@@ -1,0 +1,32 @@
+div.gallery {
+    border: 1px solid #ccc;padding:2px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;opacity:0.7;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 0;
+    float: left;
+    width: ;
+}
+
+
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
