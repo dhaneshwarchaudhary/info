@@ -103,12 +103,149 @@ input[type=submit]::after {
   position: absolute;  
   z-index: -1;  
 }  
-      </style>
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
      crossorigin="anonymous"></script>
-   </head>  
-     
-   <body>   
+
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
+</head>
+
+<body>
+
+<div style="background-color:white;">
+<center>
+ <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
+ <img alt="" src="images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ </center>
+</div>
+
+
+
+<div class="t-bar" id="navbar" style="position:;z-index:1;width:100%">
+
+
+
+ <ul class="w3-navbar w3-left-align w3-small co" style='height:42px'>
+
+  <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+
+    <a class="w3-padding-large w3-hover-white" href="javascript:void(0);" onclick="openNav()" style='height:51px;width:100%'><i class="fa fa-bars"></i></a><!-- small nav icon -->
+
+  </li>
+
+  <li><a href="./" class="w3-padding-large w3-hover-blue" style="background-color:#2196F3;color:white;" title="">Home</a></li>
+
+  <li class="w3-hide-small"><a href="" class="w3-padding-large w3-hover-blue" title="Admin">Notice</a></li>
+
+<!--<li class="w3-hide-small w3-dropdown-hover"><a class="w3-padding-large w3-hover-blue" title="Songs">Songs</a>     
+
+   <div class="w3-dropdown-content" style="background-color:rgb(0,120,201);color:white;">
+
+   <a href="./dj/songs/" class="w3-hover-blue">DJ Songs</a>
+
+   <a href = "" class="w3-hover-blue">Hindi Songs</a>
+
+   <a href="" class="w3-hover-blue">Tharu Songs</a>
+
+   <a href = "" class="w3-hover-blue">Maithali Songs</a>
+
+   <a href="" class="w3-hover-blue">Bhojpuri Songs</a>
+
+   <a href="" class="w3-hover-blue">Nepali Songs</a>
+
+    </div>
+
+
+
+</li>-->
+
+  <li class="w3-hide-small w3-dropdown-hover"><a class="w3-padding-large w3-hover-blue" title="Gallery">Gallery</a>
+
+  <div class="w3-dropdown-content dropdown-hover" style="background-color:rgb(0,120,201);color:white;">
+
+   <a href = "" class="w3-hover-blue">Photos</a>
+
+   <a href = "" class="w3-hover-blue">Members</a>
+
+   <a href="" class="w3-hover-blue">###1</a>
+
+   <a href = "" class="w3-hover-blue">###1</a>
+
+    </div>
+
+  </li>
+
+  <li class="w3-hide-small"><a href="#" class="w3-padding-large w3-hover-blue" title="About">About</a></li>
+
+  <li class="w3-hide-small"><a href="policy.html" class="w3-padding-large w3-hover-blue" title="Privacy Policy" target="_blank">Policy</a></li>
+
+<li class="w3-hide-small"><a href="contact.html" class="w3-padding-large w3-hover-blue" title="Contact">Contact</a></li>
+
+  <li class="w3-hide-small"><a href="#" class="w3-padding-large w3-hover-blue" title="F.A.Q">F.A.Q</a></li>
+
+
+ </ul>
+
+ 
+
+</div>
+
+<script>
+
+
+
+//sticky navbar
+
+window.onscroll = function() {myFunction()};
+
+
+
+var navbar = document.getElementById("navbar");
+
+var sticky = navbar.offsetTop;
+
+
+
+function myFunction() {
+
+  if (window.pageYOffset >= sticky) {
+
+    navbar.classList.add("sticky")
+
+  } else {
+
+    navbar.classList.remove("sticky");
+
+  }
+
+}
+
+
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+
+function openNav() {
+
+    var x = document.getElementById("navbar");
+
+    if (x.className.indexOf("w3-show") == -1) {
+
+        x.className += " w3-show";
+
+    } else { 
+
+        x.className = x.className.replace(" w3-show", "");
+
+    }
+
+}
+
+</script>
       <?php  
          $nameErr = "";  
          $emailErr = "";  
