@@ -500,79 +500,26 @@ function openNav() {
 }
 
 </script>
-      <?php  
-         $nameErr = "";  
-         $emailErr = "";  
-         $genderErr = "";  
-         $websiteErr = "";  
-         $name = "";  
-         $email = "";  
-         $gender = "";  
-                           $Number = "";  
-        $message = "";  
-         $subject = "";  
-           
-         if ($_SERVER["REQUEST_METHOD"] == "POST") {  
-            if (empty($_POST["name"])) {  
-               $nameErr = "Name is required";  
-            } else {  
-               $name = test_input($_POST["name"]);  
-            }  
-               if (empty($_POST["email"])) {  
-               $emailErr = "Email is required";  
-            } else {  
-               $email = test_input($_POST["email"]);  
-                    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {  
-                  $emailErr = "Invalid email format";   
-               }  
-            }  
-             if (empty($_POST["course"])) {  
-               $Number = "";  
-            } else {  
-               $Number = test_input($_POST["course"]);  
-            }  
-            if (empty($_POST["class"])) {  
-               $message = "";  
-            } else {  
-               $message = test_input($_POST["class"]);  
-            }  
-           if (empty($_POST["gender"])) {  
-               $genderErr = "Gender is required";  
-            } else {  
-               $gender = test_input($_POST["gender"]);  
-            }  
-             if (empty($_POST["subject"])) {  
-               $subjectErr = "You must select 1 or more";  
-            } else {  
-               $subject = $_POST["subject"];      
-            }  
-         }  
-           function test_input($data) {  
-            $data = trim($data);  
-            $data = stripslashes($data);  
-            $data = htmlspecialchars($data);  
-            return $data;  
-         }  
-      ?>    
-      <form method = "POST"   align ="center" action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+     
+      <form method = "POST"   align ="center" >  
       <h1> Contact Form </h1>   
          <table align ="center">  
             <tr>  
                <td> <b> Enter Your Name: </b> </td>  
                <td> <input type = "text" name = "name" placeholder ="Type in your username..">  
-                  <span class = "error"> * <?php echo $nameErr;?> </span>  
+                   
                </td>  
             </tr>  
                  <tr>  
                <td> <b> Enter E-mail Address: </b> </td>  
                <td> <input type = "text" name = "email" placeholder = "Type in your E-mail..">  
-                  <span class = "error"> * <?php echo $emailErr;?> </span>  
+                   
                </td>  
             </tr>  
                 <tr>  
                <td> <b> Enter Phone Number: </b> </td>  
                <td> <input type = "text" name = "course" placeholder ="Type in your Number..">  
-                  <span class = "error"> <?php echo $websiteErr;?> </span>  
+                   
                </td>  
             </tr>  
                  <tr>  
@@ -593,7 +540,7 @@ function openNav() {
       <input type="radio"  
                name = "gender"   
                value="no"> <label for = "gender"> Transgender  </label>   
-                  <span class = "error"> * <?php echo $genderErr;?> </span>  
+                   
                </td>  
             </tr>  
                   <tr>  
@@ -612,8 +559,7 @@ function openNav() {
             <tr>  
                <td> <b> I have Agree the terms and conditions </b> </td>  
                <td> <input type = "checkbox" name = "checked" value = "1"> </td>  
-               <?php if(!isset($_POST['checked']))  { ?>  
-                 <?php } ?>   
+               
             </tr>  
                  <tr>  
                <td>  
@@ -622,16 +568,6 @@ function openNav() {
             </tr>  
              </table>  
       </form>  
-            <?php  
-         echo "<h2> Your given values are as : </h2>";  
-         echo ("<p> Your name is:  $name </p>");  
-         echo ("<p>  your email address is :  $email </p>");  
-         echo ("<p> Your Phone Number is:  $Number </p>");  
-         echo ("<p> your message info:  $message </p>");  
-         echo ("<p> your gender is:  $gender </p>");   
-         for($i = 0; $i < count($subject); $i++) {  
-            echo($subject[$i] . " ");  
-         }  
-      ?>  
+           
    </body>  
 </html>  
