@@ -259,6 +259,81 @@ img {vertical-align: middle;}
 
 }
 
+    .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+        }
+    }
+
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
      crossorigin="anonymous"></script>
@@ -650,31 +725,122 @@ function showSlides() {
 
 
 		<div class="w3-padding">
+<div class="article">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Mount_Everest_as_seen_from_Drukair2_PLW_edit_Cropped.jpg/960px-Mount_Everest_as_seen_from_Drukair2_PLW_edit_Cropped.jpg" alt="Sagarmatha, Nepal">
+    <div class="content1">
+       <a href="sagarmatha.html" class="read-more"><h2>Mount Sagarmatha (Mount Everest)</h2></a>
+       <div class="meta">Published on November 13, 2025</div>
+        <div class="description">
+                <p>The Roof of the World – Nepal’s Pride</p>
+		<p>
+            <strong>Mount Sagarmatha</strong>, known globally as <strong>Mount Everest</strong>, 
+            is the world’s highest mountain, standing proudly at an elevation of <strong>8,848.86 meters (29,031.7 ft)</strong> above sea level. 
+            Located in the <strong>Solukhumbu District of Nepal</strong>, within the Himalayan range, 
+            Sagarmatha is not only a symbol of natural beauty but also a source of national pride and spiritual significance.
+        </p>
+        </div>
+        <a href="sagarmatha.html" class="read-more">Read More</a>
+    </div>
+</div><hr>
+<div class="article">
+    <img src="images/bpkihs_dharan.jpg" alt="BPKIHS, Dharan, Nepal">
+    <div class="content1">
+       <a href="https://bpkihs.edu/about/introduction.php" class="read-more"><h2>B.P. Koirala Institute of Health Sciences (BPKIHS), Dharan</h2></a>
+       <div class="meta">Published on November 13, 2025</div>
+        <div class="description">
+<h2>About BPKIHS</h2>
+    <p>
+        <strong>B.P. Koirala Institute of Health Sciences (BPKIHS)</strong> is an autonomous health sciences university located in <strong>Dharan, Sunsari District, Nepal</strong>. 
+        Established on <strong>January 18, 1993</strong>, it serves as one of the leading institutions in the field of medical education, health care, and research in Nepal.
+    </p>
+        </div>
+        <a href="https://bpkihs.edu/about/introduction.php" class="read-more">Read More</a>
+    </div>
+</div><hr>
+<div class="article">
+    <img src="images/sidebar-613.jpg" alt="BPKIHS, Dharan, Nepal">
+    <div class="content1">
+        <a href="darta_chalani.html" class="read-more"><h2>Digital Darta Chalani System - Nepal</h2></a>
+       <div class="meta">Published on November 13, 2025</div>
+        <div class="description">
+        <p>
+            <strong>Digital Darta Chalani</strong> is an initiative of the Government of Nepal designed to 
+            digitize the traditional process of registering and dispatching official documents. 
+            The system replaces manual record-keeping with a secure digital platform, enabling efficient document flow and transparency across government offices.
+        </p>
+        </div>
+        <a href="darta_chalani.html" class="read-more">Read More</a>
+    </div>
+</div>	<hr>
+			
+<div class="article">
+    <img src="images/Ganesh.jpg" alt="">
+    <div class="content1">
+        <a href="#"><h2>How to Access Blocked Social Media in Nepal Using DNS (1.1.1.1) and Cloudflare 1.1.1.1: Faster Internet App</h2></a>
+        <div class="meta">
+            Admin | September 7, 2025
+        </div>
+        <div class="description">
+            In recent times, many users in Nepal have faced difficulties accessing popular social media platforms such as Facebook, YouTube, Instagram, WhatsApp, and Messenger due to government restrictions.
+        </div>
+        <a href="#" class="read-more">Read More</a>
+    </div>
+</div><hr>
 
+<div class="article">
+    <img src="bpkihs_dharan.jpg" alt="">
+    <div class="content1">
+        <h2>Understanding Mutual Funds in Nepal: A Guide to Benefits, Risks, and Performance</h2>
+        <div class="meta">
+            <a href="#">Ashesh</a> | June 12, 2024
+        </div>
+        <div class="description">
+            According to Investopedia, a mutual fund is a professionally managed pool of money collected from investors to invest in securities. Securities mean investment assets like stocks, bonds, or money markets.
+        </div>
+        <a href="#" class="read-more">Read More</a>
+    </div>
+</div><hr>
+<div class="article">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Budhasubba.jpg" alt="Buddha Subba Temple, Dharan">
+    <div class="content1">
+       <h2>The Sacred Serenity of Buddha Subba Temple</h2>
+       <div class="meta">Published on November 13, 2025 | by TravelNepal</div>
+        <div class="description">
+                 <p>
+        Nestled in the hills of Dharan, the <strong>Buddha Subba Temple</strong> stands as one of the most sacred and culturally rich sites in eastern Nepal. 
+        The temple is revered by devotees who believe that their wishes come true if they tie threads or plant bamboo sticks in the temple area.
+      </p>
+        </div>
+        <a href="#" class="read-more">Read More</a>
+    </div>
+</div>	<hr>	
 		
+<div class="article">
+    <img src="images/Two date Calculation in Excel copy.png" alt="">
+    <div class="content1">
+        <a href="calculate2dates.html"><h2>Calculate the Difference Two Dates likes Years, Months, and Days in Excel</h2></a>
+        <div class="meta">
+            <a href="#">Admin</a> | November 14, 2025
+        </div>
+        <div class="description">
+            Calculate age in accumulated years, months, and days. You can also calculate age or someone’s time of service. The result can be like as 25 years, 10 months, 29 days.
+			<div style="padding-left:25px;">
+<p>=DATEDIF(B2,C2,"y")&"Y " &nbsp; &nbsp;&nbsp;&nbsp; =DATEDIF(B2,C2,"ym")&"M " &nbsp; &nbsp;&nbsp;&nbsp; =DATEDIF(B2,C2,"md")&"D" </p>
 
-			<div class="rowcard">
-	<a href="calculate2dates.html"><div style="color:white;background-color:#4169E1;"><h2>Calculate the Difference Two Dates likes Years, Months, and Days in Excel</h2></div></a>
-	<h4 style="text-align:justify;">Calculate age in accumulated years, months, and days. You can also calculate age or someone’s time of service. The result can be like as “25 years, 10 months, 29 days.” </h4>
-<div style="float:left;width:50%;padding:10px;">
-<div style="padding-left:25px;">
-<h5>
-<ol>
-<li>=DATEDIF(B2,C2,"y")&"Y " <br>
-=DATEDIF(B2,C2,"ym")&"M " <br>
-=DATEDIF(B2,C2,"md")&"D" <br>
-<a href="calculate2dates.html"><button>Read More..</button></a>
-</h5>
 </div>
-</div>
- <div style="float:right;width:50%;padding:10px;padding-top:25px;">
- <a href="calculate2dates.html"><img alt="" src="images/Two date Calculation in Excel copy.png" style="width:200px;height:150px;"/></a>
-</div> 
-</div>
+        </div>
+        <a href="calculate2dates.html" class="read-more">Read More</a>
+    </div>
+</div>	<hr>
 
-<hr>
-			<div class="rowcard">
-	<div style="color:white;background-color:#4169E1;"><h2>Sum Two or More Similar Product Name Price Values in Excel</h2></div>
+<div class="article">
+    <img src="images/consolidate.png" alt="">
+    <div class="content1">
+        <a href="calculate2dates.html"><h2>Sum Two or More Similar Product Name Price Values in Excel</h2></a>
+        <div class="meta">
+            <a href="#">Admin</a> | November 14, 2025
+        </div>
+        <div class="description">
 	<h4 style="text-align:justify;">You can follow these steps:</h4>
 <div style="float:left;width:50%;padding:10px;">
 <div style="padding-left:25px;">
@@ -693,10 +859,14 @@ function showSlides() {
 </h5>
 </div>
 </div>
- <div style="float:right;width:50%;padding:10px;padding-top:25px;">
- <img alt="" src="images/consolidate.png" style="width:100%;height:300px;"/>
-</div> 
-</div>
+        </div>
+        <a href="calculate2dates.html" class="read-more">Read More</a>
+    </div>
+</div><hr>		
+		
+
+		
+
 
 		</div>
 
