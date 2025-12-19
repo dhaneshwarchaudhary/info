@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
-	<meta name="referrer" content="no-referrer-when-downgrade" />
-<meta name="a689c6c27defd5f2b23f918e564ccc36cb1afcc8" content="a689c6c27defd5f2b23f918e564ccc36cb1afcc8" />
+
+<meta name="referrer" content="no-referrer-when-downgrade" />
 <meta name="google-adsense-account" content="ca-pub-5977312974388356">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 
 <link rel="stylesheet" type="text/css" href="css/i-g.css"/>
@@ -259,105 +260,10 @@ img {vertical-align: middle;}
 
 }
 
-    .article {
-        display: flex;
-        background: #fff;
-        border-radius: px;
-        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
-        margin-bottom: 25px;
-        overflow: hidden;
-    }
-
-    .article img {
-        width: 180px;
-        height: auto;
-        object-fit: cover;
-    }
-
-    .content1 {
-        padding: 10px;
-		margin-top:px;
-        flex: 1;
-    }
-
-    .content1 h2 {
-        margin: 8px 0;
-        font-size: 20px;
-        line-height: 1.3;
-		font-weight:bold;
-        color: #0077cc;
-    }
-
-
-    .meta {
-        font-size: 13px;
-        color: #666;
-        margin-bottom: 8px;
-    }
-
-    .meta a {
-        color: #0077cc;
-        text-decoration: none;
-    }
-
-    .meta a:hover {
-        text-decoration: underline;
-    }
-
-    .description {
-        font-size: 14px;
-        color: #555;
-        line-height: 1.6;
-    }
-
-    .read-more {
-        display: inline-block;
-		font-size:12px;
-        margin-top: 10px;
-        color: #0077cc;
-        font-weight: bold;
-        text-decoration: none;
-    }
-
-    .read-more:hover {
-        text-decoration: underline;
-    }
-
-    /* Responsive design */
-    @media (max-width: 700px) {
-        .article {
-            flex-direction: column;
-        }
-
-        .article img {
-            width: 100%;
-        }
-    }
-/* Mobile button */
-.mobile-menu-btn{
-  display:none;
-  font-size:26px;
-  color:#fff;
-  padding:12px 15px;
-  cursor:pointer;
-}
-
-/* Mobile menu */
-@media(max-width:768px){
-  .mobile-menu-btn{display:block}
-  #navMenu{display:none;flex-direction:column}
-  #navMenu.show{display:block}
-}
-
-/* simple animation */
-#navMenu{transition:all .3s ease}
-
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
      crossorigin="anonymous"></script>
-
-
-
+</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
@@ -365,18 +271,7 @@ img {vertical-align: middle;}
 </head>
 
 <body>
-<script>
-(function(juvo){
-var d = document,
-    s = d.createElement('script'),
-    l = d.scripts[d.scripts.length - 1];
-s.settings = juvo || {};
-s.src = "\/\/quizzical-cow.com\/cfDi9h6.bN2l5NlcS\/W_Q\/9CNhj\/Yj2ZOSTpgh3\/MiiP0l2\/N-j\/Yw5iOSDtcSzt";
-s.async = true;
-s.referrerPolicy = 'no-referrer-when-downgrade';
-l.parentNode.insertBefore(s, l);
-})({})
-</script>
+
 <div style="background-color:white;">
 <center>
  <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
@@ -391,7 +286,7 @@ l.parentNode.insertBefore(s, l);
 
 
 
- <ul id="navMenu" class="w3-navbar w3-left-align w3-small co" style='height:42px'>
+ <ul class="w3-navbar w3-left-align w3-small co" style='height:42px'>
 
   <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
 
@@ -441,17 +336,21 @@ l.parentNode.insertBefore(s, l);
 
   </li>
 
-  <li class="w3-hide-small"><a href="about-us.html" class="w3-padding-large w3-hover-blue" title="About">About</a></li>
+  <li class="w3-hide-small"><a href="#" class="w3-padding-large w3-hover-blue" title="About">About</a></li>
 
   <li class="w3-hide-small"><a href="policy.html" class="w3-padding-large w3-hover-blue" title="Privacy Policy" target="_blank">Policy</a></li>
 
-<li class="w3-hide-small"><a href="contact.html" class="w3-padding-large w3-hover-blue" title="Contact">Contact</a></li>
+<li class="w3-hide-small"><a href="#" class="w3-padding-large w3-hover-blue" title="Contact">Contact</a></li>
 
   <li class="w3-hide-small"><a href="#" class="w3-padding-large w3-hover-blue" title="F.A.Q">F.A.Q</a></li>
+
+  
  </ul>
 
+ 
+
 </div>
-<!--<div class="mobile-menu-btn" onclick="openNav()">☰</div>-->
+
 <script>
 
 
@@ -487,12 +386,19 @@ function myFunction() {
 // Used to toggle the menu on smaller screens when clicking on the menu button
 
 function openNav() {
-    var menu = document.getElementById("navMenu");
-    if (menu.classList.contains("show")) {
-        menu.classList.remove("show");
-    } else {
-        menu.classList.add("show");
+
+    var x = document.getElementById("navbar");
+
+    if (x.className.indexOf("w3-show") == -1) {
+
+        x.className += " w3-show";
+
+    } else { 
+
+        x.className = x.className.replace(" w3-show", "");
+
     }
+
 }
 
 </script>
