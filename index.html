@@ -333,7 +333,23 @@ img {vertical-align: middle;}
             width: 100%;
         }
     }
+/* Mobile menu */
+@media screen and (max-width: 768px) {
+  #navMenu {
+    display: none;
+    width: 100%;
+    background-color: rgb(0,120,201);
+  }
 
+  #navMenu.show {
+    display: block;
+  }
+
+  #navMenu li {
+    display: block;
+    text-align: left;
+  }
+}
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
      crossorigin="anonymous"></script>
@@ -431,6 +447,13 @@ l.parentNode.insertBefore(s, l);
 
   <li class="w3-hide-small"><a href="#" class="w3-padding-large w3-hover-blue" title="F.A.Q">F.A.Q</a></li>
 
+<li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+  <a href="javascript:void(0);"
+     onclick="openNav()"
+     class="w3-padding-large w3-hover-white">
+     ☰
+  </a>
+</li>
 
  </ul>
 
