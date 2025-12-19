@@ -373,7 +373,7 @@ l.parentNode.insertBefore(s, l);
 
 
 
- <ul class="w3-navbar w3-left-align w3-small co" style='height:42px'>
+ <ul id="navMenu" class="w3-navbar w3-left-align w3-small co" style='height:42px'>
 
   <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
 
@@ -473,19 +473,12 @@ function myFunction() {
 // Used to toggle the menu on smaller screens when clicking on the menu button
 
 function openNav() {
-
-    var x = document.getElementById("navbar");
-
-    if (x.className.indexOf("w3-show") == -1) {
-
-        x.className += " w3-show";
-
-    } else { 
-
-        x.className = x.className.replace(" w3-show", "");
-
+    var menu = document.getElementById("navMenu");
+    if (menu.classList.contains("show")) {
+        menu.classList.remove("show");
+    } else {
+        menu.classList.add("show");
     }
-
 }
 
 </script>
