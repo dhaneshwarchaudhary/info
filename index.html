@@ -333,26 +333,24 @@ img {vertical-align: middle;}
             width: 100%;
         }
     }
+/* Mobile button */
+.mobile-menu-btn{
+  display:none;
+  font-size:26px;
+  color:#fff;
+  padding:12px 15px;
+  cursor:pointer;
+}
+
 /* Mobile menu */
-@media screen and (max-width: 768px) {
-  #navMenu {
-    display: none;
-    width: 100%;
-    background-color: rgb(0,120,201);
-  }
-
-  #navMenu.show {
-    display: block;
-  }
-
-  #navMenu li {
-    display: block;
-    text-align: left;
-  }
+@media(max-width:768px){
+  .mobile-menu-btn{display:block}
+  #navMenu{display:none;flex-direction:column}
+  #navMenu.show{display:block}
 }
-	#navMenu {
-  transition: all 0.3s ease;
-}
+
+/* simple animation */
+#navMenu{transition:all .3s ease}
 
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
@@ -450,21 +448,10 @@ l.parentNode.insertBefore(s, l);
 <li class="w3-hide-small"><a href="contact.html" class="w3-padding-large w3-hover-blue" title="Contact">Contact</a></li>
 
   <li class="w3-hide-small"><a href="#" class="w3-padding-large w3-hover-blue" title="F.A.Q">F.A.Q</a></li>
-
-<li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
-  <a href="javascript:void(0);"
-     onclick="openNav()"
-     class="w3-padding-large w3-hover-white">
-     ☰
-  </a>
-</li>
-
  </ul>
 
- 
-
 </div>
-
+<div class="mobile-menu-btn" onclick="openNav()">☰</div>
 <script>
 
 
@@ -500,7 +487,7 @@ function myFunction() {
 // Used to toggle the menu on smaller screens when clicking on the menu button
 
 function openNav() {
-    var menu = document.getElementById("navMenu");
+    var menu = document.getElementById("navbar");
     if (menu.classList.contains("show")) {
         menu.classList.remove("show");
     } else {
