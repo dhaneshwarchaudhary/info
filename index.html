@@ -334,6 +334,23 @@ img {vertical-align: middle;}
         }
     }
 /* Navbar */
+body {
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:#f5f7fa;
+}
+
+/* Header */
+header {
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* Navbar */
 nav {
     background:#ffffff;
     padding:10px;
@@ -351,6 +368,81 @@ nav a {
 
 nav a:hover {
     color:#0d6efd;
+}
+
+/* Container */
+.container {
+    max-width:1000px;
+    margin:20px auto;
+    padding:10px;
+}
+
+/* Article Card */
+.card {
+    background:white;
+    margin-bottom:20px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card-content {
+    padding:15px;
+}
+
+.card-content h2 {
+    margin:0;
+    font-size:20px;
+    color:#0d6efd;
+}
+
+.card-content p {
+    font-size:14px;
+    color:#555;
+}
+
+.read-more {
+    display:inline-block;
+    margin-top:10px;
+    text-decoration:none;
+    color:#0d6efd;
+    font-weight:bold;
+}
+
+/* Sidebar */
+.sidebar {
+    margin-top:20px;
+    background:white;
+    padding:15px;
+    border-radius:10px;
+}
+
+/* Footer */
+footer {
+    text-align:center;
+    padding:20px;
+    background:#0d6efd;
+    color:white;
+    margin-top:30px;
+}
+
+@media(min-width:768px){
+    .layout {
+        display:flex;
+        gap:20px;
+    }
+    .main {
+        flex:3;
+    }
+    .sidebar {
+        flex:1;
+    }
 }
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
