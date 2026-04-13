@@ -501,73 +501,51 @@ function openNav() {
 
 </script>
      
-      <form method = "POST"   align ="center" >  
-      <h1> Contact Form </h1>   
-         <table align ="center">  
-            <tr>  
-               <td> <b> Enter Your Name: </b> </td>  
-               <td> <input type = "text" name = "name" placeholder ="Type in your username..">  
-                   
-               </td>  
-            </tr>  
-                 <tr>  
-               <td> <b> Enter E-mail Address: </b> </td>  
-               <td> <input type = "text" name = "email" placeholder = "Type in your E-mail..">  
-                   
-               </td>  
-            </tr>  
-                <tr>  
-               <td> <b> Enter Phone Number: </b> </td>  
-               <td> <input type = "text" name = "course" placeholder ="Type in your Number..">  
-                   
-               </td>  
-            </tr>  
-                 <tr>  
-               <td> <b> Message </b> </td>  
-               <td> <textarea name = "class" rows = "5" cols = "40"> Write your Message here </textarea> </td>  
-            </tr>  
-                  <tr>  
-               <td> <b> Select Gender: </b> </td>  
-               <td>  
-        <input type="radio"  
-               name = "gender"   
-               value  = "yes"> <label for = "gender"> Male  
-            </label> <br>  
-        <input type = "radio"  
-                name = "gender"   
-               value = "no"> <label for = "gender">  Female  
-            </label> <br>  
-      <input type="radio"  
-               name = "gender"   
-               value="no"> <label for = "gender"> Others  </label>   
-                   
-               </td>  
-            </tr>  
-                  <tr>  
-               <td> <b> Select City: </b> </td>  
-               <td>  
-                  <select name = "city[]" size = "4" multiple>  
-                     <option value = "Dharan"> Dharan </option>  
-                     <option value = "Biratnagar"> Biratnagar </option>  
-                     <option value = "Itahari"> Itahari </option>  
-                     <option value = "Damak"> Damak </option>  
-                     <option value = "Kathmandu"> Kathmandu </option>  
-                     <option value = "Janakpur"> Janakpur </option>  
-                  </select>  
-               </td>  
-            </tr>  
-            <tr>  
-               <td> <b> I have Agree the terms and conditions </b> </td>  
-               <td> <input type = "checkbox" name = "checked" value = "1"> </td>  
-               
-            </tr>  
-                 <tr>  
-               <td>  
-                  <input type = "submit" name = "submit" value = "Submit">   
-               </td>  
-            </tr>  
-             </table>  
-      </form>  
+<form method="POST" 
+action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" 
+target="_blank">
+
+<h1>Contact Form</h1>
+
+<label>Name:</label>
+<input type="text" name="entry.123456789"><br><br>
+
+<label>Email:</label>
+<input type="text" name="entry.987654321"><br><br>
+
+<label>Phone:</label>
+<input type="text" name="entry.111111111"><br><br>
+
+<label>Message:</label>
+<textarea name="entry.222222222"></textarea><br><br>
+
+<label>Gender:</label><br>
+<input type="radio" name="entry.333333333" value="Male"> Male
+<input type="radio" name="entry.333333333" value="Female"> Female
+<input type="radio" name="entry.333333333" value="Others"> Others
+<br><br>
+
+<label>City:</label>
+<select name="entry.444444444">
+  <option>Dharan</option>
+  <option>Biratnagar</option>
+  <option>Itahari</option>
+  <option>Damak</option>
+  <option>Kathmandu</option>
+  <option>Janakpur</option>
+</select>
+
+<br><br>
+
+<label>
+<input type="checkbox" required> I agree terms
+</label>
+
+<br><br>
+
+<input type="submit" value="Submit">
+
+</form> 
        <!-- Ads --->
 	<script>
 (function(vxm){
