@@ -432,6 +432,9 @@ function openNav() {
 
 		
 
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
 <style>
 .rowcard {
     max-width: 950px;
@@ -440,7 +443,7 @@ function openNav() {
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* Flex layout */
@@ -458,21 +461,34 @@ function openNav() {
     object-fit: cover;
     border: 5px solid #3498db;
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
 }
 
 /* Text content */
 .about-content h1 {
-    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
     margin-bottom: 10px;
     color: #2c3e50;
+    font-weight: 600;
 }
 
 .about-content p {
     color: #555;
-    line-height: 1.7;
+    line-height: 1.8;
     margin-bottom: 12px;
+    font-size: 1rem;
 }
 
+.about-content strong {
+    color: #000;
+}
+
+/* List */
 .about-content ul {
     padding-left: 20px;
 }
@@ -492,11 +508,17 @@ function openNav() {
     background: #f4f8fb;
     border-left: 4px solid #3498db;
     border-radius: 8px;
+    font-size: 0.95rem;
 }
 
 .contact a {
     color: #3498db;
     text-decoration: none;
+    font-weight: 500;
+}
+
+.contact a:hover {
+    text-decoration: underline;
 }
 
 /* Responsive */
@@ -509,6 +531,10 @@ function openNav() {
     .profile-img {
         width: 130px;
         height: 130px;
+    }
+
+    .about-content h1 {
+        font-size: 1.7rem;
     }
 }
 </style>
@@ -544,6 +570,7 @@ function openNav() {
 
     </div>
 </div>
+			<!-- end about me -->
 
 		<br>
 </div>
