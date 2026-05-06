@@ -558,48 +558,117 @@ function showSlides() {
 
 		
 
-			<div class="rowcard">
+<style>
+.rowcard {
+    max-width: 950px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
 
-<h1>About Me</h1>
-<p>
-My name is <strong>Dhaneshwar Chaudhary</strong>. I am a technology enthusiast and software developer from Nepal.
-I created this website to share my experience in digital systems, office automation, Excel tools, 
-and government software that helps improve productivity in daily work.
-</p>
+/* Flex layout */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
 
-<p>
-Through this website, I aim to:
-<ul>
-<li>Provide clear tutorials for beginners and professionals</li>
-<li>Share tools that simplify administrative work</li>
-<li>Promote digital literacy in Nepal</li>
-<li>Document cultural and travel destinations of Nepal</li>
-</ul>
-</p>
+/* Profile Image */
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #3498db;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
 
-<p>
-If you have any suggestions or questions, feel free to contact me through the contact page.<br>
-	Email: info@dhaneshwarchaudhary.com.np
-</p>
+/* Text content */
+.about-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
 
+.about-content p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
 
+.about-content ul {
+    padding-left: 20px;
+}
 
+.about-content ul li {
+    margin-bottom: 8px;
+}
 
+.about-content ul li::marker {
+    color: #3498db;
+}
 
+/* Contact box */
+.contact {
+    margin-top: 15px;
+    padding: 12px;
+    background: #f4f8fb;
+    border-left: 4px solid #3498db;
+    border-radius: 8px;
+}
 
+.contact a {
+    color: #3498db;
+    text-decoration: none;
+}
 
-  
+/* Responsive */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
 
+    .profile-img {
+        width: 130px;
+        height: 130px;
+    }
+}
+</style>
 
+<div class="rowcard">
+    <div class="about-container">
 
-  
+        <!-- Profile Image -->
+        <img src="images/dc.png" alt="Dhaneshwar Chaudhary" class="profile-img">
 
+        <!-- Content -->
+        <div class="about-content">
+            <h1>About Me</h1>
 
+            <p>
+                My name is <strong>Dhaneshwar Chaudhary</strong>. I am a technology enthusiast and software developer from Nepal.
+                I created this website to share my experience in digital systems, office automation, Excel tools,
+                and government software that helps improve productivity in daily work.
+            </p>
 
-  
+            <p><strong>Through this website, I aim to:</strong></p>
+            <ul>
+                <li>Provide clear tutorials for beginners and professionals</li>
+                <li>Share tools that simplify administrative work</li>
+                <li>Promote digital literacy in Nepal</li>
+                <li>Document cultural and travel destinations of Nepal</li>
+            </ul>
 
+            <div class="contact">
+                📧 Email: <a href="mailto:info@dhaneshwarchaudhary.com.np">info@dhaneshwarchaudhary.com.np</a>
+            </div>
+        </div>
 
-
+    </div>
 </div>
 
 		<br>
