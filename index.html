@@ -419,7 +419,59 @@ header {
     .menu-toggle {
         display: block;
     }
+	.hero{
+        min-height:500px;
+    }
 }
+
+/* Hero */
+
+.hero{
+    min-height:600px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('images/dc.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
      crossorigin="anonymous"></script>
@@ -704,8 +756,25 @@ function showSlides() {
 		
 
 		</div>
+			<!-- Information Section -->
+<section id="home" class="hero">
+<div>
 
+<h1>Technology & Information Hub</h1>
 
+<p>
+Software Products, Educational Resources,
+Nepal Tourism, Technology Articles and Useful Downloads.
+</p>
+
+<a href="#products" class="btn">
+Explore Products
+</a>
+
+</div>
+</section>
+<!-- Information Section -->
+			
 <!-- products -->
 		<div class="w3-card-3 w3-white m-margin-top" style="border: 1px solid #ddd; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
 
