@@ -694,47 +694,7 @@ function toggleMenu() {
   <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
 
     <a class="w3-padding-large w3-hover-white" href="javascript:void(0);" onclick="openNav()" style='height:51px;width:100%'><i class="fa fa-bars"></i></a><!-- small nav icon -->
-<!--	
-  </li>
 
-	<li><a href="./" class="w3-padding-large w3-hover-blue" style="background-color:#2196F3;color:white;" title="">Home</a></li>
-	<li class="w3-hide-small"><a href="about-us.html" class="w3-padding-large w3-hover-blue" title="About">About</a></li>
-	<li class="w3-hide-small"><a href="contact.html" class="w3-padding-large w3-hover-blue" title="Contact">Contact</a></li>
-	 <li class="w3-hide-small"><a href="policy.html" class="w3-padding-large w3-hover-blue" title="Privacy Policy">Policy</a></li>
-	 
-  <li class="w3-hide-small"><a href="notice.html" class="w3-padding-large w3-hover-blue" title="Admin">Notice</a></li>
-
-  <li class="w3-hide-small w3-dropdown-hover"><a class="w3-padding-large w3-hover-blue" title="Gallery">Gallery</a>
-
-  <div class="w3-dropdown-content dropdown-hover" style="background-color:rgb(0,120,201);color:white;">
-
-   <a href = "" class="w3-hover-blue">Photos</a>
-
-   <a href = "" class="w3-hover-blue">Members</a>
-
-   <a href="" class="w3-hover-blue">###1</a>
-
-   <a href = "" class="w3-hover-blue">###1</a>
-
-    </div>
-
-  </li>
-
-  <li class="w3-hide-small"><a href="about-us.html" class="w3-padding-large w3-hover-blue" title="About">About Me</a></li>
-
-  <li class="w3-hide-small"><a href="policy.html" class="w3-padding-large w3-hover-blue" title="Privacy Policy" target="_blank">Policy</a></li>
-
-<li class="w3-hide-small"><a href="contact.html" class="w3-padding-large w3-hover-blue" title="Contact">Contact</a></li>
-
-  <li class="w3-hide-small"><a href="faq.html" class="w3-padding-large w3-hover-blue" title="F.A.Q">F.A.Q</a></li>
-
-  
- </ul>
-
- 
-
-</div>
--->
 <script>
 
 
@@ -815,8 +775,8 @@ No Station Selected
 
 <div class="player-controls">
 
-<button onclick="stopRadio()" class="stop-btn">
-⏹ Stop
+<button onclick="radioPlayer.pause()" class="stop-btn">
+⏸ Pause
 </button>
 
 <button onclick="closePlayer()" class="close-btn">
@@ -840,7 +800,7 @@ name:"Saptakoshi FM",
 freq:"90 MHz",
 city:"Sunsari",
 logo:"📻",
-stream:"https://nepalipatro.com.np/nepali-radio/saptakoshi-fm"
+stream:"https://live.itech.host:4535/stream"
 },
 
 {
