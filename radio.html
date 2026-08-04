@@ -771,9 +771,13 @@ placeholder="Search station...">
 No Station Selected
 </div>
 
-<audio id="radioPlayer" controls></audio>
+<audio id="radioPlayer" controls style="display:none;"></audio>
 
 <div class="player-controls">
+
+<button onclick="radioPlayer.play()" class="stop-btn">
+▶ Play
+</button>
 
 <button onclick="radioPlayer.pause()" class="stop-btn">
 ⏸ Pause
