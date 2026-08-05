@@ -1,0 +1,979 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nepali FM Radio</title>
+
+<style>
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --card:#ffffff;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:var(--light);
+}
+
+.container{
+    width:min(1200px,95%);
+    margin:auto;
+}
+
+.radio-section{
+    padding:60px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#64748b;
+    margin-bottom:30px;
+}
+
+.radio-search{
+    width:100%;
+    max-width:500px;
+    margin:0 auto 30px;
+    display:block;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+.radio-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.radio-card{
+    background:var(--card);
+    padding:20px;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    position:relative;
+    transition:.3s;
+}
+
+.radio-card:hover{
+    transform:translateY(-5px);
+}
+
+.live{
+    position:absolute;
+    top:10px;
+    right:10px;
+    background:red;
+    color:#fff;
+    font-size:11px;
+    padding:4px 8px;
+    border-radius:20px;
+}
+
+.radio-logo{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#e2e8f0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 15px;
+    font-size:30px;
+}
+
+.radio-card h3{
+    margin-bottom:5px;
+}
+
+.radio-card p{
+    color:#64748b;
+    margin-bottom:15px;
+}
+
+.play-btn{
+    background:var(--primary);
+    color:#fff;
+    border:none;
+    padding:10px 18px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.player-box{
+    position:sticky;
+    bottom:0;
+    margin-top:40px;
+    background:#fff;
+    padding:5px;
+    border-radius:10px;
+    box-shadow:var(--shadow);
+	display:none;
+}
+
+.player-box audio{
+    width:100%;
+}
+
+.now-playing{
+    margin-bottom:10px;
+    font-weight:bold;
+}
+.player-controls{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
+
+.stop-btn,
+.close-btn{
+    border:none;
+    padding:10px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    color:white;
+}
+
+.stop-btn{
+    background:#f59e0b;
+}
+
+.close-btn{
+    background:#ef4444;
+}
+
+.stop-btn:hover{
+    background:#d97706;
+}
+
+.close-btn:hover{
+    background:#dc2626;
+}
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+<link rel="stylesheet" type="text/css" href="css/i-g.css"/>
+
+<link rel="stylesheet" type="text/css" href="css/page-style.css"/>
+
+<link rel="stylesheet" type="text/css" href="css/home.css">
+
+
+
+<title >Dhaneshwar Chaudhary </title>
+
+<link rel="icon" type="image/png" href="images/icon.ico" />
+
+<style>
+
+body {
+
+  margin: 0;
+
+  font-size: 28px;
+
+}
+
+
+
+
+
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+
+
+.sticky + .content {
+
+  padding-top: 0px;
+
+}
+
+
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  max-width: 1000px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: rgb(0,120,201);
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active {
+
+  background-color: #2196F3;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+
+  .text {font-size: 11px}
+
+}
+
+
+
+/* Float four columns side by side */
+
+.columncard {
+
+  float: left;
+
+  width: 25%;
+
+  padding: 0 10px;
+
+}
+
+
+
+/* Remove extra left and right margins, due to padding */
+
+.rowcard {margin: 0 -5px;}
+
+
+
+/* Clear floats after the columns */
+
+.rowcard:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+
+  .columncard {
+
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+
+/* Style the counter cards */
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+}
+   .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+        }
+    }
+/* Navbar */
+
+
+/* Header */
+header {
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:18px;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.nav-links li a.active {
+    background: white;
+    color: #0d6efd;
+}
+/* Responsive */
+@media(max-width:768px){
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0d6efd;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+	.hero{
+        min-height:500px;
+    }
+	.hero h1{
+    font-size:clamp(1.8rem);
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+}
+
+/* Hero */
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--dark);
+}
+.hero{
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('images/dc.jpg');
+
+    background-size:100% 100%;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
+     crossorigin="anonymous"></script>
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
+</head>
+
+<body>
+
+<div style="background-color:white;">
+<center>
+ <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
+ <img alt="" src="images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:25px;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ </center>
+</div>
+
+
+<script>
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+
+function openNav() {
+
+    var x = document.getElementById("navbar");
+
+    if (x.className.indexOf("show") == -1) {
+
+        x.className += " show";
+
+    } else { 
+
+        x.className = x.className.replace(" show", "");
+
+    }
+
+}
+
+</script>
+
+<section class="radio-section">
+
+<div class="container">
+
+<h2 class="section-title">🎙️ Nepali FM Radio</h2>
+
+<p class="section-subtitle">
+Listen Live Nepali Radio Stations
+</p>
+
+<input
+type="text"
+id="radioSearch"
+class="radio-search"
+placeholder="Search station...">
+
+<div class="radio-grid" id="radioGrid"></div>
+
+<div class="player-box">
+
+<div class="now-playing" id="nowPlaying">
+No Station Selected
+</div>
+
+<audio id="radioPlayer" controls style="display:none;"></audio>
+
+<div class="player-controls">
+
+<button onclick="radioPlayer.play()" class="stop-btn">
+▶ Play
+</button>
+
+<button onclick="radioPlayer.pause()" class="stop-btn">
+⏸ Pause
+</button>
+
+<button onclick="closePlayer()" class="close-btn">
+❌ Close
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+const radios = [
+
+{
+name:"Saptakoshi FM",
+freq:"90 MHz",
+city:"Itahari",
+logo:"📻",
+stream:"https://live.itech.host:4535/stream"
+},
+
+{
+name:"Radio Nepal",
+freq:"100 MHz",
+city:"Kathmandu",
+logo:"📻",
+stream:"https://stream1.radionepal.gov.np/live/"
+},
+
+{
+name:"Radio Kantipur",
+freq:"96.1 MHz",
+city:"Kathmandu",
+logo:"🎵",
+stream:"https://radio-broadcast.ekantipur.com/stream"
+},
+
+{
+name:"Ujyaalo 90 Network",
+freq:"90 MHz",
+city:"Lalitpur",
+logo:"🎙️",
+stream:"http://stream.zenolive.com/wtuvp08xq1duv"
+},
+
+{
+name:"Vijaypur FM",
+freq:"94 MHz",
+city:"Dharan",
+logo:"⛰️",
+stream:"https://live.itech.host:9484/stream"
+},
+
+{
+name:"Kalika FM",
+freq:"95.2 MHz",
+city:"Chitwan",
+logo:"📡",
+stream:"http://kalika-stream.softnep.com:7740/stream"
+},
+
+{
+name:"Radio Sagar",
+freq:"Online",
+city:"Nepal",
+logo:"🎧",
+stream:"https://eu1.fastcast4u.com/proxy/radiosag?mp=/stream/1/"
+},
+
+{
+name:"Radio Himalaya",
+freq:"Online",
+city:"Nepal",
+logo:"🏔️",
+stream:"https://live.itech.host/himalayaradio?1588276425741"
+},
+
+{
+name:"B FM",
+freq:"91.2",
+city:"Biratnagar",
+logo:"📰",
+stream:"https://onlineradio.websoftitnepal.com/8064/stream"
+},
+
+{
+name:"Image FM",
+freq:"97.9 MHz",
+city:"Kathmandu",
+logo:"📷",
+stream:""
+},
+
+{
+name:"Hits FM",
+freq:"91.2 MHz",
+city:"Kathmandu",
+logo:"🎼",
+stream:"https://usa15.fastcast4u.com/proxy/hitsfm912?mp=/1"
+},
+
+{
+name:"Radio Annapurna",
+freq:"93.4 MHz",
+city:"Pokhara",
+logo:"⛰️",
+stream:"http://live.itech.host:8964/stream"
+},
+
+{
+name:"Bhorukwa FM",
+freq:"92.8 MHz",
+city:"Rajbiraj",
+logo:"📷",
+stream:"https://live.itech.host:8379/stream"
+},
+
+{
+name:"Itahari FM",
+freq:"92.5 MHz",
+city:"Itahari",
+logo:"📷",
+stream:"https://live.itech.host:2880/stream"
+},
+
+{
+name:"Radio Madhya Paschim",
+freq:"91.4 MHz",
+city:"Ghorahi, Dang",
+logo:"📷",
+stream:"https://live.itech.host:9011/stream"
+},
+
+{
+name:"Radio Surkhet",
+freq:"90.2 MHz",
+city:"Birendranagar-6, Surkhet",
+logo:"📷",
+stream:"https://live.itech.host:3830/stream"
+}
+
+];
+
+const grid = document.getElementById('radioGrid');
+
+function renderStations(list){
+
+grid.innerHTML='';
+
+list.forEach(r=>{
+
+grid.innerHTML += `
+<div class="radio-card">
+
+<span class="live">LIVE</span>
+
+<div class="radio-logo">${r.logo}</div>
+
+<h3>${r.name}</h3>
+
+<p>${r.freq}<br>${r.city}</p>
+
+<button
+class="play-btn"
+onclick="playRadio('${r.stream}','${r.name}')">
+
+▶ Listen
+
+</button>
+
+</div>
+`;
+
+});
+
+}
+
+renderStations(radios);
+
+function playRadio(url,name){
+
+    if(url===''){
+        alert('Stream URL not available yet.');
+        return;
+    }
+
+    document.querySelector('.player-box')
+    .style.display='block';
+
+    document.getElementById('nowPlaying')
+    .innerHTML='🎧 Now Playing: '+name;
+
+    const player =
+    document.getElementById('radioPlayer');
+
+    player.src=url;
+
+    player.play();
+
+}
+
+document
+.getElementById('radioSearch')
+.addEventListener('keyup',function(){
+
+let value=this.value.toLowerCase();
+
+let filtered=radios.filter(r=>
+r.name.toLowerCase().includes(value)
+);
+
+renderStations(filtered);
+
+});
+
+function stopRadio(){
+
+    const player =
+    document.getElementById('radioPlayer');
+
+    player.pause();
+    player.currentTime = 0;
+
+    document.getElementById('nowPlaying')
+    .innerHTML = '⏹ Playback Stopped';
+
+}
+
+function closePlayer(){
+
+    const player =
+    document.getElementById('radioPlayer');
+
+    player.pause();
+    player.removeAttribute('src');
+    player.load();
+
+    document.getElementById('nowPlaying')
+    .innerHTML = 'No Station Selected';
+
+    document.querySelector('.player-box')
+    .style.display = 'none';
+
+}
+
+</script>
+
+</body>
+</html>
