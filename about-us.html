@@ -698,7 +698,16 @@ header {
         <li><a href="policy">Privacy</a></li>
     </ul>
 </nav>
-
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("navLinks");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
 <script>
 
 
