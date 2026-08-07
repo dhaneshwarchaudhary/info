@@ -1,57 +1,781 @@
-<div>
-<strong>EPF Online KYC Submission (Know Your Customer)</strong><br><br>
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EPF Online KYC Submission (Know Your Customer)</title>
+<style>
+body {
 
-<strong>Dear Valued Contributor,</strong><br><br>
+  margin: 0;
 
-Please complete this KYC process to comply with AML (Anti-Money Laundering) and CFT (Combating the Financing of Terrorism) regulations. Ensure all information provided is accurate and matches your official records.<br><br>
 
-<strong>Identity Verification Notice:</strong><br>
-Information submitted must match with official records. Ensure your name, date of birth (DOB), and ID numbers are exactly as shown on your documents.<br><br>
+}
 
-<strong>Documents and Data Required to Complete the KYC Form:</strong>
-<ul>
-  <li>Citizenship Certificate (Self)</li>
-  <li>PAN Number (Self)</li>
-  <li>Registered Mobile Number (Self)</li>
-  <li>Valid Bank Account (Self)</li>
-  <li>Spouse/Nominee Citizenship Information</li>
-  <li>Job Acceptance Letter</li>
-  <li>Recent Passport-size Photograph</li>
-  <li>Recent Nominee Photograph (if applicable)</li>
-</ul>
 
-<strong>Note:</strong>
-<ul>
-  <li>All documents must be clear, readable, and under 2 MB in size.</li>
-  <li>All submitted information must match official records.</li>
-</ul>
+
+
+
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+
+
+.sticky + .content {
+
+  padding-top: 0px;
+
+}
+
+
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  max-width: 1000px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: rgb(0,120,201);
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active {
+
+  background-color: #2196F3;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+
+  .text {font-size: 11px}
+
+}
+
+
+
+/* Float four columns side by side */
+
+.columncard {
+
+  float: left;
+
+  width: 25%;
+
+  padding: 0 10px;
+
+}
+
+
+
+/* Remove extra left and right margins, due to padding */
+
+.rowcard {margin: 0 -5px;}
+
+
+
+/* Clear floats after the columns */
+
+.rowcard:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+
+  .columncard {
+
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+
+/* Style the counter cards */
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+}
+   .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+        }
+    }
+/* Navbar */
+
+
+/* Header */
+header {
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:18px;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.nav-links li a.active {
+    background: white;
+    color: #0d6efd;
+}
+/* Responsive */
+@media(max-width:768px){
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0d6efd;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+	.hero{
+        min-height:500px;
+    }
+	.hero h1{
+    font-size:clamp(1.8rem);
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+}
+
+/* Hero */
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--dark);
+}
+.hero{
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('images/dc.jpg');
+
+    background-size:100% 100%;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --card:#ffffff;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Kalimati, Arial, sans-serif;
+    line-height:1.8;
+
+    background:#f8f9fa;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h1,h2{
+    color:#003366;
+}
+.step{
+    background:#f1f5ff;
+    padding:10px;
+    margin-bottom:10px;
+    border-left:5px solid #003366;
+}
+.warning{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:15px;
+}
+.danger{
+    background:#f8d7da;
+    border-left:5px solid #dc3545;
+    padding:15px;
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
+     crossorigin="anonymous"></script>
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
+</head>
+<body>
+<div style="background-color:white;">
+<center>
+ <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
+ <img alt="" src="images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:25px;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ </center>
+</div>
+<nav class="navbar" style="font-family:merienda;color:white;font-weight:bold;">
+    <div class="logo font-effect-shadow-multiple" >DHANESHWAR</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks" >
+        <li><a href="./">Home</a></li>
+		<li><a href="../radio">Nepali Radio</a></li>
+        <li><a href="../about-us">About</a></li>
+        <li><a href="../contact">Contact</a></li>
+        <li><a href="../policy">Privacy</a></li>
+    </ul>
+</nav>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("navLinks");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
+<div class="container">
+
+<h1>EPF Online KYC Submission (Know Your Customer)</h1>
+
+<p style="text-align:justify;">
+कर्मचारी सञ्चय कोष (EPF) ले आफ्ना योगदानकर्ताहरूको पहिचान, व्यक्तिगत विवरण,
+बैंकिङ जानकारी तथा लाभग्राही (Nominee) सम्बन्धी विवरण अद्यावधिक र प्रमाणीकरण
+गर्नका लागि Online KYC (Know Your Customer) प्रणाली सञ्चालन गरेको छ।
+यो प्रक्रिया Anti-Money Laundering (AML) तथा Combating the Financing of Terrorism
+(CFT) सम्बन्धी प्रचलित कानुनी व्यवस्था पालना गर्न आवश्यक छ।
+</p>
+
+<p style="text-align:justify;">
+KYC प्रक्रिया पूरा भएपछि योगदानकर्ताको व्यक्तिगत विवरण प्रमाणित हुन्छ,
+भविष्यमा सञ्चय कोषको रकम भुक्तानी, ऋण सेवा, अनलाइन सेवा तथा अन्य वित्तीय
+कारोबार सहज र सुरक्षित रूपमा सञ्चालन गर्न सहयोग पुग्छ।
+त्यसैले प्रत्येक योगदानकर्ताले आफ्नो विवरण सही तथा अद्यावधिक राख्नु अत्यन्त
+आवश्यक हुन्छ।
+</p>
 
 <hr>
 
-<strong>ईपीएफ अनलाइन KYC पेश गर्ने प्रणाली (Know Your Customer)</strong><br><br>
+<h2>EPF Online KYC के हो ?</h2>
 
-<strong>प्रिय मूल्यवान योगदानकर्ता,</strong><br><br>
+<p style="text-align:justify;">
+KYC (Know Your Customer) भनेको ग्राहक वा योगदानकर्ताको वास्तविक पहिचान,
+ठेगाना, बैंक खाता, नागरिकता विवरण तथा लाभग्राही सम्बन्धी जानकारी प्रमाणित
+गर्ने प्रक्रिया हो। कर्मचारी सञ्चय कोषले अनलाइन माध्यमबाट KYC अद्यावधिक गर्ने
+सुविधा उपलब्ध गराएको छ, जसबाट योगदानकर्ताले घरबाटै आफ्नो विवरण पेश तथा
+अद्यावधिक गर्न सक्दछन्।
+</p>
 
-AML (Anti-Money Laundering) र CFT (Combating the Financing of Terrorism) नियमहरू पालना गर्न कृपया यो KYC प्रक्रिया पूरा गर्नुहोस्। तपाईंले प्रदान गर्ने सबै जानकारी सही र आधिकारिक अभिलेखसँग मेल खाने सुनिश्चित गर्नुहोस् ।<br><br>
+<p style="text-align:justify;">
+यस प्रक्रियाले सञ्चय कोषको अभिलेखलाई सही, अद्यावधिक र सुरक्षित राख्न मद्दत
+पुर्‍याउँछ। साथै वित्तीय अपराध, नक्कली पहिचान तथा अवैध कारोबार नियन्त्रण गर्न
+समेत सहयोग गर्दछ।
+</p>
 
-<strong>पहिचान प्रमाणीकरण सूचना:</strong><br>
-पेश गरिएको जानकारी तपाईंको आधिकारिक कागजातसँग पूर्ण रूपमा मिल्नुपर्छ। कृपया तपाईंको नाम, जन्म मिति (DOB), र पहिचान नम्बरहरू कागजातमा उल्लेख भएअनुसार नै राख्नुहोस् ।<br><br>
+<h2>Online KYC किन आवश्यक छ ?</h2>
 
-<strong>KYC फारम पूरा गर्न आवश्यक कागजात तथा विवरणहरू:</strong>
 <ul>
-  <li>नागरिकता प्रमाणपत्र (स्वयंको)</li>
-  <li>PAN नम्बर (स्वयंको)</li>
-  <li>दर्ता गरिएको मोबाइल नम्बर (स्वयंको)</li>
-  <li>बैंक खाता (स्वयंको)</li>
-  <li>जीवनसाथी/ईच्छाएको व्यक्तिको नागरिकता विवरण</li>
-  <li>जागिर स्वीकृति पत्र</li>
-  <li>हालसालै खिचिएको पासपोर्ट साइज फोटो</li>
-  <li>ईच्छाएको व्यक्तिको फोटो </li>
+<li>योगदानकर्ताको वास्तविक पहिचान प्रमाणीकरण गर्न।</li>
+<li>AML तथा CFT सम्बन्धी कानुनी प्रावधान पालना गर्न।</li>
+<li>ऋण, सञ्चय रकम भुक्तानी तथा अन्य सेवाहरू सहज बनाउन।</li>
+<li>गलत वा दोहोरो अभिलेख रोक्न।</li>
+<li>लाभग्राही (Nominee) सम्बन्धी विवरण अद्यावधिक राख्न।</li>
+<li>डिजिटल सेवा सुरक्षित र विश्वसनीय बनाउन।</li>
 </ul>
 
-<strong>नोट:</strong>
+<h2>पहिचान प्रमाणीकरण सम्बन्धी महत्त्वपूर्ण सूचना</h2>
+
+<div class="alert alert-warning">
+<p style="text-align:justify;">
+<strong>सावधान:</strong> KYC फारममा प्रविष्ट गरिने सम्पूर्ण विवरणहरू आधिकारिक
+कागजातमा उल्लेख भएअनुसार नै हुनुपर्छ। नाम, जन्म मिति (DOB), नागरिकता नम्बर,
+PAN नम्बर, मोबाइल नम्बर तथा बैंक विवरणमा कुनै त्रुटि भएमा आवेदन अस्वीकृत हुन
+सक्छ।
+</p>
+</div>
+
 <ul>
-  <li>सबै कागजातहरू स्पष्ट, पढ्न मिल्ने र 2 MB भन्दा कम साइजको हुनुपर्छ ।</li>
-  <li>पेश गरिएको सबै विवरणहरू आधिकारिक अभिलेखसँग मेल खानु अनिवार्य छ ।</li>
+<li>नाम नागरिकतामा भएको जस्तै हुनुपर्छ।</li>
+<li>जन्म मिति (Date of Birth) सही हुनुपर्छ।</li>
+<li>नागरिकता नम्बर र जारी जिल्ला स्पष्ट हुनुपर्छ।</li>
+<li>PAN नम्बर वास्तविक र सक्रिय हुनुपर्छ।</li>
+<li>बैंक खाताको विवरण सही हुनुपर्छ।</li>
+</ul>
+
+<h2>KYC फाराम पूरा गर्न आवश्यक कागजातहरू</h2>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%">
+<tr>
+<th>क्र.सं.</th>
+<th>आवश्यक कागजात</th>
+<th>विवरण</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>नागरिकता प्रमाणपत्र</td>
+<td>योगदानकर्ताको स्पष्ट र पढ्न मिल्ने नागरिकता प्रतिलिपि</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>PAN नम्बर</td>
+<td>व्यक्तिगत स्थायी लेखा नम्बर (PAN)</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>मोबाइल नम्बर</td>
+<td>आफ्नो नाममा दर्ता भएको सक्रिय मोबाइल नम्बर</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>बैंक खाता</td>
+<td>योगदानकर्ताको नाममा रहेको वैध बैंक खाता</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>जीवनसाथी/Nominee नागरिकता</td>
+<td>लाभग्राही वा इच्छाएको व्यक्तिको नागरिकता विवरण</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Job Acceptance Letter</td>
+<td>नियुक्ति वा सेवा प्रवेश प्रमाणित गर्ने पत्र</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>पासपोर्ट साइज फोटो</td>
+<td>हालसालै खिचिएको स्पष्ट रंगीन फोटो</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Nominee Photo</td>
+<td>इच्छाएको व्यक्तिको हालसालैको फोटो</td>
+</tr>
+</table>
+
+<h2>EPF Online KYC भर्ने प्रक्रिया</h2>
+
+<h3>चरण १: EPF Portal मा Login गर्नुहोस्</h3>
+
+<p>
+कर्मचारी सञ्चय कोषको आधिकारिक पोर्टलमा गई आफ्नो User ID र Password प्रयोग गरी
+Login गर्नुहोस्।
+</p>
+
+<h3>चरण २: KYC Menu खोल्नुहोस्</h3>
+
+<p>
+Dashboard मा रहेको "Online KYC" वा "KYC Update" विकल्पमा क्लिक गर्नुहोस्।
+</p>
+
+<h3>चरण ३: व्यक्तिगत विवरण भर्नुहोस्</h3>
+
+<ul>
+<li>पूरा नाम</li>
+<li>जन्म मिति</li>
+<li>लिङ्ग</li>
+<li>वैवाहिक स्थिति</li>
+<li>ठेगाना</li>
+<li>मोबाइल नम्बर</li>
+<li>ईमेल ठेगाना</li>
+</ul>
+
+<h3>चरण ४: नागरिकता तथा PAN विवरण प्रविष्ट गर्नुहोस्</h3>
+
+<p>
+नागरिकता नम्बर, जारी जिल्ला, जारी मिति तथा PAN नम्बर सावधानीपूर्वक प्रविष्ट
+गर्नुहोस्।
+</p>
+
+<h3>चरण ५: बैंक विवरण भर्नुहोस्</h3>
+
+<ul>
+<li>बैंकको नाम</li>
+<li>शाखा</li>
+<li>खाता नम्बर</li>
+<li>खातावालाको नाम</li>
+</ul>
+
+<h3>चरण ६: Nominee विवरण भर्नुहोस्</h3>
+
+<p>
+लाभग्राही (Nominee) को नाम, सम्बन्ध, नागरिकता नम्बर तथा फोटो अपलोड गर्नुहोस्।
+</p>
+
+<h3>चरण ७: आवश्यक कागजात अपलोड गर्नुहोस्</h3>
+
+<p>
+नागरिकता, फोटो, नियुक्ति पत्र तथा अन्य आवश्यक कागजातहरू PDF/JPG/JPEG
+फर्म्याटमा अपलोड गर्नुहोस्।
+</p>
+
+<h3>चरण ८: Verify तथा Submit गर्नुहोस्</h3>
+
+<p>
+सबै विवरण पुनः जाँच गरी Submit बटन क्लिक गर्नुहोस्। सफलतापूर्वक पेश भएपछि
+Submission Confirmation प्राप्त हुनेछ।
+</p>
+
+<h2>कागजात अपलोड गर्दा ध्यान दिनुपर्ने कुराहरू</h2>
+
+<div class="alert alert-info">
+<ul>
+<li>प्रत्येक फाइल 2 MB भन्दा कम साइजको हुनुपर्छ।</li>
+<li>फोटो तथा कागजात स्पष्ट र पढ्न मिल्ने हुनुपर्छ।</li>
+<li>धमिलो, काटिएको वा अस्पष्ट कागजात स्वीकार नहुन सक्छ।</li>
+<li>JPG, JPEG, PNG वा PDF फाइल प्रयोग गर्नु उपयुक्त हुन्छ।</li>
+<li>अपलोड गरिएको फोटो हालसालैको हुनुपर्छ।</li>
 </ul>
 </div>
+
+<h2>गलत विवरण पेश गरे के हुन्छ ?</h2>
+
+<ul>
+<li>KYC आवेदन अस्वीकृत हुन सक्छ।</li>
+<li>पुनः संशोधन गरी पेश गर्नुपर्ने हुन सक्छ।</li>
+<li>ऋण तथा रकम भुक्तानी प्रक्रिया ढिलो हुन सक्छ।</li>
+<li>खाता प्रमाणीकरणमा समस्या आउन सक्छ।</li>
+<li>भविष्यमा सेवा प्राप्त गर्दा कठिनाइ हुन सक्छ।</li>
+</ul>
+
+<h2>निष्कर्ष</h2>
+
+<p style="text-align:justify;">
+EPF Online KYC प्रणाली योगदानकर्ताको पहिचान, बैंक विवरण तथा लाभग्राही सम्बन्धी
+जानकारी अद्यावधिक र प्रमाणीकरण गर्ने महत्वपूर्ण प्रक्रिया हो। सही विवरण तथा
+आवश्यक कागजातहरू समयमै पेश गर्दा कर्मचारी सञ्चय कोषका सम्पूर्ण सेवाहरू सुरक्षित,
+छिटो र प्रभावकारी रूपमा प्राप्त गर्न सकिन्छ। त्यसैले प्रत्येक योगदानकर्ताले
+आफ्नो KYC विवरण नियमित रूपमा अद्यावधिक राख्नु आवश्यक छ।
+</p>
+
+</div>
+
+</body>
+</html>
