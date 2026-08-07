@@ -1,7 +1,682 @@
-<p style="text-align: justify;">
-  कर्मचारी बचत वृद्धि निवृत्ति योजना कर्मचारीहरूको दीर्घकालीन आर्थिक सुरक्षा सुनिश्चित गर्ने उद्देश्यले सुरु गरिएको महत्वपूर्ण व्यवस्था हो। यस अन्तर्गत कर्मचारीको मासिक तलबबाट निश्चित रकम कटौती गरी व्यक्तिगत खातामा जम्मा गरिन्छ। त्यसरी संकलित रकम सम्बन्धित कार्यालय वा संस्थाले तोकिएका सङ्कलन केन्द्रहरू—जस्तै वाणिज्य बैंकका शाखा तथा नेपाल राष्ट्र बैंक—मार्फत नियमित रूपमा जमा गर्ने व्यवस्था हुन्छ।
-यो योजना स्वेच्छिक सहभागितामा आधारित छ र “Defined Contribution” प्रणाली अनुसार सञ्चालन हुन्छ। यसमा जम्मा हुने कोष पूर्ण रूपमा सुरक्षित (Fully Funded) रहन्छ र प्रत्येक सहभागीको छुट्टै खाता हुने व्यवस्था गरिएको हुन्छ। परम्परागत “pay-as-you-go” सरकारी पेन्सन प्रणालीलाई क्रमशः प्रतिस्थापन गर्दै आधुनिक पेन्सन व्यवस्थामा सुधार ल्याउने उद्देश्य यस योजनाले बोकेको छ।
-यसले निवृत्ति लाभहरूलाई अझ व्यापक बनाउने तथा बढी व्यक्तिहरूलाई समेट्ने अपेक्षा गरिएको छ।
-साथै, यस योजनामा सहभागी हुने व्यक्तिहरूले करसम्बन्धी सहुलियत पनि पाउँछन्। उनीहरूले गरेको योगदान वा आफ्नो कुल पारिश्रमिकको ३३ प्रतिशतसम्म (जुन कम हुन्छ) कर छुट प्राप्त गर्न सक्ने व्यवस्था गरिएको छ।
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>कर्मचारी बचत वृद्धि स्वीकृत अवकाश कोष (नागरिक लगानी कोष)</title>
+<style>
+body {
 
+  margin: 0;
+
+
+}
+
+
+
+
+
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+
+
+.sticky + .content {
+
+  padding-top: 0px;
+
+}
+
+
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  max-width: 1000px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: rgb(0,120,201);
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active {
+
+  background-color: #2196F3;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+
+  .text {font-size: 11px}
+
+}
+
+
+
+/* Float four columns side by side */
+
+.columncard {
+
+  float: left;
+
+  width: 25%;
+
+  padding: 0 10px;
+
+}
+
+
+
+/* Remove extra left and right margins, due to padding */
+
+.rowcard {margin: 0 -5px;}
+
+
+
+/* Clear floats after the columns */
+
+.rowcard:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+
+  .columncard {
+
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+
+/* Style the counter cards */
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+}
+   .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+        }
+    }
+/* Navbar */
+
+
+/* Header */
+header {
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:18px;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.nav-links li a.active {
+    background: white;
+    color: #0d6efd;
+}
+/* Responsive */
+@media(max-width:768px){
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0d6efd;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+	.hero{
+        min-height:500px;
+    }
+	.hero h1{
+    font-size:clamp(1.8rem);
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+}
+
+/* Hero */
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--dark);
+}
+.hero{
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('images/dc.jpg');
+
+    background-size:100% 100%;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --card:#ffffff;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Kalimati, Arial, sans-serif;
+    line-height:1.8;
+
+    background:#f8f9fa;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h1,h2{
+    color:#003366;
+}
+.step{
+    background:#f1f5ff;
+    padding:10px;
+    margin-bottom:10px;
+    border-left:5px solid #003366;
+}
+.warning{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:15px;
+}
+.danger{
+    background:#f8d7da;
+    border-left:5px solid #dc3545;
+    padding:15px;
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
+     crossorigin="anonymous"></script>
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
+</head>
+<body>
+<div style="background-color:white;">
+<center>
+ <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
+ <img alt="" src="images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:25px;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ </center>
+</div>
+<nav class="navbar" style="font-family:merienda;color:white;font-weight:bold;">
+    <div class="logo font-effect-shadow-multiple" >DHANESHWAR</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks" >
+        <li><a href="./">Home</a></li>
+		<li><a href="radio">Nepali Radio</a></li>
+        <li><a href="about-us">About</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="policy">Privacy</a></li>
+    </ul>
+</nav>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("navLinks");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
+<div class="container">
+
+<h1>कर्मचारी बचत वृद्धि स्वीकृत अवकाश कोष (नागरिक लगानी कोष)</h1>
+
+<p style="text-align:justify;">
+कर्मचारी बचत वृद्धि स्वीकृत अवकाश कोष (Employees Saving Growth Retirement Fund)
+नागरिक लगानी कोष (CIT) द्वारा सञ्चालन गरिएको एक महत्वपूर्ण अवकाश बचत योजना हो।
+यस योजनाको मुख्य उद्देश्य कर्मचारीहरूलाई नियमित बचत गर्न प्रोत्साहन गर्नु,
+अवकाशपछिको आर्थिक सुरक्षा सुनिश्चित गर्नु तथा दीर्घकालीन वित्तीय स्थायित्व
+प्रदान गर्नु हो। यो योजना सरकारी, गैरसरकारी, सार्वजनिक संस्था, निजी कम्पनी तथा
+अन्य संगठित संस्थामा कार्यरत कर्मचारीहरूका लागि उपलब्ध छ। 
 </p>
+
+<p style="text-align:justify;">
+यस योजना अन्तर्गत कर्मचारीको मासिक तलबबाट निश्चित रकम कट्टी गरी व्यक्तिगत खातामा
+जम्मा गरिन्छ। सम्बन्धित कार्यालय वा संस्थाले उक्त रकम नागरिक लगानी कोषले
+तोकिएका सङ्कलन केन्द्रहरू, जस्तै वाणिज्य बैंकका शाखा तथा नेपाल राष्ट्र बैंक
+मार्फत नियमित रूपमा जम्मा गर्ने व्यवस्था हुन्छ। प्रत्येक सहभागीको नाममा छुट्टै
+व्यक्तिगत खाता सञ्चालन गरिन्छ र जम्मा भएको रकममा नागरिक लगानी कोषले तोकेको
+प्रतिफल (ब्याज) प्रदान गर्दछ। 
+</p>
+
+<h2>योजनाको परिचय</h2>
+
+<p style="text-align:justify;">
+कर्मचारी बचत वृद्धि स्वीकृत अवकाश कोष पूर्ण रूपमा स्वेच्छिक (Voluntary) योजना हो।
+यो योजना “Defined Contribution”, “Fully Funded” तथा “Individual Account Based”
+प्रणालीमा आधारित छ। अर्थात् कर्मचारीले जम्मा गरेको रकम, त्यसमा प्राप्त हुने
+प्रतिफल तथा अन्य सुविधाहरू सम्बन्धित कर्मचारीको व्यक्तिगत खातासँग प्रत्यक्ष
+सम्बन्धित हुन्छन्। :contentReference[oaicite:2]{index=2}
+</p>
+
+<h2>योजनाका प्रमुख उद्देश्यहरू</h2>
+
+<ul>
+<li>कर्मचारीमा नियमित बचत गर्ने बानीको विकास गर्नु।</li>
+<li>अवकाशपछिको आर्थिक सुरक्षा सुनिश्चित गर्नु।</li>
+<li>पेन्सन तथा अवकाश व्यवस्थापन प्रणालीलाई सुदृढ बनाउनु।</li>
+<li>दीर्घकालीन राष्ट्रिय पूँजी निर्माणमा योगदान पुर्‍याउनु।</li>
+<li>कर्मचारीलाई कर बचत (Tax Benefit) सुविधा उपलब्ध गराउनु।</li>
+</ul>
+
+<h2>मुख्य विशेषताहरू</h2>
+
+<ul>
+<li>पूर्ण रूपमा स्वेच्छिक सहभागितामा आधारित योजना।</li>
+<li>प्रत्येक सहभागीको व्यक्तिगत खाता सञ्चालन हुने व्यवस्था।</li>
+<li>जम्मा रकममा वार्षिक प्रतिफल (ब्याज) प्राप्त हुने।</li>
+<li>आयकर ऐन अनुसार निश्चित सीमासम्म कर छुट सुविधा उपलब्ध हुने।</li>
+<li>अवकाश, राजीनामा वा सेवा समाप्तिपछि रकम प्राप्त गर्न सकिने।</li>
+<li>नियम अनुसार बचतको आधारमा सापटी (Loan) सुविधा उपलब्ध हुने।</li>
+</ul>
+
+<p>
+नागरिक लगानी कोषको व्यवस्था अनुसार सहभागीले अवकाश योजनामा गरेको योगदान वा कुल
+पारिश्रमिकको तोकिएको सीमासम्म आयकर छुट सुविधा प्राप्त गर्न सक्छन्। 
+</p>
+
+<h2>को–को सहभागी हुन सक्छन् ?</h2>
+
+<ul>
+<li>सरकारी कार्यालयका कर्मचारी</li>
+<li>सार्वजनिक संस्थानका कर्मचारी</li>
+<li>बैंक तथा वित्तीय संस्थाका कर्मचारी</li>
+<li>निजी कम्पनीका कर्मचारी</li>
+<li>गैरसरकारी संस्था (NGO/INGO) का कर्मचारी</li>
+<li>अन्य संगठित संस्थाका कर्मचारी</li>
+</ul>
+
+<h2>रकम जम्मा गर्ने प्रक्रिया</h2>
+
+<ol>
+<li>कर्मचारीले मासिक बचत रकम निर्धारण गर्दछ।</li>
+<li>कार्यालयले तलबबाट सो रकम कट्टी गर्दछ।</li>
+<li>कट्टी गरिएको रकम नागरिक लगानी कोषको खातामा जम्मा गरिन्छ।</li>
+<li>प्रत्येक कर्मचारीको व्यक्तिगत खातामा रकम अद्यावधिक हुन्छ।</li>
+<li>जम्मा रकममा वार्षिक रूपमा प्रतिफल गणना गरिन्छ।</li>
+</ol>
+
+<h2>योजनाका फाइदाहरू</h2>
+
+<ul>
+<li>अवकाशपछि एकमुष्ट रकम प्राप्त हुने।</li>
+<li>दीर्घकालीन बचतको सुरक्षित माध्यम।</li>
+<li>आयकर बचतको सुविधा।</li>
+<li>सापटी सुविधा प्राप्त गर्न सकिने।</li>
+<li>आर्थिक अनुशासन तथा भविष्यको वित्तीय योजना बनाउन सहयोग पुग्ने।</li>
+<li>मृत्यु वा विशेष अवस्थाका लागि तोकिएका अतिरिक्त सुविधाहरू उपलब्ध हुने।</li>
+</ul>
+
+<h2>रकम फिर्ता प्राप्त गर्ने अवस्था</h2>
+
+<p>
+सहभागीले अवकाश प्राप्त गर्दा, राजीनामा दिँदा, सेवा समाप्त हुँदा वा नागरिक
+लगानी कोषको प्रचलित कार्यविधिमा उल्लेखित विशेष अवस्थामा आफ्नो खातामा जम्मा भएको
+मूल रकम तथा प्राप्त प्रतिफल सहितको रकम फिर्ता प्राप्त गर्न सक्दछन्। आवश्यक
+कागजात पेश गरी अन्तिम भुक्तानी प्रक्रिया पूरा गर्नुपर्छ। 
+</p>
+
+<h2>महत्त्वपूर्ण जानकारी</h2>
+
+<div class="note">
+<ul>
+<li>यो योजना पूर्ण रूपमा स्वेच्छिक सहभागितामा आधारित छ।</li>
+<li>प्रत्येक सहभागीको छुट्टै व्यक्तिगत खाता सञ्चालन हुन्छ।</li>
+<li>नागरिक लगानी कोषले समय–समयमा ब्याजदर तथा कार्यविधि अद्यावधिक गर्न सक्छ।</li>
+<li>कर छुट तथा अन्य सुविधा प्रचलित आयकर ऐन र नियमावली अनुसार लागू हुन्छन्।</li>
+<li>सहभागीले आफ्नो खाताको विवरण नागरिक लगानी कोषको e-Service मार्फत हेर्न सक्छन्।</li>
+</ul>
+</div>
+
+<h2>निष्कर्ष</h2>
+
+<p style="text-align:justify;">
+कर्मचारी बचत वृद्धि स्वीकृत अवकाश कोष कर्मचारीहरूको दीर्घकालीन आर्थिक सुरक्षा,
+नियमित बचत तथा अवकाशपछिको जीवनलाई आर्थिक रूपमा सुदृढ बनाउन तयार गरिएको एक
+विश्वसनीय योजना हो। व्यक्तिगत खातामा आधारित यस योजनाले बचत, प्रतिफल, कर छुट
+तथा सापटी सुविधा प्रदान गरी कर्मचारीहरूको भविष्य सुरक्षित बनाउन महत्वपूर्ण
+भूमिका निर्वाह गरेको छ। 
+</p>
+
+</div>
+</div>
+
+</body>
+</html>
