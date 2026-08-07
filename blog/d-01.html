@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D-01 Return Form (स्वयं कर निर्धारण आय विवरण)</title>
+<style>
+body {
+
+  margin: 0;
+
+
+}
+
+
+
+
+
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+
+
+.sticky + .content {
+
+  padding-top: 0px;
+
+}
+
+
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  max-width: 1000px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: rgb(0,120,201);
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active {
+
+  background-color: #2196F3;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+
+  .text {font-size: 11px}
+
+}
+
+
+
+/* Float four columns side by side */
+
+.columncard {
+
+  float: left;
+
+  width: 25%;
+
+  padding: 0 10px;
+
+}
+
+
+
+/* Remove extra left and right margins, due to padding */
+
+.rowcard {margin: 0 -5px;}
+
+
+
+/* Clear floats after the columns */
+
+.rowcard:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+
+  .columncard {
+
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+
+/* Style the counter cards */
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+}
+   .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+        }
+    }
+/* Navbar */
+
+
+/* Header */
+header {
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:18px;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.nav-links li a.active {
+    background: white;
+    color: #0d6efd;
+}
+/* Responsive */
+@media(max-width:768px){
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0d6efd;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+	.hero{
+        min-height:500px;
+    }
+	.hero h1{
+    font-size:clamp(1.8rem);
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+}
+
+/* Hero */
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--dark);
+}
+.hero{
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('images/dc.jpg');
+
+    background-size:100% 100%;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --card:#ffffff;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Kalimati, Arial, sans-serif;
+    line-height:1.8;
+
+    background:#f8f9fa;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h1,h2{
+    color:#003366;
+}
+.step{
+    background:#f1f5ff;
+    padding:10px;
+    margin-bottom:10px;
+    border-left:5px solid #003366;
+}
+.warning{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:15px;
+}
+.danger{
+    background:#f8d7da;
+    border-left:5px solid #dc3545;
+    padding:15px;
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
+     crossorigin="anonymous"></script>
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
+</head>
+<body>
+<div style="background-color:white;">
+<center>
+ <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
+ <img alt="" src="images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:25px;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ </center>
+</div>
+<nav class="navbar" style="font-family:merienda;color:white;font-weight:bold;">
+    <div class="logo font-effect-shadow-multiple" >DHANESHWAR</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks" >
+        <li><a href="./">Home</a></li>
+		<li><a href="radio">Nepali Radio</a></li>
+        <li><a href="about-us">About</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="policy">Privacy</a></li>
+    </ul>
+</nav>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("navLinks");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
+<div class="container">
+
+<h1>D-01 Return Form (स्वयं कर निर्धारण आय विवरण)</h1>
+
+<h2>१. D-01 Return Form के हो ?</h2>
+
+<p style="text-align:justify;">
+D-01 Return Form भनेको आन्तरिक राजस्व विभाग (IRD) द्वारा साना करदाताहरूका लागि
+निर्धारण गरिएको <strong>स्वयं कर निर्धारण आय विवरण (Self Assessment Return)</strong>
+फाराम हो। वार्षिक कारोबार तोकिएको सीमाभित्र रहेका तथा अनुमानित कर प्रणाली
+अन्तर्गत पर्ने व्यवसायी वा साना करदाताले आफ्नो आम्दानी, कारोबार तथा कर दायित्व
+स्वयं घोषणा गर्न यो फाराम प्रयोग गर्छन्। D-01 फाराम अनलाइन Taxpayer Portal मार्फत
+भर्न र पेश गर्न सकिन्छ। 
+</p>
+
+<div class="info">
+<strong>D-01 फाराम सामान्यतया निम्न करदाताले भर्ने गर्दछन्:</strong>
+<ul>
+<li>साना व्यवसाय सञ्चालन गर्ने प्राकृतिक व्यक्ति</li>
+<li>पूर्वानुमानित (Presumptive) कर प्रणाली अन्तर्गत पर्ने करदाता</li>
+<li>VAT मा दर्ता नभएका साना व्यवसायी</li>
+<li>IRD ले D-01 पेश गर्न योग्य ठहर गरेका करदाता</li>
+</ul>
+</div>
+
+<h2>२. D-01 Return Form कसरी भर्ने ?</h2>
+
+<div class="step">
+<strong>चरण १:</strong> IRD को Taxpayer Portal मा Login गर्नुहोस्।
+</div>
+
+<div class="step">
+<strong>चरण २:</strong> Income Tax Menu विस्तार (Expand) गर्नुहोस्।
+</div>
+
+<div class="step">
+<strong>चरण ३:</strong> "D-01 Return Entry" मा क्लिक गर्नुहोस्।
+</div>
+
+<div class="step">
+<strong>चरण ४:</strong> PAN Number, Mobile Number र Email प्रविष्ट गरी Register गर्नुहोस्।
+</div>
+
+<div class="step">
+<strong>चरण ५:</strong> प्राप्त Submission Number सुरक्षित राख्नुहोस्।
+</div>
+
+<div class="step">
+<strong>चरण ६:</strong> आर्थिक वर्ष (Fiscal Year) चयन गर्नुहोस्।
+</div>
+
+<div class="step">
+<strong>चरण ७:</strong> वार्षिक कारोबार (Turnover), आम्दानी तथा करसम्बन्धी विवरण प्रविष्ट गर्नुहोस्।
+</div>
+
+<div class="step">
+<strong>चरण ८:</strong> प्रणालीले गणना गरेको कर रकम जाँच गर्नुहोस्।
+</div>
+
+<div class="step">
+<strong>चरण ९:</strong> Verify गरी Submit गर्नुहोस्।
+</div>
+
+<div class="step">
+<strong>चरण १०:</strong> आवश्यक भए Voucher प्रिन्ट गरी कर भुक्तानी गर्नुहोस् वा उपलब्ध डिजिटल माध्यमबाट भुक्तानी गर्नुहोस्।
+</div>
+
+<p>
+IRD को D-01 SOP अनुसार करदाताले Taxpayer Portal मा गई D-01 Return Entry प्रयोग गरी
+Submission Number प्राप्त गर्ने, विवरण प्रविष्ट गर्ने र Return Submit गर्ने प्रक्रिया पूरा गर्नुपर्छ। 
+</p>
+
+<h2>३. D-01 भर्दा आवश्यक विवरणहरू</h2>
+
+<ul>
+<li>PAN Number</li>
+<li>Mobile Number</li>
+<li>Email Address</li>
+<li>आर्थिक वर्ष (Fiscal Year)</li>
+<li>वार्षिक कारोबार रकम (Turnover)</li>
+<li>आम्दानी तथा कर विवरण</li>
+</ul>
+
+<h2>४. D-01 Return नबुझाए के हुन्छ ?</h2>
+
+<div class="danger">
+<ul>
+<li>आय विवरण नबुझाएको मानिन सक्छ।</li>
+<li>आयकर ऐन अनुसार जरिवाना तथा थप शुल्क लाग्न सक्छ।</li>
+<li>कर चुक्ता प्रमाणपत्र (Tax Clearance Certificate) प्राप्त गर्न कठिनाइ हुन सक्छ।</li>
+<li>बाँकी करमा ब्याज तथा अतिरिक्त दायित्व सिर्जना हुन सक्छ।</li>
+<li>कर कार्यालयबाट स्पष्टीकरण वा परीक्षण (Audit) हुन सक्छ।</li>
+</ul>
+</div>
+
+<p>
+करदाताले तोकिएको समयभित्र D-01 आय विवरण पेश नगरेमा कर प्रशासन सम्बन्धी कानुनी
+कारबाही, जरिवाना वा कर चुक्ता प्रमाणपत्र प्राप्त गर्न समस्या आउन सक्ने व्यवस्था रहेको छ। 
+</p>
+
+<h2>५. महत्त्वपूर्ण सुझाव</h2>
+
+<div class="warning">
+<ul>
+<li>Submission Number सुरक्षित राख्नुहोस्।</li>
+<li>Submit गर्नु अघि सबै विवरण पुनः जाँच गर्नुहोस्।</li>
+<li>कर रकम सही गणना भएको सुनिश्चित गर्नुहोस्।</li>
+<li>Return पेश गरेपछि PDF वा Print प्रतिलिपि सुरक्षित राख्नुहोस्।</li>
+<li>अन्तिम मिति कुर्नु भन्दा अगाडि नै विवरण पेश गर्नुहोस्।</li>
+</ul>
+</div>
+
+<h2>६. निष्कर्ष</h2>
+
+<p style="text-align:justify;">
+D-01 Return Form साना करदाताले आफ्नो कारोबार र कर दायित्व स्वयं घोषणा गर्न प्रयोग
+गर्ने महत्वपूर्ण आयकर फाराम हो। समयमै तथा सही विवरणसहित D-01 पेश गर्दा कर
+अनुपालन सुनिश्चित हुन्छ, कर चुक्ता प्रमाणपत्र प्राप्त गर्न सहज हुन्छ र जरिवाना,
+ब्याज तथा अन्य कानुनी समस्याबाट बच्न सकिन्छ।
+</p>
+
+
+<h2>७. उपयोगी लिंक</h2>
+
+<p>
+E-Permit Renew Portal:
+<br>
+<a href="http://ereturns.ird.gov.np:8289/incometax/d01/d01ReturnEntry" target="_blank">
+D-01 फारम कसरी 
+</a>
+</p>
+
+<p>
+IRD Official Website:
+<br>
+<a href="https://www.ird.gov.np" target="_blank">
+https://www.ird.gov.np
+</a>
+</p>
+
+</div>
+
+</body>
+</html>
