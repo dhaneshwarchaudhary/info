@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microsoft Word मा Mail Merge प्रयोग गर्ने तरिका</title>
+<style>
+body {
+
+  margin: 0;
+
+
+}
+
+
+
+
+
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+
+
+.sticky + .content {
+
+  padding-top: 0px;
+
+}
+
+
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  max-width: 1000px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: rgb(0,120,201);
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active {
+
+  background-color: #2196F3;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+
+  .text {font-size: 11px}
+
+}
+
+
+
+/* Float four columns side by side */
+
+.columncard {
+
+  float: left;
+
+  width: 25%;
+
+  padding: 0 10px;
+
+}
+
+
+
+/* Remove extra left and right margins, due to padding */
+
+.rowcard {margin: 0 -5px;}
+
+
+
+/* Clear floats after the columns */
+
+.rowcard:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+
+  .columncard {
+
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+
+/* Style the counter cards */
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+}
+   .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+        }
+    }
+/* Navbar */
+
+
+/* Header */
+header {
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:18px;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.nav-links li a.active {
+    background: white;
+    color: #0d6efd;
+}
+/* Responsive */
+@media(max-width:768px){
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0d6efd;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+	.hero{
+        min-height:500px;
+    }
+	.hero h1{
+    font-size:clamp(1.8rem);
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+}
+
+/* Hero */
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--dark);
+}
+.hero{
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('images/dc.jpg');
+
+    background-size:100% 100%;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --card:#ffffff;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Kalimati, Arial, sans-serif;
+    line-height:1.8;
+
+    background:#f8f9fa;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h1,h2{
+    color:#003366;
+}
+.step{
+    background:#f1f5ff;
+    padding:10px;
+    margin-bottom:10px;
+    border-left:5px solid #003366;
+}
+.warning{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:15px;
+}
+.danger{
+    background:#f8d7da;
+    border-left:5px solid #dc3545;
+    padding:15px;
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
+     crossorigin="anonymous"></script>
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
+</head>
+<body>
+<div style="background-color:white;">
+<center>
+ <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
+ <img alt="" src="../images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:25px;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ </center>
+</div>
+<nav class="navbar" style="font-family:merienda;color:white;font-weight:bold;">
+    <div class="logo font-effect-shadow-multiple" >DHANESHWAR</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks" >
+        <li><a href="../">Home</a></li>
+		<li><a href="../radio">Nepali Radio</a></li>
+        <li><a href="../about-us">About</a></li>
+        <li><a href="../contact">Contact</a></li>
+        <li><a href="../policy">Privacy</a></li>
+    </ul>
+</nav>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("navLinks");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
+<div class="container">
+
+<h1>Microsoft Word मा Mail Merge प्रयोग गर्ने तरिका</h1>
+
+<p style="text-align:justify;">
+Mail Merge भनेको Microsoft Word को एउटा विशेष सुविधा हो जसको प्रयोग गरेर एउटै
+ढाँचाको पत्र, प्रमाणपत्र, नियुक्ति पत्र, तलब पर्चा, निमन्त्रणा पत्र, परिचयपत्र
+आदि धेरै व्यक्तिका लागि स्वचालित रूपमा तयार गर्न सकिन्छ।
+यसमा Word फाइल (Main Document) र Excel फाइल (Data Source) लाई आपसमा जोडेर
+प्रत्येक व्यक्तिको नाम, ठेगाना, पद, तलब, फोन नम्बर आदि विवरण स्वतः राख्न सकिन्छ।
+</p>
+
+<h2>Mail Merge के हो ?</h2>
+
+<p style="text-align:justify;">
+Mail Merge भनेको एउटै Word Document लाई धेरै व्यक्तिका फरक–फरक विवरणसँग
+संयोजन (Merge) गरी व्यक्तिगत दस्तावेज तयार गर्ने प्रक्रिया हो।
+उदाहरणका लागि, ५०० जना कर्मचारीलाई नियुक्ति पत्र पठाउनुपर्दा
+प्रत्येक व्यक्तिको नाम छुट्टाछुट्टै टाइप गर्नुको सट्टा एक पटक मात्र
+Template तयार गरी Excel मा रहेको विवरण प्रयोग गरेर सबै पत्र
+स्वचालित रूपमा तयार गर्न सकिन्छ।
+</p>
+
+<h2>Mail Merge का मुख्य प्रयोगहरू</h2>
+
+<ul>
+<li>नियुक्ति पत्र (Appointment Letter)</li>
+<li>प्रमाणपत्र (Certificate)</li>
+<li>तलब पर्चा (Salary Slip)</li>
+<li>विद्यार्थीको नतिजा पत्र</li>
+<li>निमन्त्रणा पत्र (Invitation Letter)</li>
+<li>सिफारिस पत्र</li>
+<li>कर्मचारी परिचयपत्र (ID Card)</li>
+<li>कर सूचना तथा सरकारी पत्राचार</li>
+</ul>
+
+<h2>Mail Merge का लागि आवश्यक सामग्री</h2>
+
+<ul>
+<li>Microsoft Word</li>
+<li>Microsoft Excel</li>
+<li>डेटा भएको Excel Sheet</li>
+<li>पत्र वा प्रमाणपत्रको Template</li>
+</ul>
+
+<h2>Step 1: Excel Data तयार गर्नुहोस्</h2>
+
+<p>
+सबै विवरण Excel मा Column अनुसार राख्नुहोस्।
+</p>
+
+<table border="1" cellpadding="8" cellspacing="0">
+<tr>
+<th>SN</th>
+<th>Name</th>
+<th>Post</th>
+<th>Office</th>
+<th>Address</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Ram Kumar</td>
+<td>Accountant</td>
+<td>ABC Office</td>
+<td>Kathmandu</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Sita Devi</td>
+<td>Officer</td>
+<td>ABC Office</td>
+<td>Lalitpur</td>
+</tr>
+</table>
+
+<p>
+Excel फाइल Save गरेर बन्द गर्नुहोस्।
+</p>
+
+<h2>Step 2: Word Template तयार गर्नुहोस्</h2>
+
+<p>
+Microsoft Word खोल्नुहोस् र आवश्यक पत्रको ढाँचा तयार गर्नुहोस्।
+</p>
+
+<pre>
+मिति: __________
+
+श्री/श्रीमती [Name]
+[Address]
+
+विषय: नियुक्ति सम्बन्धमा
+
+तपाईंलाई [Post] पदमा नियुक्त गरिएको जानकारी गराइन्छ।
+
+धन्यवाद।
+</pre>
+
+<h2>Step 3: Mail Merge सुरु गर्नुहोस्</h2>
+
+<ol>
+<li>Word मा <strong>Mailings</strong> Tab खोल्नुहोस्।</li>
+<li><strong>Start Mail Merge</strong> मा क्लिक गर्नुहोस्।</li>
+<li><strong>Letters</strong> चयन गर्नुहोस्।</li>
+</ol>
+
+<h2>Step 4: Excel File जोड्नुहोस्</h2>
+
+<ol>
+<li><strong>Select Recipients</strong> मा क्लिक गर्नुहोस्।</li>
+<li><strong>Use Existing List</strong> चयन गर्नुहोस्।</li>
+<li>Excel File छान्नुहोस्।</li>
+<li>Sheet चयन गरी <strong>OK</strong> क्लिक गर्नुहोस्।</li>
+</ol>
+
+<h2>Step 5: Merge Field राख्नुहोस्</h2>
+
+<p>
+कर्सर आवश्यक स्थानमा राखी
+<strong>Insert Merge Field</strong> प्रयोग गर्नुहोस्।
+</p>
+
+<p>उदाहरण:</p>
+
+<pre>
+श्री/श्रीमती «Name»
+«Address»
+
+तपाईंलाई «Post» पदमा नियुक्त गरिएको छ।
+</pre>
+
+<h2>Step 6: Preview Results हेर्नुहोस्</h2>
+
+<ol>
+<li><strong>Preview Results</strong> मा क्लिक गर्नुहोस्।</li>
+<li>प्रत्येक व्यक्तिको विवरण सही आएको छ कि छैन जाँच गर्नुहोस्।</li>
+<li>Next Record प्रयोग गरी अन्य विवरण हेर्नुहोस्।</li>
+</ol>
+
+<h2>Step 7: Merge सम्पन्न गर्नुहोस्</h2>
+
+<ol>
+<li><strong>Finish & Merge</strong> मा क्लिक गर्नुहोस्।</li>
+<li><strong>Edit Individual Documents</strong> चयन गर्नुहोस्।</li>
+<li>All Records चयन गरी OK क्लिक गर्नुहोस्।</li>
+</ol>
+
+<p>
+अब सबै व्यक्तिका छुट्टाछुट्टै पत्रहरू नयाँ Word Document मा तयार हुन्छन्।
+</p>
+
+<h2>Certificate Mail Merge उदाहरण</h2>
+
+<pre>
+प्रमाणपत्र
+
+यो प्रमाणित गरिन्छ कि
+
+«Name»
+
+ले «Course» तालिम सफलतापूर्वक सम्पन्न गर्नुभएको छ।
+
+मिति: «Date»
+</pre>
+
+<h2>ID Card Mail Merge उदाहरण</h2>
+
+<pre>
+नाम: «Name»
+पद: «Post»
+कार्यालय: «Office»
+फोन: «Phone»
+</pre>
+
+<h2>Mail Merge का फाइदाहरू</h2>
+
+<ul>
+<li>समय बचत हुन्छ।</li>
+<li>हजारौं पत्र एकै पटक तयार गर्न सकिन्छ।</li>
+<li>मानवीय त्रुटि कम हुन्छ।</li>
+<li>व्यक्तिगत विवरण स्वतः भरिन्छ।</li>
+<li>सरकारी तथा कार्यालय कार्यमा अत्यन्त उपयोगी हुन्छ।</li>
+<li>Certificate, Salary Slip, ID Card आदि छिटो तयार गर्न सकिन्छ।</li>
+</ul>
+
+<h2>सामान्य समस्याहरू</h2>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%">
+<tr>
+<th>समस्या</th>
+<th>समाधान</th>
+</tr>
+
+<tr>
+<td>Excel Data नदेखिने</td>
+<td>Excel File Save गरी बन्द गर्नुहोस्।</td>
+</tr>
+
+<tr>
+<td>नेपाली Font बिग्रिने</td>
+<td>Unicode Font (Preeti होइन) प्रयोग गर्नुहोस्।</td>
+</tr>
+
+<tr>
+<td>खाली Record आउने</td>
+<td>Excel मा खाली Row हटाउनुहोस्।</td>
+</tr>
+
+<tr>
+<td>संख्या Format बिग्रिने</td>
+<td>Excel मा Text Format प्रयोग गर्नुहोस्।</td>
+</tr>
+</table>
+
+<div class="note">
+<strong>महत्त्वपूर्ण:</strong>
+Mail Merge प्रयोग गर्दा Excel Column Heading मा Space वा Special Character
+कम प्रयोग गर्नु राम्रो हुन्छ। उदाहरण: Name, Address, Post, Phone जस्ता
+सरल Field Name प्रयोग गर्दा Mail Merge सजिलै काम गर्छ।
+</div>
+
+
+</div>
+
+</body>
+</html>
