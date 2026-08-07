@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अन्तःशुल्क इजाजतपत्र नवीकरण (E-Permit Renew)</title>
+<style>
+body {
+
+  margin: 0;
+
+
+}
+
+
+
+
+
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+
+
+.sticky + .content {
+
+  padding-top: 0px;
+
+}
+
+
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  max-width: 1000px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: rgb(0,120,201);
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active {
+
+  background-color: #2196F3;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+
+  .text {font-size: 11px}
+
+}
+
+
+
+/* Float four columns side by side */
+
+.columncard {
+
+  float: left;
+
+  width: 25%;
+
+  padding: 0 10px;
+
+}
+
+
+
+/* Remove extra left and right margins, due to padding */
+
+.rowcard {margin: 0 -5px;}
+
+
+
+/* Clear floats after the columns */
+
+.rowcard:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+
+  .columncard {
+
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+
+/* Style the counter cards */
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+}
+   .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+        }
+    }
+/* Navbar */
+
+
+/* Header */
+header {
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:18px;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.nav-links li a.active {
+    background: white;
+    color: #0d6efd;
+}
+/* Responsive */
+@media(max-width:768px){
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0d6efd;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+	.hero{
+        min-height:500px;
+    }
+	.hero h1{
+    font-size:clamp(1.8rem);
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+}
+
+/* Hero */
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--dark);
+}
+.hero{
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('images/dc.jpg');
+
+    background-size:100% 100%;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --card:#ffffff;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Kalimati, Arial, sans-serif;
+    line-height:1.8;
+
+    background:#f8f9fa;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h1,h2{
+    color:#003366;
+}
+.step{
+    background:#f1f5ff;
+    padding:10px;
+    margin-bottom:10px;
+    border-left:5px solid #003366;
+}
+.warning{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:15px;
+}
+.danger{
+    background:#f8d7da;
+    border-left:5px solid #dc3545;
+    padding:15px;
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
+     crossorigin="anonymous"></script>
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
+</head>
+<body>
+<div style="background-color:white;">
+<center>
+ <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
+ <img alt="" src="images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:25px;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ </center>
+</div>
+<nav class="navbar" style="font-family:merienda;color:white;font-weight:bold;">
+    <div class="logo font-effect-shadow-multiple" >DHANESHWAR</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks" >
+        <li><a href="./">Home</a></li>
+		<li><a href="radio">Nepali Radio</a></li>
+        <li><a href="about-us">About</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="policy">Privacy</a></li>
+    </ul>
+</nav>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("navLinks");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
+<div class="container">
+
+<h1>अन्तःशुल्क इजाजतपत्र नवीकरण (E-Permit Renew)</h1>
+
+<h2>१. अन्तःशुल्क इजाजतपत्र नवीकरण (E-Permit Renew) के हो ?</h2>
+
+<p style="text-align:justify;">
+अन्तःशुल्क इजाजतपत्र नवीकरण (Excise Permit Renewal) भनेको अन्तःशुल्क लाग्ने वस्तु वा सेवासँग सम्बन्धित व्यवसाय सञ्चालन गर्न लिइएको इजाजतपत्रको म्याद समाप्त भएपछि त्यसलाई पुनः वैधानिक र सक्रिय बनाउने प्रक्रिया हो। नेपालमा मदिरा, बियर, वाइन, चुरोट, सूर्तीजन्य पदार्थ तथा अन्तःशुल्क लाग्ने अन्य वस्तु वा सेवाको उत्पादन, पैठारी, निकासी, भण्डारण, बिक्री वितरण तथा सम्बन्धित कारोबार गर्न अन्तःशुल्क इजाजतपत्र अनिवार्य हुन्छ। यस्तो इजाजतपत्र सामान्यतया एक आर्थिक वर्षका लागि जारी हुने भएकाले प्रत्येक वर्ष समयमै नवीकरण गर्नुपर्छ ।
+<br><br>
+आन्तरिक राजस्व विभाग (IRD) ले करदातालाई अनलाइन माध्यमबाट आफ्नै करदाता पोर्टल (Taxpayer Portal) प्रयोग गरी स्वयं इजाजतपत्र नवीकरण गर्ने सुविधा उपलब्ध गराएको छ। करदाताले IRD को वेबसाइटमा गई Taxpayer Portal मा लगइन गरी Excise मेनु अन्तर्गत रहेको “Self Renew Permit” विकल्प छनोट गर्नुपर्छ। त्यसपछि PAN नम्बर, इजाजतपत्र नम्बर तथा आवश्यक विवरणहरू प्रविष्ट गरी नवीकरणको निवेदन पेश गर्न सकिन्छ। तोकिएको नवीकरण शुल्क अनलाइन भुक्तानी गरेपछि प्रणालीबाट नवीकृत इजाजतपत्र डाउनलोड वा प्रिन्ट गर्न सकिन्छ। यस प्रक्रियाले कार्यालयमा बारम्बार उपस्थित हुनुपर्ने झन्झट कम गरी समय र खर्च दुवै बचत गर्दछ ।
+<br><br>
+इजाजतपत्र नवीकरण नगरेमा सम्बन्धित व्यवसायले कानुनी रूपमा कारोबार सञ्चालन गर्न समस्या भोग्न सक्छ। म्याद समाप्त भएको इजाजतपत्र प्रयोग गरी कारोबार गरेमा जरिवाना, थप शुल्क, प्रशासनिक कारबाही वा इजाजतपत्र रद्द हुने जोखिम समेत रहन्छ। यदि व्यवसाय स्थायी वा अस्थायी रूपमा बन्द गरिएको छ भने अन्तःशुल्क अधिकृत समक्ष निवेदन दिई इजाजतपत्र स्थगन गर्न सकिन्छ। स्वीकृत स्थगन अवधिभर नवीकरण गर्नुपर्ने दायित्व रहँदैन। त्यसैले अन्तःशुल्क सम्बन्धी कारोबार गर्ने प्रत्येक व्यवसायीले आफ्नो इजाजतपत्रको म्याद नियमित रूपमा जाँच गरी समयमै नवीकरण गर्नु आवश्यक हुन्छ। यसले व्यवसायलाई कानुनी रूपमा सुरक्षित राख्नुका साथै कर प्रशासनसँगको अनुपालन पनि सुनिश्चित गर्दछ ।
+</p>
+
+<h2>२. कसले नवीकरण गर्नुपर्छ ?</h2>
+
+<ul>
+<li>मदिरा व्यवसाय</li>
+<li>बियर, वाइन, स्प्रिट उद्योग</li>
+<li>चुरोट, सूर्ति, गुट्खा, पान मसला उद्योग</li>
+<li>अन्तःशुल्क लाग्ने वस्तु वा सेवाको कारोबार गर्ने इजाजतपत्र प्राप्त व्यवसाय</li>
+</ul>
+
+<h2>३. अनलाइनबाट नवीकरण गर्ने तरिका</h2>
+
+<div class="step">
+<strong>Step 1:</strong> IRD को Taxpayer Portal मा लगइन गर्नुहोस्।
+</div>
+
+<div class="step">
+<strong>Step 2:</strong> Excise मेनुमा क्लिक गर्नुहोस्।
+</div>
+
+<div class="step">
+<strong>Step 3:</strong> "Self Renew Permit" विकल्प छनोट गर्नुहोस्।
+</div>
+
+<div class="step">
+<strong>Step 4:</strong> PAN नम्बर र Permit Number प्रविष्ट गर्नुहोस्।
+</div>
+
+<div class="step">
+<strong>Step 5:</strong> आवश्यक विवरणहरू जाँच गरी नवीकरणको निवेदन पेश गर्नुहोस्।
+</div>
+
+<div class="step">
+<strong>Step 6:</strong> तोकिएको नवीकरण शुल्क अनलाइन भुक्तानी गर्नुहोस्।
+</div>
+
+<div class="step">
+<strong>Step 7:</strong> भुक्तानी सफल भएपछि Renew भएको Permit डाउनलोड वा प्रिन्ट गर्नुहोस्।
+</div>
+
+<p>
+नवीकरण प्रक्रिया IRD Portal को Excise → Self Renew Permit बाट गर्न सकिन्छ। :contentReference[oaicite:1]{index=1}
+</p>
+
+<h2>४. नवीकरण गर्दा आवश्यक विवरण</h2>
+
+<ul>
+<li>PAN Number</li>
+<li>Excise Permit Number</li>
+<li>करदाता पोर्टलको User ID / Password</li>
+<li>नवीकरण दस्तुर भुक्तानीका लागि बैंक वा ConnectIPS सुविधा</li>
+</ul>
+
+<h2>५. नवीकरण नगरे के हुन्छ ?</h2>
+
+<div class="danger">
+<ul>
+<li>इजाजतपत्र अमान्य हुन सक्छ।</li>
+<li>व्यवसाय सञ्चालन गर्दा कानुनी समस्या आउन सक्छ।</li>
+<li>जरिवाना तिर्नुपर्ने हुन सक्छ।</li>
+<li>नवीकरणमा ढिलाइ भए थप दस्तुर वा दण्ड लाग्न सक्छ।</li>
+<li>गम्भीर अवस्थामा इजाजतपत्र रद्द हुन सक्ने सम्भावना हुन्छ।</li>
+</ul>
+</div>
+
+<p>
+अन्तःशुल्क नियमावली अनुसार इजाजतपत्र नवीकरण तोकिएको अवधिभित्र गर्नु आवश्यक हुन्छ। ढिला भए जरिवाना लाग्न सक्ने व्यवस्था रहेको छ। :contentReference[oaicite:2]{index=2}
+</p>
+
+<h2>६. महत्त्वपूर्ण जानकारी</h2>
+
+<div class="warning">
+<ul>
+<li>इजाजतपत्रको अवधि सामान्यतया एक आर्थिक वर्षको हुन्छ।</li>
+<li>व्यवसाय बन्द भएको अवस्थामा इजाजतपत्र स्थगनको निवेदन दिन सकिन्छ।</li>
+<li>स्थगन स्वीकृत भएको अवधिभर नवीकरण गर्न आवश्यक पर्दैन।</li>
+</ul>
+</div>
+
+<p>
+इजाजतपत्रको अवधि सामान्यतया एक आर्थिक वर्षको हुने र विशेष अवस्थामा स्थगनको व्यवस्था रहेको IRD ले उल्लेख गरेको छ। :contentReference[oaicite:3]{index=3}
+</p>
+
+<h2>७. उपयोगी लिंक</h2>
+
+<p>
+E-Permit Renew Portal:
+<br>
+<a href="http://ereturns.ird.gov.np:8289/excise/SelfRenewPermit" target="_blank">
+http://ereturns.ird.gov.np:8289/excise/SelfRenewPermit
+</a>
+</p>
+
+<p>
+IRD Official Website:
+<br>
+<a href="https://www.ird.gov.np" target="_blank">
+https://www.ird.gov.np
+</a>
+</p>
+
+</div>
+
+</body>
+</html>
