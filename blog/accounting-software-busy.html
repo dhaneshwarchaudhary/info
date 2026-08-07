@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BUSY Accounting Software प्रयोग गर्ने सम्पूर्ण मार्गदर्शन</title>
+<style>
+body {
+
+  margin: 0;
+
+
+}
+
+
+
+
+
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+
+
+.sticky + .content {
+
+  padding-top: 0px;
+
+}
+
+
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  max-width: 1000px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: rgb(0,120,201);
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active {
+
+  background-color: #2196F3;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+
+  .text {font-size: 11px}
+
+}
+
+
+
+/* Float four columns side by side */
+
+.columncard {
+
+  float: left;
+
+  width: 25%;
+
+  padding: 0 10px;
+
+}
+
+
+
+/* Remove extra left and right margins, due to padding */
+
+.rowcard {margin: 0 -5px;}
+
+
+
+/* Clear floats after the columns */
+
+.rowcard:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+
+  .columncard {
+
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+
+/* Style the counter cards */
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+}
+   .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+        }
+    }
+/* Navbar */
+
+
+/* Header */
+header {
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:18px;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.nav-links li a.active {
+    background: white;
+    color: #0d6efd;
+}
+/* Responsive */
+@media(max-width:768px){
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0d6efd;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+	.hero{
+        min-height:500px;
+    }
+	.hero h1{
+    font-size:clamp(1.8rem);
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+}
+
+/* Hero */
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--dark);
+}
+.hero{
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('images/dc.jpg');
+
+    background-size:100% 100%;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --card:#ffffff;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Kalimati, Arial, sans-serif;
+    line-height:1.8;
+
+    background:#f8f9fa;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h1,h2{
+    color:#003366;
+}
+.step{
+    background:#f1f5ff;
+    padding:10px;
+    margin-bottom:10px;
+    border-left:5px solid #003366;
+}
+.warning{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:15px;
+}
+.danger{
+    background:#f8d7da;
+    border-left:5px solid #dc3545;
+    padding:15px;
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
+     crossorigin="anonymous"></script>
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
+</head>
+<body>
+<div style="background-color:white;">
+<center>
+ <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
+ <img alt="" src="../images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:25px;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ </center>
+</div>
+<nav class="navbar" style="font-family:merienda;color:white;font-weight:bold;">
+    <div class="logo font-effect-shadow-multiple" >DHANESHWAR</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks" >
+        <li><a href="../">Home</a></li>
+		<li><a href="../radio">Nepali Radio</a></li>
+        <li><a href="../about-us">About</a></li>
+        <li><a href="../contact">Contact</a></li>
+        <li><a href="../policy">Privacy</a></li>
+    </ul>
+</nav>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("navLinks");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
+<div class="container">
+
+<h1>BUSY Accounting Software प्रयोग गर्ने सम्पूर्ण मार्गदर्शन</h1>
+
+<p>
+<strong>BUSY Accounting Software</strong> व्यवसाय, पसल, उद्योग, होलसेल, रिटेल,
+वितरण कम्पनी तथा सेवा प्रदायक संस्थाहरूमा लेखा (Accounting), स्टक व्यवस्थापन
+(Inventory Management), बिक्री (Sales), खरिद (Purchase), कर व्यवस्थापन (VAT/GST)
+र वित्तीय प्रतिवेदन (Financial Reports) तयार गर्न प्रयोग हुने लोकप्रिय
+Accounting Software हो।
+</p>
+
+<p>
+BUSY Software को मुख्य उद्देश्य व्यवसायको दैनिक आर्थिक कारोबारलाई व्यवस्थित,
+छिटो, सुरक्षित तथा त्रुटिरहित बनाउनु हो। यस सफ्टवेयरको प्रयोग गरेर नगद,
+बैंक, ग्राहक, आपूर्तिकर्ता, स्टक तथा कर सम्बन्धी सम्पूर्ण विवरण एकै स्थानबाट
+व्यवस्थापन गर्न सकिन्छ।
+</p>
+
+<hr>
+
+<h2>BUSY Accounting Software का मुख्य विशेषताहरू</h2>
+
+<ul>
+<li>Accounting Management</li>
+<li>Inventory / Stock Management</li>
+<li>Sales & Purchase Management</li>
+<li>VAT / GST Management</li>
+<li>Barcode Support</li>
+<li>Multi-User Facility</li>
+<li>Financial Reporting</li>
+<li>Bank Reconciliation</li>
+<li>Payroll Management</li>
+<li>Backup & Restore Facility</li>
+</ul>
+
+<hr>
+
+<h2>१. BUSY Software सुरु गर्ने तरिका</h2>
+
+<ol>
+<li>Computer मा BUSY Software खोल्नुहोस्।</li>
+<li>User Name र Password प्रविष्ट गर्नुहोस्।</li>
+<li>Login बटनमा क्लिक गर्नुहोस्।</li>
+<li>मुख्य Dashboard खुल्नेछ।</li>
+</ol>
+
+<p>
+पहिलो पटक प्रयोग गर्दा नयाँ कम्पनी (Company) सिर्जना गर्नुपर्छ।
+</p>
+
+<hr>
+
+<h2>२. नयाँ Company Create गर्ने तरिका</h2>
+
+<ol>
+<li>Company Menu मा क्लिक गर्नुहोस्।</li>
+<li>Create Company चयन गर्नुहोस्।</li>
+<li>Company Name लेख्नुहोस्।</li>
+<li>Address, Phone Number, PAN/VAT Number प्रविष्ट गर्नुहोस्।</li>
+<li>Financial Year चयन गर्नुहोस्।</li>
+<li>Save क्लिक गर्नुहोस्।</li>
+</ol>
+
+<p>
+अब तपाईंको कम्पनी BUSY मा तयार हुनेछ।
+</p>
+
+<hr>
+
+<h2>३. Master Setup के हो ?</h2>
+
+<p>
+Master Setup भनेको कारोबार सुरु गर्नुअघि आवश्यक आधारभूत विवरणहरू
+तयार गर्ने प्रक्रिया हो।
+</p>
+
+<ul>
+<li>Account Master</li>
+<li>Item Master</li>
+<li>Unit Master</li>
+<li>Customer Master</li>
+<li>Supplier Master</li>
+<li>Tax Category</li>
+</ul>
+
+<hr>
+
+<h2>४. Ledger (Account Master) बनाउने</h2>
+
+<p>
+Ledger भनेको कारोबार हुने व्यक्ति, संस्था, बैंक वा खाताको विवरण हो।
+</p>
+
+<h3>Ledger का उदाहरण</h3>
+
+<ul>
+<li>Cash Account</li>
+<li>Nabil Bank</li>
+<li>Customer Account</li>
+<li>Supplier Account</li>
+<li>Salary Account</li>
+<li>Rent Expense Account</li>
+</ul>
+
+<h3>Ledger बनाउने तरिका</h3>
+
+<ol>
+<li>Masters Menu मा जानुहोस्।</li>
+<li>Account Master चयन गर्नुहोस्।</li>
+<li>Add क्लिक गर्नुहोस्।</li>
+<li>Ledger Name लेख्नुहोस्।</li>
+<li>Group चयन गर्नुहोस्।</li>
+<li>Save गर्नुहोस्।</li>
+</ol>
+
+<hr>
+
+<h2>५. Item (Stock) Master बनाउने</h2>
+
+<p>
+बिक्री वा खरिद हुने सामानको विवरण Item Master मा राखिन्छ।
+</p>
+
+<h3>उदाहरण</h3>
+
+<table border="1" cellpadding="8" cellspacing="0">
+<tr>
+<th>Item Name</th>
+<th>Unit</th>
+<th>Rate</th>
+</tr>
+
+<tr>
+<td>Laptop</td>
+<td>Pcs</td>
+<td>70000</td>
+</tr>
+
+<tr>
+<td>Printer</td>
+<td>Pcs</td>
+<td>15000</td>
+</tr>
+</table>
+
+<h3>Item Create गर्ने तरिका</h3>
+
+<ol>
+<li>Masters → Item Master</li>
+<li>Add क्लिक गर्नुहोस्।</li>
+<li>Item Name राख्नुहोस्।</li>
+<li>Unit चयन गर्नुहोस्।</li>
+<li>Rate राख्नुहोस्।</li>
+<li>Save गर्नुहोस्।</li>
+</ol>
+
+<hr>
+
+<h2>६. Purchase Entry (खरिद Entry)</h2>
+
+<p>
+व्यवसायले सामान खरिद गर्दा Purchase Voucher प्रयोग गरिन्छ।
+</p>
+
+<h3>Purchase Entry गर्ने तरिका</h3>
+
+<ol>
+<li>Transactions Menu खोल्नुहोस्।</li>
+<li>Purchase Voucher चयन गर्नुहोस्।</li>
+<li>Supplier चयन गर्नुहोस्।</li>
+<li>Item चयन गर्नुहोस्।</li>
+<li>Quantity र Rate लेख्नुहोस्।</li>
+<li>Save गर्नुहोस्।</li>
+</ol>
+
+<p>
+यसपछि Stock स्वतः बढ्छ।
+</p>
+
+<hr>
+
+<h2>७. Sales Entry (बिक्री Entry)</h2>
+
+<p>
+सामान बिक्री गर्दा Sales Voucher प्रयोग गरिन्छ।
+</p>
+
+<h3>Sales Entry गर्ने तरिका</h3>
+
+<ol>
+<li>Transactions → Sales Voucher</li>
+<li>Customer चयन गर्नुहोस्।</li>
+<li>Item चयन गर्नुहोस्।</li>
+<li>Quantity तथा Rate लेख्नुहोस्।</li>
+<li>VAT आवश्यक भए समावेश गर्नुहोस्।</li>
+<li>Save गर्नुहोस्।</li>
+</ol>
+
+<p>
+बिक्री भएपछि Stock स्वतः घट्छ।
+</p>
+
+<hr>
+
+<h2>८. Receipt Entry (रकम प्राप्ति)</h2>
+
+<p>
+ग्राहकबाट रकम प्राप्त गर्दा Receipt Voucher प्रयोग गरिन्छ।
+</p>
+
+<h3>उदाहरण</h3>
+
+<ul>
+<li>ग्राहकले रु. ५०,००० भुक्तानी गर्‍यो।</li>
+<li>Receipt Voucher मार्फत Entry गरिन्छ।</li>
+</ul>
+
+<hr>
+
+<h2>९. Payment Entry (भुक्तानी)</h2>
+
+<p>
+आपूर्तिकर्ता, कर्मचारी वा अन्य खर्चको भुक्तानी गर्दा Payment Voucher प्रयोग गरिन्छ।
+</p>
+
+<h3>उदाहरण</h3>
+
+<ul>
+<li>घरभाडा भुक्तानी</li>
+<li>तलब भुक्तानी</li>
+<li>Supplier Payment</li>
+</ul>
+
+<hr>
+
+<h2>१०. Journal Entry</h2>
+
+<p>
+समायोजन (Adjustment), Depreciation, Provision तथा अन्य विशेष लेखा Entry
+गर्न Journal Voucher प्रयोग गरिन्छ।
+</p>
+
+<h3>उदाहरण</h3>
+
+<pre>
+Depreciation A/C Dr.
+     To Furniture A/C
+</pre>
+
+<hr>
+
+<h2>११. Stock Management</h2>
+
+<p>
+BUSY Software मा प्रत्येक खरिद र बिक्रीपछि Stock स्वतः अद्यावधिक हुन्छ।
+</p>
+
+<h3>हेर्न सकिने विवरणहरू</h3>
+
+<ul>
+<li>Current Stock</li>
+<li>Stock Valuation</li>
+<li>Stock Summary</li>
+<li>Low Stock Report</li>
+<li>Item-wise Report</li>
+</ul>
+
+<hr>
+
+<h2>१२. VAT / Tax Management</h2>
+
+<p>
+BUSY Software ले VAT सम्बन्धी विवरण स्वचालित रूपमा गणना गर्न सक्छ।
+</p>
+
+<ul>
+<li>VAT Sales Register</li>
+<li>VAT Purchase Register</li>
+<li>Tax Report</li>
+<li>Return Filing Data</li>
+</ul>
+
+<p>
+नेपालमा VAT दर्ता भएका व्यवसायका लागि यो सुविधा अत्यन्त उपयोगी हुन्छ।
+</p>
+
+<hr>
+
+<h2>१३. Reports हेर्ने तरिका</h2>
+
+<p>
+BUSY Software को सबैभन्दा महत्वपूर्ण पक्ष यसको Reporting System हो।
+</p>
+
+<h3>मुख्य Reports</h3>
+
+<ul>
+<li>Day Book</li>
+<li>Cash Book</li>
+<li>Bank Book</li>
+<li>Ledger Report</li>
+<li>Trial Balance</li>
+<li>Profit & Loss Account</li>
+<li>Balance Sheet</li>
+<li>Outstanding Report</li>
+<li>Stock Report</li>
+</ul>
+
+<hr>
+
+<h2>१४. Profit & Loss Report</h2>
+
+<p>
+व्यवसायले नाफा गर्‍यो वा घाटा भयो भन्ने जानकारी Profit & Loss Report बाट पाइन्छ।
+</p>
+
+<h3>उदाहरण</h3>
+
+<table border="1" cellpadding="8" cellspacing="0">
+<tr>
+<th>विवरण</th>
+<th>रकम</th>
+</tr>
+
+<tr>
+<td>कुल बिक्री</td>
+<td>10,00,000</td>
+</tr>
+
+<tr>
+<td>कुल खर्च</td>
+<td>7,50,000</td>
+</tr>
+
+<tr>
+<td>नाफा</td>
+<td>2,50,000</td>
+</tr>
+</table>
+
+<hr>
+
+<h2>१५. Balance Sheet</h2>
+
+<p>
+कम्पनीको सम्पत्ति (Assets), दायित्व (Liabilities) तथा पूँजी (Capital)
+को अवस्था Balance Sheet बाट हेर्न सकिन्छ।
+</p>
+
+<hr>
+
+<h2>१६. Backup लिने तरिका</h2>
+
+<p>
+Data सुरक्षित राख्न नियमित Backup लिनुपर्छ।
+</p>
+
+<ol>
+<li>Administration Menu खोल्नुहोस्।</li>
+<li>Backup Data चयन गर्नुहोस्।</li>
+<li>Folder चयन गर्नुहोस्।</li>
+<li>Backup क्लिक गर्नुहोस्।</li>
+</ol>
+
+<div class="note">
+<strong>सुझाव:</strong>
+Backup लाई Pen Drive, External Hard Disk वा Cloud Storage मा सुरक्षित राख्नु राम्रो हुन्छ।
+</div>
+
+<hr>
+
+<h2>१७. Restore गर्ने तरिका</h2>
+
+<ol>
+<li>Administration Menu खोल्नुहोस्।</li>
+<li>Restore Data चयन गर्नुहोस्।</li>
+<li>Backup File चयन गर्नुहोस्।</li>
+<li>Restore क्लिक गर्नुहोस्।</li>
+</ol>
+
+<hr>
+
+<h2>BUSY Software प्रयोग गर्दा ध्यान दिनुपर्ने कुराहरू</h2>
+
+<ul>
+<li>नियमित Backup लिनुहोस्।</li>
+<li>Voucher Save गर्नु अघि विवरण जाँच गर्नुहोस्।</li>
+<li>VAT नम्बर सही राख्नुहोस्।</li>
+<li>Financial Year सही चयन गर्नुहोस्।</li>
+<li>User Password सुरक्षित राख्नुहोस्।</li>
+<li>महिनाको अन्त्यमा Reports मिलान गर्नुहोस्।</li>
+</ul>
+
+<hr>
+
+<h2>BUSY Software का फाइदाहरू</h2>
+
+<ul>
+<li>लेखा व्यवस्थापन छिटो हुन्छ।</li>
+<li>Manual Calculation कम हुन्छ।</li>
+<li>Stock स्वतः अद्यावधिक हुन्छ।</li>
+<li>नाफा-नोक्सान सजिलै थाहा हुन्छ।</li>
+<li>VAT तथा कर व्यवस्थापन सहज हुन्छ।</li>
+<li>Financial Reports तुरुन्त प्राप्त हुन्छन्।</li>
+<li>समय र लागत बचत हुन्छ।</li>
+</ul>
+
+<hr>
+
+
+</div>
+
+</body>
+</html>
