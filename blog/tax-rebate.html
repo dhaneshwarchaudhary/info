@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>व्यक्तिगत आयकरमा प्राप्त हुने कर छुट सुविधा (अवकाश कोष र शिक्षा कर छुट)</title>
+<style>
+body {
+
+  margin: 0;
+
+
+}
+
+
+
+
+
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+
+
+.sticky + .content {
+
+  padding-top: 0px;
+
+}
+
+
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  max-width: 1000px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: rgb(0,120,201);
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active {
+
+  background-color: #2196F3;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+
+  .text {font-size: 11px}
+
+}
+
+
+
+/* Float four columns side by side */
+
+.columncard {
+
+  float: left;
+
+  width: 25%;
+
+  padding: 0 10px;
+
+}
+
+
+
+/* Remove extra left and right margins, due to padding */
+
+.rowcard {margin: 0 -5px;}
+
+
+
+/* Clear floats after the columns */
+
+.rowcard:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+
+  .columncard {
+
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+
+/* Style the counter cards */
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+}
+   .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+        }
+    }
+/* Navbar */
+
+
+/* Header */
+header {
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:18px;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.nav-links li a.active {
+    background: white;
+    color: #0d6efd;
+}
+/* Responsive */
+@media(max-width:768px){
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0d6efd;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+	.hero{
+        min-height:500px;
+    }
+	.hero h1{
+    font-size:clamp(1.8rem);
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+}
+
+/* Hero */
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--dark);
+}
+.hero{
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('images/dc.jpg');
+
+    background-size:100% 100%;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --card:#ffffff;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Kalimati, Arial, sans-serif;
+    line-height:1.8;
+
+    background:#f8f9fa;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h1,h2{
+    color:#003366;
+}
+.step{
+    background:#f1f5ff;
+    padding:10px;
+    margin-bottom:10px;
+    border-left:5px solid #003366;
+}
+.warning{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:15px;
+}
+.danger{
+    background:#f8d7da;
+    border-left:5px solid #dc3545;
+    padding:15px;
+}
+
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
+</head>
+<body>
+<div style="background-color:white;">
+<center>
+ <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
+ <img alt="" src="../images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:25px;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ </center>
+</div>
+<nav class="navbar" style="font-family:merienda;color:white;font-weight:bold;">
+    <div class="logo font-effect-shadow-multiple" >DHANESHWAR</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks" >
+        <li><a href="../">Home</a></li>
+		<li><a href="../radio">Nepali Radio</a></li>
+        <li><a href="../about-us">About</a></li>
+        <li><a href="../contact">Contact</a></li>
+        <li><a href="../policy">Privacy</a></li>
+    </ul>
+</nav>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("navLinks");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
+<div class="container">
+
+<h1>व्यक्तिगत आयकरमा प्राप्त हुने कर छुट सुविधा (अवकाश कोष र शिक्षा कर छुट)</h1>
+
+<p style="text-align:justify;">
+नेपालको आयकर कानून अनुसार करदाताले आफ्नो करयोग्य आय (Taxable Income) गणना गर्दा
+केही विशेष खर्च तथा योगदान रकम करयोग्य आयबाट घटाउन (Deduction) पाउने व्यवस्था छ।
+यसको उद्देश्य बचत, सामाजिक सुरक्षा तथा शिक्षालाई प्रोत्साहन गर्नु हो।
+</p>
+
+<p style="text-align:justify;">
+व्यक्तिगत आयकर गणना गर्दा सबै आयमा सिधै कर लाग्दैन। कानूनले तोकेका केही
+रकमहरू पहिले घटाउन पाइन्छ र बाँकी रकममा मात्र कर गणना गरिन्छ।
+यस्ता सुविधामध्ये <strong>स्वीकृत अवकाश कोषमा योगदान</strong> तथा
+<strong>शिक्षा सम्बन्धी कर छुट</strong> महत्वपूर्ण मानिन्छन्।
+</p>
+<br>
+<p style="text-align:justify;">
+नेपालको आयकर कानूनले करदातालाई कर तिर्ने दायित्व मात्र दिएको छैन, बचत गर्ने,
+भविष्य सुरक्षित गर्ने, शिक्षा तथा सामाजिक सुरक्षामा लगानी गर्न प्रोत्साहन
+गर्ने उद्देश्यले विभिन्न प्रकारका <strong>कर छुट (Tax Deduction)</strong> तथा
+<strong>कर सहुलियत (Tax Relief)</strong> को व्यवस्था पनि गरेको छ।
+करदाताले कानुनले तोकेका निश्चित खर्च तथा योगदान रकम आफ्नो करयोग्य आयबाट
+घटाउन पाउने भएकाले वास्तविक कर दायित्व कम हुन्छ। 
+</p>
+
+<p style="text-align:justify;">
+सामान्यतया धेरै व्यक्तिले आफ्नो कुल तलब वा आम्दानीको सम्पूर्ण रकममा कर लाग्छ
+भन्ने बुझाइ राख्छन्। तर वास्तवमा कर गणना गर्नु अघि कानुनले मान्यता दिएका
+केही रकमहरू घटाइन्छन्। यसरी घटाइसकेपछि बाँकी रहेको रकमलाई मात्र
+<strong>करयोग्य आय (Taxable Income)</strong> मानिन्छ र सोही आधारमा आयकर गणना गरिन्छ।
+यस कारण कर छुटको सही जानकारी हुँदा करदाता कानुनी रूपमा कर बचत गर्न सक्छन्। 
+</p>
+<br>
+<p style="text-align:justify;">
+उदाहरणका लागि कुनै कर्मचारीको वार्षिक आय रु. १५ लाख छ भने उसले
+नागरिक लगानी कोष (CIT), कर्मचारी सञ्चय कोष (EPF), सामाजिक सुरक्षा कोष (SSF)
+वा अन्य स्वीकृत अवकाश कोषमा योगदान गरेको रकम, शिक्षा खर्चमा उपलब्ध छुट,
+जीवन बीमा तथा स्वास्थ्य बीमामा उपलब्ध छुट आदि रकम कानुन अनुसार
+करयोग्य आयबाट घटाउन सक्छ। त्यसपछि मात्र अन्तिम कर गणना गरिन्छ। 
+</p>
+
+<p style="text-align:justify;">
+यस व्यवस्थाको मुख्य उद्देश्य नागरिकलाई भविष्यका लागि बचत गर्न,
+अवकाशपछिको जीवन आर्थिक रूपमा सुरक्षित बनाउन, सामाजिक सुरक्षा प्रणालीलाई
+मजबुत बनाउन तथा छोराछोरीको शिक्षामा लगानी गर्न प्रोत्साहित गर्नु हो।
+यदि यस्ता कर छुटको व्यवस्था नभएको भए धेरै व्यक्तिले दीर्घकालीन बचत
+गर्न कम रुचि देखाउन सक्थे। सरकारले कर छुटको माध्यमबाट नागरिकलाई
+संगठित बचत प्रणालीमा सहभागी हुन प्रेरित गरेको छ। 
+</p>
+
+<hr>
+
+<h2>१. अवकाश कोष (Retirement Fund) मा प्राप्त कर छुट</h2>
+
+<p style="text-align:justify;">
+कर्मचारी सञ्चय कोष (EPF), नागरिक लगानी कोष (CIT), सामाजिक सुरक्षा कोष (SSF)
+वा अन्य स्वीकृत अवकाश कोषमा जम्मा गरिएको रकम निश्चित सीमासम्म
+करयोग्य आयबाट घटाउन पाइन्छ।
+</p>
+
+<p style="text-align:justify;">
+यस व्यवस्थाले भविष्यका लागि बचत गर्न प्रोत्साहन गर्नुका साथै
+करदाताको तत्काल कर दायित्व पनि कम गर्छ।
+</p>
+
+<h3>कुन-कुन कोषमा छुट पाइन्छ ?</h3>
+
+<ul>
+<li>कर्मचारी सञ्चय कोष (EPF)</li>
+<li>नागरिक लगानी कोष (CIT)</li>
+<li>सामाजिक सुरक्षा कोष (SSF)</li>
+<li>स्वीकृत अवकाश कोष (Approved Retirement Fund)</li>
+</ul>
+
+<h3>कति रकमसम्म छुट पाइन्छ ?</h3>
+
+<p>
+करदाताले स्वीकृत अवकाश कोषमा जम्मा गरेको रकममध्ये
+<strong>वार्षिक रु. ५,००,००० सम्म</strong> अथवा
+करयोग्य आयको तोकिएको प्रतिशत सीमाभित्र रहेको रकम
+करयोग्य आयबाट घटाउन पाउँछन्।
+</p>
+
+<div class="note">
+<strong>उदाहरण:</strong><br>
+यदि कुनै कर्मचारीले एक वर्षमा नागरिक लगानी कोष (CIT) र
+कर्मचारी सञ्चय कोष (EPF) मा जम्मा गरी कुल रु. ३,५०,००० योगदान गरेको छ भने
+उक्त रकम करयोग्य आयबाट घटाउन सकिन्छ।
+</div>
+
+<hr>
+
+<h2>२. शिक्षा कर छुट (Education Tax Deduction)</h2>
+
+<p style="text-align:justify;">
+नेपालको आयकर व्यवस्थाअनुसार करदाताले आफ्ना सन्तानको शिक्षामा भएको
+खर्चबापत निश्चित रकमसम्म कर छुट प्राप्त गर्न सक्ने व्यवस्था छ।
+</p>
+
+<p style="text-align:justify;">
+यस सुविधाको उद्देश्य परिवारलाई शिक्षामा लगानी गर्न प्रोत्साहन गर्नु तथा
+शिक्षा खर्चको आर्थिक भार कम गर्नु हो।
+</p>
+
+<h3>कति रकमसम्म छुट पाइन्छ ?</h3>
+
+<p style="text-align:justify;">
+करदाताले आफ्ना छोराछोरीको शिक्षा सम्बन्धी खर्चबापत
+<strong>वार्षिक रु. २५,००० सम्म</strong> करयोग्य आयबाट घटाउन सक्ने व्यवस्था छ।
+</p>
+
+<h3>कसले पाउँछ ?</h3>
+
+<ul>
+<li>तलबभोगी कर्मचारी</li>
+<li>व्यक्तिगत आयकर तिर्ने करदाता</li>
+<li>आफ्नो आश्रित सन्तानको शिक्षा खर्च व्यहोर्ने व्यक्ति</li>
+</ul>
+
+<h3>के प्रमाण आवश्यक पर्छ ?</h3>
+
+<ul>
+<li>विद्यालय वा कलेजको शुल्क रसिद</li>
+<li>शिक्षा शुल्क भुक्तानीको प्रमाण</li>
+<li>आवश्यक परे सम्बन्धित शैक्षिक संस्थाको प्रमाणपत्र</li>
+</ul>
+
+<div class="note">
+<strong>महत्त्वपूर्ण:</strong>
+शिक्षा खर्चको प्रमाण (Receipt/Bill) सुरक्षित राख्नु आवश्यक हुन्छ।
+कर परीक्षण (Tax Audit) वा विवरण माग भएमा पेश गर्नुपर्ने हुन सक्छ।
+</div>
+
+<hr>
+
+<h2>कर छुट गणनाको उदाहरण</h2>
+
+<p>
+मानौं कुनै कर्मचारीको वार्षिक करयोग्य आय रु. १२,००,००० छ।
+</p>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%">
+<tr>
+<th>विवरण</th>
+<th>रकम (रु.)</th>
+</tr>
+
+<tr>
+<td>वार्षिक आय</td>
+<td>12,00,000</td>
+</tr>
+
+<tr>
+<td>अवकाश कोषमा योगदान (CIT/EPF/SSF)</td>
+<td>3,00,000</td>
+</tr>
+
+<tr>
+<td>शिक्षा कर छुट</td>
+<td>25,000</td>
+</tr>
+
+<tr>
+<td><strong>कुल छुटयोग्य रकम</strong></td>
+<td><strong>3,25,000</strong></td>
+</tr>
+
+<tr>
+<td><strong>करयोग्य आय</strong></td>
+<td><strong>8,75,000</strong></td>
+</tr>
+</table>
+
+<p style="text-align:justify;">
+यस उदाहरणमा कर्मचारीको कुल आय रु. १२ लाख भए पनि
+अवकाश कोष र शिक्षा कर छुट प्रयोग गरेपछि
+कर गणना हुने रकम रु. ८ लाख ७५ हजार मात्र हुनेछ।
+यसले कर दायित्व उल्लेखनीय रूपमा कम गर्छ।
+</p>
+
+<hr>
+
+<h2>यी कर छुटका फाइदाहरू</h2>
+
+<ul>
+<li>करयोग्य आय कम हुन्छ।</li>
+<li>कर तिर्नुपर्ने रकम घट्छ।</li>
+<li>भविष्यको लागि बचत गर्न प्रोत्साहन मिल्छ।</li>
+<li>सामाजिक सुरक्षा प्रणाली बलियो हुन्छ।</li>
+<li>शिक्षामा लगानी गर्न प्रेरणा मिल्छ।</li>
+<li>आर्थिक योजना बनाउन सहयोग पुग्छ।</li>
+</ul>
+
+<hr>
+
+<h2>ध्यान दिनुपर्ने कुराहरू</h2>
+
+<ul>
+<li>अवकाश कोषमा गरिएको योगदान स्वीकृत कोषमा भएको हुनुपर्छ।</li>
+<li>शिक्षा खर्चको प्रमाण सुरक्षित राख्नुपर्छ।</li>
+<li>कर विवरण (Tax Return) भर्दा सही रकम उल्लेख गर्नुपर्छ।</li>
+<li>आन्तरिक राजस्व विभागले मागेमा प्रमाण पेश गर्न सक्नुपर्छ।</li>
+<li>प्रचलित आयकर ऐन तथा नियमावली अनुसारको सीमा मात्र छुटयोग्य हुन्छ।</li>
+</ul>
+
+<div class="warning">
+<strong>सावधानी:</strong>
+कर छुट प्राप्त गर्न गलत विवरण वा नक्कली रसिद प्रयोग गर्नु कानूनविपरीत हो।
+सधैं वास्तविक तथा प्रमाणित विवरण मात्र प्रयोग गर्नुहोस्।
+</div>
+
+
+
+</div>
+
+</body>
+</html>
