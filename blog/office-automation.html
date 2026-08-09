@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>नेपालमा सरकारी कार्यालयको कामलाई रूपान्तरण गर्दै Office Automation</title>
+<style>
+body {
+
+  margin: 0;
+
+
+}
+
+
+
+
+
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+
+
+.sticky + .content {
+
+  padding-top: 0px;
+
+}
+
+
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  max-width: 1000px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: rgb(0,120,201);
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active {
+
+  background-color: #2196F3;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+
+  .text {font-size: 11px}
+
+}
+
+
+
+/* Float four columns side by side */
+
+.columncard {
+
+  float: left;
+
+  width: 25%;
+
+  padding: 0 10px;
+
+}
+
+
+
+/* Remove extra left and right margins, due to padding */
+
+.rowcard {margin: 0 -5px;}
+
+
+
+/* Clear floats after the columns */
+
+.rowcard:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+
+  .columncard {
+
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+
+/* Style the counter cards */
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+}
+   .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+        }
+    }
+/* Navbar */
+
+
+/* Header */
+header {
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:18px;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.nav-links li a.active {
+    background: white;
+    color: #0d6efd;
+}
+/* Responsive */
+@media(max-width:768px){
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0d6efd;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+	.hero{
+        min-height:500px;
+    }
+	.hero h1{
+    font-size:clamp(1.8rem);
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+}
+
+/* Hero */
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--dark);
+}
+.hero{
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('images/dc.jpg');
+
+    background-size:100% 100%;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --card:#ffffff;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Kalimati, Arial, sans-serif;
+    line-height:1.8;
+
+    background:#f8f9fa;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h1,h2{
+    color:#003366;
+}
+.step{
+    background:#f1f5ff;
+    padding:10px;
+    margin-bottom:10px;
+    border-left:5px solid #003366;
+}
+.warning{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:15px;
+}
+.danger{
+    background:#f8d7da;
+    border-left:5px solid #dc3545;
+    padding:15px;
+}
+
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
+</head>
+<body>
+<div style="background-color:white;">
+<center>
+ <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
+ <img alt="" src="../images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:25px;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ </center>
+</div>
+<nav class="navbar" style="font-family:merienda;color:white;font-weight:bold;">
+    <div class="logo font-effect-shadow-multiple" >DHANESHWAR</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks" >
+        <li><a href="../">Home</a></li>
+		<li><a href="../radio">Nepali Radio</a></li>
+        <li><a href="../about-us">About</a></li>
+        <li><a href="../contact">Contact</a></li>
+        <li><a href="../policy">Privacy</a></li>
+    </ul>
+</nav>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("navLinks");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
+<div class="container">
+
+<h1>नेपालमा सरकारी कार्यालयको कामलाई रूपान्तरण गर्दै Office Automation</h1>
+
+<p style="text-align:justify;">
+डिजिटल प्रविधिको तीव्र विकाससँगै नेपालका सरकारी कार्यालयहरू पनि परम्परागत
+कागजी प्रणालीबाट क्रमशः डिजिटल प्रणालीतर्फ अघि बढिरहेका छन्।
+यस परिवर्तनको प्रमुख आधार <strong>Office Automation (कार्यालय स्वचालन)</strong>
+हो। Office Automation ले कार्यालयका दैनिक कार्यहरूलाई कम्प्युटर, सफ्टवेयर,
+नेटवर्क तथा डिजिटल प्रणालीको माध्यमबाट स्वचालित, व्यवस्थित र प्रभावकारी बनाउने
+कार्य गर्दछ।
+</p>
+
+<p style="text-align:justify;">
+पहिले सरकारी कार्यालयमा एउटा पत्र दर्ता गर्न, फाइल खोज्न, टिप्पणी लेख्न,
+चलानी गर्न वा कुनै निवेदनको अवस्था बुझ्न धेरै समय लाग्थ्यो।
+कागज हराउने, फाइल भेट्टाउन कठिन हुने, काम ढिलो हुने तथा पारदर्शिताको कमी
+जस्ता समस्याहरू सामान्य थिए। अहिले दर्ता–चलानी, डिजिटल अभिलेख व्यवस्थापन,
+अनलाइन सेवा तथा ई-फाइल प्रणालीको प्रयोग बढ्दै जाँदा यी समस्याहरू क्रमशः
+घट्दै गएका छन्। 
+</p>
+
+<hr>
+
+<h2>Office Automation भनेको के हो ?</h2>
+
+<p style="text-align:justify;">
+Office Automation भनेको कार्यालयमा हुने दैनिक प्रशासनिक तथा व्यवस्थापकीय
+कामहरूलाई डिजिटल प्रणालीमार्फत सञ्चालन गर्ने प्रक्रिया हो।
+यस अन्तर्गत पत्र दर्ता, चलानी, फाइल व्यवस्थापन, कर्मचारी व्यवस्थापन,
+बैठक व्यवस्थापन, अभिलेख संरक्षण, सूचना प्रवाह, प्रतिवेदन निर्माण तथा
+सेवा प्रवाहलाई कम्प्युटर प्रणालीमार्फत सञ्चालन गरिन्छ।
+</p>
+
+<p style="text-align:justify;">
+सरल भाषामा भन्नुपर्दा, पहिले कागजमा गरिने कामहरूलाई कम्प्युटर वा
+अनलाइन प्रणालीमार्फत गर्ने प्रक्रियालाई Office Automation भनिन्छ।
+</p>
+
+<hr>
+
+<h2>नेपालमा Office Automation को आवश्यकता</h2>
+
+<p style="text-align:justify;">
+नेपालका धेरै सरकारी कार्यालयहरूमा विगतमा सम्पूर्ण कार्य कागजी फाइलमा आधारित
+हुन्थ्यो। एउटा फाइल विभिन्न शाखामा पुग्न दिनौं वा हप्तौं लाग्ने अवस्था
+समेत थियो। पुराना कागजात खोज्न धेरै समय खर्चिनुपर्ने, अभिलेख हराउने,
+कर्मचारी परिवर्तन हुँदा जानकारी हराउने तथा नागरिकले सेवाको अवस्थाबारे
+जानकारी नपाउने समस्या देखिन्थ्यो।
+</p>
+
+<p style="text-align:justify;">
+यस्ता समस्याको समाधानका लागि विभिन्न सरकारी निकाय तथा स्थानीय तहहरूले
+दर्ता–चलानी, डिजिटल पत्र व्यवस्थापन, ई-अफिस तथा अनलाइन सेवा प्रणाली
+लागू गर्न थालेका छन्। 
+</p>
+
+<hr>
+
+<h2>Office Automation का मुख्य कम्पोनेन्टहरू</h2>
+
+<h3>१. डिजिटल दर्ता (E-Darta)</h3>
+
+<p style="text-align:justify;">
+कार्यालयमा प्राप्त हुने सबै पत्र, निवेदन तथा कागजातहरू डिजिटल रूपमा
+दर्ता गरिन्छ। प्रत्येक पत्रलाई छुट्टै नम्बर दिइन्छ र कम्प्युटर प्रणालीमा
+सुरक्षित राखिन्छ।
+</p>
+
+<h3>२. डिजिटल चलानी (E-Chalani)</h3>
+
+<p style="text-align:justify;">
+कार्यालयबाट पठाइने पत्रहरूलाई चलानी नम्बर सहित डिजिटल रूपमा रेकर्ड गरिन्छ।
+यसले पत्रको इतिहास तथा गन्तव्य सजिलै ट्र्याक गर्न मद्दत गर्छ।
+</p>
+
+<h3>३. डिजिटल फाइल व्यवस्थापन</h3>
+
+<p style="text-align:justify;">
+पुराना फाइल तथा कागजात स्क्यान गरी डिजिटल रूपमा सुरक्षित राख्न सकिन्छ।
+आवश्यक पर्दा केही सेकेन्डमै खोज्न सकिन्छ।
+</p>
+
+<h3>४. ई-टिप्पणी (E-Tippani)</h3>
+
+<p style="text-align:justify;">
+अधिकारीहरूले फाइलमा डिजिटल टिप्पणी गर्न सक्छन्।
+यसले फाइलको आवागमन छिटो बनाउँछ र कागजको प्रयोग घटाउँछ।
+</p>
+
+<h3>५. डिजिटल अभिलेख प्रणाली</h3>
+
+<p style="text-align:justify;">
+कार्यालयका महत्वपूर्ण दस्तावेजहरू सुरक्षित रूपमा संग्रह गर्न तथा
+दीर्घकालीन अभिलेख राख्न प्रयोग गरिन्छ।
+</p>
+
+<hr>
+
+<h2>Office Automation ले सरकारी काममा ल्याएको परिवर्तन</h2>
+
+<h3>१. काम छिटो हुन्छ</h3>
+
+<p style="text-align:justify;">
+पहिले एउटा पत्र एक शाखाबाट अर्को शाखामा पुग्न धेरै समय लाग्थ्यो।
+डिजिटल प्रणालीमा फाइल तुरुन्त सम्बन्धित अधिकारीसम्म पुग्न सक्छ।
+यसले निर्णय प्रक्रिया छिटो बनाउँछ। 
+</p>
+
+<h3>२. पारदर्शिता बढ्छ</h3>
+
+<p style="text-align:justify;">
+कुन फाइल कसको जिम्मामा छ, कहिले प्राप्त भयो र कहाँ पुगेको छ भन्ने
+जानकारी प्रणालीमा सुरक्षित रहन्छ। यसले अनावश्यक ढिलाइ तथा
+जवाफदेहितामा सुधार ल्याउँछ। 
+</p>
+
+<h3>३. कागजको प्रयोग घट्छ</h3>
+
+<p style="text-align:justify;">
+Office Automation ले कागजी फाइलको आवश्यकता कम गर्छ।
+यसले लागत बचत गर्नुका साथै वातावरण संरक्षणमा पनि योगदान पुर्‍याउँछ।
+</p>
+
+<h3>४. अभिलेख सुरक्षित हुन्छ</h3>
+
+<p style="text-align:justify;">
+कागजी फाइल हराउने, च्यातिने वा बिग्रिने जोखिम हुन्छ।
+डिजिटल प्रणालीमा डेटा सुरक्षित रूपमा संग्रह गर्न सकिन्छ र
+आवश्यक पर्दा ब्याकअपबाट पुनः प्राप्त गर्न सकिन्छ।
+</p>
+
+<h3>५. नागरिक सेवामा सुधार</h3>
+
+<p style="text-align:justify;">
+नागरिकले सेवाको अवस्थाबारे छिटो जानकारी पाउन सक्छन्।
+अनलाइन आवेदन, अनलाइन ट्र्याकिङ तथा डिजिटल सेवा प्रणालीले
+सेवा प्राप्त गर्न लाग्ने समय घटाउँछ। 
+</p>
+
+<hr>
+
+<h2>नेपालमा प्रयोग भइरहेका Office Automation का उदाहरणहरू</h2>
+
+<ul>
+<li>ई-दर्ता (E-Darta) प्रणाली</li>
+<li>ई-चलानी (E-Chalani) प्रणाली</li>
+<li>ई-टिप्पणी (E-Tippani)</li>
+<li>डिजिटल पत्र व्यवस्थापन प्रणाली</li>
+<li>अनलाइन कर प्रणाली</li>
+<li>अनलाइन राहदानी सेवा</li>
+<li>राष्ट्रिय परिचयपत्र सम्बन्धी अनलाइन सेवा</li>
+<li>स्थानीय तहका डिजिटल सेवा पोर्टलहरू</li>
+</ul>
+
+<p>
+नेपाल सरकार तथा विभिन्न स्थानीय तहहरूले नागरिकलाई घरमै बसेर सेवा
+प्राप्त गर्न सकिने डिजिटल सेवाहरू विस्तार गर्दै आएका छन्। 
+</p>
+
+<hr>
+
+<h2>Office Automation का फाइदाहरू</h2>
+
+<ul>
+<li>कामको गति बढ्छ।</li>
+<li>सेवा प्रवाह प्रभावकारी हुन्छ।</li>
+<li>कागज तथा छपाइ खर्च घट्छ।</li>
+<li>अभिलेख सुरक्षित रहन्छ।</li>
+<li>पारदर्शिता तथा जवाफदेहिता बढ्छ।</li>
+<li>नागरिकले छिटो सेवा पाउँछन्।</li>
+<li>प्रतिवेदन तयार गर्न सजिलो हुन्छ।</li>
+<li>कार्यालयबीच समन्वय बढ्छ।</li>
+</ul>
+
+<hr>
+
+<h2>चुनौतीहरू</h2>
+
+<ul>
+<li>इन्टरनेट तथा पूर्वाधारको कमी</li>
+<li>कर्मचारीलाई आवश्यक तालिमको अभाव</li>
+<li>साइबर सुरक्षा जोखिम</li>
+<li>परम्परागत कार्यशैली परिवर्तन गर्न कठिनाइ</li>
+<li>डिजिटल प्रणालीको नियमित मर्मत तथा व्यवस्थापन</li>
+</ul>
+
+<p style="text-align:justify;">
+विशेषज्ञहरूका अनुसार सफल ई-शासन (E-Governance) का लागि केवल सफ्टवेयर मात्र
+पर्याप्त हुँदैन; बलियो पूर्वाधार, सुरक्षा, तालिम तथा संस्थागत समन्वय
+पनि आवश्यक हुन्छ। 
+</p>
+
+<hr>
+
+<h2>भविष्यको दिशा</h2>
+
+<p style="text-align:justify;">
+नेपाल सरकारले डिजिटल नेपाल तथा ई-गभर्नेन्सलाई प्राथमिकता दिँदै विभिन्न
+सेवाहरूलाई अनलाइन माध्यममा रूपान्तरण गरिरहेको छ। आगामी दिनमा
+कृत्रिम बुद्धिमत्ता (AI), डिजिटल हस्ताक्षर, क्लाउड प्रणाली तथा
+एकीकृत सरकारी सेवा पोर्टलहरूको प्रयोग बढ्दै जाने अपेक्षा गरिएको छ।
+यसले सरकारी सेवा नागरिकको हातमै पुर्‍याउने लक्ष्यलाई अझ सशक्त बनाउनेछ।
+
+</p>
+
+</div>
+
+</body>
+</html>
