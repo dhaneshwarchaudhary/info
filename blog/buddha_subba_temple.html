@@ -1,34 +1,14 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="ne">
 <head>
-
-<meta name="referrer" content="no-referrer-when-downgrade" />
-<meta name="google-adsense-account" content="ca-pub-5977312974388356">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="stylesheet" type="text/css" href="../css/style.css"/>
-
-<link rel="stylesheet" type="text/css" href="../css/i-g.css"/>
-
-<link rel="stylesheet" type="text/css" href="../css/page-style.css"/>
-
-<link rel="stylesheet" type="text/css" href="../css/home.css">
-
-
-
-<title >Dhaneshwar Chaudhary </title>
-
-<link rel="icon" type="image/png" href="../images/icon.ico" />
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>बुढा सुब्बा मन्दिर (Buddha Subba Temple) – धरान</title>
 <style>
-
 body {
 
   margin: 0;
 
-  font-size: 28px;
 
 }
 
@@ -259,74 +239,80 @@ img {vertical-align: middle;}
   background-color: #f1f1f1;
 
 }
+   .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
 
-        body {
-            font-family: "Poppins", sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f6f8;
-            color: #333;
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
         }
 
-        header {
-            background: linear-gradient(to right, #0057a6, #00b4d8);
-            color: #fff;
-            text-align: center;
-            padding: 30px 10px;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 30px auto;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            padding: 20px;
-        }
-
-        img {
+        .article img {
             width: 100%;
-            height: auto;
-            border-radius: 8px;
         }
-
-        h2 {
-            color: #0057a6;
-            margin-top: 25px;
-        }
-
-        p {
-            line-height: 1.7;
-            text-align: justify;
-        }
-
-        ul {
-            margin-left: 20px;
-            line-height: 1.8;
-        }
-
-        footer {
-            background-color: #0057a6;
-            color: #fff;
-            text-align: center;
-            padding: 15px 10px;
-            margin-top: 40px;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.5em;
-            }
-            .container {
-                margin: 15px;
-                padding: 15px;
-            }
-        }
+    }
 /* Navbar */
 
 
@@ -413,6 +399,119 @@ header {
     .menu-toggle {
         display: block;
     }
+	.hero{
+        min-height:500px;
+    }
+	.hero h1{
+    font-size:clamp(1.8rem);
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+}
+
+/* Hero */
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--dark);
+}
+.hero{
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('images/dc.jpg');
+
+    background-size:100% 100%;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --card:#ffffff;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Kalimati, Arial, sans-serif;
+    line-height:1.8;
+
+    background:#f8f9fa;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h1,h2{
+    color:#003366;
+}
+.step{
+    background:#f1f5ff;
+    padding:10px;
+    margin-bottom:10px;
+    border-left:5px solid #003366;
+}
+.warning{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:15px;
+}
+.danger{
+    background:#f8d7da;
+    border-left:5px solid #dc3545;
+    padding:15px;
 }
 
 </style>
@@ -421,22 +520,14 @@ header {
 <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
 </head>
-
 <body>
-
 <div style="background-color:white;">
 <center>
  <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
  <img alt="" src="../images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
- <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:25px;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
  </center>
 </div>
-
-
-
-<div class="t-bar" id="navbar" style="position:;z-index:1;width:100%">
-
-
 <nav class="navbar" style="font-family:merienda;color:white;font-weight:bold;">
     <div class="logo font-effect-shadow-multiple" >DHANESHWAR</div>
 
@@ -460,174 +551,136 @@ function toggleMenu() {
     }
 }
 </script>
+<div class="container">
 
- 
+<h1>बुढा सुब्बा मन्दिर (Buddha Subba Temple) – धरान</h1>
 
-</div>
+<p style="text-align:justify;">
+बुढा सुब्बा मन्दिर पूर्वी नेपालको सुनसरी जिल्लाको धरान उपमहानगरपालिका–१४,
+विजयपुर क्षेत्रमा अवस्थित एक प्रसिद्ध धार्मिक तथा पर्यटकीय स्थल हो।
+यो मन्दिर पूर्वाञ्चलका सबैभन्दा लोकप्रिय तीर्थस्थलमध्ये एक मानिन्छ।
+प्रत्येक वर्ष नेपालका विभिन्न जिल्लाका साथै भारतलगायत अन्य देशबाट समेत
+हजारौं भक्तजन तथा पर्यटक यहाँ दर्शन गर्न आउने गर्छन्।
+मन्दिर धार्मिक आस्था, ऐतिहासिक महत्व, सांस्कृतिक परम्परा तथा प्राकृतिक
+सौन्दर्यका कारण विशेष रूपमा परिचित छ। 
+</p>
 
+<p style="text-align:justify;">
+धरानको विजयपुर डाँडामा रहेको
+शान्त वातावरण, हरियाली वन क्षेत्र तथा धार्मिक महत्वका कारण
+धरानको प्रमुख आकर्षणमध्ये एक मानिन्छ। यहाँ आउने भक्तजनले मनोकामना पूरा
+हुने विश्वासका साथ पूजा-अर्चना गर्ने गर्दछन्। 
+</p>
 
+<h2>बुढा सुब्बा मन्दिरको परिचय</h2>
 
-<div style="padding:0% 3% 1% 3%">
+<p style="text-align:justify;">
+बुढा सुब्बा मन्दिरलाई किराँत समुदायले विशेष श्रद्धाका साथ पूज्ने गर्दछन्।
+किराँत परम्परामा यस स्थानलाई "केवासुमाङ" को रूपमा पनि मानिन्छ भने
+कतिपय हिन्दू भक्तजनहरूले यसलाई भगवान शिवसँग सम्बन्धित धार्मिक स्थलका रूपमा
+समेत मान्ने गर्छन्। यही कारणले विभिन्न धर्म, जाति तथा समुदायका मानिसहरू
+यहाँ दर्शनका लागि आउने गरेका छन्। 
+</p>
 
-<div class="row w3-card-2 w3-white" style="padding-bottom:10px;">
+<h2>इतिहास र धार्मिक मान्यता</h2>
 
+<p>
+बुढा सुब्बा मन्दिरसँग सम्बन्धित विभिन्न ऐतिहासिक तथा धार्मिक कथनहरू
+प्रचलित छन्। एक लोकप्रिय विश्वास अनुसार यो स्थान किराँत राज्यका
+अन्तिम शक्तिशाली राजा बुद्धिकर्ण राय खेबाङ (Buddhi Karna Raya Khebang)
+संग सम्बन्धित छ। स्थानीय जनविश्वास अनुसार उनको स्मृतिमा यो स्थल
+पवित्र धार्मिक केन्द्रका रूपमा विकसित भएको हो। 
+</p>
 
+<p style="text-align:justify;">
+अर्को धार्मिक मान्यताअनुसार भगवान शिव र पार्वतीले विजयपुर क्षेत्रमा
+आएर तपस्या गरेको स्थान यही हो भन्ने विश्वास गरिन्छ।
+यस कारण हिन्दू तथा किराँत दुवै समुदायका लागि यो स्थल अत्यन्त
+महत्वपूर्ण मानिन्छ। 
+</p>
 
-  <div class="column2">
+<h2>मनोकामना पूरा हुने विश्वास</h2>
 
-	<div class="w3-row-padding">
+<p style="text-align:justify;">
+बुढा सुब्बा मन्दिरको सबैभन्दा प्रसिद्ध विशेषता भनेको यहाँ
+आएर मनोकामना माग्दा पूरा हुने जनविश्वास हो।
+देशभरका मानिसहरू व्यक्तिगत, पारिवारिक, शैक्षिक, व्यवसायिक तथा
+वैवाहिक सफलताको कामना गर्दै यहाँ पूजा गर्न आउने गर्दछन्। 
+</p>
 
-		
+<p style="text-align:justify;">
+विशेष गरी युवायुवतीहरूबीच यो मन्दिर प्रेम र वैवाहिक सम्बन्धसँग
+जोडिएको धार्मिक स्थलका रूपमा प्रसिद्ध छ। स्थानीय विश्वास अनुसार
+एक-अर्कालाई मन पराउने जोडीले यहाँ आएर मनोकामना गरेमा सम्बन्ध सफल
+हुने तथा विवाह हुने सम्भावना बढ्ने मान्यता रहेको छ। 
+</p>
 
-		<div class="m-margin-top">
+<h2>बाँस र धागो बाँध्ने परम्परा</h2>
 
-	
-<!-- products -->
-		<div class="w3-card-3 w3-white m-margin-top">
+<p style="text-align:justify;">
+बुढा सुब्बा मन्दिरको अर्को अनौठो विशेषता यहाँ पाइने टुप्पो नभएका
+बाँसहरू हुन्। विगतमा भक्तजनहरूले आफ्नो मनोकामना वा प्रिय व्यक्तिको नाम
+बाँसमा लेख्ने चलन थियो। तर बाँसमा धेरै लेखाइ हुन थालेपछि बाँसलाई
+क्षति पुग्न थालेकाले अहिले उक्त प्रचलन बन्द गरिएको छ। 
+</p>
 
+<p style="text-align:justify;">
+हाल भक्तजनहरूले पूजा गरेपछि बाँसमा रंगीन धागो वा पवित्र डोरी बाँध्ने
+गर्छन्। धागो बाँधेर मनोकामना माग्दा इच्छा पूरा हुने विश्वास
+आज पनि व्यापक रूपमा प्रचलित छ। मन्दिर परिसरमा विभिन्न रंगका धागोहरूले
+सजिएका बाँसहरू देख्न सकिन्छ, जुन यहाँको प्रमुख आकर्षण हो। 
+</p>
 
-		<div class="w3-padding">
+<h2>मन्दिर परिसरको वातावरण</h2>
 
-		
+<p style="text-align:justify;">
+मन्दिर वरिपरि घना हरियाली, शान्त वातावरण तथा प्राकृतिक सौन्दर्यले
+पर्यटकलाई आकर्षित गर्छ। धार्मिक यात्राका साथै प्रकृति अवलोकन,
+फोटो खिच्ने तथा शान्त वातावरणमा समय बिताउन चाहनेहरूका लागि पनि
+यो उपयुक्त गन्तव्य हो। 
+</p>
 
-			<div class="rowcard">
-
-  <header>
-    <h1>Buddha Subba Temple - Dharan</h1>
-  </header>
-
-  <div class="">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Budha_Subba_Temple_Dharan.jpg" alt="Buddha Subba Temple, Dharan">
-
-    <h2>About Buddha Subba Temple</h2>
-    <p>
-      Buddha Subba Temple, located in Dharan, Nepal, is one of the most popular and sacred pilgrimage sites in the eastern region of the country. It is dedicated to Lord Buddha Subba, believed to be a powerful local deity who fulfills the wishes of devotees. The temple is surrounded by lush greenery and a peaceful atmosphere, attracting both spiritual seekers and tourists alike.
-    </p>
-
-    <p>
-      One of the unique traditions at Buddha Subba Temple is that visitors write their wishes on bamboo sticks and plant them around the temple premises, hoping that their prayers will be granted. It is also believed that unmarried couples who visit together are destined to get married. The temple’s serene environment and cultural significance make it a must-visit landmark in Dharan.
-    </p>
-  </div>
- 
-
-  
-
-
-
-</div>
-
-		
-
-
-
-	
-
-		<br>
-
-		
-
-		</div>
-
-		
-
-		</div>
-
-		
-		
-
-		</div>
-
-		
-
-	</div>
-
-
-
-
-
-
-
-  </div>
-
- 
-
-
-
-  <div class="column3"> 
-
-  <div class="w3-row-padding">
-
-
-
-	<div class="m-margin-top" >
-
-		<div class="w3-card-3 w3-white">
-
-		<div>
-
-		<p style="background-color:rgb(0,120,201);font-size:14px;text-align:center;color:white;">Recent Post</p>
-
-		</div>
-
-<div class="w3-padding w3-small">
+<h2>धार्मिक गतिविधिहरू</h2>
 
 <ul>
-<li><a href="calculate2dates.html">Calculate Two Dates in Excel</a>
-<li><a href="consolidate.html">Sum Two or more same Products Values in Excel</a>
-<li><a href="downloads/GoogleInputToolsNepali.zip">Download Nepali InputTool</a><br>
-<li><a href="downloads/ChequeWriter_NP.zip">Download Cheque Writer</a>
+<li>दैनिक पूजा-अर्चना</li>
+<li>मनोकामना पूजा</li>
+<li>विशेष पर्व तथा मेलाहरू</li>
+<li>धागो बाँध्ने धार्मिक परम्परा</li>
+<li>किराँत धार्मिक अनुष्ठान</li>
+<li>पारिवारिक तथा व्यक्तिगत पूजा</li>
 </ul>
 
+<h2>यहाँ कसरी पुग्ने ?</h2>
+
+<p style="text-align:justify;">
+बुढा सुब्बा मन्दिर धरान बजारबाट केही किलोमिटर उत्तरतर्फ विजयपुर क्षेत्रमा
+अवस्थित छ। धरान बसपार्क वा शहरको मुख्य क्षेत्रबाट ट्याक्सी, मोटरसाइकल
+वा स्थानीय सवारी साधनमार्फत सजिलै पुग्न सकिन्छ। विराटनगरबाट पनि
+सडकमार्ग हुँदै केही घण्टाको यात्रापछि मन्दिर पुग्न सकिन्छ। 
+</p>
+
+<h2>पर्यटकका लागि सुझाव</h2>
+
+<ul>
+<li>मन्दिर परिसर सफा राख्नुहोस्।</li>
+<li>धार्मिक परम्परा तथा स्थानीय संस्कृतिको सम्मान गर्नुहोस्।</li>
+<li>पूजापछि बाँसमा लेख्ने कार्य नगर्नुहोस्।</li>
+<li>धागो बाँध्ने परम्परा पालना गर्न सकिन्छ।</li>
+<li>भीडभाड हुने समयमा आफ्नो सामानको सुरक्षा गर्नुहोस्।</li>
+<li>प्राकृतिक वातावरण जोगाउन फोहोर नफाल्नुहोस्।</li>
+</ul>
+
+<div class="note">
+<strong>रोचक तथ्य:</strong><br>
+बुढा सुब्बा मन्दिर विशेष गरी प्रेम सम्बन्ध र मनोकामना पूर्तिसँग जोडिएको
+नेपालकै चर्चित धार्मिक स्थलमध्ये एक हो। यहाँका टुप्पो नभएका बाँस र
+धागो बाँध्ने परम्परा नेपालका अन्य धेरै मन्दिरहरूभन्दा फरक र अनौठो
+मानिन्छ। 
 </div>
 
-</div></div></div>
-
-
-
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-
-<!-- Footer -->
-
-<div class="w3-container w3-theme-d3 w3-padding-16 t-bar co">
-
-<p class='footer-col w3-small'>My Products: BPKIHS_Darta_Chalani</a></p>
-
-
-<!--
-
-  <p class='footer-col w3-small'><a href=# class="bot-foot">Home</a><br><a href=# class="bot-foot">Admin</a><br><a href=# class="bot-foot">Songs</a><br><a href=# class="bot-foot">Gallery</a><br><a href=# class="bot-foot">About</a><br><a href=# class="bot-foot">F.A.Q</a><br><a href=# class="bot-foot">More</a><br><a href=# class="bot-foot">Top</a>
-
-   </p>-->
-
-   </div>
-
-<div class="w3-container w3-theme-d3 w3-padding-16 foot-bar co w3-small">
-
-  <h5 class='' style="text-align:center;"></h5>
-
-  <p class='' class='' style="text-align:center;"><p class='' class='' style="text-align:center;">
-
-   &copy <?php echo date("Y"); ?> All Right Reserved. dhaneshwarchaudhary.com.np</p> <p><label style="float:right;"></label></p>
 
 </div>
 
 </body>
-
 </html>
-
