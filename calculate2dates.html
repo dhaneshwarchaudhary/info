@@ -449,7 +449,271 @@ md & D = Days
  <img alt="" src="images/Two date Calculation in Excel copy.png" style="width:100%;height:300px;"/>
 </div> 
 
- 
+ <div class="container">
+
+<h1>Excel मा दुई मितिबीचको फरक (Years, Months, Days) कसरी गणना गर्ने ?</h1>
+
+<p>
+Microsoft Excel मा दुई वटा मितिबीच (Date Between Two Dates) को फरक
+वर्ष (Years), महिना (Months) र दिन (Days) मा निकाल्नका लागि
+<strong>DATEDIF()</strong> Function प्रयोग गरिन्छ।
+यो Function विशेष गरी कर्मचारीको सेवा अवधि (Service Period),
+उमेर (Age Calculation), अनुभव (Work Experience) तथा अन्य समय सम्बन्धी
+गणनाहरूका लागि अत्यन्त उपयोगी मानिन्छ।
+</p>
+
+<p>
+उदाहरणका लागि कुनै व्यक्तिको जन्म मिति र हालको मितिबीचको अन्तर
+निकाल्नुपरेमा, वा कुनै कर्मचारीले कार्यालयमा कति वर्ष, महिना र दिन
+सेवा गरिसकेको छ भन्ने जानकारी लिनुपरेमा DATEDIF Function प्रयोग गर्न
+सकिन्छ।
+</p>
+
+<hr>
+
+<h2>DATEDIF Function के हो ?</h2>
+
+<p>
+DATEDIF (Date Difference) Function ले दुई मितिबीचको अन्तर गणना गर्छ।
+यसले वर्ष, महिना तथा दिन छुट्टाछुट्टै वा संयुक्त रूपमा निकाल्न सक्छ।
+</p>
+
+<p>
+DATEDIF Function को Syntax निम्नानुसार हुन्छ:
+</p>
+
+<pre>
+=DATEDIF(Start_Date, End_Date, "Unit")
+</pre>
+
+<p>
+जहाँ:
+</p>
+
+<ul>
+<li><strong>Start_Date</strong> = सुरुको मिति</li>
+<li><strong>End_Date</strong> = अन्तिम मिति</li>
+<li><strong>Unit</strong> = कुन आधारमा गणना गर्ने भन्ने संकेत</li>
+</ul>
+
+<hr>
+
+<h2>DATEDIF मा प्रयोग हुने Unit हरू</h2>
+
+<table border="1" cellpadding="5" cellspacing="0">
+<tr>
+<th>Unit</th>
+<th>अर्थ</th>
+</tr>
+
+<tr>
+<td>Y</td>
+<td>पूर्ण वर्ष (Years)</td>
+</tr>
+
+<tr>
+<td>M</td>
+<td>पूर्ण महिना (Months)</td>
+</tr>
+
+<tr>
+<td>D</td>
+<td>पूर्ण दिन (Days)</td>
+</tr>
+
+<tr>
+<td>YM</td>
+<td>वर्ष हटाएपछि बाँकी महिना</td>
+</tr>
+
+<tr>
+<td>MD</td>
+<td>महिना हटाएपछि बाँकी दिन</td>
+</tr>
+
+<tr>
+<td>YD</td>
+<td>वर्ष हटाएपछि बाँकी दिन</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>१. वर्ष, महिना र दिन छुट्टाछुट्टै निकाल्ने</h2>
+
+<p>
+यदि जन्म मिति <strong>B2</strong> Cell मा र हालको मिति
+<strong>C2</strong> Cell मा छ भने:
+</p>
+
+<h3>वर्ष (Years)</h3>
+
+<pre>
+=DATEDIF(B2,C2,"y")&"Y"
+</pre>
+
+<p>
+यसले पूर्ण वर्षको संख्या देखाउँछ।
+</p>
+
+<h3>महिना (Remaining Months)</h3>
+
+<pre>
+=DATEDIF(B2,C2,"ym")&"M"
+</pre>
+
+<p>
+यसले वर्ष बाहेक बाँकी महिना देखाउँछ।
+</p>
+
+<h3>दिन (Remaining Days)</h3>
+
+<pre>
+=DATEDIF(B2,C2,"md")&"D"
+</pre>
+
+<p>
+यसले महिना बाहेक बाँकी दिन देखाउँछ।
+</p>
+
+<hr>
+
+<h2>२. वर्ष, महिना र दिन एउटै Formula मा निकाल्ने</h2>
+
+<p>
+यदि B7 मा सुरु मिति र C7 मा अन्तिम मिति छ भने:
+</p>
+
+<pre>
+=DATEDIF(B7,C7,"y")&"Y "&DATEDIF(B7,C7,"ym")&"M "&DATEDIF(B7,C7,"md")&"D"
+</pre>
+
+<p>
+यसले परिणाम यस प्रकार देखाउँछ:
+</p>
+
+<pre>
+25Y 10M 29D
+</pre>
+
+<hr>
+
+<h2>३. पूर्ण शब्दमा Result देखाउने</h2>
+
+<pre>
+=DATEDIF(B7,C7,"y")&" Years "&DATEDIF(B7,C7,"ym")&" Months "&DATEDIF(B7,C7,"md")&" Days"
+</pre>
+
+<p>
+यसले परिणाम यसरी देखाउँछ:
+</p>
+
+<pre>
+25 Years 10 Months 29 Days
+</pre>
+
+<hr>
+
+<h2>उमेर (Age) निकाल्ने उदाहरण</h2>
+
+<p>
+मानौं:
+</p>
+
+<table border="1" cellpadding="5" cellspacing="0">
+<tr>
+<th>जन्म मिति</th>
+<th>हालको मिति</th>
+</tr>
+
+<tr>
+<td>1999-09-15</td>
+<td>2025-08-01</td>
+</tr>
+</table>
+
+<p>
+Formula:
+</p>
+
+<pre>
+=DATEDIF(B2,C2,"y")&" Years "&DATEDIF(B2,C2,"ym")&" Months "&DATEDIF(B2,C2,"md")&" Days"
+</pre>
+
+<p>
+Result:
+</p>
+
+<pre>
+25 Years 10 Months 17 Days
+</pre>
+
+<hr>
+
+<h2>कर्मचारीको सेवा अवधि (Service Period) निकाल्ने</h2>
+
+<p>
+यदि कर्मचारीको नियुक्ति मिति B2 मा छ र हालको मिति C2 मा छ भने:
+</p>
+
+<pre>
+=DATEDIF(B2,C2,"y")&" Years "&DATEDIF(B2,C2,"ym")&" Months "&DATEDIF(B2,C2,"md")&" Days"
+</pre>
+
+<p>
+यसबाट कर्मचारीले कति वर्ष, महिना र दिन सेवा गरिसकेको छ भन्ने जानकारी
+सजिलै प्राप्त गर्न सकिन्छ।
+</p>
+
+<hr>
+
+<h2>TODAY() Function प्रयोग गरेर वर्तमान मितिसम्म गणना</h2>
+
+<p>
+यदि हालको मिति प्रत्येक दिन स्वतः अपडेट हुनुपर्ने हो भने:
+</p>
+
+<pre>
+=DATEDIF(B2,TODAY(),"y")&" Years "&DATEDIF(B2,TODAY(),"ym")&" Months "&DATEDIF(B2,TODAY(),"md")&" Days"
+</pre>
+
+<p>
+TODAY() Function ले कम्प्युटरको हालको मिति स्वतः लिन्छ र उमेर वा
+सेवा अवधि दैनिक रूपमा अपडेट हुन्छ।
+</p>
+
+<hr>
+
+<h2>महत्वपूर्ण सावधानीहरू</h2>
+
+<ul>
+<li>Start Date सधैं End Date भन्दा सानो हुनुपर्छ।</li>
+<li>गलत Date Format भए Formula Error आउन सक्छ।</li>
+<li>DATEDIF Function Formula List मा नदेखिए पनि Excel मा काम गर्छ।</li>
+<li>Cell को Date Format सही छ कि छैन जाँच गर्नुहोस्।</li>
+<li>उमेर तथा सेवा अवधि गणनाका लागि DATEDIF सबैभन्दा उपयुक्त Function हो।</li>
+</ul>
+
+<hr>
+
+<div class="note">
+<strong>छिटो सम्झनुहोस्:</strong><br><br>
+
+Y = Years (वर्ष)<br>
+YM = Remaining Months (बाँकी महिना)<br>
+MD = Remaining Days (बाँकी दिन)<br><br>
+
+सबैभन्दा धेरै प्रयोग हुने Formula:
+<pre>
+=DATEDIF(B2,C2,"y")&" Years "&DATEDIF(B2,C2,"ym")&" Months "&DATEDIF(B2,C2,"md")&" Days"
+</pre>
+
+यस Formula ले उमेर, सेवा अवधि, अनुभव तथा दुई मितिबीचको समय अन्तर
+सजिलै निकाल्न मद्दत गर्छ।
+</div>
+
+</div>
 
   
 
