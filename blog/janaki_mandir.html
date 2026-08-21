@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>जानकी मन्दिर, जनकपुरधाम, धनुषा </title>
+<style>
+body {
+
+  margin: 0;
+
+
+}
+
+
+
+
+
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+
+
+.sticky + .content {
+
+  padding-top: 0px;
+
+}
+
+
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  max-width: 1000px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: rgb(0,120,201);
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active {
+
+  background-color: #2196F3;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+
+  .text {font-size: 11px}
+
+}
+
+
+
+/* Float four columns side by side */
+
+.columncard {
+
+  float: left;
+
+  width: 25%;
+
+  padding: 0 10px;
+
+}
+
+
+
+/* Remove extra left and right margins, due to padding */
+
+.rowcard {margin: 0 -5px;}
+
+
+
+/* Clear floats after the columns */
+
+.rowcard:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+
+  .columncard {
+
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+
+/* Style the counter cards */
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+}
+   .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+        }
+    }
+/* Navbar */
+
+
+/* Header */
+header {
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:18px;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.nav-links li a.active {
+    background: white;
+    color: #0d6efd;
+}
+/* Responsive */
+@media(max-width:768px){
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0d6efd;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+	.hero{
+        min-height:500px;
+    }
+	.hero h1{
+    font-size:clamp(1.8rem);
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+}
+
+/* Hero */
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--dark);
+}
+.hero{
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('images/dc.jpg');
+
+    background-size:100% 100%;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --card:#ffffff;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Kalimati, Arial, sans-serif;
+    line-height:1.8;
+
+    background:#f8f9fa;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h1,h2{
+    color:#003366;
+}
+.step{
+    background:#f1f5ff;
+    padding:10px;
+    margin-bottom:10px;
+    border-left:5px solid #003366;
+}
+.warning{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:15px;
+}
+.danger{
+    background:#f8d7da;
+    border-left:5px solid #dc3545;
+    padding:15px;
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
+     crossorigin="anonymous"></script>
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
+</head>
+<body>
+<div style="background-color:white;">
+<center>
+ <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
+ <img alt="" src="../images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:25px;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ </center>
+</div>
+<nav class="navbar" style="font-family:merienda;color:white;font-weight:bold;">
+    <div class="logo font-effect-shadow-multiple" >DHANESHWAR</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks" >
+        <li><a href="../">Home</a></li>
+		<!--<li><a href="../radio">Nepali Radio</a></li>-->
+        <li><a href="../about-us">About</a></li>
+        <li><a href="../contact">Contact</a></li>
+        <li><a href="../policy">Privacy</a></li>
+    </ul>
+</nav>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("navLinks");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
+<div class="container">
+
+    <h1>जानकी मन्दिर, जनकपुरधाम, धनुषा</h1>
+
+    <h2>परिचय</h2>
+
+    <p style="text-align:justify;">
+        <strong>जानकी मन्दिर</strong> नेपालको मधेश प्रदेशअन्तर्गत
+        धनुषा जिल्लाको <strong>जनकपुरधाम</strong>मा अवस्थित प्रसिद्ध
+        धार्मिक, ऐतिहासिक तथा सांस्कृतिक सम्पदा हो। यो मन्दिर
+        माता जानकी अर्थात् <strong>सीता देवी</strong>लाई समर्पित छ।
+        हिन्दू धर्मावलम्बीहरूका लागि यो नेपालका सबैभन्दा महत्वपूर्ण
+        तीर्थस्थलमध्ये एक मानिन्छ।
+    </p>
+
+    <p style="text-align:justify;">
+        जनकपुरधामलाई माता सीताको जन्मभूमि तथा भगवान् रामसँग जोडिएको
+        पवित्र धार्मिक नगरीका रूपमा मानिन्छ। त्यसैले जानकी मन्दिरमा
+        नेपालका विभिन्न ठाउँका साथै भारत र अन्य देशबाट समेत
+        श्रद्धालु तथा पर्यटकहरू दर्शन गर्न आउने गर्दछन्।
+    </p>
+
+    <hr>
+
+    <h2>जानकी मन्दिर किन प्रसिद्ध छ ?</h2>
+
+    <p style="text-align:justify;">
+        धार्मिक मान्यताअनुसार माता सीता मिथिलाका राजा
+        <strong>जनक</strong>की छोरी हुनुहुन्थ्यो। उहाँलाई
+        <strong>जानकी</strong> नामले पनि चिनिन्छ। भगवान् राम र
+        माता सीताको विवाह जनकपुरधाममा भएको धार्मिक विश्वास रहेको छ।
+    </p>
+
+    <p style="text-align:justify;">
+        यही कारण जनकपुरधामलाई <strong>राम–जानकीको पवित्र भूमि</strong>
+        का रूपमा सम्मान गरिन्छ। जानकी मन्दिर यस धार्मिक इतिहासको
+        प्रमुख केन्द्र भएकाले हिन्दू धर्मावलम्बीहरूको विशेष आस्थाको
+        स्थल बनेको छ।
+    </p>
+
+    <hr>
+
+    <h2>जानकी मन्दिरको इतिहास</h2>
+
+    <p style="text-align:justify;">
+        वर्तमान जानकी मन्दिरको निर्माणको इतिहाससँग
+        <strong>वृन्दावनकी रानी राजेन्द्रकुमारी</strong>को नाम जोडिएको
+        पाइन्छ। मन्दिरको निर्माण सन् <strong>1910 ईस्वी</strong>तिर
+        सम्पन्न भएको मानिन्छ।
+    </p>
+
+    <p style="text-align:justify;">
+        मन्दिरको विशाल आकार, कलात्मक शैली र आकर्षक संरचनाका कारण
+        यसलाई जनकपुरधामको प्रमुख पहिचानका रूपमा लिइन्छ। मन्दिरको
+        वास्तुकलामा विभिन्न धार्मिक तथा सांस्कृतिक प्रभावको सुन्दर
+        संयोजन देखिन्छ।
+    </p>
+
+    <hr>
+
+    <h2>मन्दिरको वास्तुकला</h2>
+
+    <p style="text-align:justify;">
+        जानकी मन्दिर आफ्नो <strong>भव्य तथा आकर्षक वास्तुकला</strong>का
+        लागि पनि प्रसिद्ध छ। सेतो रङको विशाल भवन, गुम्बज, मेहराब,
+        कलात्मक झ्याल तथा विभिन्न सजावटी संरचनाले मन्दिरलाई निकै
+        आकर्षक बनाएका छन्।
+    </p>
+
+    <p style="text-align:justify;">
+        मन्दिरको संरचनामा मुगल तथा राजपूत शैलीको प्रभाव देखिने
+        बताइन्छ। ठूलो क्षेत्रफलमा फैलिएको मन्दिर परिसरले
+        जनकपुरधाम आउने पर्यटकलाई विशेष आकर्षित गर्दछ।
+    </p>
+
+    <hr>
+
+    <h2>माता जानकीको धार्मिक महत्व</h2>
+
+    <p style="text-align:justify;">
+        हिन्दू धर्ममा माता सीतालाई आदर्श नारी, पतिव्रता, त्याग,
+        धैर्य, करुणा तथा नैतिकताको प्रतीकका रूपमा सम्मान गरिन्छ।
+        उहाँलाई <strong>जानकी, मैथिली, वैदेही तथा सीता</strong> आदि
+        नामले पनि चिनिन्छ।
+    </p>
+
+    <p style="text-align:justify;">
+        जानकी मन्दिरमा माता सीताको पूजा तथा आराधना गरिन्छ। भक्तजनहरूले
+        परिवारको सुख–शान्ति, समृद्धि, वैवाहिक जीवनको सफलता तथा
+        मनोकामना पूरा होस् भन्ने कामनासहित मन्दिरमा पूजा तथा दर्शन
+        गर्ने गर्दछन्।
+    </p>
+
+    <hr>
+
+    <h2>राम–सीता विवाहसँगको सम्बन्ध</h2>
+
+    <p style="text-align:justify;">
+        जनकपुरधामको सबैभन्दा महत्वपूर्ण धार्मिक परम्परामध्ये
+        <strong>राम–जानकी विवाह</strong> प्रमुख हो। धार्मिक कथाअनुसार
+        अयोध्याका राजकुमार भगवान् राम जनकपुरधाममा आयोजित
+        स्वयंवरमा सहभागी हुनुभएको थियो।
+    </p>
+
+    <p style="text-align:justify;">
+        भगवान् रामले भगवान् शिवको धनुष उठाएर तोडेपछि माता सीता र
+        भगवान् रामको विवाह भएको धार्मिक विश्वास छ। यसै घटनाको
+        सम्झनामा प्रत्येक वर्ष जनकपुरधाममा <strong>विवाह पञ्चमी</strong>
+        विशेष उत्साहका साथ मनाइन्छ।
+    </p>
+
+    <hr>
+
+    <h2>विवाह पञ्चमी</h2>
+
+    <p style="text-align:justify;">
+        <strong>विवाह पञ्चमी</strong> जानकी मन्दिर तथा जनकपुरधामको
+        सबैभन्दा प्रसिद्ध धार्मिक पर्वमध्ये एक हो। यस अवसरमा
+        भगवान् राम र माता सीताको विवाहको प्रतीकात्मक पुनःअभिनय
+        तथा विभिन्न धार्मिक कार्यक्रम आयोजना गरिन्छ।
+    </p>
+
+    <p style="text-align:justify;">
+        विवाह पञ्चमीको समयमा नेपालका विभिन्न स्थान तथा भारतबाट समेत
+        ठूलो संख्यामा साधुसन्त, श्रद्धालु तथा पर्यटक जनकपुरधाम
+        आउने गर्दछन्। मन्दिर तथा जनकपुरधामको वातावरण यस समयमा
+        अत्यन्त उत्सवमय र भक्तिमय हुन्छ।
+    </p>
+
+    <hr>
+
+    <h2>राम नवमी तथा अन्य पर्व</h2>
+
+    <p style="text-align:justify;">
+        जानकी मन्दिरमा <strong>राम नवमी, विवाह पञ्चमी, दीपावली,
+        तीज तथा अन्य हिन्दू धार्मिक पर्व</strong>हरूमा विशेष
+        पूजा–आराधना हुने गर्दछ।
+    </p>
+
+    <p style="text-align:justify;">
+        पर्वका समयमा मन्दिरमा भक्तजनको संख्या उल्लेखनीय रूपमा
+        बढ्ने गर्दछ। धार्मिक कार्यक्रम, भजन–कीर्तन, पूजा तथा
+        सांस्कृतिक गतिविधिले जनकपुरधामको धार्मिक वातावरण अझ
+        आकर्षक बनाउँछ।
+    </p>
+
+    <hr>
+
+    <h2>जनकपुरधामको धार्मिक महत्व</h2>
+
+    <p style="text-align:justify;">
+        जानकी मन्दिर मात्र नभई सम्पूर्ण <strong>जनकपुरधाम</strong>
+        नै हिन्दू धर्मको महत्वपूर्ण तीर्थस्थल हो। जनकपुर क्षेत्रमा
+        राम, सीता तथा मिथिला संस्कृतिसँग सम्बन्धित धेरै धार्मिक
+        स्थलहरू रहेका छन्।
+    </p>
+
+    <p style="text-align:justify;">
+        जनकपुरधामको धार्मिक महत्व नेपाल–भारतबीचको सांस्कृतिक तथा
+        धार्मिक सम्बन्धसँग पनि जोडिएको छ। विशेषगरी मिथिला क्षेत्रका
+        मानिसहरूका लागि जनकपुरधाम धार्मिक तथा सांस्कृतिक पहिचानको
+        महत्वपूर्ण केन्द्र हो।
+    </p>
+
+    <hr>
+
+    <h2>मिथिला संस्कृति र जानकी मन्दिर</h2>
+
+    <p style="text-align:justify;">
+        जानकी मन्दिर मिथिला संस्कृति र परम्पराको संरक्षण तथा
+        प्रचार–प्रसारसँग पनि नजिकबाट जोडिएको छ। जनकपुरधाममा
+        <strong>मिथिला चित्रकला, लोकगीत, लोकनृत्य तथा परम्परागत
+        संस्कार</strong>को विशेष महत्व रहेको छ।
+    </p>
+
+    <p style="text-align:justify;">
+        मन्दिर तथा आसपासका क्षेत्रमा पाइने धार्मिक तथा सांस्कृतिक
+        गतिविधिले नेपालको मौलिक मिथिला संस्कृतिलाई देश–विदेशमा
+        चिनाउन सहयोग पुर्‍याएको छ।
+    </p>
+
+    <hr>
+
+    <h2>पर्यटकीय महत्व</h2>
+
+    <p style="text-align:justify;">
+        जानकी मन्दिर धार्मिक पर्यटकका साथै इतिहास, वास्तुकला,
+        संस्कृति तथा फोटोग्राफीमा रुचि राख्ने पर्यटकका लागि पनि
+        आकर्षक गन्तव्य हो।
+    </p>
+
+    <ul>
+        <li>भव्य मन्दिरको वास्तुकला अवलोकन गर्न सकिन्छ।</li>
+        <li>माता जानकीको दर्शन तथा पूजा गर्न सकिन्छ।</li>
+        <li>मिथिला संस्कृति र परम्पराको अनुभव गर्न सकिन्छ।</li>
+        <li>स्थानीय बजार तथा मिथिला कला अवलोकन गर्न सकिन्छ।</li>
+        <li>जनकपुरका अन्य धार्मिक तथा ऐतिहासिक स्थल भ्रमण गर्न सकिन्छ।</li>
+    </ul>
+
+    <hr>
+
+    <h2>जानकी मन्दिर आसपासका प्रमुख धार्मिक स्थलहरू</h2>
+
+    <p style="text-align:justify;">
+        जनकपुरधाममा जानकी मन्दिरका अतिरिक्त धेरै धार्मिक तथा
+        ऐतिहासिक स्थलहरू रहेका छन्। तीमध्ये केही महत्वपूर्ण स्थल
+        निम्न छन्:
+    </p>
+
+    <ul>
+        <li>राम मन्दिर</li>
+        <li>राम–जानकी विवाह मण्डप</li>
+        <li>गंगा सागर</li>
+        <li>धनुष सागर</li>
+        <li>दूधमती क्षेत्र</li>
+        <li>हनुमान मन्दिर</li>
+        <li>विभिन्न प्राचीन पोखरी तथा धार्मिक स्थलहरू</li>
+    </ul>
+
+    <hr>
+
+    <h2>जनकपुरधामको पोखरीहरूको महत्व</h2>
+
+    <p style="text-align:justify;">
+        जनकपुरधाममा रहेका प्राचीन पोखरीहरू पनि धार्मिक तथा सांस्कृतिक
+        दृष्टिले महत्वपूर्ण छन्। <strong>गंगासागर र धनुषसागर</strong>
+        जस्ता पोखरीमा धार्मिक स्नान तथा पूजा गर्ने परम्परा रहेको छ।
+    </p>
+
+    <p style="text-align:justify;">
+        यी पोखरीहरू जनकपुरधामको धार्मिक वातावरणका महत्वपूर्ण
+        अंग हुन्। जानकी मन्दिर भ्रमण गर्ने पर्यटकहरूले यी स्थानहरू
+        पनि अवलोकन गर्ने गर्दछन्।
+    </p>
+
+    <hr>
+
+    <h2>जानकी मन्दिर जाने तरिका</h2>
+
+    <p style="text-align:justify;">
+        जानकी मन्दिर धनुषा जिल्लाको जनकपुरधाम शहरको केन्द्रमा
+        अवस्थित भएकाले यहाँ पुग्न सहज छ। नेपालका विभिन्न प्रमुख
+        शहरहरूबाट सडक तथा हवाई यातायातमार्फत जनकपुरधाम पुग्न
+        सकिन्छ।
+    </p>
+
+    <p style="text-align:justify;">
+        जनकपुरधाममा पुगेपछि स्थानीय टेम्पो, ई–रिक्सा, ट्याक्सी तथा
+        अन्य स्थानीय यातायात प्रयोग गरेर जानकी मन्दिर पुग्न सकिन्छ।
+    </p>
+
+    <hr>
+
+    <h2>भक्तजन तथा पर्यटकका लागि सुझाव</h2>
+
+    <ul>
+        <li>मन्दिर परिसरमा सरसफाइ कायम राख्नुहोस्।</li>
+        <li>धार्मिक तथा सांस्कृतिक परम्पराको सम्मान गर्नुहोस्।</li>
+        <li>मन्दिर व्यवस्थापनले तोकेका नियम पालना गर्नुहोस्।</li>
+        <li>भीडभाडको समयमा आफ्ना सामान सुरक्षित राख्नुहोस्।</li>
+        <li>फोहोर जथाभावी नफाल्नुहोस्।</li>
+        <li>पूजा तथा दर्शनको समयमा शान्त वातावरण कायम राख्नुहोस्।</li>
+        <li>फोटो तथा भिडियो खिच्नुअघि मन्दिरका नियम बुझ्नुहोस्।</li>
+    </ul>
+
+    <hr>
+
+    <div class="note">
+
+        <p style="text-align:justify;">
+            <strong>जानकी मन्दिर</strong> जनकपुरधाम, धनुषामा रहेको
+            माता सीतालाई समर्पित नेपालको प्रसिद्ध धार्मिक स्थल हो।
+            धार्मिक विश्वासअनुसार माता सीता मिथिलाका राजा जनककी
+            छोरी हुनुहुन्थ्यो र भगवान् रामसँग उहाँको विवाह
+            जनकपुरधाममा भएको मानिन्छ।
+        </p>
+
+        <p style="text-align:justify;">
+            भव्य सेतो भवन, आकर्षक वास्तुकला, धार्मिक महत्व र
+            मिथिला संस्कृतिका कारण जानकी मन्दिर नेपालकै महत्वपूर्ण
+            धार्मिक तथा पर्यटकीय गन्तव्य बनेको छ।
+        </p>
+
+        <p style="text-align:justify;">
+            विशेषगरी <strong>विवाह पञ्चमी</strong>का समयमा यहाँ
+            ठूलो धार्मिक उत्सव हुन्छ र नेपाल तथा भारतका विभिन्न
+            स्थानबाट ठूलो संख्यामा श्रद्धालुहरू जनकपुरधाम आउने
+            गर्दछन्।
+        </p>
+
+    </div>
+
+    <hr>
+
+    <p style="text-align:justify;">
+        जानकी मन्दिर जनकपुरधामको धार्मिक, ऐतिहासिक, सांस्कृतिक तथा
+        पर्यटकीय पहिचानको प्रमुख आधार हो। माता सीता र भगवान् रामसँग
+        जोडिएको धार्मिक इतिहास, भव्य वास्तुकला तथा मिथिला संस्कृतिका
+        कारण यसको महत्व नेपालमा मात्र नभई भारत तथा अन्य देशका
+        हिन्दू धर्मावलम्बीहरूका बीचमा पनि रहेको छ।
+    </p>
+
+    <p style="text-align:justify;">
+        धार्मिक आस्था भएका व्यक्तिका लागि जानकी मन्दिर महत्वपूर्ण
+        तीर्थस्थल हो भने नेपालको इतिहास, संस्कृति, वास्तुकला र
+        मिथिला परम्परा बुझ्न चाहने पर्यटकका लागि पनि यो अत्यन्त
+        महत्वपूर्ण गन्तव्य हो।
+    </p>
+
+</div>
+
+</body>
+</html>
