@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MobiOffice Android Application for Office</title>
+<style>
+body {
+
+  margin: 0;
+
+
+}
+
+p{text-align:justify;}
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+
+
+.sticky + .content {
+
+  padding-top: 0px;
+
+}
+
+
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  max-width: 1000px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: rgb(0,120,201);
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active {
+
+  background-color: #2196F3;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+
+  .text {font-size: 11px}
+
+}
+
+
+
+/* Float four columns side by side */
+
+.columncard {
+
+  float: left;
+
+  width: 25%;
+
+  padding: 0 10px;
+
+}
+
+
+
+/* Remove extra left and right margins, due to padding */
+
+.rowcard {margin: 0 -5px;}
+
+
+
+/* Clear floats after the columns */
+
+.rowcard:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+
+  .columncard {
+
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+
+/* Style the counter cards */
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+}
+   .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+        }
+    }
+/* Navbar */
+
+
+/* Header */
+header {
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:18px;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.nav-links li a.active {
+    background: white;
+    color: #0d6efd;
+}
+/* Responsive */
+@media(max-width:768px){
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0d6efd;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+	.hero{
+        min-height:500px;
+    }
+	.hero h1{
+    font-size:clamp(1.8rem);
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+}
+
+/* Hero */
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--dark);
+}
+.hero{
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('images/dc.jpg');
+
+    background-size:100% 100%;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --card:#ffffff;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Kalimati, Arial, sans-serif;
+    line-height:1.8;
+
+    background:#f8f9fa;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h1,h2{
+    color:#003366;
+}
+.step{
+    background:#f1f5ff;
+    padding:10px;
+    margin-bottom:10px;
+    border-left:5px solid #003366;
+}
+.warning{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:15px;
+}
+.danger{
+    background:#f8d7da;
+    border-left:5px solid #dc3545;
+    padding:15px;
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
+     crossorigin="anonymous"></script>
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
+</head>
+<body>
+<div style="background-color:white;">
+<center>
+ <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
+ <img alt="" src="../images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:25px;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ </center>
+</div>
+<nav class="navbar" style="font-family:merienda;color:white;font-weight:bold;">
+    <div class="logo font-effect-shadow-multiple" >DHANESHWAR</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks" >
+        <li><a href="../">Home</a></li>
+		<!--<li><a href="../radio">Nepali Radio</a></li>-->
+        <li><a href="../about-us">About</a></li>
+        <li><a href="../contact">Contact</a></li>
+        <li><a href="../policy">Privacy</a></li>
+    </ul>
+</nav>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("navLinks");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
+<div class="container">
+
+    <h1>MobiOffice Android Application for Office</h1>
+
+    <h2>परिचय</h2>
+
+    <p>
+        <strong>MobiOffice</strong> (पहिले OfficeSuite को नामले परिचित)
+        Android मोबाइल तथा ट्याबलेटमा प्रयोग गर्न मिल्ने लोकप्रिय
+        Office Application हो। यस Application को प्रयोग गरी Microsoft Word,
+        Excel, PowerPoint तथा PDF फाइलहरू सजिलै खोल्न, सम्पादन गर्न,
+        सुरक्षित गर्न र शेयर गर्न सकिन्छ।
+    </p>
+
+    <p>
+        कार्यालय, विद्यालय, व्यवसाय तथा व्यक्तिगत प्रयोगका लागि
+        MobiOffice अत्यन्त उपयोगी Application मानिन्छ। कम्प्युटर
+        नभएको अवस्थामा पनि मोबाइलबाटै कार्यालयका आवश्यक कागजात
+        तयार गर्न, सम्पादन गर्न तथा पठाउन सकिने भएकाले यसको प्रयोग
+        दिनप्रतिदिन बढ्दै गएको छ।
+    </p>
+
+    <hr>
+
+    <h2>MobiOffice के हो ?</h2>
+
+    <p>
+        MobiOffice एउटा Mobile Office Suite हो जसले प्रयोगकर्तालाई
+        मोबाइलबाटै विभिन्न प्रकारका कार्यालय सम्बन्धी फाइलहरू
+        व्यवस्थापन गर्न सहयोग गर्दछ।
+    </p>
+
+    <p>
+        यस Application मार्फत Word Document, Spreadsheet, Presentation
+        तथा PDF फाइलहरू सजिलै सञ्चालन गर्न सकिन्छ। Microsoft Office
+        फाइलहरूसँग राम्रो Compatibility भएकाले सरकारी कार्यालय,
+        निजी संस्था, विद्यालय, बैंक तथा व्यवसायिक क्षेत्रमा समेत
+        यसको प्रयोग हुने गरेको छ।
+    </p>
+
+    <hr>
+
+    <h2>MobiOffice का प्रमुख विशेषताहरू</h2>
+
+    <ul>
+        <li>Word Document खोल्ने तथा सम्पादन गर्ने सुविधा</li>
+        <li>Excel Spreadsheet सञ्चालन गर्ने सुविधा</li>
+        <li>PowerPoint Presentation हेर्ने तथा सम्पादन गर्ने सुविधा</li>
+        <li>PDF फाइल पढ्ने तथा Annotation गर्ने सुविधा</li>
+        <li>Cloud Storage Support</li>
+        <li>Document Scan गर्ने सुविधा</li>
+        <li>File Sharing तथा Export सुविधा</li>
+        <li>Multiple File Formats Support</li>
+        <li>Offline Mode मा पनि काम गर्ने सुविधा</li>
+        <li>Mobile Friendly Interface</li>
+    </ul>
+
+    <hr>
+
+    <h2>MobiOffice कसरी Install गर्ने ?</h2>
+
+    <ol>
+        <li>मोबाइलमा Google Play Store खोल्नुहोस्।</li>
+        <li>Search Box मा "MobiOffice" टाइप गर्नुहोस्।</li>
+        <li>Application छान्नुहोस्।</li>
+        <li>Install बटनमा क्लिक गर्नुहोस्।</li>
+        <li>Installation पूरा भएपछि Open गर्नुहोस्।</li>
+        <li>आवश्यक Permission Allow गर्नुहोस्।</li>
+    </ol>
+
+    <hr>
+
+    <h2>MobiOffice मा Word Document कसरी बनाउने ?</h2>
+
+    <ol>
+        <li>Application खोल्नुहोस्।</li>
+        <li>New Document विकल्पमा क्लिक गर्नुहोस्।</li>
+        <li>Word Document चयन गर्नुहोस्।</li>
+        <li>आवश्यक Text टाइप गर्नुहोस्।</li>
+        <li>Font, Size, Color तथा Formatting प्रयोग गर्नुहोस्।</li>
+        <li>Save बटनमा क्लिक गरी फाइल सुरक्षित गर्नुहोस्।</li>
+    </ol>
+
+    <p>
+        यसरी मोबाइलबाटै Letter, Report, Application, Notice,
+        Memo तथा अन्य कार्यालय सम्बन्धी कागजात तयार गर्न सकिन्छ।
+    </p>
+
+    <hr>
+
+    <h2>MobiOffice मा Excel कसरी प्रयोग गर्ने ?</h2>
+
+    <p>
+        Excel Spreadsheet प्रयोग गरी कार्यालयको विभिन्न तथ्याङ्क,
+        बजेट, तलब, उपस्थिति विवरण तथा अन्य गणनाहरू गर्न सकिन्छ।
+    </p>
+
+    <ul>
+        <li>नयाँ Spreadsheet बनाउन सकिन्छ।</li>
+        <li>Formula प्रयोग गर्न सकिन्छ।</li>
+        <li>SUM, AVERAGE, IF लगायत Formula Support हुन्छ।</li>
+        <li>Chart तथा Table बनाउन सकिन्छ।</li>
+        <li>Excel File Edit तथा Save गर्न सकिन्छ।</li>
+    </ul>
+
+    <hr>
+
+    <h2>MobiOffice मा PowerPoint Presentation</h2>
+
+    <p>
+        MobiOffice मार्फत PowerPoint Presentation खोल्न,
+        सम्पादन गर्न तथा प्रस्तुति तयार गर्न सकिन्छ।
+    </p>
+
+    <p>
+        शिक्षक, विद्यार्थी, कार्यालय कर्मचारी तथा व्यवसायिक
+        प्रयोगकर्ताका लागि यो सुविधा निकै उपयोगी हुन्छ।
+    </p>
+
+    <ul>
+        <li>Slide थप्न सकिन्छ।</li>
+        <li>Text तथा Image राख्न सकिन्छ।</li>
+        <li>Presentation Edit गर्न सकिन्छ।</li>
+        <li>Presentation Share गर्न सकिन्छ।</li>
+    </ul>
+
+    <hr>
+
+    <h2>PDF फाइल व्यवस्थापन</h2>
+
+    <p>
+        MobiOffice मा PDF Reader पनि उपलब्ध हुन्छ।
+        यसको प्रयोग गरी PDF फाइल खोल्न, पढ्न तथा
+        केही अवस्थामा Comment वा Annotation गर्न सकिन्छ।
+    </p>
+
+    <ul>
+        <li>PDF Read</li>
+        <li>Zoom In / Zoom Out</li>
+        <li>Search Text</li>
+        <li>Highlight Text</li>
+        <li>PDF Share</li>
+    </ul>
+
+    <hr>
+
+    <h2>Cloud Storage Support</h2>
+
+    <p>
+        MobiOffice ले विभिन्न Cloud Services सँग
+        Integration प्रदान गर्दछ।
+    </p>
+
+    <ul>
+        <li>Google Drive</li>
+        <li>Dropbox</li>
+        <li>OneDrive</li>
+        <li>Box Cloud Storage</li>
+    </ul>
+
+    <p>
+        यसले गर्दा कार्यालयका फाइलहरू Cloud मा सुरक्षित राख्न
+        र विभिन्न उपकरणबाट पहुँच प्राप्त गर्न सजिलो हुन्छ।
+    </p>
+
+    <hr>
+
+    <h2>कार्यालयमा MobiOffice को उपयोग</h2>
+
+    <p>
+        सरकारी तथा निजी कार्यालयमा MobiOffice प्रयोग गरी
+        धेरै कार्यहरू मोबाइलबाटै सम्पन्न गर्न सकिन्छ।
+    </p>
+
+    <ul>
+        <li>पत्र तयार गर्ने</li>
+        <li>प्रतिवेदन बनाउने</li>
+        <li>बैठकको Minutes तयार गर्ने</li>
+        <li>Excel तथ्याङ्क व्यवस्थापन गर्ने</li>
+        <li>PDF फाइल हेर्ने</li>
+        <li>फाइल ईमेलमार्फत पठाउने</li>
+        <li>Cloud मा Backup राख्ने</li>
+        <li>Presentation तयार गर्ने</li>
+    </ul>
+
+    <hr>
+
+    <h2>MobiOffice प्रयोग गर्दा हुने फाइदाहरू</h2>
+
+    <ul>
+        <li>कम्प्युटर बिना पनि Office कार्य गर्न सकिन्छ।</li>
+        <li>मोबाइलबाटै Document Edit गर्न सकिन्छ।</li>
+        <li>समयको बचत हुन्छ।</li>
+        <li>कुनै पनि स्थानबाट काम गर्न सकिन्छ।</li>
+        <li>फाइल तुरुन्त Share गर्न सकिन्छ।</li>
+        <li>Cloud Backup उपलब्ध हुन्छ।</li>
+        <li>Microsoft Office फाइलसँग Compatible हुन्छ।</li>
+        <li>सरल तथा प्रयोगकर्ता मैत्री Interface हुन्छ।</li>
+    </ul>
+
+    <hr>
+
+    <h2>MobiOffice प्रयोग गर्दा ध्यान दिनुपर्ने कुराहरू</h2>
+
+    <ul>
+        <li>महत्वपूर्ण फाइलहरूको Backup राख्नुहोस्।</li>
+        <li>आधिकारिक फाइलहरू सुरक्षित स्थानमा Save गर्नुहोस्।</li>
+        <li>Application नियमित रूपमा Update गर्नुहोस्।</li>
+        <li>Cloud Storage प्रयोग गर्दा Password सुरक्षित राख्नुहोस्।</li>
+        <li>अज्ञात स्रोतबाट प्राप्त फाइलहरू सावधानीपूर्वक खोल्नुहोस्।</li>
+    </ul>
+
+    <hr>
+
+    <div class="note">
+
+        <p>
+            MobiOffice एउटा Android Application हो जसले मोबाइललाई
+            सानो Office मा परिवर्तन गरिदिन्छ। यसको प्रयोग गरेर
+            Word, Excel, PowerPoint तथा PDF फाइलहरू खोल्न,
+            सम्पादन गर्न तथा शेयर गर्न सकिन्छ।
+        </p>
+
+        <p>
+            सरकारी कार्यालय, विद्यालय, बैंक, व्यवसाय तथा व्यक्तिगत
+            प्रयोगका लागि यो निकै उपयोगी Application हो। विशेषगरी
+            कम्प्युटर नभएको अवस्थामा मोबाइलबाटै कार्यालयका आवश्यक
+            कामहरू गर्न सकिने भएकाले MobiOffice आजको डिजिटल
+            युगमा महत्वपूर्ण उपकरण बनेको छ।
+        </p>
+
+    </div>
+
+    <hr>
+
+    <p>
+        MobiOffice Android Application आधुनिक कार्यालय कार्यलाई
+        मोबाइलमै सहज बनाउने प्रभावकारी समाधान हो। Word, Excel,
+        PowerPoint र PDF Support, Cloud Integration तथा
+        Mobile-Friendly Interface का कारण यो कार्यालय तथा
+        व्यक्तिगत दुवै प्रयोगकर्ताका लागि उपयोगी Application
+        बनेको छ।
+    </p>
+
+    <p>
+        डिजिटल कार्यालयको अवधारणालाई प्रभावकारी रूपमा कार्यान्वयन
+        गर्न MobiOffice जस्ता Application हरूले महत्वपूर्ण भूमिका
+        खेलिरहेका छन्।
+    </p>
+
+</div>
+
+</body>
+</html>

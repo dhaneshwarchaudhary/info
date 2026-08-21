@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>नागरिक लगानी कोष (CIT) को सापटी रकम Connect IPS बाट कसरी तिर्ने ?</title>
+<style>
+body {
+
+  margin: 0;
+
+
+}
+
+p{text-align:justify;}
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+
+
+.sticky + .content {
+
+  padding-top: 0px;
+
+}
+
+
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  max-width: 1000px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: rgb(0,120,201);
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active {
+
+  background-color: #2196F3;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+
+  .text {font-size: 11px}
+
+}
+
+
+
+/* Float four columns side by side */
+
+.columncard {
+
+  float: left;
+
+  width: 25%;
+
+  padding: 0 10px;
+
+}
+
+
+
+/* Remove extra left and right margins, due to padding */
+
+.rowcard {margin: 0 -5px;}
+
+
+
+/* Clear floats after the columns */
+
+.rowcard:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+
+  .columncard {
+
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+
+/* Style the counter cards */
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+}
+   .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+        }
+    }
+/* Navbar */
+
+
+/* Header */
+header {
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:18px;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.nav-links li a.active {
+    background: white;
+    color: #0d6efd;
+}
+/* Responsive */
+@media(max-width:768px){
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0d6efd;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+	.hero{
+        min-height:500px;
+    }
+	.hero h1{
+    font-size:clamp(1.8rem);
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+}
+
+/* Hero */
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--dark);
+}
+.hero{
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('images/dc.jpg');
+
+    background-size:100% 100%;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --card:#ffffff;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Kalimati, Arial, sans-serif;
+    line-height:1.8;
+
+    background:#f8f9fa;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h1,h2{
+    color:#003366;
+}
+.step{
+    background:#f1f5ff;
+    padding:10px;
+    margin-bottom:10px;
+    border-left:5px solid #003366;
+}
+.warning{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:15px;
+}
+.danger{
+    background:#f8d7da;
+    border-left:5px solid #dc3545;
+    padding:15px;
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
+     crossorigin="anonymous"></script>
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
+</head>
+<body>
+<div style="background-color:white;">
+<center>
+ <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
+ <img alt="" src="../images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:25px;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ </center>
+</div>
+<nav class="navbar" style="font-family:merienda;color:white;font-weight:bold;">
+    <div class="logo font-effect-shadow-multiple" >DHANESHWAR</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks" >
+        <li><a href="../">Home</a></li>
+		<!--<li><a href="../radio">Nepali Radio</a></li>-->
+        <li><a href="../about-us">About</a></li>
+        <li><a href="../contact">Contact</a></li>
+        <li><a href="../policy">Privacy</a></li>
+    </ul>
+</nav>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("navLinks");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
+<div class="container">
+
+    <h1>नागरिक लगानी कोष (CIT) को सापटी रकम Connect IPS बाट कसरी तिर्ने ?</h1>
+
+    <h2>परिचय</h2>
+
+    <p>
+        <strong>नागरिक लगानी कोष (Citizen Investment Trust - CIT)</strong>
+        बाट विभिन्न प्रयोजनका लागि लिइएको सापटी (Loan) रकम हाल
+        <strong>Connect IPS</strong> मार्फत अनलाइन भुक्तानी गर्न सकिन्छ।
+        यस सुविधाले सेवाग्राहीलाई बैंक वा कोषको कार्यालयमा उपस्थित नभई
+        घर, कार्यालय वा जहाँबाट पनि सजिलै किस्ता तथा बाँकी सापटी रकम
+        बुझाउने सुविधा प्रदान गरेको छ।
+    </p>
+
+    <p>
+        Connect IPS नेपाल क्लियरिङ हाउस लिमिटेड (NCHL) द्वारा सञ्चालन
+        गरिएको सुरक्षित विद्युतीय भुक्तानी प्रणाली हो। यस प्रणालीमार्फत
+        बैंक खाताबाट सिधै रकम कट्टा गरी नागरिक लगानी कोषमा भुक्तानी
+        गर्न सकिन्छ।
+    </p>
+
+    <hr>
+
+    <h2>Connect IPS बाट CIT सापटी तिर्न आवश्यक तयारी</h2>
+
+    <ul>
+        <li>Connect IPS मा दर्ता भएको Account हुनुपर्छ।</li>
+        <li>आफ्नो Bank Account Connect IPS मा Link भएको हुनुपर्छ।</li>
+        <li>CIT Participant Number वा Account Number थाहा हुनुपर्छ।</li>
+        <li>मोबाइल वा कम्प्युटरमा Internet सुविधा हुनुपर्छ।</li>
+        <li>बैंक खातामा पर्याप्त रकम उपलब्ध हुनुपर्छ।</li>
+    </ul>
+
+    <hr>
+
+    <h2>Connect IPS बाट CIT सापटी रकम कसरी तिर्ने ?</h2>
+
+    <ol>
+        <li>Connect IPS Mobile App वा Website मा Login गर्नुहोस्।</li>
+        <li>Menu बाट <strong>Government / Institutional Payment</strong> वा <strong>Citizen Investment Trust (CIT)</strong> सम्बन्धी सेवा चयन गर्नुहोस्।</li>
+        <li>Participant Number, CIT Account Number वा माग गरिएको विवरण प्रविष्ट गर्नुहोस्।</li>
+        <li>तपाईंको सापटी सम्बन्धी विवरण प्रणालीमा देखिनेछ।</li>
+        <li>तिर्न चाहेको रकम प्रविष्ट गर्नुहोस्।</li>
+        <li>भुक्तानी गर्ने Bank Account चयन गर्नुहोस्।</li>
+        <li>Transaction विवरण पुनः जाँच गर्नुहोस्।</li>
+        <li>Confirm बटनमा क्लिक गर्नुहोस्।</li>
+        <li>OTP Verification पूरा गर्नुहोस्।</li>
+        <li>Transaction सफल भएपछि Receipt सुरक्षित राख्नुहोस्।</li>
+    </ol>
+
+    <hr>
+
+    <h2>एकपटकमा कति रकम तिर्न मिल्छ ?</h2>
+
+    <p>
+        Connect IPS बाट CIT को सापटी रकम तिर्न मिल्ने अधिकतम सीमा
+        (Transaction Limit) सम्बन्धित बैंक तथा Connect IPS ले निर्धारण
+        गरेको नियम अनुसार फरक–फरक हुन सक्छ।
+    </p>
+
+    <ul>
+        <li>दैनिक Transaction Limit बैंकअनुसार फरक हुन सक्छ।</li>
+        <li>कतिपय बैंकहरूले प्रतिदिन लाखौं रुपैयाँसम्म भुक्तानी सुविधा दिन्छन्।</li>
+        <li>ठूलो रकम भएमा एकभन्दा बढी Transaction गरेर पनि भुक्तानी गर्न सकिन्छ।</li>
+        <li>व्यक्तिगत तथा Corporate Account को सीमा फरक हुन सक्छ।</li>
+    </ul>
+
+    <p>
+        बैंक तथा Connect IPS ले समय–समयमा सीमा परिवर्तन गर्न सक्ने भएकाले
+        ठूलो रकम भुक्तानी गर्नु अघि आफ्नो बैंकको हालको Transaction Limit
+        जाँच गर्नु उपयुक्त हुन्छ।
+    </p>
+
+    <hr>
+
+    <h2>सापटी रकम समयमै नतिरे के हुन्छ ?</h2>
+
+    <ul>
+        <li>बाँकी सापटीमा अतिरिक्त ब्याज लाग्न सक्छ।</li>
+        <li>विलम्ब शुल्क (Late Fee) लाग्न सक्छ।</li>
+        <li>भविष्यमा नयाँ सापटी सुविधा प्राप्त गर्न कठिन हुन सक्छ।</li>
+        <li>CIT मा रहेको बचत वा लगानी रकमबाट समायोजन हुन सक्छ।</li>
+        <li>ऋणको दायित्व बढ्दै जान सक्छ।</li>
+    </ul>
+
+    <hr>
+
+    <h2>Connect IPS बाट सापटी तिर्नुका फाइदाहरू</h2>
+
+    <ul>
+        <li>घरबाटै अनलाइन भुक्तानी गर्न सकिन्छ।</li>
+        <li>कार्यालय वा बैंकमा लाइन बस्नु पर्दैन।</li>
+        <li>२४ घण्टा सेवा उपलब्ध हुन्छ।</li>
+        <li>भुक्तानीको डिजिटल प्रमाण (Receipt) प्राप्त हुन्छ।</li>
+        <li>समय तथा यातायात खर्च बचत हुन्छ।</li>
+        <li>सुरक्षित तथा भरपर्दो भुक्तानी प्रणाली हो।</li>
+        <li>भुक्तानी विवरण सजिलै ट्र्याक गर्न सकिन्छ।</li>
+    </ul>
+
+    <hr>
+
+    <h2>भुक्तानी गर्दा ध्यान दिनुपर्ने कुराहरू</h2>
+
+    <ul>
+        <li>CIT Account Number वा Participant Number सही राख्नुहोस्।</li>
+        <li>भुक्तानी अघि सबै विवरण राम्रोसँग जाँच गर्नुहोस्।</li>
+        <li>OTP कसैलाई नदिनुहोस्।</li>
+        <li>Transaction सफल भएपछि Receipt डाउनलोड गरी सुरक्षित राख्नुहोस्।</li>
+        <li>रकम कटे पनि भुक्तानी देखिएन भने बैंक वा CIT मा सम्पर्क गर्नुहोस्।</li>
+        <li>मोबाइल नम्बर र ईमेल अद्यावधिक राख्नुहोस्।</li>
+    </ul>
+
+    <hr>
+
+    <h2>CIT सापटीका सामान्य प्रकारहरू</h2>
+
+    <ul>
+        <li>विशेष बचत योजना सापटी</li>
+        <li>कर्मचारी बचत वृद्धि योजना सापटी</li>
+        <li>घर निर्माण वा आवास सापटी</li>
+        <li>शिक्षा सापटी</li>
+        <li>अन्य स्वीकृत लगानी योजना अन्तर्गतका सापटी</li>
+    </ul>
+
+    <hr>
+
+    <div class="note">
+
+
+        <p>
+            नागरिक लगानी कोषबाट लिएको सापटी रकम अहिले
+            <strong>Connect IPS</strong> बाट सजिलै तिर्न सकिन्छ।
+            Connect IPS मा Login गरेर CIT सेवा चयन गर्ने,
+            आफ्नो Participant Number राख्ने र रकम भुक्तानी गर्ने
+            मात्र हो।
+        </p>
+
+        <p>
+            एकपटकमा कति रकम तिर्न मिल्छ भन्ने कुरा तपाईंको बैंकले
+            तोकेको Transaction Limit मा निर्भर हुन्छ। ठूलो रकम
+            तिर्नुअघि बैंकको सीमा जाँच गर्नु राम्रो हुन्छ।
+        </p>
+
+        <p>
+            सापटीको किस्ता समयमै तिर्दा अतिरिक्त ब्याज तथा
+            जरिवाना लाग्दैन र भविष्यमा अन्य सुविधा लिन पनि सहज हुन्छ।
+        </p>
+
+    </div>
+
+    <hr>
+
+    <p>
+        नागरिक लगानी कोषको सापटी रकम Connect IPS मार्फत तिर्ने
+        व्यवस्था डिजिटल तथा सहज सेवा हो। यसले सेवाग्राहीलाई
+        छिटो, सुरक्षित र पारदर्शी रूपमा भुक्तानी गर्न सहयोग पुर्‍याउँछ।
+    </p>
+
+    <p>
+        सही विवरण प्रविष्ट गरी समयमै सापटी रकम बुझाउने बानीले
+        आर्थिक अनुशासन कायम राख्न र भविष्यका वित्तीय सुविधाहरू
+        सहज रूपमा प्राप्त गर्न मद्दत गर्दछ।
+    </p>
+
+</div>
+
+</body>
+</html>

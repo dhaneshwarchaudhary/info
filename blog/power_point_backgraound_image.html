@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MS PowerPoint मा Background Image कसरी राख्ने ?</title>
+<style>
+body {
+
+  margin: 0;
+
+
+}
+
+p{text-align:justify;}
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+
+
+.sticky + .content {
+
+  padding-top: 0px;
+
+}
+
+
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  max-width: 1000px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: rgb(0,120,201);
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active {
+
+  background-color: #2196F3;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+
+  .text {font-size: 11px}
+
+}
+
+
+
+/* Float four columns side by side */
+
+.columncard {
+
+  float: left;
+
+  width: 25%;
+
+  padding: 0 10px;
+
+}
+
+
+
+/* Remove extra left and right margins, due to padding */
+
+.rowcard {margin: 0 -5px;}
+
+
+
+/* Clear floats after the columns */
+
+.rowcard:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+
+  .columncard {
+
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+
+/* Style the counter cards */
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+}
+   .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+        }
+    }
+/* Navbar */
+
+
+/* Header */
+header {
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:18px;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.nav-links li a.active {
+    background: white;
+    color: #0d6efd;
+}
+/* Responsive */
+@media(max-width:768px){
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0d6efd;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+	.hero{
+        min-height:500px;
+    }
+	.hero h1{
+    font-size:clamp(1.8rem);
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+}
+
+/* Hero */
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--dark);
+}
+.hero{
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('images/dc.jpg');
+
+    background-size:100% 100%;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --card:#ffffff;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Kalimati, Arial, sans-serif;
+    line-height:1.8;
+
+    background:#f8f9fa;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h1,h2{
+    color:#003366;
+}
+.step{
+    background:#f1f5ff;
+    padding:10px;
+    margin-bottom:10px;
+    border-left:5px solid #003366;
+}
+.warning{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:15px;
+}
+.danger{
+    background:#f8d7da;
+    border-left:5px solid #dc3545;
+    padding:15px;
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
+     crossorigin="anonymous"></script>
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
+</head>
+<body>
+<div style="background-color:white;">
+<center>
+ <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
+ <img alt="" src="../images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:25px;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ </center>
+</div>
+<nav class="navbar" style="font-family:merienda;color:white;font-weight:bold;">
+    <div class="logo font-effect-shadow-multiple" >DHANESHWAR</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks" >
+        <li><a href="../">Home</a></li>
+		<!--<li><a href="../radio">Nepali Radio</a></li>-->
+        <li><a href="../about-us">About</a></li>
+        <li><a href="../contact">Contact</a></li>
+        <li><a href="../policy">Privacy</a></li>
+    </ul>
+</nav>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("navLinks");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
+<div class="container">
+
+    <h1>MS PowerPoint मा Background Image कसरी राख्ने ?</h1>
+
+    <h2>परिचय</h2>
+
+    <p>
+        Microsoft PowerPoint मा Slide लाई अझ आकर्षक, व्यवस्थित र
+        Professional बनाउन <strong>Background Image</strong> राख्न
+        सकिन्छ। Background Image भनेको Slide को पछाडिको भागमा
+        राखिने तस्वीर हो, जसको माथि Text, Heading, Shape, Chart,
+        Table वा अन्य सामग्री राख्न सकिन्छ।
+    </p>
+
+    <p>
+        उदाहरणका लागि विद्यालयको Presentation मा विद्यालयको भवनको
+        तस्वीर, कार्यालयीय Presentation मा कार्यालयको फोटो,
+        पर्यटनसम्बन्धी Presentation मा पर्यटकीय स्थलको तस्वीर वा
+        कुनै Project को Logo/Design लाई Background मा राख्न सकिन्छ।
+    </p>
+
+    <hr>
+
+    <h2>१. Background Image किन प्रयोग गर्ने ?</h2>
+
+    <ul>
+        <li>Presentation लाई आकर्षक बनाउन।</li>
+        <li>Slide को विषयअनुसार Visual Design बनाउन।</li>
+        <li>कुनै संस्था वा कार्यालयको Branding देखाउन।</li>
+        <li>पर्यटन, शिक्षा तथा Project Presentation लाई प्रभावकारी बनाउन।</li>
+        <li>Slide को पछाडि Logo वा सम्बन्धित तस्वीर राख्न।</li>
+        <li>Presentation लाई Professional देखाउन।</li>
+    </ul>
+
+    <hr>
+
+    <h2>२. PowerPoint मा Background Image राख्ने तरिका</h2>
+
+    <p>
+        PowerPoint को विभिन्न Version मा Menu को स्थान केही फरक
+        देखिन सक्छ, तर सामान्य प्रक्रिया लगभग एउटै हुन्छ।
+    </p>
+
+    <ol>
+        <li>
+            सबैभन्दा पहिले <strong>Microsoft PowerPoint</strong>
+            खोल्नुहोस्।
+        </li>
+
+        <li>
+            आफ्नो Presentation खोल्नुहोस् वा नयाँ Presentation
+            तयार गर्नुहोस्।
+        </li>
+
+        <li>
+            Background Image राख्न चाहेको Slide चयन गर्नुहोस्।
+        </li>
+
+        <li>
+            Slide को खाली भागमा
+            <strong>Right Click</strong> गर्नुहोस्।
+        </li>
+
+        <li>
+            देखिएको Menu बाट
+            <strong>Format Background</strong> चयन गर्नुहोस्।
+        </li>
+
+        <li>
+            अब PowerPoint को दायाँपट्टि
+            <strong>Format Background</strong> Panel खुल्छ।
+        </li>
+
+        <li>
+            <strong>Picture or texture fill</strong> विकल्प चयन गर्नुहोस्।
+        </li>
+
+        <li>
+            <strong>Insert</strong> वा
+            <strong>Insert picture from</strong> भन्ने विकल्प
+            चयन गर्नुहोस्।
+        </li>
+
+        <li>
+            आफ्नो Computer बाट Background मा राख्न चाहेको
+            Picture चयन गर्नुहोस्।
+        </li>
+
+        <li>
+            Picture चयन गरेपछि त्यो Slide को Background मा
+            देखिन्छ।
+        </li>
+    </ol>
+
+    <hr>
+
+    <h2>३. Menu बाट Background Image राख्ने तरिका</h2>
+
+    <p>
+        अर्को तरिका पनि प्रयोग गर्न सकिन्छ।
+    </p>
+
+    <ol>
+        <li>Slide चयन गर्नुहोस्।</li>
+        <li><strong>Design</strong> Tab मा जानुहोस्।</li>
+        <li><strong>Format Background</strong> मा क्लिक गर्नुहोस्।</li>
+        <li><strong>Picture or texture fill</strong> चयन गर्नुहोस्।</li>
+        <li><strong>Insert</strong> मा क्लिक गर्नुहोस्।</li>
+        <li>Computer बाट Picture चयन गर्नुहोस्।</li>
+        <li>Picture लाई Background को रूपमा प्रयोग गर्नुहोस्।</li>
+    </ol>
+
+    <hr>
+
+    <h2>४. सबै Slide मा एउटै Background Image राख्ने</h2>
+
+    <p>
+        यदि एउटै Background Image सबै Slide मा राख्न चाहनुहुन्छ भने
+        प्रत्येक Slide मा छुट्टाछुट्टै Image राख्न आवश्यक छैन।
+    </p>
+
+    <ol>
+        <li>पहिले एउटा Slide मा Background Image राख्नुहोस्।</li>
+        <li><strong>Format Background</strong> Panel खोल्नुहोस्।</li>
+        <li>आवश्यक Picture चयन गर्नुहोस्।</li>
+        <li>
+            तल रहेको
+            <strong>Apply to All</strong>
+            Button मा क्लिक गर्नुहोस्।
+        </li>
+    </ol>
+
+    <p>
+        अब उक्त Background Image सबै Slide मा लागू हुन्छ।
+    </p>
+
+    <div class="note">
+        <strong>महत्वपूर्ण:</strong>
+        <p>
+            यदि सबै Slide मा एउटै Background राख्ने हो भने
+            <strong>Apply to All</strong> प्रयोग गर्दा समय बचत हुन्छ।
+        </p>
+    </div>
+
+    <hr>
+
+    <h2>५. केवल एउटा Slide मा Background Image राख्ने</h2>
+
+    <p>
+        यदि एउटा मात्र Slide मा Background Image राख्न चाहनुहुन्छ
+        भने <strong>Apply to All</strong> मा क्लिक नगर्नुहोस्।
+    </p>
+
+    <ol>
+        <li>आवश्यक Slide चयन गर्नुहोस्।</li>
+        <li><strong>Format Background</strong> खोल्नुहोस्।</li>
+        <li><strong>Picture or texture fill</strong> चयन गर्नुहोस्।</li>
+        <li>आफ्नो Picture चयन गर्नुहोस्।</li>
+        <li><strong>Apply to All</strong> नगर्नुहोस्।</li>
+    </ol>
+
+    <p>
+        यसरी Background Image केवल चयन गरिएको Slide मा मात्र
+        लागू हुन्छ।
+    </p>
+
+    <hr>
+
+    <h2>६. Background Image लाई हल्का (Transparent) कसरी बनाउने ?</h2>
+
+    <p>
+        Background Image धेरै गाढा वा स्पष्ट भयो भने त्यसको माथि
+        राखिएको Text पढ्न गाह्रो हुन सक्छ। यस्तो अवस्थामा Picture लाई
+        हल्का बनाउन <strong>Transparency</strong> प्रयोग गर्न सकिन्छ।
+    </p>
+
+    <ol>
+        <li>Slide मा Background Image राख्नुहोस्।</li>
+        <li><strong>Format Background</strong> Panel खोल्नुहोस्।</li>
+        <li><strong>Transparency</strong> विकल्प खोज्नुहोस्।</li>
+        <li>Transparency को प्रतिशत बढाउनुहोस्।</li>
+        <li>Text स्पष्ट देखिने गरी उपयुक्त स्तरमा राख्नुहोस्।</li>
+    </ol>
+
+    <p>
+        उदाहरणका लागि 20%, 40% वा 50% Transparency प्रयोग गरेर
+        हेर्न सकिन्छ। आवश्यकताअनुसार प्रतिशत फरक हुन सक्छ।
+    </p>
+
+    <div class="note">
+        <strong>सुझाव:</strong>
+        <p>
+            Background Image भन्दा Text महत्वपूर्ण छ भने Image लाई
+            हल्का राख्नु राम्रो हुन्छ। यसले Text पढ्न सजिलो बनाउँछ।
+        </p>
+    </div>
+
+    <hr>
+
+    <h2>७. Background Image माथि Text कसरी स्पष्ट देखाउने ?</h2>
+
+    <p>
+        Photo मा धेरै रङ वा Detail भएमा Text स्पष्ट नदेखिन सक्छ।
+        यस्तो अवस्थामा निम्न उपाय उपयोगी हुन्छन्।
+    </p>
+
+    <ul>
+        <li>Background Image लाई हल्का बनाउनुहोस्।</li>
+        <li>Text को Font Size बढाउनुहोस्।</li>
+        <li>Text Bold बनाउनुहोस्।</li>
+        <li>Text पछाडि हल्का Shape राख्न सकिन्छ।</li>
+        <li>Text को रङ Background सँग राम्रो Contrast हुने राख्नुहोस्।</li>
+        <li>धेरै Detail भएको तस्वीर प्रयोग नगर्नुहोस्।</li>
+    </ul>
+
+    <h3>उदाहरण</h3>
+
+    <p>
+        यदि Background मा आकाश र पहाडको तस्वीर छ भने माथि राखिएको
+        सेतो Text स्पष्ट देखिन सक्छ। तर तस्वीर धेरै उज्यालो छ भने
+        Text पछाडि हल्का Transparent Shape राख्दा अझ राम्रो देखिन्छ।
+    </p>
+
+    <hr>
+
+    <h2>८. Background Image हटाउने तरिका</h2>
+
+    <p>
+        राखिएको Background Image हटाउन पनि सजिलो छ।
+    </p>
+
+    <ol>
+        <li>सम्बन्धित Slide चयन गर्नुहोस्।</li>
+        <li>Slide मा Right Click गर्नुहोस्।</li>
+        <li><strong>Format Background</strong> खोल्नुहोस्।</li>
+        <li><strong>Solid fill</strong> चयन गर्नुहोस्।</li>
+        <li>आवश्यक Background Color चयन गर्नुहोस्।</li>
+    </ol>
+
+    <p>
+        यदि पुरानो Background हटाएर सामान्य सेतो Background चाहनुहुन्छ
+        भने Solid Fill मा सेतो रङ चयन गर्न सकिन्छ।
+    </p>
+
+    <hr>
+
+    <h2>९. Background Image र Picture को रूपमा Insert गर्ने बीचको फरक</h2>
+
+    <table border="1" cellpadding="8" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>विषय</th>
+                <th>Background Image</th>
+                <th>Insert Picture</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>प्रयोग</td>
+                <td>Slide को पछाडिको भागमा</td>
+                <td>Slide को कुनै पनि स्थानमा</td>
+            </tr>
+            <tr>
+                <td>Text को पछाडि राख्न</td>
+                <td>हो</td>
+                <td>हो, तर Layer/Arrange गर्नुपर्छ</td>
+            </tr>
+            <tr>
+                <td>Slide को सम्पूर्ण भाग ढाक्न</td>
+                <td>सजिलो</td>
+                <td>Picture को Size मिलाउनुपर्छ</td>
+            </tr>
+            <tr>
+                <td>Transparency</td>
+                <td>Background Format बाट मिलाउन सकिन्छ</td>
+                <td>Picture Format बाट मिलाउन सकिन्छ</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2>१०. Background Image को Size र Quality कस्तो हुनुपर्छ ?</h2>
+
+    <p>
+        राम्रो Presentation का लागि धेरै सानो Resolution भएको
+        Picture प्रयोग गर्दा ठूलो Slide मा तन्काउँदा Image
+        <strong>Blur</strong> वा अस्पष्ट देखिन सक्छ।
+    </p>
+
+    <p>
+        त्यसैले Slide को आकारअनुसार पर्याप्त Resolution भएको
+        उच्च गुणस्तरको Picture प्रयोग गर्नु राम्रो हुन्छ।
+    </p>
+
+    <ul>
+        <li>धेरै Blur भएको Picture प्रयोग नगर्नुहोस्।</li>
+        <li>अत्यधिक ठूलो File Size भएको Image पनि आवश्यकताबिना प्रयोग नगर्नुहोस्।</li>
+        <li>Presentation को विषयसँग सम्बन्धित Picture प्रयोग गर्नुहोस्।</li>
+        <li>Text पढ्न मिल्ने खाली ठाउँ भएको Image रोज्नुहोस्।</li>
+    </ul>
+
+    <hr>
+
+    <h2>११. Professional Presentation का लागि Background कसरी राख्ने ?</h2>
+
+    <p>
+        Professional Presentation मा Background धेरै चम्किलो,
+        रंगीन वा Detail भएको राख्दा मुख्य विषयबाट दर्शकको ध्यान
+        हट्न सक्छ।
+    </p>
+
+    <p>
+        त्यसैले निम्न कुरामा ध्यान दिनु राम्रो हुन्छ:
+    </p>
+
+    <ul>
+        <li>सरल र सफा Background प्रयोग गर्नुहोस्।</li>
+        <li>Text र Background बीच राम्रो Contrast राख्नुहोस्।</li>
+        <li>सबै Slide मा एउटै Design कायम राख्नुहोस्।</li>
+        <li>Office Presentation मा धेरै चम्किलो Photo प्रयोग नगर्नुहोस्।</li>
+        <li>Logo लाई आवश्यक स्थानमा मात्र प्रयोग गर्नुहोस्।</li>
+        <li>Background भन्दा मुख्य Content बढी स्पष्ट देखिनुपर्छ।</li>
+    </ul>
+
+    <hr>
+
+    <h2>१२. सबै Slide मा Logo राख्ने राम्रो तरिका</h2>
+
+    <p>
+        यदि कार्यालयको Logo सबै Slide मा एउटै स्थानमा राख्न चाहनुहुन्छ
+        भने प्रत्येक Slide मा छुट्टाछुट्टै राख्नुको सट्टा
+        <strong>Slide Master</strong> प्रयोग गर्नु राम्रो हुन्छ।
+    </p>
+
+    <ol>
+        <li><strong>View</strong> Tab मा जानुहोस्।</li>
+        <li><strong>Slide Master</strong> मा क्लिक गर्नुहोस्।</li>
+        <li>Master Slide चयन गर्नुहोस्।</li>
+        <li><strong>Insert → Pictures</strong> बाट Logo राख्नुहोस्।</li>
+        <li>Logo को Size र Position मिलाउनुहोस्।</li>
+        <li><strong>Close Master View</strong> मा क्लिक गर्नुहोस्।</li>
+    </ol>
+
+    <p>
+        अब Master बाट सम्बन्धित Layout प्रयोग गर्ने Slide मा
+        Logo व्यवस्थित रूपमा देखिन सक्छ।
+    </p>
+
+    <hr>
+
+    <div class="note">
+
+
+        <p>
+            PowerPoint Slide को पछाडि Photo राख्न:
+        </p>
+
+        <p>
+            <strong>
+                Slide Select → Right Click → Format Background →
+                Picture or Texture Fill → Insert Picture
+            </strong>
+        </p>
+
+        <p>
+            सबै Slide मा एउटै Background राख्न:
+        </p>
+
+        <p>
+            <strong>Apply to All</strong> क्लिक गर्नुहोस्।
+        </p>
+
+        <p>
+            केवल एउटा Slide मा राख्न:
+            <strong>Apply to All</strong> नगर्नुहोस्।
+        </p>
+
+        <p>
+            Background धेरै गाढा भए
+            <strong>Transparency</strong> बढाएर Image लाई हल्का
+            बनाउन सकिन्छ।
+        </p>
+
+    </div>
+
+    <hr>
+
+    <p>
+        Microsoft PowerPoint मा Background Image राख्नु Presentation
+        लाई आकर्षक र प्रभावकारी बनाउने सरल उपाय हो। सही तस्वीर,
+        उचित Transparency र राम्रो Text Contrast प्रयोग गरेमा
+        Presentation अझ Professional देखिन्छ।
+    </p>
+
+    <p>
+        सामान्य Presentation मा एउटा उपयुक्त Background प्रयोग गर्न
+        सकिन्छ भने कार्यालयीय वा संस्थागत Presentation मा
+        <strong>Slide Master</strong> प्रयोग गरेर Logo तथा
+        Background लाई सबै Slide मा समान रूपमा राख्न सकिन्छ।
+    </p>
+
+    <p>
+        <strong>
+            याद राख्नुहोस्: Background को मुख्य उद्देश्य Slide लाई
+            सुन्दर बनाउनु मात्र होइन, मुख्य Content लाई स्पष्ट र
+            सजिलै बुझिने बनाउनु पनि हो।
+        </strong>
+    </p>
+
+</div>
+
+</body>
+</html>

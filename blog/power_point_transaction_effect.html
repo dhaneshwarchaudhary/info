@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MS PowerPoint मा Transition Effect कसरी प्रयोग गर्ने ?</title>
+<style>
+body {
+
+  margin: 0;
+
+
+}
+
+p{text-align:justify;}
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+
+
+.sticky + .content {
+
+  padding-top: 0px;
+
+}
+
+
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  max-width: 1000px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: rgb(0,120,201);
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active {
+
+  background-color: #2196F3;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+
+  .text {font-size: 11px}
+
+}
+
+
+
+/* Float four columns side by side */
+
+.columncard {
+
+  float: left;
+
+  width: 25%;
+
+  padding: 0 10px;
+
+}
+
+
+
+/* Remove extra left and right margins, due to padding */
+
+.rowcard {margin: 0 -5px;}
+
+
+
+/* Clear floats after the columns */
+
+.rowcard:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+
+  .columncard {
+
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+
+/* Style the counter cards */
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+}
+   .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+        }
+    }
+/* Navbar */
+
+
+/* Header */
+header {
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:18px;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.nav-links li a.active {
+    background: white;
+    color: #0d6efd;
+}
+/* Responsive */
+@media(max-width:768px){
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0d6efd;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+	.hero{
+        min-height:500px;
+    }
+	.hero h1{
+    font-size:clamp(1.8rem);
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+}
+
+/* Hero */
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--dark);
+}
+.hero{
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('images/dc.jpg');
+
+    background-size:100% 100%;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --card:#ffffff;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Kalimati, Arial, sans-serif;
+    line-height:1.8;
+
+    background:#f8f9fa;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h1,h2{
+    color:#003366;
+}
+.step{
+    background:#f1f5ff;
+    padding:10px;
+    margin-bottom:10px;
+    border-left:5px solid #003366;
+}
+.warning{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:15px;
+}
+.danger{
+    background:#f8d7da;
+    border-left:5px solid #dc3545;
+    padding:15px;
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
+     crossorigin="anonymous"></script>
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
+</head>
+<body>
+<div style="background-color:white;">
+<center>
+ <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
+ <img alt="" src="../images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:25px;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ </center>
+</div>
+<nav class="navbar" style="font-family:merienda;color:white;font-weight:bold;">
+    <div class="logo font-effect-shadow-multiple" >DHANESHWAR</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks" >
+        <li><a href="../">Home</a></li>
+		<!--<li><a href="../radio">Nepali Radio</a></li>-->
+        <li><a href="../about-us">About</a></li>
+        <li><a href="../contact">Contact</a></li>
+        <li><a href="../policy">Privacy</a></li>
+    </ul>
+</nav>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("navLinks");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
+<div class="container">
+
+    <h1>MS PowerPoint मा Transition Effect कसरी प्रयोग गर्ने ?</h1>
+
+    <h2>परिचय</h2>
+
+    <p>
+        Microsoft PowerPoint मा तयार गरिएको Presentation लाई अझ आकर्षक,
+        व्यवस्थित र प्रभावकारी बनाउन विभिन्न प्रकारका
+        <strong>Transition Effect</strong> प्रयोग गर्न सकिन्छ।
+        Transition भनेको एउटा Slide बाट अर्को Slide मा जाँदा देखिने
+        दृश्य प्रभाव हो।
+    </p>
+
+    <p>
+        उदाहरणका लागि एउटा Slide समाप्त भएर अर्को Slide आउँदा
+        सामान्य रूपमा सिधै परिवर्तन हुनुको सट्टा
+        <strong>Fade, Push, Wipe, Split, Morph</strong> आदि
+        प्रभाव देखाउन सकिन्छ। यही प्रभावलाई Transition Effect भनिन्छ।
+    </p>
+
+    <hr>
+
+    <h2>१. Transition Effect भनेको के हो ?</h2>
+
+    <p>
+        <strong>Transition Effect</strong> भनेको Presentation को
+        एउटा Slide बाट अर्को Slide मा परिवर्तन हुँदा देखिने
+        Animation वा Visual Effect हो।
+    </p>
+
+    <p>
+        यसलाई सरल भाषामा बुझ्दा:
+    </p>
+
+    <div class="note">
+        <p>
+            <strong>Slide 1 → Transition Effect → Slide 2</strong>
+        </p>
+
+        <p>
+            अर्थात् Slide 1 बाट Slide 2 मा जाँदा देखिने
+            परिवर्तनको प्रभाव नै Transition हो।
+        </p>
+    </div>
+
+    <hr>
+
+    <h2>२. Transition र Animation बीचको फरक</h2>
+
+    <p>
+        धेरैजसो नयाँ प्रयोगकर्ताले Transition र Animation लाई
+        एउटै ठान्ने गर्छन्। तर यी दुई फरक हुन्।
+    </p>
+
+    <table border="1" cellpadding="8" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>विषय</th>
+                <th>Transition</th>
+                <th>Animation</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>प्रयोग हुने ठाउँ</td>
+                <td>Slide परिवर्तन हुँदा</td>
+                <td>Slide भित्रको Text, Picture, Shape आदि</td>
+            </tr>
+
+            <tr>
+                <td>मुख्य उद्देश्य</td>
+                <td>एक Slide बाट अर्को Slide मा जाने प्रभाव</td>
+                <td>Slide का वस्तुहरूलाई चलायमान बनाउने</td>
+            </tr>
+
+            <tr>
+                <td>Menu</td>
+                <td>Transitions</td>
+                <td>Animations</td>
+            </tr>
+
+            <tr>
+                <td>उदाहरण</td>
+                <td>Fade, Push, Wipe, Morph</td>
+                <td>Appear, Fly In, Float In, Zoom</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2>३. PowerPoint मा Transition Effect कसरी राख्ने ?</h2>
+
+    <p>
+        कुनै Slide मा Transition Effect राख्न निम्न चरणहरू
+        पालना गर्नुहोस्।
+    </p>
+
+    <ol>
+        <li>
+            सबैभन्दा पहिले <strong>Microsoft PowerPoint</strong>
+            खोल्नुहोस्।
+        </li>
+
+        <li>
+            आफ्नो Presentation खोल्नुहोस् वा नयाँ Presentation
+            तयार गर्नुहोस्।
+        </li>
+
+        <li>
+            बायाँपट्टि रहेको Slide List बाट Transition राख्न चाहेको
+            Slide चयन गर्नुहोस्।
+        </li>
+
+        <li>
+            माथिको Menu Bar बाट
+            <strong>Transitions</strong> मा क्लिक गर्नुहोस्।
+        </li>
+
+        <li>
+            अब विभिन्न Transition Effect हरू देखिन्छन्।
+        </li>
+
+        <li>
+            आफूलाई मन परेको Transition Effect मा क्लिक गर्नुहोस्।
+        </li>
+
+        <li>
+            Effect चयन गरेपछि PowerPoint ले त्यसको Preview
+            देखाउँछ।
+        </li>
+    </ol>
+
+    <hr>
+
+    <h2>४. Transition Effect का प्रमुख प्रकारहरू</h2>
+
+    <p>
+        PowerPoint को Version अनुसार Transition को नाम र उपलब्ध
+        Effect केही फरक हुन सक्छन्। सामान्य रूपमा निम्न प्रकारका
+        Transition धेरै प्रयोग हुन्छन्।
+    </p>
+
+    <h3>Fade</h3>
+
+    <p>
+        एउटा Slide बिस्तारै हराउँदै अर्को Slide बिस्तारै देखिने
+        प्रभाव हो। यो Professional Presentation का लागि धेरै
+        उपयोगी हुन्छ।
+    </p>
+
+    <h3>Push</h3>
+
+    <p>
+        नयाँ Slide ले पुरानो Slide लाई कुनै दिशाबाट धकेलेर
+        हटाएजस्तो देखिन्छ।
+    </p>
+
+    <h3>Wipe</h3>
+
+    <p>
+        नयाँ Slide कुनै दिशाबाट विस्तारै देखिँदै जाने प्रभाव हो।
+    </p>
+
+    <h3>Split</h3>
+
+    <p>
+        Slide विभिन्न दिशाबाट छुट्टिँदै वा खुल्दै जाने जस्तो
+        प्रभाव देखिन्छ।
+    </p>
+
+    <h3>Cover</h3>
+
+    <p>
+        नयाँ Slide ले पुरानो Slide लाई ढाक्दै अगाडि आउने जस्तो
+        प्रभाव देखाउँछ।
+    </p>
+
+    <h3>Reveal</h3>
+
+    <p>
+        पुरानो Slide हट्दै नयाँ Slide बिस्तारै प्रकट हुने
+        प्रभाव हो।
+    </p>
+
+    <h3>Morph</h3>
+
+    <p>
+        PowerPoint का समर्थित संस्करणमा उपलब्ध
+        <strong>Morph</strong> ले दुई Slide बीचका समान वस्तुहरूको
+        Position, Size वा अन्य परिवर्तनलाई Smooth रूपमा देखाउन
+        मद्दत गर्छ।
+    </p>
+
+    <hr>
+
+    <h2>५. Transition Effect को Preview कसरी हेर्ने ?</h2>
+
+    <ol>
+        <li>Transition राख्न चाहेको Slide चयन गर्नुहोस्।</li>
+        <li><strong>Transitions</strong> Menu खोल्नुहोस्।</li>
+        <li>कुनै Transition Effect मा क्लिक गर्नुहोस्।</li>
+        <li>Slide मा Effect को Preview देखिन्छ।</li>
+        <li>
+            आवश्यक परे <strong>Preview</strong> Button क्लिक गरेर
+            फेरि हेर्न सकिन्छ।
+        </li>
+    </ol>
+
+    <hr>
+
+    <h2>६. Transition Effect को Duration कसरी परिवर्तन गर्ने ?</h2>
+
+    <p>
+        Transition कति छिटो वा ढिलो हुने भन्ने कुरा
+        <strong>Duration</strong> बाट नियन्त्रण गर्न सकिन्छ।
+    </p>
+
+    <ol>
+        <li>Slide चयन गर्नुहोस्।</li>
+        <li><strong>Transitions</strong> Menu मा जानुहोस्।</li>
+        <li>
+            <strong>Timing</strong> Group मा रहेको
+            <strong>Duration</strong> खोज्नुहोस्।
+        </li>
+        <li>आवश्यक समय राख्नुहोस्।</li>
+    </ol>
+
+    <p>
+        उदाहरण:
+    </p>
+
+    <ul>
+        <li><strong>00.50</strong> = छिटो Transition</li>
+        <li><strong>01.00</strong> = सामान्य Transition</li>
+        <li><strong>02.00</strong> = तुलनात्मक रूपमा ढिलो Transition</li>
+    </ul>
+
+    <p>
+        Presentation को प्रकारअनुसार Duration छनोट गर्नुपर्छ।
+    </p>
+
+    <hr>
+
+    <h2>७. Transition मा Sound कसरी राख्ने ?</h2>
+
+    <p>
+        केही PowerPoint Version मा Transition सँगै Sound
+        प्रयोग गर्ने सुविधा पनि हुन्छ।
+    </p>
+
+    <ol>
+        <li>Slide चयन गर्नुहोस्।</li>
+        <li><strong>Transitions</strong> Menu खोल्नुहोस्।</li>
+        <li><strong>Timing</strong> Group मा जानुहोस्।</li>
+        <li><strong>Sound</strong> विकल्प खोल्नुहोस्।</li>
+        <li>आवश्यक Sound चयन गर्नुहोस्।</li>
+    </ol>
+
+    <p>
+        तर Office Presentation, Seminar वा Professional
+        Presentation मा अनावश्यक Sound प्रयोग गर्दा
+        Presentation कम Professional देखिन सक्छ। त्यसैले
+        आवश्यक अवस्थामा मात्र प्रयोग गर्नु राम्रो हुन्छ।
+    </p>
+
+    <hr>
+
+    <h2>८. सबै Slide मा एउटै Transition कसरी राख्ने ?</h2>
+
+    <p>
+        यदि Presentation का सबै Slide मा एउटै Transition Effect
+        राख्न चाहनुहुन्छ भने प्रत्येक Slide मा छुट्टाछुट्टै
+        Effect राख्न आवश्यक छैन।
+    </p>
+
+    <ol>
+        <li>बायाँपट्टि Slide List मा कुनै एउटा Slide चयन गर्नुहोस्।</li>
+        <li><strong>Transitions</strong> Menu मा जानुहोस्।</li>
+        <li>आवश्यक Transition Effect चयन गर्नुहोस्।</li>
+        <li>
+            <strong>Apply to All</strong> मा क्लिक गर्नुहोस्।
+        </li>
+    </ol>
+
+    <p>
+        अब उक्त Transition Effect सबै Slide मा लागू हुन्छ।
+    </p>
+
+    <hr>
+
+    <h2>९. Slide आफैं परिवर्तन हुने बनाउने</h2>
+
+    <p>
+        PowerPoint मा Slide लाई Mouse वा Keyboard नथिचीकन
+        निश्चित समयपछि आफैं परिवर्तन हुने बनाउन सकिन्छ।
+    </p>
+
+    <ol>
+        <li>Slide चयन गर्नुहोस्।</li>
+        <li><strong>Transitions</strong> Menu मा जानुहोस्।</li>
+        <li><strong>Timing</strong> Group मा जानुहोस्।</li>
+        <li>
+            <strong>Advance Slide</strong> अन्तर्गत
+            <strong>After</strong> विकल्प चयन गर्नुहोस्।
+        </li>
+        <li>जस्तै <strong>00:05</strong> राख्नुहोस्।</li>
+    </ol>
+
+    <p>
+        अब उक्त Slide 5 सेकेन्डपछि अर्को Slide मा जान सक्छ।
+    </p>
+
+    <hr>
+
+    <h2>१०. Mouse Click बाट Slide परिवर्तन गर्ने</h2>
+
+    <p>
+        यदि Presentation चलाउँदा Mouse Click गरेपछि मात्र
+        अर्को Slide मा जान चाहनुहुन्छ भने:
+    </p>
+
+    <ol>
+        <li><strong>Transitions</strong> Menu खोल्नुहोस्।</li>
+        <li><strong>Advance Slide</strong> मा जानुहोस्।</li>
+        <li><strong>On Mouse Click</strong> विकल्प चयन गर्नुहोस्।</li>
+    </ol>
+
+    <p>
+        यस अवस्थामा Presentation चलिरहेको बेला Mouse Click गरेपछि
+        अर्को Slide मा जान्छ।
+    </p>
+
+    <hr>
+
+    <h2>११. आफैं पनि र Mouse Click बाट पनि Slide परिवर्तन गर्ने</h2>
+
+    <p>
+        PowerPoint मा चाहनुभयो भने दुवै विकल्प प्रयोग गर्न सकिन्छ।
+    </p>
+
+    <ul>
+        <li><strong>On Mouse Click</strong> – Click गर्दा Slide परिवर्तन हुन्छ।</li>
+        <li><strong>After</strong> – तोकिएको समयपछि Slide आफैं परिवर्तन हुन्छ।</li>
+    </ul>
+
+    <p>
+        दुवै विकल्प प्रयोग गर्दा Presentation लाई आफ्नो
+        आवश्यकताअनुसार सञ्चालन गर्न सकिन्छ।
+    </p>
+
+    <hr>
+
+    <h2>१२. Transition हटाउने तरिका</h2>
+
+    <p>
+        कुनै Slide मा राखिएको Transition Effect मन परेन वा हटाउन
+        चाहनुभयो भने सजिलै हटाउन सकिन्छ।
+    </p>
+
+    <ol>
+        <li>Transition भएको Slide चयन गर्नुहोस्।</li>
+        <li><strong>Transitions</strong> Menu मा क्लिक गर्नुहोस्।</li>
+        <li>Transition Gallery बाट <strong>None</strong> चयन गर्नुहोस्।</li>
+    </ol>
+
+    <p>
+        सबै Slide बाट Transition हटाउन चाहनुहुन्छ भने
+        <strong>None</strong> चयन गरेपछि
+        <strong>Apply to All</strong> क्लिक गर्न सकिन्छ।
+    </p>
+
+    <hr>
+
+    <h2>१३. Professional Presentation का लागि कुन Transition राम्रो ?</h2>
+
+    <p>
+        सबै Presentation मा धेरै Animation वा Transition राख्नु
+        आवश्यक हुँदैन। कार्यालयीय तथा Professional Presentation
+        का लागि सरल र Smooth Transition प्रयोग गर्नु राम्रो हुन्छ।
+    </p>
+
+    <ul>
+        <li><strong>Fade</strong> – Office Presentation का लागि राम्रो।</li>
+        <li><strong>Push</strong> – सामान्य Business Presentation का लागि उपयोगी।</li>
+        <li><strong>Wipe</strong> – सरल Presentation मा प्रयोग गर्न सकिन्छ।</li>
+        <li><strong>Morph</strong> – उपयुक्त Slide Design भएको अवस्थामा आकर्षक हुन्छ।</li>
+    </ul>
+
+    <p>
+        अत्यधिक चम्किलो वा धेरै छिटो Transition प्रयोग गर्दा
+        दर्शकको ध्यान मुख्य विषयबाट हट्न सक्छ।
+    </p>
+
+    <hr>
+
+    <h2>१४. Transition Effect प्रयोग गर्दा ध्यान दिनुपर्ने कुराहरू</h2>
+
+    <ul>
+        <li>सबै Slide मा धेरै फरक-फरक Effect नराख्नुहोस्।</li>
+        <li>Professional Presentation मा सरल Effect प्रयोग गर्नुहोस्।</li>
+        <li>Duration धेरै लामो नराख्नुहोस्।</li>
+        <li>अनावश्यक Sound प्रयोग नगर्नुहोस्।</li>
+        <li>Presentation को विषयअनुसार Transition छनोट गर्नुहोस्।</li>
+        <li>महत्वपूर्ण Slide मा आवश्यकताअनुसार मात्र विशेष Effect प्रयोग गर्नुहोस्।</li>
+        <li>Presentation सुरु गर्नुअघि Slide Show चलाएर परीक्षण गर्नुहोस्।</li>
+    </ul>
+
+    <hr>
+
+    <div class="note">
+
+
+        <p>
+            <strong>Transition Effect</strong> भनेको एउटा Slide बाट
+            अर्को Slide मा जाँदा देखिने दृश्य प्रभाव हो।
+        </p>
+
+        <p>
+            Transition राख्न:
+        </p>
+
+        <p>
+            <strong>
+                Slide Select → Transitions → Effect Select
+            </strong>
+        </p>
+
+        <p>
+            सबै Slide मा एउटै Effect राख्न:
+        </p>
+
+        <p>
+            <strong>
+                Transitions → Effect → Apply to All
+            </strong>
+        </p>
+
+        <p>
+            Slide आफैं परिवर्तन गर्न:
+        </p>
+
+        <p>
+            <strong>
+                Transitions → Timing → After
+            </strong>
+        </p>
+
+        <p>
+            Transition हटाउन:
+        </p>
+
+        <p>
+            <strong>
+                Transitions → None
+            </strong>
+        </p>
+
+    </div>
+
+    <hr>
+
+ 
+    <p>
+        Microsoft PowerPoint को <strong>Transition Effect</strong>
+        ले एउटा Slide बाट अर्को Slide मा जाँदा आकर्षक दृश्य प्रभाव
+        देखाउन मद्दत गर्छ। यसले Presentation लाई व्यवस्थित,
+        आकर्षक र प्रभावकारी बनाउन सक्छ।
+    </p>
+
+    <p>
+        तर राम्रो Presentation बनाउन धेरै Transition राख्नु भन्दा
+        विषयअनुसार सरल र उपयुक्त Transition प्रयोग गर्नु राम्रो हुन्छ।
+        विशेषगरी कार्यालयीय बैठक, तालिम, Seminar, Project
+        Presentation तथा शैक्षिक Presentation मा
+        <strong>Fade, Push, Wipe</strong> जस्ता सरल Effect
+        प्रभावकारी हुन्छन्।
+    </p>
+
+</div>
+
+</body>
+</html>

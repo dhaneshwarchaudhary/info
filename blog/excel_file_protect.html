@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MS Excel File खोल्नु अघि Password Protect कसरी गर्ने ?</title>
+<style>
+body {
+
+  margin: 0;
+
+
+}
+
+p{text-align:justify;}
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+
+
+.sticky + .content {
+
+  padding-top: 0px;
+
+}
+
+
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  max-width: 1000px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: rgb(0,120,201);
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active {
+
+  background-color: #2196F3;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+
+  .text {font-size: 11px}
+
+}
+
+
+
+/* Float four columns side by side */
+
+.columncard {
+
+  float: left;
+
+  width: 25%;
+
+  padding: 0 10px;
+
+}
+
+
+
+/* Remove extra left and right margins, due to padding */
+
+.rowcard {margin: 0 -5px;}
+
+
+
+/* Clear floats after the columns */
+
+.rowcard:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+
+  .columncard {
+
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+
+/* Style the counter cards */
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+}
+   .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+        }
+    }
+/* Navbar */
+
+
+/* Header */
+header {
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:18px;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.nav-links li a.active {
+    background: white;
+    color: #0d6efd;
+}
+/* Responsive */
+@media(max-width:768px){
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0d6efd;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+	.hero{
+        min-height:500px;
+    }
+	.hero h1{
+    font-size:clamp(1.8rem);
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+}
+
+/* Hero */
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--dark);
+}
+.hero{
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('images/dc.jpg');
+
+    background-size:100% 100%;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --card:#ffffff;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Kalimati, Arial, sans-serif;
+    line-height:1.8;
+
+    background:#f8f9fa;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h1,h2{
+    color:#003366;
+}
+.step{
+    background:#f1f5ff;
+    padding:10px;
+    margin-bottom:10px;
+    border-left:5px solid #003366;
+}
+.warning{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:15px;
+}
+.danger{
+    background:#f8d7da;
+    border-left:5px solid #dc3545;
+    padding:15px;
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
+     crossorigin="anonymous"></script>
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
+</head>
+<body>
+<div style="background-color:white;">
+<center>
+ <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
+ <img alt="" src="../images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:25px;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ </center>
+</div>
+<nav class="navbar" style="font-family:merienda;color:white;font-weight:bold;">
+    <div class="logo font-effect-shadow-multiple" >DHANESHWAR</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks" >
+        <li><a href="../">Home</a></li>
+		<!--<li><a href="../radio">Nepali Radio</a></li>-->
+        <li><a href="../about-us">About</a></li>
+        <li><a href="../contact">Contact</a></li>
+        <li><a href="../policy">Privacy</a></li>
+    </ul>
+</nav>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("navLinks");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
+<div class="container">
+
+    <h1>MS Excel File खोल्नु अघि Password Protect कसरी गर्ने ?</h1>
+
+    <h2>परिचय</h2>
+
+    <p>
+        Microsoft Excel मा तयार गरिएको महत्वपूर्ण, व्यक्तिगत वा गोप्य
+        Excel File लाई अनधिकृत व्यक्तिले खोल्न नपाओस् भन्नका लागि
+        <strong>Password Protection</strong> प्रयोग गर्न सकिन्छ।
+        Password राखेपछि Excel File खोल्दा पहिले Password मागिन्छ र
+        सही Password राखेपछि मात्र File खुल्छ।
+    </p>
+
+    <p>
+        यो सुविधा कार्यालयको कर्मचारी विवरण, तलब विवरण, बजेट,
+        लेखा विवरण, परीक्षा परिणाम, विद्यार्थी विवरण, बैंकिङ विवरण,
+        व्यक्तिगत आर्थिक विवरण तथा अन्य संवेदनशील Excel File सुरक्षित
+        राख्न निकै उपयोगी हुन्छ।
+    </p>
+
+    <hr>
+
+    <h2>१. Excel File मा Password किन राख्ने ?</h2>
+
+    <p>
+        Computer वा Laptop मा रहेको Excel File अरू व्यक्तिले अनुमति
+        बिना खोल्न, पढ्न वा त्यसमा भएको जानकारी हेर्न नसकोस् भनेर
+        Password राखिन्छ।
+    </p>
+
+    <ul>
+        <li>गोप्य कार्यालयीय विवरण सुरक्षित राख्न।</li>
+        <li>कर्मचारीको तलब तथा व्यक्तिगत विवरण सुरक्षित राख्न।</li>
+        <li>विद्यार्थीको परीक्षा तथा Result विवरण सुरक्षित राख्न।</li>
+        <li>आर्थिक तथा लेखा विवरण सुरक्षित राख्न।</li>
+        <li>बजेट तथा वित्तीय विवरण सुरक्षित राख्न।</li>
+        <li>व्यक्तिगत महत्वपूर्ण Data सुरक्षित राख्न।</li>
+        <li>अनधिकृत व्यक्तिबाट Excel File खोल्न रोक्न।</li>
+    </ul>
+
+    <hr>
+
+    <h2>२. Excel File खोल्न Password कसरी राख्ने ?</h2>
+
+    <p>
+        Excel File खोल्दा नै Password मागिने बनाउन निम्न चरणहरू
+        पालना गर्नुहोस्।
+    </p>
+
+    <ol>
+        <li>
+            सबैभन्दा पहिले आफ्नो
+            <strong>Microsoft Excel File</strong> खोल्नुहोस्।
+        </li>
+
+        <li>
+            माथि बायाँतर्फ रहेको <strong>File</strong> Menu मा क्लिक गर्नुहोस्।
+        </li>
+
+        <li>
+            अब <strong>Info</strong> विकल्पमा क्लिक गर्नुहोस्।
+        </li>
+
+        <li>
+            <strong>Protect Workbook</strong> भन्ने विकल्पमा क्लिक गर्नुहोस्।
+        </li>
+
+        <li>
+            देखिएको Menu बाट
+            <strong>Encrypt with Password</strong> चयन गर्नुहोस्।
+        </li>
+
+        <li>
+            अब Password राख्ने Box खुल्छ।
+        </li>
+
+        <li>
+            आफूले चाहेको सुरक्षित Password लेख्नुहोस्।
+        </li>
+
+        <li>
+            <strong>OK</strong> मा क्लिक गर्नुहोस्।
+        </li>
+
+        <li>
+            फेरि Password Confirm गर्न अर्को Box आउँछ।
+        </li>
+
+        <li>
+            पहिले राखेको Password फेरि लेख्नुहोस्।
+        </li>
+
+        <li>
+            <strong>OK</strong> मा क्लिक गर्नुहोस्।
+        </li>
+
+        <li>
+            अन्त्यमा <strong>Ctrl + S</strong> थिचेर Excel File Save गर्नुहोस्।
+        </li>
+    </ol>
+
+    <hr>
+
+    <h2>३. छोटकरीमा Password राख्ने तरिका</h2>
+
+    <p>
+        Excel File खोल्नुहोस् →
+        <strong>File</strong> →
+        <strong>Info</strong> →
+        <strong>Protect Workbook</strong> →
+        <strong>Encrypt with Password</strong> →
+        Password राख्नुहोस् →
+        Confirm गर्नुहोस् →
+        <strong>Save</strong> गर्नुहोस्।
+    </p>
+
+    <hr>
+
+    <h2>४. Password राखेपछि के हुन्छ ?</h2>
+
+    <p>
+        Password राखिसकेपछि Excel File बन्द गरेर पुनः खोल्दा
+        Excel ले पहिले Password माग्छ।
+    </p>
+
+    <div class="note">
+
+        <p><strong>Password Required</strong></p>
+
+        <p>
+            Enter password to open this file:
+        </p>
+
+        <p>
+            <strong>
+                Password: __________________
+            </strong>
+        </p>
+
+        <p>
+            <strong>OK &nbsp;&nbsp; Cancel</strong>
+        </p>
+
+    </div>
+
+    <p>
+        सही Password राखेपछि मात्र Excel File खुल्छ।
+        गलत Password राख्दा File खोल्न सकिँदैन।
+    </p>
+
+    <hr>
+
+    <h2>५. Excel File बाट Password कसरी हटाउने ?</h2>
+
+    <p>
+        पछि Password आवश्यक छैन भने त्यसलाई हटाउन सकिन्छ।
+    </p>
+
+    <ol>
+        <li>Password Protected Excel File खोल्नुहोस्।</li>
+        <li>Password राखेर File खोल्नुहोस्।</li>
+        <li><strong>File</strong> Menu मा क्लिक गर्नुहोस्।</li>
+        <li><strong>Info</strong> मा जानुहोस्।</li>
+        <li><strong>Protect Workbook</strong> मा क्लिक गर्नुहोस्।</li>
+        <li><strong>Encrypt with Password</strong> चयन गर्नुहोस्।</li>
+        <li>Password Box मा रहेको Password Delete गर्नुहोस्।</li>
+        <li>Password Box खाली भएपछि <strong>OK</strong> क्लिक गर्नुहोस्।</li>
+        <li><strong>Ctrl + S</strong> थिचेर File Save गर्नुहोस्।</li>
+    </ol>
+
+    <p>
+        अब Excel File बन्द गरेर पुनः खोल्दा Password मागिने छैन।
+    </p>
+
+    <hr>
+
+    <h2>६. Password बिर्सिएमा के हुन्छ ?</h2>
+
+    <p>
+        <strong>Encrypt with Password</strong> प्रयोग गरेर Excel File
+        सुरक्षित गरेपछि Password बिर्सनु गम्भीर समस्या हुन सक्छ।
+        Excel ले सामान्य रूपमा बिर्सिएको Password सजिलै देखाउने
+        वा Reset गर्ने सुविधा दिँदैन।
+    </p>
+
+    <p>
+        त्यसैले महत्वपूर्ण Excel File मा Password राख्दा Password
+        सुरक्षित स्थानमा राख्नुहोस्। कार्यालयीय File भएमा संस्थाको
+        Password Management Policy अनुसार व्यवस्थापन गर्नु राम्रो हुन्छ।
+    </p>
+
+    <div class="warning">
+
+        <strong>महत्वपूर्ण सूचना:</strong>
+
+        <p>
+            Excel File को Password बिर्सिएमा File खोल्न समस्या आउन
+            सक्छ। त्यसैले Password सुरक्षित रूपमा सम्झना राख्नुहोस्।
+        </p>
+
+    </div>
+
+    <hr>
+
+    <h2>७. बलियो Password कसरी बनाउने ?</h2>
+
+    <p>
+        Password अरूले सजिलै अनुमान गर्न नसक्ने हुनुपर्छ। आफ्नो नाम,
+        जन्ममिति, मोबाइल नम्बर वा <strong>123456</strong> जस्ता
+        सजिला Password प्रयोग नगर्नु राम्रो हुन्छ।
+    </p>
+
+    <p>
+        बलियो Password मा निम्नमध्ये विभिन्न प्रकारका Character
+        समावेश गर्न सकिन्छ:
+    </p>
+
+    <ul>
+        <li>ठूला अक्षर – A-Z</li>
+        <li>साना अक्षर – a-z</li>
+        <li>अंक – 0-9</li>
+        <li>Special Character – @, #, !, %, $ आदि</li>
+    </ul>
+
+    <p>
+        <strong>उदाहरण:</strong>
+        <code>Office@Data#2026!</code>
+    </p>
+
+    <p>
+        <em>
+            नोट: माथिको Password केवल उदाहरण हो। वास्तविक File मा
+            यही Password प्रयोग नगर्नुहोस्।
+        </em>
+    </p>
+
+    <hr>
+
+    <h2>८. Excel मा File Password र Sheet Password बीचको फरक</h2>
+
+    <table border="1" cellpadding="8" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>विषय</th>
+                <th>Encrypt with Password</th>
+                <th>Protect Sheet</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>File खोल्दा Password माग्छ ?</td>
+                <td>हो</td>
+                <td>होइन</td>
+            </tr>
+
+            <tr>
+                <td>सम्पूर्ण File सुरक्षित गर्छ ?</td>
+                <td>हो</td>
+                <td>मुख्यतः एउटा Worksheet सुरक्षित गर्छ</td>
+            </tr>
+
+            <tr>
+                <td>File को Data हेर्न रोक्छ ?</td>
+                <td>हो</td>
+                <td>File खुलेपछि मात्र Sheet Editing नियन्त्रण गर्छ</td>
+            </tr>
+
+            <tr>
+                <td>Formula/Cell Edit रोक्न</td>
+                <td>यसको मुख्य उद्देश्य होइन</td>
+                <td>हो</td>
+            </tr>
+
+            <tr>
+                <td>गोप्य File का लागि</td>
+                <td>धेरै उपयोगी</td>
+                <td>सीमित उद्देश्यका लागि उपयोगी</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2>९. Protect Sheet र Protect Workbook पनि बुझौं</h2>
+
+    <h3>Protect Sheet</h3>
+
+    <p>
+        <strong>Protect Sheet</strong> को प्रयोग Worksheet भित्रका
+        Cell, Formula वा Data लाई अनधिकृत रूपमा परिवर्तन गर्न
+        नदिन गरिन्छ।
+    </p>
+
+    <p>
+        उदाहरणका लागि Excel मा कर्मचारीको तलब Formula राखिएको छ भने
+        Formula भएको Cell परिवर्तन गर्न नदिन Protect Sheet प्रयोग
+        गर्न सकिन्छ।
+    </p>
+
+    <h3>Protect Workbook</h3>
+
+    <p>
+        <strong>Protect Workbook</strong> को प्रयोग Workbook को
+        Structure सुरक्षित गर्न उपयोगी हुन्छ। यसले प्रयोगकर्तालाई
+        Worksheet थप्ने, Delete गर्ने, Rename गर्ने वा Move गर्ने
+        जस्ता कार्यमा नियन्त्रण गर्न मद्दत गर्न सक्छ।
+    </p>
+
+    <p>
+        तर <strong>File खोल्न Password</strong> राख्नका लागि
+        <strong>Encrypt with Password</strong> प्रयोग गर्नुहोस्।
+    </p>
+
+    <hr>
+
+    <h2>१०. कार्यालयमा Excel Password Protection को प्रयोग</h2>
+
+    <p>
+        कार्यालयमा निम्न प्रकारका Excel File मा Password Protection
+        उपयोगी हुन्छ:
+    </p>
+
+    <ul>
+        <li>कर्मचारीको Salary Sheet</li>
+        <li>कर्मचारी व्यक्तिगत विवरण</li>
+        <li>कर तथा वित्तीय विवरण</li>
+        <li>Budget तथा Accounting Sheet</li>
+        <li>विद्यार्थीको Result Sheet</li>
+        <li>परीक्षाको Mark Sheet</li>
+        <li>Bank तथा Payment Details</li>
+        <li>गोप्य कार्यालयीय तथ्याङ्क</li>
+        <li>Inventory तथा Stock विवरण</li>
+        <li>Research Data</li>
+    </ul>
+
+    <hr>
+
+    <h2>११. Excel File Email वा WhatsApp मार्फत पठाउँदा</h2>
+
+    <p>
+        महत्वपूर्ण Excel File Email, Messenger वा अन्य माध्यमबाट
+        पठाउँदा पनि Password Protection उपयोगी हुन्छ।
+    </p>
+
+    <p>
+        उदाहरणका लागि:
+    </p>
+
+    <ol>
+        <li>पहिले Excel File मा Password राख्नुहोस्।</li>
+        <li>File Save गर्नुहोस्।</li>
+        <li>Password Protected File पठाउनुहोस्।</li>
+        <li>Password चाहिँ छुट्टै सुरक्षित माध्यमबाट सम्बन्धित व्यक्तिलाई दिनुहोस्।</li>
+    </ol>
+
+    <p>
+        यसरी File गलत व्यक्तिको हातमा परे पनि Password बिना
+        खोल्न कठिन हुन्छ।
+    </p>
+
+    <hr>
+
+    <div class="note">
+
+
+        <p>
+            यदि तपाईं चाहनुहुन्छ कि तपाईंले बनाएको Excel File
+            <strong>Password नहाली कसैले पनि खोल्न नसकोस्</strong>
+            भने:
+        </p>
+
+        <p>
+            <strong>
+                File → Info → Protect Workbook →
+                Encrypt with Password
+            </strong>
+        </p>
+
+        <p>
+            मा गएर Password राख्नुहोस्, Confirm गर्नुहोस् र
+            File Save गर्नुहोस्।
+        </p>
+
+        <p>
+            त्यसपछि Excel File खोल्दा पहिले Password मागिन्छ।
+            सही Password राखेपछि मात्र Excel File खुल्छ।
+        </p>
+
+        <p>
+            ध्यान दिनुपर्ने मुख्य कुरा के हो भने
+            <strong>Protect Sheet</strong> र
+            <strong>Encrypt with Password</strong> एउटै कुरा होइन।
+            File नै खोल्न रोक्न <strong>Encrypt with Password</strong>
+            प्रयोग गर्नुपर्छ।
+        </p>
+
+    </div>
+
+    <hr>
+
+
+
+    <p>
+        Microsoft Excel को <strong>Encrypt with Password</strong>
+        सुविधा महत्वपूर्ण तथा गोप्य Excel File सुरक्षित राख्ने
+        सरल र प्रभावकारी उपाय हो। यसले Password बिना File खोल्न
+        नदिएर अनधिकृत पहुँचबाट Data जोगाउन मद्दत गर्दछ।
+    </p>
+
+    <p>
+        कार्यालयीय Salary Sheet, कर्मचारी विवरण, विद्यार्थी Result,
+        Budget, Accounting तथा अन्य संवेदनशील Data राखिएको Excel
+        File मा यो सुविधा प्रयोग गर्नु उपयोगी हुन्छ।
+    </p>
+
+    <p>
+        <strong>
+            याद राख्नुहोस्: Password राख्नु मात्र पर्याप्त होइन;
+            Password सुरक्षित राख्नु र आवश्यक अवस्थामा Backup राख्नु
+            पनि उत्तिकै महत्वपूर्ण हुन्छ।
+        </strong>
+    </p>
+
+</div>
+
+</body>
+</html>

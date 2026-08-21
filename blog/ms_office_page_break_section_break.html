@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microsoft Word मा Page Break र Section Break के हो ?</title>
+<style>
+body {
+
+  margin: 0;
+
+
+}
+
+p{text-align:justify;}
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+
+
+.sticky + .content {
+
+  padding-top: 0px;
+
+}
+
+
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  max-width: 1000px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: rgb(0,120,201);
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active {
+
+  background-color: #2196F3;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+
+  .text {font-size: 11px}
+
+}
+
+
+
+/* Float four columns side by side */
+
+.columncard {
+
+  float: left;
+
+  width: 25%;
+
+  padding: 0 10px;
+
+}
+
+
+
+/* Remove extra left and right margins, due to padding */
+
+.rowcard {margin: 0 -5px;}
+
+
+
+/* Clear floats after the columns */
+
+.rowcard:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+
+  .columncard {
+
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+
+/* Style the counter cards */
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+}
+   .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+        }
+    }
+/* Navbar */
+
+
+/* Header */
+header {
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:18px;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.nav-links li a.active {
+    background: white;
+    color: #0d6efd;
+}
+/* Responsive */
+@media(max-width:768px){
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0d6efd;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+	.hero{
+        min-height:500px;
+    }
+	.hero h1{
+    font-size:clamp(1.8rem);
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+}
+
+/* Hero */
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--dark);
+}
+.hero{
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('images/dc.jpg');
+
+    background-size:100% 100%;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --card:#ffffff;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Kalimati, Arial, sans-serif;
+    line-height:1.8;
+
+    background:#f8f9fa;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h1,h2{
+    color:#003366;
+}
+.step{
+    background:#f1f5ff;
+    padding:10px;
+    margin-bottom:10px;
+    border-left:5px solid #003366;
+}
+.warning{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:15px;
+}
+.danger{
+    background:#f8d7da;
+    border-left:5px solid #dc3545;
+    padding:15px;
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
+     crossorigin="anonymous"></script>
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
+</head>
+<body>
+<div style="background-color:white;">
+<center>
+ <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
+ <img alt="" src="../images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:25px;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ </center>
+</div>
+<nav class="navbar" style="font-family:merienda;color:white;font-weight:bold;">
+    <div class="logo font-effect-shadow-multiple" >DHANESHWAR</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks" >
+        <li><a href="../">Home</a></li>
+		<!--<li><a href="../radio">Nepali Radio</a></li>-->
+        <li><a href="../about-us">About</a></li>
+        <li><a href="../contact">Contact</a></li>
+        <li><a href="../policy">Privacy</a></li>
+    </ul>
+</nav>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("navLinks");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
+<div class="container">
+
+    <h1>Microsoft Word मा Page Break र Section Break के हो ?</h1>
+
+    <p>
+        Microsoft Word मा लामो Document तयार गर्दा एउटै Document लाई
+        विभिन्न पृष्ठ तथा भागमा व्यवस्थित गर्न <strong>Page Break</strong>
+        र <strong>Section Break</strong> को प्रयोग गरिन्छ। यी दुवैको
+        काम Document लाई व्यवस्थित बनाउनु हो, तर दुवैको उद्देश्य
+        फरक हुन्छ।
+    </p>
+
+    <hr>
+
+    <h2>१. Page Break भनेको के हो ?</h2>
+
+    <p>
+        <strong>Page Break</strong> भनेको हाल लेखिरहेको स्थानदेखि
+        अगाडिको सामग्रीलाई नयाँ Page बाट सुरु गराउने सुविधा हो।
+        उदाहरणका लागि तपाईंले एउटा अध्यायको लेखाइ पूरा गरेपछि
+        अर्को अध्याय नयाँ पृष्ठबाट सुरु गर्न चाहनुभयो भने Page Break
+        प्रयोग गर्न सकिन्छ।
+    </p>
+
+    <p>
+        Page Break प्रयोग गरेपछि Cursor रहेको स्थानपछि आउने सामग्री
+        स्वतः अर्को पृष्ठबाट सुरु हुन्छ।
+    </p>
+
+    <h3>सरल उदाहरण</h3>
+
+    <p>
+        मानौं तपाईंले एउटा Report तयार गर्दै हुनुहुन्छ:
+    </p>
+
+    <ul>
+        <li>Page 1 – Introduction</li>
+        <li>Page 2 – Objectives</li>
+        <li>Page 3 – Methodology</li>
+        <li>Page 4 – Conclusion</li>
+    </ul>
+
+    <p>
+        Introduction सकिएपछि Objectives लाई नयाँ Page बाट सुरु गर्न
+        <strong>Page Break</strong> प्रयोग गर्न सकिन्छ।
+    </p>
+
+    <hr>
+
+    <h2>२. Page Break कसरी राख्ने ?</h2>
+
+    <h3>तरिका १: Insert Menu बाट</h3>
+
+    <ol>
+        <li>Microsoft Word खोल्नुहोस्।</li>
+        <li>जहाँबाट नयाँ Page सुरु गर्न चाहनुहुन्छ त्यहाँ Cursor राख्नुहोस्।</li>
+        <li><strong>Insert</strong> Menu मा क्लिक गर्नुहोस्।</li>
+        <li><strong>Page Break</strong> मा क्लिक गर्नुहोस्।</li>
+        <li>Cursor पछिको सामग्री नयाँ Page बाट सुरु हुन्छ।</li>
+    </ol>
+
+    <h3>तरिका २: Keyboard Shortcut</h3>
+
+    <p>
+        Page Break राख्ने सबैभन्दा सजिलो तरिका:
+    </p>
+
+    <p>
+        <strong>Ctrl + Enter</strong>
+    </p>
+
+    <p>
+        अर्थात् Keyboard मा <strong>Ctrl</strong> थिचेर
+        <strong>Enter</strong> थिच्दा नयाँ Page सुरु हुन्छ।
+    </p>
+
+    <hr>
+
+    <h2>३. Page Break र सामान्य Enter बीचको फरक</h2>
+
+    <p>
+        धेरै प्रयोगकर्ताले नयाँ पृष्ठमा सामग्री लैजान धेरै पटक
+        <strong>Enter</strong> थिच्ने गर्छन्। यो सही तरिका होइन।
+    </p>
+
+    <p>
+        धेरै पटक Enter थिचेर नयाँ Page बनाउँदा Document को
+        Formatting बिग्रिन सक्छ। पछि अगाडिको सामग्री थप्दा वा
+        हटाउँदा Page को स्थिति परिवर्तन हुन सक्छ।
+    </p>
+
+    <p>
+        त्यसैले नयाँ Page सुरु गर्न सधैं <strong>Page Break</strong>
+        प्रयोग गर्नु राम्रो हुन्छ।
+    </p>
+
+    <hr>
+
+    <h2>४. Section Break भनेको के हो ?</h2>
+
+    <p>
+        <strong>Section Break</strong> भनेको एउटै Word Document लाई
+        विभिन्न Section मा विभाजन गर्ने सुविधा हो। Section Break को
+        विशेषता के हो भने प्रत्येक Section को Page Setup तथा
+        Formatting अलग-अलग राख्न सकिन्छ।
+    </p>
+
+    <p>
+        उदाहरणका लागि एउटै Document मा पहिलो भागमा Portrait Page
+        र अर्को भागमा Landscape Page चाहियो भने Section Break
+        प्रयोग गर्न सकिन्छ।
+    </p>
+
+    <hr>
+
+    <h2>५. Section Break किन प्रयोग गर्ने ?</h2>
+
+    <p>
+        Section Break विशेषगरी निम्न अवस्थामा उपयोगी हुन्छ:
+    </p>
+
+    <ul>
+        <li>एउटै Document मा Portrait र Landscape Page राख्न।</li>
+        <li>अलग-अलग Header राख्न।</li>
+        <li>अलग-अलग Footer राख्न।</li>
+        <li>Page Number को Format परिवर्तन गर्न।</li>
+        <li>Document को कुनै भागमा फरक Margin राख्न।</li>
+        <li>Column को संख्या परिवर्तन गर्न।</li>
+        <li>अलग-अलग Page Orientation प्रयोग गर्न।</li>
+        <li>Document का विभिन्न भागलाई स्वतन्त्र रूपमा Format गर्न।</li>
+    </ul>
+
+    <hr>
+
+    <h2>६. Section Break का प्रकारहरू</h2>
+
+    <p>
+        Microsoft Word मा मुख्य रूपमा चार प्रकारका Section Break
+        उपलब्ध हुन्छन्।
+    </p>
+
+    <h3>१. Next Page</h3>
+
+    <p>
+        <strong>Next Page</strong> ले नयाँ Section लाई अर्को नयाँ
+        Page बाट सुरु गर्छ।
+    </p>
+
+    <p>
+        उदाहरण:
+    </p>
+
+    <ul>
+        <li>Section 1 – Portrait</li>
+        <li>Section Break – Next Page</li>
+        <li>Section 2 – Landscape</li>
+    </ul>
+
+    <p>
+        यो विकल्प Report, Thesis तथा Project Document मा धेरै
+        उपयोगी हुन्छ।
+    </p>
+
+    <h3>२. Continuous</h3>
+
+    <p>
+        <strong>Continuous</strong> Section Break ले नयाँ Section
+        सुरु गर्छ तर नयाँ Page सुरु गर्दैन। अर्थात् त्यही Page बाट
+        अर्को Section सुरु हुन्छ।
+    </p>
+
+    <p>
+        उदाहरणका लागि एउटै Page मा एउटा भागलाई दुई Column र अर्को
+        भागलाई एक Column बनाउन Continuous Section Break उपयोगी हुन्छ।
+    </p>
+
+    <h3>३. Even Page</h3>
+
+    <p>
+        <strong>Even Page</strong> ले नयाँ Section लाई अर्को
+        Even-numbered Page बाट सुरु गर्छ।
+    </p>
+
+    <p>
+        पुस्तक, Thesis वा दुईतर्फी Printing हुने Document तयार गर्दा
+        यसको प्रयोग उपयोगी हुन्छ।
+    </p>
+
+    <h3>४. Odd Page</h3>
+
+    <p>
+        <strong>Odd Page</strong> ले नयाँ Section लाई अर्को
+        Odd-numbered Page बाट सुरु गर्छ।
+    </p>
+
+    <p>
+        पुस्तक वा Chapter लाई सधैं दायाँतर्फको Page अर्थात्
+        Odd Page बाट सुरु गराउन यसको प्रयोग गर्न सकिन्छ।
+    </p>
+
+    <hr>
+
+    <h2>७. Section Break कसरी राख्ने ?</h2>
+
+    <ol>
+        <li>Microsoft Word Document खोल्नुहोस्।</li>
+        <li>जहाँ Section छुट्याउन चाहनुहुन्छ त्यहाँ Cursor राख्नुहोस्।</li>
+        <li><strong>Layout</strong> Menu मा जानुहोस्।</li>
+        <li><strong>Breaks</strong> मा क्लिक गर्नुहोस्।</li>
+        <li>Section Break अन्तर्गत आवश्यक विकल्प छान्नुहोस्।</li>
+        <li>Next Page, Continuous, Even Page वा Odd Page चयन गर्नुहोस्।</li>
+    </ol>
+
+    <hr>
+
+    <h2>८. Page Break र Section Break बीचको फरक</h2>
+
+    <table border="1" cellpadding="8" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>विषय</th>
+                <th>Page Break</th>
+                <th>Section Break</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>मुख्य उद्देश्य</td>
+                <td>नयाँ Page सुरु गर्नु</td>
+                <td>Document लाई फरक Section मा विभाजन गर्नु</td>
+            </tr>
+            <tr>
+                <td>Formatting</td>
+                <td>सामान्यतया एउटै Formatting कायम रहन्छ</td>
+                <td>प्रत्येक Section को Formatting फरक राख्न सकिन्छ</td>
+            </tr>
+            <tr>
+                <td>Page Orientation</td>
+                <td>अलग गर्न प्रयोग हुँदैन</td>
+                <td>Portrait/Landscape फरक राख्न सकिन्छ</td>
+            </tr>
+            <tr>
+                <td>Header/Footer</td>
+                <td>Section परिवर्तन हुँदैन</td>
+                <td>Section अनुसार फरक गर्न सकिन्छ</td>
+            </tr>
+            <tr>
+                <td>Shortcut</td>
+                <td>Ctrl + Enter</td>
+                <td>प्रत्यक्ष Shortcut छैन</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2>९. एउटै Document मा Portrait र Landscape कसरी राख्ने ?</h2>
+
+    <p>
+        यो Section Break को सबैभन्दा महत्वपूर्ण प्रयोगमध्ये एक हो।
+        उदाहरणका लागि तपाईंको Report मा धेरै ठूलो Table छ र त्यो
+        Landscape Page मा मात्र राम्रोसँग अट्छ।
+    </p>
+
+    <ol>
+        <li>Landscape बनाउनुपर्ने Table भन्दा अगाडि Cursor राख्नुहोस्।</li>
+        <li><strong>Layout → Breaks → Section Breaks → Next Page</strong> चयन गर्नुहोस्।</li>
+        <li>अब Landscape बनाउनुपर्ने Page मा Cursor राख्नुहोस्।</li>
+        <li><strong>Layout → Orientation → Landscape</strong> चयन गर्नुहोस्।</li>
+        <li>Landscape Section पछि फेरि Section Break राख्नुहोस्।</li>
+        <li>अर्को Section लाई <strong>Portrait</strong> मा राख्नुहोस्।</li>
+    </ol>
+
+    <p>
+        यसरी एउटै Word Document मा केही Page Portrait र केही Page
+        Landscape बनाउन सकिन्छ।
+    </p>
+
+    <hr>
+
+    <h2>१०. Header र Footer मा Section Break को प्रयोग</h2>
+
+    <p>
+        लामो Report वा Thesis मा प्रत्येक Chapter को Header फरक
+        राख्नुपर्ने हुन सक्छ। यस्तो अवस्थामा Section Break अत्यन्त
+        उपयोगी हुन्छ।
+    </p>
+
+    <p>
+        Section Break राखेपछि Header वा Footer खोल्दा
+        <strong>Link to Previous</strong> भन्ने विकल्प देखिन्छ।
+        यसलाई बन्द गरेपछि उक्त Section को Header/Footer लाई
+        अघिल्लो Section भन्दा फरक बनाउन सकिन्छ।
+    </p>
+
+    <hr>
+
+    <h2>११. Page Number मा Section Break को प्रयोग</h2>
+
+    <p>
+        Thesis, Research Report वा पुस्तक तयार गर्दा सुरुका
+        Page मा Roman Number अर्थात् <strong>i, ii, iii</strong>
+        र मुख्य भागमा <strong>1, 2, 3</strong> राख्नुपर्ने हुन सक्छ।
+    </p>
+
+    <p>
+        यस्तो अवस्थामा Section Break प्रयोग गरेर दुईवटा Section
+        बनाउन सकिन्छ र प्रत्येक Section मा फरक Page Number
+        Format राख्न सकिन्छ।
+    </p>
+
+    <hr>
+
+    <h2>१२. Page Break र Section Break कहिले प्रयोग गर्ने ?</h2>
+
+    <h3>Page Break प्रयोग गर्नुहोस् यदि:</h3>
+
+    <ul>
+        <li>नयाँ Chapter नयाँ Page बाट सुरु गर्नुपर्छ।</li>
+        <li>नयाँ विषय नयाँ Page बाट सुरु गर्नुपर्छ।</li>
+        <li>Cover Page पछि अर्को Page सुरु गर्नुपर्छ।</li>
+        <li>सामग्रीलाई निश्चित Page बाट सुरु गराउनुपर्छ।</li>
+    </ul>
+
+    <h3>Section Break प्रयोग गर्नुहोस् यदि:</h3>
+
+    <ul>
+        <li>Portrait र Landscape Page एउटै Document मा चाहिन्छ।</li>
+        <li>Header/Footer फरक चाहिन्छ।</li>
+        <li>Page Number Format फरक चाहिन्छ।</li>
+        <li>Margin फरक चाहिन्छ।</li>
+        <li>Column Layout फरक चाहिन्छ।</li>
+        <li>Document को विभिन्न भागमा अलग Page Setup चाहिन्छ।</li>
+    </ul>
+
+    <hr>
+
+    <div class="note">
+
+
+        <p>
+            <strong>Page Break</strong> भनेको "अबको लेखाइ अर्को
+            Page बाट सुरु होस्" भन्ने आदेश हो।
+        </p>
+
+        <p>
+            <strong>Section Break</strong> भनेको "अबदेखि Document को
+            यो भागको Page Setup वा Formatting फरक हुन सक्छ" भन्ने
+            आदेश हो।
+        </p>
+
+        <p>
+            त्यसैले सामान्य रूपमा नयाँ Page मात्र चाहिएको हो भने
+            <strong>Page Break</strong> प्रयोग गर्नुहोस्। तर Page
+            Orientation, Header, Footer, Margin, Column वा Page
+            Number फरक चाहिएको छ भने <strong>Section Break</strong>
+            प्रयोग गर्नुहोस्।
+        </p>
+
+    </div>
+
+    <hr>
+
+
+
+    <p>
+        Microsoft Word मा राम्रो र व्यवस्थित Document बनाउन
+        <strong>Page Break</strong> र <strong>Section Break</strong>
+        को सही प्रयोग अत्यन्त महत्वपूर्ण हुन्छ। धेरै पटक Enter
+        थिचेर Page मिलाउनुको सट्टा Page Break प्रयोग गर्दा
+        Document व्यवस्थित र सजिलै Edit गर्न सकिने हुन्छ।
+    </p>
+
+    <p>
+        त्यस्तै, लामो Report, Thesis, Project Work, कार्यालयीय
+        प्रतिवेदन वा पुस्तक तयार गर्दा फरक Page Orientation,
+        Header/Footer, Margin तथा Page Number आवश्यक भएमा
+        Section Break प्रयोग गर्नुपर्छ।
+    </p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>धारापानी पर्यटकीय स्थल, सप्तरी </title>
+<style>
+body {
+
+  margin: 0;
+
+
+}
+
+
+
+
+
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+
+
+.sticky + .content {
+
+  padding-top: 0px;
+
+}
+
+
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  max-width: 1000px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: rgb(0,120,201);
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active {
+
+  background-color: #2196F3;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+
+  .text {font-size: 11px}
+
+}
+
+
+
+/* Float four columns side by side */
+
+.columncard {
+
+  float: left;
+
+  width: 25%;
+
+  padding: 0 10px;
+
+}
+
+
+
+/* Remove extra left and right margins, due to padding */
+
+.rowcard {margin: 0 -5px;}
+
+
+
+/* Clear floats after the columns */
+
+.rowcard:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+
+  .columncard {
+
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+
+/* Style the counter cards */
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+}
+   .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+        }
+    }
+/* Navbar */
+
+
+/* Header */
+header {
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:18px;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.nav-links li a.active {
+    background: white;
+    color: #0d6efd;
+}
+/* Responsive */
+@media(max-width:768px){
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0d6efd;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+	.hero{
+        min-height:500px;
+    }
+	.hero h1{
+    font-size:clamp(1.8rem);
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+}
+
+/* Hero */
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--dark);
+}
+.hero{
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('images/dc.jpg');
+
+    background-size:100% 100%;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --card:#ffffff;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Kalimati, Arial, sans-serif;
+    line-height:1.8;
+
+    background:#f8f9fa;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h1,h2{
+    color:#003366;
+}
+.step{
+    background:#f1f5ff;
+    padding:10px;
+    margin-bottom:10px;
+    border-left:5px solid #003366;
+}
+.warning{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:15px;
+}
+.danger{
+    background:#f8d7da;
+    border-left:5px solid #dc3545;
+    padding:15px;
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
+     crossorigin="anonymous"></script>
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
+</head>
+<body>
+<div style="background-color:white;">
+<center>
+ <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
+ <img alt="" src="../images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:25px;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ </center>
+</div>
+<nav class="navbar" style="font-family:merienda;color:white;font-weight:bold;">
+    <div class="logo font-effect-shadow-multiple" >DHANESHWAR</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks" >
+        <li><a href="../">Home</a></li>
+		<!--<li><a href="../radio">Nepali Radio</a></li>-->
+        <li><a href="../about-us">About</a></li>
+        <li><a href="../contact">Contact</a></li>
+        <li><a href="../policy">Privacy</a></li>
+    </ul>
+</nav>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("navLinks");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
+<div class="container">
+
+    <h1>धारापानी पर्यटकीय स्थल, सप्तरी</h1>
+
+    <h2>परिचय</h2>
+
+    <p style="text-align:justify;">
+        <strong>धारापानी</strong> सप्तरी जिल्लामा रहेको प्राकृतिक तथा
+        स्थानीय पर्यटनको सम्भावना बोकेको रमणीय स्थल हो। हरियाली,
+        प्राकृतिक वातावरण, पानीका स्रोत तथा शान्त वातावरणका कारण
+        धारापानीलाई आन्तरिक पर्यटकका लागि आकर्षक गन्तव्यका रूपमा
+        लिन सकिन्छ।
+    </p>
+
+    <p style="text-align:justify;">
+        दैनिक जीवनको व्यस्तता, शहरी भीडभाड र कोलाहलबाट केही समय टाढा
+        रहेर प्राकृतिक वातावरणमा रमाउन चाहने मानिसहरूका लागि धारापानी
+        उपयुक्त स्थान बन्न सक्छ। विशेषगरी परिवार, साथीभाइ तथा
+        प्रकृतिप्रेमीहरूका लागि यहाँको वातावरण आकर्षक मानिन्छ।
+    </p>
+
+    <hr>
+
+    <h2>धारापानी नाम कसरी रह्यो ?</h2>
+
+    <p style="text-align:justify;">
+        धारापानी नाम आफैंमा <strong>“धारा” र “पानी”</strong> भन्ने
+        शब्दबाट बनेको देखिन्छ। पानीको प्राकृतिक स्रोत वा धारा भएको
+        स्थानलाई स्थानीय रूपमा धारापानी भन्ने चलन पनि पाइन्छ।
+        यस क्षेत्रको स्थानीय पहिचान र प्राकृतिक पानीका स्रोतसँग
+        जोडिएर यसको नाम प्रचलित भएको मानिन्छ।
+    </p>
+
+    <p style="text-align:justify;">
+        यस्ता प्राकृतिक पानीका स्रोतहरू ग्रामीण तथा पहाडी जीवनमा
+        अत्यन्त महत्वपूर्ण हुने गरेका छन्। त्यसैले धारापानी जस्ता
+        स्थानहरू प्राकृतिक सम्पदाका साथै स्थानीय जीवनशैली र
+        संस्कृतिसँग पनि जोडिएका हुन्छन्।
+    </p>
+
+    <hr>
+
+    <h2>प्राकृतिक सौन्दर्य</h2>
+
+    <p style="text-align:justify;">
+        धारापानीको मुख्य आकर्षण यसको प्राकृतिक वातावरण हो। हरियाली,
+        खुला वातावरण, प्राकृतिक पानीका स्रोत तथा वरपरको शान्त
+        वातावरणले यहाँ आउने मानिसलाई प्राकृतिक सौन्दर्यको अनुभव
+        गराउँछ।
+    </p>
+
+    <p style="text-align:justify;">
+        वर्षायाम तथा वर्षापछि वरपरको वातावरण अझ हरियाली देखिन सक्छ।
+        प्राकृतिक सौन्दर्य अवलोकन, घुमफिर, फोटो खिच्ने तथा केही समय
+        आराम गर्ने दृष्टिले यो स्थान उपयोगी हुन सक्छ।
+    </p>
+
+    <hr>
+
+    <h2>पर्यटकीय महत्व</h2>
+
+    <p style="text-align:justify;">
+        धारापानीलाई सप्तरीको <strong>स्थानीय तथा आन्तरिक पर्यटन</strong>
+        विकासका लागि सम्भावना भएको क्षेत्रका रूपमा लिन सकिन्छ।
+        ठूलो तथा व्यावसायिक पर्यटन केन्द्रभन्दा फरक रूपमा प्राकृतिक
+        वातावरणमा आधारित पर्यटनको विकास गर्न सकिने सम्भावना यहाँ
+        रहेको छ।
+    </p>
+
+    <ul>
+        <li>प्राकृतिक वातावरणको अवलोकन</li>
+        <li>परिवार तथा साथीभाइसँग घुमफिर</li>
+        <li>पिकनिक तथा मनोरञ्जन</li>
+        <li>फोटोग्राफी</li>
+        <li>प्रकृतिको अध्ययन तथा अवलोकन</li>
+        <li>स्थानीय संस्कृति र जीवनशैलीको अनुभव</li>
+        <li>छोटो दूरीको आन्तरिक भ्रमण</li>
+    </ul>
+
+    <hr>
+
+    <h2>परिवार तथा साथीभाइसँग घुम्नका लागि</h2>
+
+    <p style="text-align:justify;">
+        प्राकृतिक तथा शान्त वातावरण भएका स्थानहरू परिवार र
+        साथीभाइसँग समय बिताउनका लागि उपयुक्त हुन्छन्। धारापानीमा
+        पनि मौसम तथा स्थानीय अवस्था अनुकूल हुँदा परिवार तथा
+        साथीभाइसँग घुम्न र रमाइलो गर्न सकिन्छ।
+    </p>
+
+    <p style="text-align:justify;">
+        बालबालिका तथा ज्येष्ठ नागरिकसँग भ्रमण गर्दा भने बाटो,
+        पानीको बहाव, बस्ने स्थान तथा मौसमको अवस्थालाई ध्यान दिनु
+        आवश्यक हुन्छ।
+    </p>
+
+    <hr>
+
+    <h2>पिकनिक तथा मनोरञ्जन</h2>
+
+    <p style="text-align:justify;">
+        प्राकृतिक वातावरणका कारण धारापानीलाई स्थानीय रूपमा
+        <strong>पिकनिक तथा मनोरञ्जन</strong>का लागि पनि प्रयोग गर्न
+        सकिने सम्भावना हुन्छ। साथीभाइ तथा परिवारसँग खाना खाने,
+        प्रकृतिको आनन्द लिने र केही समय आराम गर्ने उद्देश्यले
+        मानिसहरू यस्ता स्थानमा जाने गर्दछन्।
+    </p>
+
+    <p style="text-align:justify;">
+        तर पिकनिक गर्दा प्लास्टिक, बोतल, खानेकुराको फोहोर तथा अन्य
+        सामग्री जथाभावी नफाल्नु अत्यन्त आवश्यक छ। पर्यटकीय स्थलको
+        प्राकृतिक सौन्दर्य जोगाउनु सबै आगन्तुकको साझा जिम्मेवारी हो।
+    </p>
+
+    <hr>
+
+    <h2>स्थानीय समुदायका लागि अवसर</h2>
+
+    <p style="text-align:justify;">
+        धारापानीको व्यवस्थित पर्यटन विकास हुन सकेमा स्थानीय
+        समुदायका लागि रोजगारी तथा आम्दानीका अवसर सिर्जना हुन सक्छन्।
+        स्थानीय उत्पादन, खाना, कृषि सामग्री, हस्तकला तथा अन्य
+        सेवाहरूलाई पर्यटकसँग जोड्न सकिन्छ।
+    </p>
+
+    <p style="text-align:justify;">
+        पर्यटन विकाससँगै स्थानीय युवालाई गाइड, होटल तथा होमस्टे,
+        यातायात, खाद्य सेवा, सरसफाइ तथा अन्य क्षेत्रमा काम गर्ने
+        अवसर प्राप्त हुन सक्छ।
+    </p>
+
+    <hr>
+
+    <h2>धारापानीको पर्यटन विकासका सम्भावना</h2>
+
+    <p style="text-align:justify;">
+        धारापानीलाई व्यवस्थित पर्यटकीय गन्तव्यका रूपमा विकास गर्न
+        आधारभूत पूर्वाधारमा ध्यान दिन आवश्यक हुन्छ। पर्यटकको
+        सुविधा र प्राकृतिक वातावरणको संरक्षणलाई सँगसँगै अघि बढाउन
+        सकेमा यस क्षेत्रको पर्यटन सम्भावना अझ बढ्न सक्छ।
+    </p>
+
+    <ul>
+        <li>सडक तथा पैदल मार्गको सुधार</li>
+        <li>पिउने पानीको व्यवस्था</li>
+        <li>सार्वजनिक शौचालय निर्माण</li>
+        <li>फोहोर व्यवस्थापनको उचित व्यवस्था</li>
+        <li>बस्ने तथा आराम गर्ने स्थान निर्माण</li>
+        <li>सूचना तथा दिशानिर्देशन बोर्ड राख्ने</li>
+        <li>सुरक्षाको उचित व्यवस्था</li>
+        <li>स्थानीय होमस्टे तथा खानाको प्रवर्द्धन</li>
+        <li>प्राकृतिक स्रोत तथा वातावरणको संरक्षण</li>
+    </ul>
+
+    <hr>
+
+    <h2>धारापानी भ्रमण गर्दा ध्यान दिनुपर्ने कुरा</h2>
+
+    <ul>
+        <li>मौसमको अवस्था बुझेर मात्र भ्रमण गर्नुहोस्।</li>
+        <li>पानीको स्रोत तथा खोलानालाको आसपास सावधानी अपनाउनुहोस्।</li>
+        <li>फोहोर जथाभावी नफाल्नुहोस्।</li>
+        <li>प्लास्टिकको प्रयोग सकेसम्म कम गर्नुहोस्।</li>
+        <li>प्राकृतिक वनस्पति तथा वातावरणलाई क्षति नपुर्‍याउनुहोस्।</li>
+        <li>स्थानीय बासिन्दा तथा संस्कृतिको सम्मान गर्नुहोस्।</li>
+        <li>बालबालिका तथा ज्येष्ठ नागरिकको विशेष ख्याल गर्नुहोस्।</li>
+        <li>स्थानीय प्रशासन वा व्यवस्थापनले तोकेका नियम पालना गर्नुहोस्।</li>
+    </ul>
+
+    <hr>
+
+    <div class="note">
+
+        <p style="text-align:justify;">
+            <strong>धारापानी, सप्तरी</strong> प्राकृतिक वातावरण,
+            पानीका स्रोत, हरियाली र शान्त वातावरणका कारण घुमफिरका
+            लागि सम्भावना भएको स्थानीय पर्यटकीय स्थल हो।
+        </p>
+
+        <p style="text-align:justify;">
+            यहाँ परिवार तथा साथीभाइसँग घुम्न, प्राकृतिक वातावरणको
+            आनन्द लिन, फोटोग्राफी गर्न तथा पिकनिक गर्न सकिन्छ।
+            उचित पूर्वाधार निर्माण, सरसफाइ, सुरक्षा र प्राकृतिक
+            सम्पदाको संरक्षणमा ध्यान दिन सकेमा धारापानीलाई
+            सप्तरीको आकर्षक आन्तरिक पर्यटकीय गन्तव्यका रूपमा
+            विकास गर्न सकिन्छ।
+        </p>
+
+    </div>
+
+    <hr>
+
+    <p style="text-align:justify;">
+        धारापानी सप्तरीको प्राकृतिक सौन्दर्य र स्थानीय पर्यटनको
+        सम्भावना बोकेको स्थान हो। प्राकृतिक स्रोतको संरक्षण गर्दै
+        आवश्यक पूर्वाधार विकास गर्न सकेमा यस क्षेत्रले स्थानीय
+        पर्यटन प्रवर्द्धनमा महत्वपूर्ण योगदान दिन सक्छ।
+    </p>
+
+    <p style="text-align:justify;">
+        धारापानीको वास्तविक महत्व कायम राख्न <strong>पर्यटनसँगै
+        वातावरण संरक्षण</strong>लाई प्राथमिकता दिन आवश्यक छ।
+        स्थानीय समुदाय, पर्यटक र सम्बन्धित निकायको सहकार्यबाट
+        धारापानीलाई स्वच्छ, सुरक्षित र आकर्षक पर्यटकीय स्थलका रूपमा
+        विकास गर्न सकिन्छ।
+    </p>
+
+</div>
+
+</body>
+</html>
