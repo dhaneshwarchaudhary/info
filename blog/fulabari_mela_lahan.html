@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>फुलबारी मेला, लहान, सिरहा</title>
+<style>
+body {
+
+  margin: 0;
+
+
+}
+
+p{text-align:justify;}
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+
+
+.sticky + .content {
+
+  padding-top: 0px;
+
+}
+
+
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  max-width: 1000px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: rgb(0,120,201);
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active {
+
+  background-color: #2196F3;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+
+  .text {font-size: 11px}
+
+}
+
+
+
+/* Float four columns side by side */
+
+.columncard {
+
+  float: left;
+
+  width: 25%;
+
+  padding: 0 10px;
+
+}
+
+
+
+/* Remove extra left and right margins, due to padding */
+
+.rowcard {margin: 0 -5px;}
+
+
+
+/* Clear floats after the columns */
+
+.rowcard:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+
+  .columncard {
+
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+
+/* Style the counter cards */
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+}
+   .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+        }
+    }
+/* Navbar */
+
+
+/* Header */
+header {
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:18px;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.nav-links li a.active {
+    background: white;
+    color: #0d6efd;
+}
+/* Responsive */
+@media(max-width:768px){
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0d6efd;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+	.hero{
+        min-height:500px;
+    }
+	.hero h1{
+    font-size:clamp(1.8rem);
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+}
+
+/* Hero */
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--dark);
+}
+.hero{
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('images/dc.jpg');
+
+    background-size:100% 100%;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --card:#ffffff;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Kalimati, Arial, sans-serif;
+    line-height:1.8;
+
+    background:#f8f9fa;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h1,h2{
+    color:#003366;
+}
+.step{
+    background:#f1f5ff;
+    padding:10px;
+    margin-bottom:10px;
+    border-left:5px solid #003366;
+}
+.warning{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:15px;
+}
+.danger{
+    background:#f8d7da;
+    border-left:5px solid #dc3545;
+    padding:15px;
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
+     crossorigin="anonymous"></script>
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
+</head>
+<body>
+<div style="background-color:white;">
+<center>
+ <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
+ <img alt="" src="../images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:25px;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ </center>
+</div>
+<nav class="navbar" style="font-family:merienda;color:white;font-weight:bold;">
+    <div class="logo font-effect-shadow-multiple" >DHANESHWAR</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks" >
+        <li><a href="../">Home</a></li>
+		<!--<li><a href="../radio">Nepali Radio</a></li>-->
+        <li><a href="../about-us">About</a></li>
+        <li><a href="../contact">Contact</a></li>
+        <li><a href="../policy">Privacy</a></li>
+    </ul>
+</nav>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("navLinks");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
+<div class="container">
+
+    <h1>फुलबारी मेला, लहान, सिरहा</h1>
+
+    <h2>परिचय</h2>
+
+    <p>
+        <strong>फुलबारी मेला</strong> सिरहा जिल्लाको लहान क्षेत्रमा
+        लाग्ने स्थानीय तथा सांस्कृतिक महत्व बोकेको मेलामध्ये एक हो।
+        यस प्रकारका स्थानीय मेलाले धार्मिक आस्था, संस्कृति,
+        परम्परा, व्यापार तथा मनोरञ्जनलाई एउटै स्थानमा जोड्ने काम
+        गर्छन्। मेला स्थानीय बासिन्दा मात्र नभई आसपासका गाउँ तथा
+        विभिन्न स्थानबाट आउने मानिसहरूका लागि पनि भेटघाट र
+        मनोरञ्जनको अवसर बन्ने गर्दछ।
+    </p>
+
+    <p>
+        फुलबारी मेलामा स्थानीय संस्कृति, परम्परागत गतिविधि,
+        विभिन्न प्रकारका पसल तथा मनोरञ्जनका सामग्रीहरू देख्न पाइन्छ।
+        मेलाको समयमा स्थानीय क्षेत्रमा चहलपहल बढ्नुका साथै
+        साना तथा स्थानीय व्यवसायीहरूले आफ्नो सामान तथा सेवाको
+        बिक्री गर्ने अवसर प्राप्त गर्छन्।
+    </p>
+
+    <hr>
+
+    <h2>फुलबारी मेला कहाँ पर्छ ?</h2>
+
+    <p>
+        फुलबारी मेला <strong>लहान, सिरहा, मधेश प्रदेश, नेपाल</strong>
+        क्षेत्रमा सम्बन्धित स्थानीय मेला तथा सांस्कृतिक गतिविधिका
+        रूपमा परिचित छ। लहान पूर्वी नेपालको महत्वपूर्ण व्यापारिक
+        तथा यातायात केन्द्र भएकाले यहाँ आयोजना हुने स्थानीय
+        कार्यक्रम तथा मेलामा आसपासका क्षेत्रबाट पनि मानिसहरूको
+        सहभागिता हुने गर्दछ।
+    </p>
+
+    <p>
+        मेलामा जानुअघि मेला आयोजना हुने स्थान, मिति र समयसम्बन्धी
+        जानकारी स्थानीय आयोजक वा सम्बन्धित स्थानीय निकायबाट
+        पुष्टि गर्नु राम्रो हुन्छ।
+    </p>
+
+    <hr>
+
+    <h2>फुलबारी मेलाको मुख्य विशेषता</h2>
+
+    <ul>
+        <li>स्थानीय संस्कृति र परम्पराको संरक्षण तथा प्रदर्शन।</li>
+        <li>स्थानीय समुदायबीच भेटघाट र सामाजिक सम्बन्ध विस्तार।</li>
+        <li>स्थानीय उत्पादन तथा सामानको बिक्री–वितरण।</li>
+        <li>बालबालिका तथा परिवारका लागि मनोरञ्जनको अवसर।</li>
+        <li>स्थानीय कलाकार तथा सांस्कृतिक कार्यक्रमलाई प्रोत्साहन।</li>
+        <li>व्यापारिक गतिविधि बढाउन सहयोग।</li>
+        <li>स्थानीय क्षेत्रको पहिचान र पर्यटन प्रवर्द्धनमा सहयोग।</li>
+    </ul>
+
+    <hr>
+
+    <h2>मेलामा के–के गर्न सकिन्छ ?</h2>
+
+    <p>
+        फुलबारी मेलामा सहभागी हुँदा मानिसहरूले विभिन्न प्रकारका
+        स्थानीय पसल तथा स्टलहरू अवलोकन गर्न सक्छन्। स्थानीय
+        उत्पादन, खानाका परिकार, कपडा, खेलौना, घरायसी सामग्री तथा
+        अन्य दैनिक उपयोगका वस्तुहरू बिक्रीका लागि राखिएका हुन
+        सक्छन्।
+    </p>
+
+    <p>
+        मेलाको स्वरूप र आयोजकअनुसार सांस्कृतिक कार्यक्रम,
+        मनोरञ्जनात्मक कार्यक्रम, स्थानीय कला तथा अन्य गतिविधिहरू
+        पनि सञ्चालन हुन सक्छन्।
+    </p>
+
+    <hr>
+
+    <h2>स्थानीय व्यापारमा मेलाको योगदान</h2>
+
+    <p>
+        मेला केवल मनोरञ्जनको माध्यम मात्र होइन, स्थानीय व्यापार
+        प्रवर्द्धन गर्ने महत्वपूर्ण अवसर पनि हो। मेलामा स्थानीय
+        व्यापारी, किसान, हस्तकला व्यवसायी तथा साना उद्यमीहरूले
+        आफ्ना उत्पादनहरू उपभोक्तासम्म पुर्‍याउन सक्छन्।
+    </p>
+
+    <p>
+        यसले स्थानीय उत्पादनको प्रचार हुनुका साथै साना व्यवसायीलाई
+        नयाँ ग्राहकसँग जोडिन सहयोग गर्छ। मेलामा हुने आर्थिक
+        गतिविधिले स्थानीय बजारलाई पनि केही हदसम्म चलायमान बनाउन
+        मद्दत गर्दछ।
+    </p>
+
+    <hr>
+
+    <h2>सामाजिक तथा सांस्कृतिक महत्व</h2>
+
+    <p>
+        स्थानीय मेला समुदायको सामाजिक तथा सांस्कृतिक जीवनसँग
+        जोडिएको हुन्छ। विभिन्न उमेर समूहका मानिसहरू एउटै स्थानमा
+        भेला भएर भेटघाट गर्ने, मनोरञ्जन गर्ने र स्थानीय परम्परा
+        अनुभव गर्ने अवसर प्राप्त गर्छन्।
+    </p>
+
+    <p>
+        नयाँ पुस्तालाई स्थानीय संस्कृति, कला, परम्परा र सामुदायिक
+        जीवनसँग परिचित गराउन पनि यस्ता कार्यक्रम उपयोगी हुन सक्छन्।
+        त्यसैले मेलाले मनोरञ्जनसँगै सामाजिक एकता र सांस्कृतिक
+        निरन्तरतामा योगदान पुर्‍याउन सक्छ।
+    </p>
+
+    <hr>
+
+    <h2>बालबालिका तथा परिवारका लागि</h2>
+
+    <p>
+        मेलामा बालबालिकाका लागि विभिन्न मनोरञ्जनात्मक गतिविधि,
+        खेलौना तथा खानाका सामग्रीहरू आकर्षणको विषय बन्न सक्छन्।
+        परिवारका सदस्यहरू सँगै मेला घुम्न जाने, स्थानीय परिकार
+        खाने तथा विभिन्न गतिविधि हेर्ने अवसर पाउँछन्।
+    </p>
+
+    <p>
+        बालबालिकालाई मेला घुमाउँदा भीडभाडमा उनीहरूको सुरक्षामा
+        विशेष ध्यान दिनुपर्छ।
+    </p>
+
+    <hr>
+
+    <h2>फुलबारी मेला र स्थानीय संस्कृति</h2>
+
+    <p>
+        मधेश क्षेत्र विभिन्न जातजाति, भाषा, कला, परम्परा र
+        संस्कृतिको विविधताले भरिएको क्षेत्र हो। स्थानीय मेलाहरूले
+        यही विविधतालाई समुदायबीच प्रस्तुत गर्ने अवसर प्रदान गर्छन्।
+    </p>
+
+    <p>
+        स्थानीय कला, संगीत, खानाका परिकार, पहिरन, हस्तकला तथा
+        सामाजिक परम्पराको प्रदर्शनले नयाँ पुस्तालाई आफ्नो स्थानीय
+        पहिचान बुझ्न सहयोग पुर्‍याउँछ।
+    </p>
+
+    <hr>
+
+    <h2>मेला घुम्दा ध्यान दिनुपर्ने कुराहरू</h2>
+
+    <ul>
+        <li>मेलाको वास्तविक मिति र स्थान पहिले नै पुष्टि गर्नुहोस्।</li>
+        <li>भीडभाडमा आफ्ना बालबालिका तथा परिवारका सदस्यको ख्याल गर्नुहोस्।</li>
+        <li>मोबाइल, पैसा तथा महत्वपूर्ण सामान सुरक्षित राख्नुहोस्।</li>
+        <li>सवारी साधन तोकिएको स्थानमा मात्र पार्क गर्नुहोस्।</li>
+        <li>खानेकुरा खरिद गर्दा सरसफाइ र गुणस्तरमा ध्यान दिनुहोस्।</li>
+        <li>फोहोर जथाभावी नफाल्नुहोस्।</li>
+        <li>स्थानीय नियम तथा आयोजकको निर्देशन पालना गर्नुहोस्।</li>
+        <li>आपतकालीन अवस्था आएमा सुरक्षाकर्मी वा आयोजकलाई जानकारी दिनुहोस्।</li>
+    </ul>
+
+    <hr>
+
+    <div class="note">
+
+        <h2>सरल भाषामा बुझौं</h2>
+
+        <p>
+            <strong>फुलबारी मेला, लहान, सिरहा</strong> स्थानीय समुदाय,
+            संस्कृति, व्यापार र मनोरञ्जनसँग जोडिएको मेला हो।
+            यस्तो मेलाले मानिसहरूलाई एकै ठाउँमा भेला हुने, स्थानीय
+            उत्पादन तथा व्यवसायको प्रवर्द्धन गर्ने र स्थानीय कला तथा
+            संस्कृतिको अनुभव गर्ने अवसर प्रदान गर्छ।
+        </p>
+
+        <p>
+            मेला आयोजना हुने वास्तविक मिति, स्थान, कार्यक्रम र
+            समय वर्षअनुसार फरक हुन सक्ने भएकाले मेला जानुअघि
+            सम्बन्धित आयोजक वा स्थानीय निकायबाट पछिल्लो जानकारी
+            पुष्टि गर्नु उपयुक्त हुन्छ।
+        </p>
+
+    </div>
+
+    <hr>
+
+    <h2>निष्कर्ष</h2>
+
+    <p>
+        फुलबारी मेला लहान क्षेत्रको स्थानीय सामाजिक, सांस्कृतिक,
+        व्यापारिक तथा मनोरञ्जनात्मक गतिविधिसँग जोडिएको महत्वपूर्ण
+        अवसरका रूपमा लिन सकिन्छ। यस्ता मेलाले स्थानीय समुदायलाई
+        एकताबद्ध गर्नुका साथै स्थानीय उत्पादन, कला, संस्कृति र
+        व्यवसायलाई प्रवर्द्धन गर्न सहयोग पुर्‍याउन सक्छन्।
+    </p>
+
+    <p>
+        स्थानीय संस्कृति र परम्पराको संरक्षण गर्दै मेला तथा
+        सांस्कृतिक कार्यक्रमलाई व्यवस्थित, सुरक्षित र वातावरणमैत्री
+        रूपमा सञ्चालन गर्न सकेमा यसले स्थानीय पर्यटन र आर्थिक
+        गतिविधिमा समेत सकारात्मक योगदान पुर्‍याउन सक्छ।
+    </p>
+
+</div>
+
+</body>
+</html>
