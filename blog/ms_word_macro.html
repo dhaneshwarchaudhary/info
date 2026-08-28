@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MS Word मा  Macro को प्रयोग</title>
+<style>
+body {
+
+  margin: 0;
+
+
+}
+
+p{text-align:justify;}
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+
+
+.sticky + .content {
+
+  padding-top: 0px;
+
+}
+
+
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  max-width: 1000px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: rgb(0,120,201);
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active {
+
+  background-color: #2196F3;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+
+  .text {font-size: 11px}
+
+}
+
+
+
+/* Float four columns side by side */
+
+.columncard {
+
+  float: left;
+
+  width: 25%;
+
+  padding: 0 10px;
+
+}
+
+
+
+/* Remove extra left and right margins, due to padding */
+
+.rowcard {margin: 0 -5px;}
+
+
+
+/* Clear floats after the columns */
+
+.rowcard:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+
+  .columncard {
+
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+
+/* Style the counter cards */
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+}
+   .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+        }
+    }
+/* Navbar */
+
+
+/* Header */
+header {
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:18px;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.nav-links li a.active {
+    background: white;
+    color: #0d6efd;
+}
+/* Responsive */
+@media(max-width:768px){
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0d6efd;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+	.hero{
+        min-height:500px;
+    }
+	.hero h1{
+    font-size:clamp(1.8rem);
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+}
+
+/* Hero */
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--dark);
+}
+.hero{
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('images/dc.jpg');
+
+    background-size:100% 100%;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --card:#ffffff;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Kalimati, Arial, sans-serif;
+    line-height:1.8;
+
+    background:#f8f9fa;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h1,h2{
+    color:#003366;
+}
+.step{
+    background:#f1f5ff;
+    padding:10px;
+    margin-bottom:10px;
+    border-left:5px solid #003366;
+}
+.warning{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:15px;
+}
+.danger{
+    background:#f8d7da;
+    border-left:5px solid #dc3545;
+    padding:15px;
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5977312974388356"
+     crossorigin="anonymous"></script>
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
+</head>
+<body>
+<div style="background-color:white;">
+<center>
+ <!--	<img alt="" src="images/dc-header0.jpg" style="width:100%;height:"/>-->
+ <img alt="" src="../images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:25px;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ </center>
+</div>
+<nav class="navbar" style="font-family:merienda;color:white;font-weight:bold;">
+    <div class="logo font-effect-shadow-multiple" >DHANESHWAR</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks" >
+        <li><a href="../">Home</a></li>
+		<!--<li><a href="../radio">Nepali Radio</a></li>-->
+        <li><a href="../about-us">About</a></li>
+        <li><a href="../contact">Contact</a></li>
+        <li><a href="../policy">Privacy</a></li>
+    </ul>
+</nav>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("navLinks");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
+<div class="container">
+
+    <h1><center>MS Word मा  Macro को प्रयोग </center></h1>
+<image src="../images/ms_word_macro.png" width="100%" height="auto">
+    <h2>Developer Tab के हो ?</h2>
+
+    <p>
+        <strong>Developer Tab</strong> Microsoft Word को एउटा विशेष मेनु हो
+        जसले प्रयोगकर्तालाई Word लाई सामान्य Document Editing भन्दा
+        अझ उन्नत (Advanced) रूपमा प्रयोग गर्न मद्दत गर्छ।
+    </p>
+
+    <p>
+        Developer Tab प्रयोग गरेर <strong>Macros</strong> बनाउन,
+        <strong>Visual Basic (VBA)</strong> कोड लेख्न,
+        Form तयार गर्न, Automation गर्न, XML Mapping गर्न तथा
+        विभिन्न प्रकारका Office Add-ins प्रयोग गर्न सकिन्छ।
+    </p>
+
+    <p>
+        सामान्य प्रयोगकर्ताले Word मा पत्र, प्रतिवेदन, तालिका आदि
+        तयार गर्न Developer Tab प्रयोग नगरे पनि हुन्छ। तर बारम्बार
+        दोहोरिने कामलाई स्वचालित (Automatic) बनाउन चाहने
+        प्रयोगकर्ताका लागि Developer Tab धेरै उपयोगी हुन्छ।
+    </p>
+
+    <hr>
+
+    <h2>Developer Tab कसरी ON गर्ने ?</h2>
+
+    <p>
+        MS Word इन्स्टल भएपछि Developer Tab प्रायः लुकेको (Hidden)
+        अवस्थामा हुन्छ। यसलाई निम्न चरणहरू पूरा गरेर देखाउन सकिन्छ।
+    </p>
+
+    <ol>
+        <li><strong>File</strong> मेनुमा क्लिक गर्नुहोस्।</li>
+        <li><strong>Options</strong> मा क्लिक गर्नुहोस्।</li>
+        <li><strong>Customize Ribbon</strong> चयन गर्नुहोस्।</li>
+        <li>दायाँपट्टि रहेको सूचीमा <strong>Developer</strong> मा ✔ चिन्ह लगाउनुहोस्।</li>
+        <li><strong>OK</strong> बटनमा क्लिक गर्नुहोस्।</li>
+    </ol>
+
+    <p>
+        अब Word को माथिल्लो Ribbon मा Developer Tab देखिनेछ।
+    </p>
+
+    <hr>
+
+    <h2>Developer Tab भित्र के–के हुन्छ ?</h2>
+
+    <ul>
+        <li>Visual Basic</li>
+        <li>Macros</li>
+        <li>Macro Security</li>
+        <li>Add-ins</li>
+        <li>Controls</li>
+        <li>Design Mode</li>
+        <li>XML Mapping</li>
+        <li>Protect Document</li>
+    </ul>
+
+    <hr>
+
+    <h2>Visual Basic (VBA) के हो ?</h2>
+
+    <p>
+        <strong>Visual Basic for Applications (VBA)</strong> Microsoft Office
+        भित्र प्रयोग हुने Programming Language हो।
+    </p>
+
+    <p>
+        यसको प्रयोग गरेर Word का विभिन्न कार्यहरू स्वचालित बनाउन
+        सकिन्छ। उदाहरणका लागि:
+    </p>
+
+    <ul>
+        <li>एकै पटक सयौं पत्र तयार गर्ने।</li>
+        <li>Document Formatting Automatic गर्ने।</li>
+        <li>Data Import/Export गर्ने।</li>
+        <li>Custom Menu वा Button बनाउने।</li>
+        <li>Repeated Tasks Automatic गर्ने।</li>
+    </ul>
+
+    <h3>Visual Basic Editor कसरी खोल्ने ?</h3>
+
+    <ol>
+        <li>Developer Tab मा जानुहोस्।</li>
+        <li><strong>Visual Basic</strong> मा क्लिक गर्नुहोस्।</li>
+        <li>VBA Editor खुल्छ।</li>
+        <li>त्यहाँ Module बनाएर VBA Code लेख्न सकिन्छ।</li>
+    </ol>
+
+    <div class="note">
+        <strong>उदाहरण:</strong>
+        <p>
+            यदि तपाईंलाई प्रत्येक दिन एउटै प्रकारको पत्र बनाउनु पर्छ भने
+            VBA प्रयोग गरेर एउटा Button क्लिक गर्दा पत्र आफै तयार
+            हुने व्यवस्था गर्न सकिन्छ।
+        </p>
+    </div>
+
+    <hr>
+
+    <h2>Macros के हो ?</h2>
+
+    <p>
+        <strong>Macro</strong> भनेको Word मा गरिएका कार्यहरूको
+        रेकर्ड (Record) हो।
+    </p>
+
+    <p>
+        कुनै काम बारम्बार गर्नुपर्छ भने त्यसलाई Record गरेर
+        पछि एक क्लिकमै पुनः चलाउन सकिन्छ।
+    </p>
+
+    <h3>Macro किन प्रयोग गर्ने ?</h3>
+
+    <ul>
+        <li>समय बचाउन।</li>
+        <li>दोहोरिने काम स्वचालित बनाउन।</li>
+        <li>त्रुटि कम गर्न।</li>
+        <li>उत्पादकता बढाउन।</li>
+    </ul>
+
+    <h3>Macro कसरी बनाउने ?</h3>
+
+    <ol>
+        <li>Developer Tab मा जानुहोस्।</li>
+        <li><strong>Record Macro</strong> क्लिक गर्नुहोस्।</li>
+        <li>Macro Name लेख्नुहोस्।</li>
+        <li>OK क्लिक गर्नुहोस्।</li>
+        <li>अब Word मा गर्ने कामहरू Record हुन्छन्।</li>
+        <li>काम पूरा भएपछि <strong>Stop Recording</strong> क्लिक गर्नुहोस्।</li>
+    </ol>
+
+    <h3>Macro कसरी चलाउने ?</h3>
+
+    <ol>
+        <li>Developer → Macros मा क्लिक गर्नुहोस्।</li>
+        <li>Macro चयन गर्नुहोस्।</li>
+        <li><strong>Run</strong> क्लिक गर्नुहोस्।</li>
+    </ol>
+
+    <div class="note">
+        <strong>उदाहरण:</strong>
+        <p>
+            यदि प्रत्येक पत्रमा एउटै Header, Footer र Font प्रयोग
+            गर्नुपर्छ भने Macro बनाएर एक क्लिकमै सबै Formatting
+            लागू गर्न सकिन्छ।
+        </p>
+    </div>
+
+    <hr>
+
+    <h2>Macro Security के हो ?</h2>
+
+    <p>
+        Macro Security भनेको Word मा रहेका Macros सुरक्षित रूपमा
+        चलाउने वा रोक्ने व्यवस्था हो।
+    </p>
+
+    <p>
+        केही Macro हरूमा हानिकारक Code (Virus वा Malware) हुन
+        सक्ने भएकाले Microsoft ले Security सुविधा दिएको हुन्छ।
+    </p>
+
+    <h3>Macro Security कसरी खोल्ने ?</h3>
+
+    <ol>
+        <li>Developer Tab मा जानुहोस्।</li>
+        <li><strong>Macro Security</strong> मा क्लिक गर्नुहोस्।</li>
+        <li>Trust Center खुल्छ।</li>
+        <li>Macro Settings चयन गर्न सकिन्छ।</li>
+    </ol>
+
+    <h3>Macro Security का मुख्य विकल्पहरू</h3>
+
+    <ul>
+        <li>
+            <strong>Disable all macros without notification</strong><br>
+            कुनै Macro चल्न दिँदैन।
+        </li>
+
+        <li>
+            <strong>Disable all macros with notification</strong><br>
+            Macro भेटिएमा Enable गर्ने अनुमति माग्छ।
+        </li>
+
+        <li>
+            <strong>Disable all macros except digitally signed macros</strong><br>
+            Digital Signature भएका Macro मात्र चल्न दिन्छ।
+        </li>
+
+        <li>
+            <strong>Enable all macros</strong><br>
+            सबै Macro चल्न दिन्छ। (सुरक्षाको दृष्टिले सिफारिस गरिँदैन)
+        </li>
+    </ul>
+
+    <div class="warning">
+        <strong>सावधानी:</strong>
+        <p>
+            अपरिचित व्यक्तिबाट प्राप्त Word फाइलको Macro
+            तुरुन्त Enable नगर्नुहोस्। हानिकारक Macro ले
+            कम्प्युटरमा Virus वा Malware चलाउन सक्छ।
+        </p>
+    </div>
+
+    <hr>
+
+    <h2>Developer Tab को प्रयोग कहाँ–कहाँ हुन्छ ?</h2>
+
+    <ul>
+        <li>Office Automation System</li>
+        <li>Darta-Chalani System</li>
+        <li>Mail Merge Automation</li>
+        <li>Employee Management System</li>
+        <li>Report Generation</li>
+        <li>Form Design</li>
+        <li>Data Entry Forms</li>
+        <li>Government Office Automation</li>
+        <li>School एवं College Reporting</li>
+    </ul>
+
+    <hr>
+
+    <div class="note">
+
+        <p>
+            <strong>Developer Tab</strong> भनेको MS Word को Advanced Feature
+            हो जसले Word लाई Programming र Automation का लागि प्रयोग
+            गर्न मद्दत गर्छ।
+        </p>
+
+        <p>
+            <strong>Visual Basic (VBA)</strong> प्रयोग गरेर Program लेख्न सकिन्छ,
+            <strong>Macro</strong> प्रयोग गरेर दोहोरिने काम Record गरेर
+            Automatic गर्न सकिन्छ, र <strong>Macro Security</strong>
+            प्रयोग गरेर हानिकारक Macro बाट कम्प्युटरलाई सुरक्षित राख्न सकिन्छ।
+        </p>
+
+        <p>
+            Office Automation, Mail Merge, Report Generation तथा
+            Government Office Digitalization मा Developer Tab को
+            प्रयोग धेरै हुने गर्दछ।
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
