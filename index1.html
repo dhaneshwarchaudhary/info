@@ -1,0 +1,1961 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Referrer Policy -->
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    <!-- Google AdSense Verification -->
+    <meta name="google-adsense-account" content="ca-pub-5977312974388356">
+
+    <!-- SEO -->
+    <title>Dhaneshwar Chaudhary - Web Development & Technology</title>
+	<link rel="icon" type="image/png" href="images/icon.ico" />
+    <meta name="description" content="Official website of Dhaneshwar Chaudhary. Explore PHP projects, web development tutorials, software solutions, database management, and technology resources.">
+    <meta name="keywords" content="Dhaneshwar Chaudhary, PHP Developer, Web Development, MySQL, Nepal, Software Development, HTML, CSS, JavaScript, BPKIHS payroll, darta chalani">
+    <meta name="author" content="Dhaneshwar Chaudhary">
+
+
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+<link rel="stylesheet" type="text/css" href="css/i-g.css"/>
+
+<link rel="stylesheet" type="text/css" href="css/page-style.css"/>
+
+<link rel="stylesheet" type="text/css" href="css/home.css">
+
+
+<style>
+body {
+
+  margin: 0;
+
+  font-size: 28px;
+
+}
+
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+.sticky + .content {
+
+  padding-top: 0px;
+
+}
+
+/* =======================
+   TOP STICKY NAVBAR
+======================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:9999;
+    background:linear-gradient(90deg,#0d6efd,#0a58ca);
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:5px 5px;
+}
+
+.logo{
+    color:#fff;
+    font-size:22px;
+    font-weight:bold;
+    white-space:nowrap;
+    font-weight: bold;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    padding:8px 12px;
+    border-radius:6px;
+    transition:.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    background:rgba(255,255,255,.2);
+}
+
+/* =======================
+   MOBILE BOTTOM NAV
+======================= */
+
+.bottom-nav{
+    display:none;
+}
+
+/* =======================
+   CONTENT
+======================= */
+
+.content{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+.box{
+    background:#fff;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+/* =======================
+   MOBILE VIEW
+======================= */
+
+@media(max-width:768px){
+
+    .nav-container{
+        flex-direction:column;
+        gap:5px;
+        padding:5px;
+    }
+
+    .logo{
+        font-size:18px;
+    }
+
+    .nav-links{
+        width:100%;
+        justify-content:center;
+        gap:5px;
+        flex-wrap:wrap;
+    }
+
+    .nav-links a{
+        font-size:13px;
+        padding:6px 10px;
+    }
+
+    /* Bottom Sticky Navigation */
+
+    .bottom-nav{
+        position:fixed;
+        left:0;
+        bottom:0;
+        width:100%;
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        background:#0d6efd;
+        box-shadow:0 -2px 10px rgba(0,0,0,.2);
+        z-index:9999;
+        padding:5px 0;
+    }
+
+    .bottom-nav a{
+        flex:1;
+        text-decoration:none;
+        color:#fff;
+        text-align:center;
+
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .bottom-nav i{
+        font-size:20px;
+        margin-bottom:3px;
+    }
+
+    .bottom-nav span{
+        font-size:11px;
+    }
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  max-width: 1000px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: rgb(0,120,201);
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active {
+
+  background-color: #2196F3;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+
+  .text {font-size: 11px}
+
+}
+
+
+
+/* Float four columns side by side */
+
+.columncard {
+
+  float: left;
+
+  width: 25%;
+
+  padding: 0 10px;
+
+}
+
+
+
+/* Remove extra left and right margins, due to padding */
+
+.rowcard {margin: 0 -5px;}
+
+
+
+/* Clear floats after the columns */
+
+.rowcard:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+
+  .columncard {
+
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+
+/* Style the counter cards */
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+}
+   .article {
+        display: flex;
+        background: #fff;
+        border-radius: px;
+        box-shadow0: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .article img {
+        width: 180px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content1 {
+        padding: 10px;
+		margin-top:px;
+        flex: 1;
+    }
+
+    .content1 h2 {
+        margin: 8px 0;
+        font-size: 20px;
+        line-height: 1.3;
+		font-weight:bold;
+        color: #0077cc;
+    }
+
+
+    .meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .meta a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    .meta a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .read-more {
+        display: inline-block;
+		font-size:12px;
+        margin-top: 10px;
+        color: #0077cc;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+    @media (max-width: 700px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+        }
+    }
+/* Navbar */
+
+
+/* Header */
+header {
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0d6efd, #0a58ca);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:18px;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.nav-links li a.active {
+    background: white;
+    color: #0d6efd;
+}
+/* Responsive */
+@media(max-width:768px){
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0d6efd;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+	.hero{
+        min-height:500px;
+    }
+	.hero h1{
+    font-size:clamp(1.8rem);
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+}
+
+/* Hero */
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:var(--dark);
+}
+.hero{
+    min-height:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('./images/dc.jpg');
+
+    background-size:100% 100%;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:12px;
+    font-weight:600;
+    transition:var(--transition);
+}
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Arima&effect=shadow-multiple">
+</head>
+
+<body>
+
+<center>
+  <img alt="" src="./images/icon.png" style="width:45px;height:;position:relative;float:lef;"/>
+ <p style="font-family:merienda;color:#1d1de2;font-weight:bold;text-align:center;font-size:25px;" class="font-effect-shadow-multiple">Dhaneshwar Chaudhary</p>
+ </center>
+
+<nav class="navbar" >
+    <div class="nav-container">
+
+        <div class="logo">
+            <img src="./images/dc-logo.png" style="width:250px;height:45px"/>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="../" class="">🏠 Home</a></li>
+            <li><a href="../about-us">ℹ️ About</a></li>
+            <li><a href="../contact">📞 Contact</a></li>
+            <li><a href="../policy">🔒 Privacy</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+<!-- MOBILE BOTTOM NAVIGATION -->
+
+<nav class="bottom-nav">
+
+    <a href="../">
+        <i class="fas fa-home">🏠</i>
+        <span>Home</span>
+    </a>
+
+    <a href="../about-us">
+        <i class="fas fa-user">ℹ️</i>
+        <span>About</span>
+    </a>
+
+    <a href="../contact">
+        <i class="fas fa-phone">📞</i>
+        <span>Contact</span>
+    </a>
+
+    <a href="../policy">
+        <i class="fas fa-shield-alt">🔒</i>
+        <span>Privacy</span>
+    </a>
+
+</nav>
+
+			<!-- Information Section -->
+<section id="home" class="hero">
+<div>
+
+<h1>Technology & Information Hub</h1>
+
+<p>
+Software Products, Educational Resources,
+Nepal Tourism, Technology Articles and Useful Downloads.
+</p>
+
+
+</div>
+</section>
+<!-- Information Section -->
+
+
+
+<div style="paddin:0% 3% 1% 3%">
+
+<div class="row w3-card-2 w3-white" style="padding-bottom:10px;">
+
+
+
+  <div class="column2">
+
+	<div class="w3-row-padding">
+
+		
+
+		<div class="m-margin-top">
+
+	
+
+			<div class="w3-card-3 w3-white" style="border: 1px solid #ddd; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+
+	
+
+	  <div class="slideshow-container">
+
+		  <div class="mySlides fade">
+
+  <div class="numbertext"></div>
+
+  <img src="images/janaki-temple.jpg" style="width:100%">
+
+  <div class="text">जानकी मन्दिर जनकपुर</div>
+
+</div>
+
+<div class="mySlides fade">
+
+  <div class="numbertext"> </div>
+
+  <img src="images/8.jpg" style="width:100%">
+
+  <div class="text">Koshi Bridge Nepal</div>
+
+</div>
+
+
+
+<div class="mySlides fade">
+
+  <div class="numbertext"> </div>
+
+  <img src="images/9.jpg" style="width:100%">
+
+  <div class="text">Kankalani Temple Bhardaha Saptari</div>
+
+</div>
+<div class="mySlides fade">
+
+  <div class="numbertext"> </div>
+
+  <img src="images/Lohajara_thakur_baba.jpg" style="width:100%">
+
+  <div class="text">Thakur Baba Lake Lohajara Saptari </div>
+
+</div>
+
+<div class="mySlides fade">
+
+  <div class="numbertext"> </div>
+
+  <img src="images/Chinnamasta_bhagawati.jpg" style="width:100%">
+
+  <div class="text">Chhinnamasta Temple Rajbiraj Saptari </div>
+
+</div>
+
+
+</div>
+
+
+
+<div style="text-align:center">
+
+  <span class="dot"></span> 
+
+  <span class="dot"></span> 
+
+  <span class="dot"></span>
+
+  <span class="dot"></span>  
+
+  <span class="dot"></span>
+
+</div>
+
+
+
+<script>
+
+var slideIndex = 0;
+
+showSlides();
+
+
+
+function showSlides() {
+
+  var i;
+
+  var slides = document.getElementsByClassName("mySlides");
+
+  var dots = document.getElementsByClassName("dot");
+
+  for (i = 0; i < slides.length; i++) {
+
+    slides[i].style.display = "none";  
+
+  }
+
+  slideIndex++;
+
+  if (slideIndex > slides.length) {slideIndex = 1}    
+
+  for (i = 0; i < dots.length; i++) {
+
+    dots[i].className = dots[i].className.replace(" active", "");
+
+  }
+
+  slides[slideIndex-1].style.display = "block";  
+
+  dots[slideIndex-1].className += " active";
+
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
+
+}
+
+</script>
+
+		
+
+		</div>
+
+			
+<!-- products -->
+		<div class="w3-card-3 w3-white m-margin-top" style="border: 1px solid #ddd; box-shadow: 0 4px 12px rgba(0,0,0,0.3);" id="products">
+
+		<p style="background-color:rgb(0,120,201);font-size:14px;text-align:center;color:white;">Our Products</p>
+
+		<div class="w3-padding">
+
+		
+
+			<div class="rowcard">
+
+  <div class="columncard">
+<a href="https://bp.dhaneshwarchaudhary.com.np/" target="_blank">
+   <div class="card">
+
+      <img alt="" src="images/bpkihs_payroll.jpg" style="width:100%;height:300px;"/><br>
+
+		<div style="background-color:rgb(0,120,201);font-size:14px;text-align:center;color:white;position:relative;margin-top:-5px;">BPKIHS PAYROLL</div>
+
+    </div>
+</a>
+  </div>
+
+  
+
+  <div class="columncard">
+
+    <div class="card">
+
+      <img alt="" src="images/dc-613.jpg" style="width:100%;height:300px;"/><br>
+
+		<div style="background-color:rgb(0,120,201);font-size:14px;text-align:center;color:white;position:relative;margin-top:-5px;">Darta Chalani</div>
+
+    </div>
+			
+  </div>
+
+  
+
+  <div class="columncard">
+    <div class="card">
+
+      <img alt="" src="images/cfrs1.jpg" style="width:100%;height:300px;"/><br>
+
+		<div style="background-color:rgb(0,120,201);font-size:14px;text-align:center;color:white;position:relative;margin-top:-5px;">CFRS</div>
+
+    </div>
+
+  </div>
+
+  
+
+  <div class="columncard">
+
+    <div class="card">
+
+      <img alt="" src="images/front.png" style="width:100%;height:300px;"/><br>
+
+		<div style="background-color:rgb(0,120,201);font-size:14px;text-align:center;color:white;position:relative;margin-top:-5px;">Churches Members System</div>
+
+    </div>
+
+  </div>
+
+</div>
+
+		<br>
+</div>
+</div>
+
+<!-- Posted -->
+		<div class="w3-card-3 w3-white m-margin-top">
+			<p style="background-color:rgb(0,120,201);font-size:14px;text-align:center;color:white;">Latest Articles</p>
+		<div class="w3-padding">
+<!------- Posted Goes Here -------->
+
+			<!--------------- MS Word मा  Macro को प्रयोग  --------->
+	<div class="article">
+    <img src="images/ms_word_macro.png"
+     alt="MS Word मा  Macro को प्रयोग">
+    <div class="content1">
+       <a href="blog/ms_word_macro" class="read-more" target="_blank"><h2>MS Word मा  Macro को प्रयोग</h2></a>
+       <div class="meta">Posted on August 28, 2026</div>
+<div class="description">
+    <p style="text-align:justify;">
+         <strong>Developer Tab</strong> Microsoft Word को एउटा विशेष मेनु हो
+        जसले प्रयोगकर्तालाई Word लाई सामान्य Document Editing भन्दा
+        अझ उन्नत (Advanced) रूपमा प्रयोग गर्न मद्दत गर्छ ।
+        Developer Tab प्रयोग गरेर <strong>Macros</strong> बनाउन,
+        <strong>Visual Basic (VBA)</strong> कोड लेख्न,
+        Form तयार गर्न, Automation गर्न, XML Mapping गर्न तथा
+        विभिन्न प्रकारका Office Add-ins प्रयोग गर्न सकिन्छ ।
+    </p>
+        </div>
+        <a href="blog/ms_word_macro" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+			
+			<!--------------- eSewa/Khalti बाट CIT को Loan तिर्ने तरिका  --------->
+	<div class="article">
+    <img src="images/cit.jpg"
+     alt="eSewa/Khalti बाट CIT को Loan तिर्ने तरिका">
+    <div class="content1">
+       <a href="blog/cit_repayment_esewa_khalti" class="read-more" target="_blank"><h2>eSewa/Khalti बाट CIT को Loan तिर्ने तरिका</h2></a>
+       <div class="meta">Posted on August 26, 2026</div>
+<div class="description">
+    <p style="text-align:justify;">
+         <strong>नागरिक लगानी कोष (Citizen Investment Trust - CIT)</strong>
+        ले आफ्ना सहभागी तथा लगानीकर्ताहरूलाई विभिन्न प्रकारका
+        कर्जा तथा सापटी सुविधा उपलब्ध गराउँदै आएको छ। ती कर्जाहरूको
+        मासिक वा निर्धारित किस्ताबापतको <strong>साँवा (Principal)</strong>
+        र <strong>ब्याज (Interest)</strong> नियमित रूपमा भुक्तानी
+        गर्नुपर्ने हुन्छ ।
+    </p>
+        </div>
+        <a href="blog/cit_repayment_esewa_khalti" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+
+			<!--------------- कर्मचारी सञ्चय कोष (EPF) सञ्चयकर्ता स्वास्थ्य उपचार योजना  --------->
+	<div class="article">
+    <img src="images/epf_medical_treatment.jpg"
+     alt="कर्मचारी सञ्चय कोष (EPF) सञ्चयकर्ता स्वास्थ्य उपचार योजना">
+    <div class="content1">
+       <a href="blog/epf_medical_treatment" class="read-more" target="_blank"><h2>कर्मचारी सञ्चय कोष (EPF) सञ्चयकर्ता स्वास्थ्य उपचार योजना</h2></a>
+       <div class="meta">Posted on August 25, 2026</div>
+<div class="description">
+    <p style="text-align:justify;">
+         <strong>कर्मचारी सञ्चय कोष (EPF)</strong> ले आफ्ना सञ्चयकर्ताहरूको
+        सामाजिक सुरक्षालाई थप प्रभावकारी बनाउन
+        <strong>सञ्चयकर्ता स्वास्थ्य उपचार योजना</strong> सञ्चालन गर्दै आएको छ।
+        यस योजना अन्तर्गत सञ्चयकर्ता वा उहाँको पति/पत्नी अस्पतालमा
+        भर्ना भई उपचार गराउँदा भएको उपचार खर्चको निश्चित रकम
+        कर्मचारी सञ्चय कोषबाट शोधभर्ना (Reimbursement) प्राप्त गर्न सकिन्छ। 
+    </p>
+        </div>
+        <a href="blog/epf_medical_treatment" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+			<!--------------- फुलबारी मेला, लहान, सिरहा  --------->
+	<div class="article">
+    <img src="images/fulbaari_mela.jpg"
+     alt="फुलबारी मेला, लहान, सिरहा">
+    <div class="content1">
+       <a href="blog/fulabari_mela_lahan" class="read-more" target="_blank"><h2>फुलबारी मेला, लहान, सिरहा</h2></a>
+       <div class="meta">Posted on August 24, 2026</div>
+<div class="description">
+    <p style="text-align:justify;">
+        <strong>फुलबारी मेला</strong> सिरहा जिल्लाको लहान क्षेत्रमा
+        लाग्ने स्थानीय तथा सांस्कृतिक महत्व बोकेको मेलामध्ये एक हो।
+        यस प्रकारका स्थानीय मेलाले धार्मिक आस्था, संस्कृति,
+        परम्परा, व्यापार तथा मनोरञ्जनलाई एउटै स्थानमा जोड्ने काम
+        गर्छन्। मेला स्थानीय बासिन्दा मात्र नभई आसपासका गाउँ तथा
+        विभिन्न स्थानबाट आउने मानिसहरूका लागि पनि भेटघाट र
+        मनोरञ्जनको अवसर बन्ने गर्दछ।
+    </p>
+        </div>
+        <a href="blog/fulabari_mela_lahan" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+
+			<!--------------- स्वरोजगार व्यक्ति सामाजिक सुरक्षा कोषमा कसरी आवद्ध हुने ?  --------->
+	<div class="article">
+    <img src="images/ssf.jpg"
+     alt="स्वरोजगार व्यक्ति सामाजिक सुरक्षा कोषमा कसरी आवद्ध हुने ?">
+    <div class="content1">
+       <a href="blog/ssf_registration" class="read-more" target="_blank"><h2>स्वरोजगार व्यक्ति सामाजिक सुरक्षा कोषमा कसरी आवद्ध हुने ?</h2></a>
+       <div class="meta">Posted on August 21, 2026</div>
+<div class="description">
+    <p style="text-align:justify;">
+         नेपाल सरकारले योगदानमा आधारित सामाजिक सुरक्षा कार्यक्रमलाई औपचारिक क्षेत्रका
+श्रमिकहरू मात्र नभई स्वरोजगार (Self-Employed) व्यक्ति तथा अनौपचारिक क्षेत्रका
+श्रमिकहरूका लागि समेत विस्तार गरेको छ। यस व्यवस्थाअनुसार आफ्नै व्यवसाय,
+पेशागत सेवा, कृषि, व्यापार, स्वरोजगार वा स्वतन्त्र पेशामा संलग्न व्यक्तिहरू
+पनि सामाजिक सुरक्षा कोष (SSF) मा आवद्ध हुन सक्ने व्यवस्था रहेको छ।
+    </p>
+        </div>
+        <a href="blog/ssf_registration" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+			<!--------------- निवृत्तिभरण (पेन्सन) आयमा २५% अतिरिक्त छुट र कर गणना  --------->
+	<div class="article">
+    <img src="images/gov.png"
+     alt="निवृत्तिभरण (पेन्सन) आयमा २५% अतिरिक्त छुट र कर गणना">
+    <div class="content1">
+       <a href="blog/pension_tax" class="read-more" target="_blank"><h2>निवृत्तिभरण (पेन्सन) आयमा २५% अतिरिक्त छुट र कर गणना</h2></a>
+       <div class="meta">Posted on August 21, 2026</div>
+<div class="description">
+    <p style="text-align:justify;">
+        नेपालको आयकर कानून अनुसार निवृत्तिभरण (Pension) प्राप्त गर्ने व्यक्तिलाई
+विशेष कर सुविधा प्रदान गरिएको छ। पेन्सन आय भएका करदाताले आफ्नो
+करयोग्य आय गणना गर्दा पहिलो कर स्ल्याब (Basic Exemption Limit) को
+२५ प्रतिशत वा वास्तविक पेन्सन आयमध्ये जुन कम हुन्छ, त्यति रकम
+अतिरिक्त रूपमा करयोग्य आयबाट घटाउन पाउँछन्। त्यसपछि बाँकी रहेको
+<strong>खुद करयोग्य आय (Net Taxable Income)</strong> मा मात्र आयकर गणना गरिन्छ। 
+    </p>
+        </div>
+        <a href="blog/pension_tax" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+			
+			<!--------------- D-04 form   --------->
+	<div class="article">
+    <img src="images/gov.png"
+     alt="D-04 Return Form">
+    <div class="content1">
+       <a href="blog/d-04" class="read-more" target="_blank"><h2>D-04 Return Form (स्वयं कर निर्धारण आय विवरण) </h2></a>
+       <div class="meta">Posted on August 21, 2026</div>
+<div class="description">
+<p style="text-align:justify;">
+D-04 Return Form भनेको आन्तरिक राजस्व विभाग (IRD) द्वारा जारी गरिएको
+<strong>स्वयं कर निर्धारण आय विवरण (Self Assessment Return)</strong> हो।
+यस फाराममार्फत करदाताले आफ्नो वार्षिक आय, खर्च, करयोग्य आम्दानी,
+कर छुट तथा तिर्न बाँकी करको विवरण स्वयं घोषणा गरी विभागमा पेश गर्दछ।
+आयकर ऐन अनुसार निश्चित अवस्था भएका व्यक्तिहरूले आर्थिक वर्ष समाप्त
+भएको निश्चित अवधिभित्र D-04 फाराम अनलाइन पेश गर्नुपर्छ। D-04 फाराम
+Taxpayer Portal मार्फत अनलाइन भर्न र पेश गर्न सकिन्छ । 
+</p>
+        </div>
+        <a href="blog/d-04" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+			<!---------------कर्मचारी सञ्चय कोष (EPF) को सापटी रकम Connect IPS बाट कसरी तिर्ने ?  --------->
+	<div class="article">
+    <img src="images/epg.png"
+     alt="कर्मचारी सञ्चय कोष (EPF) को सापटी रकम Connect IPS बाट कसरी तिर्ने ?">
+    <div class="content1">
+       <a href="blog/epf_repayment" class="read-more" target="_blank"><h2>कर्मचारी सञ्चय कोष (EPF) को सापटी रकम Connect IPS बाट कसरी तिर्ने ?</h2></a>
+       <div class="meta">Posted on August 13, 2026</div>
+<div class="description">
+    <p style="text-align:justify;">
+         कर्मचारी सञ्चय कोष (Employees Provident Fund - EPF) बाट लिइएको
+        सापटी (Loan) रकम हाल विभिन्न विद्युतीय माध्यमबाट भुक्तानी गर्न
+        सकिन्छ। तीमध्ये <strong>Connect IPS</strong> सबैभन्दा लोकप्रिय र
+        सुरक्षित अनलाइन भुक्तानी प्रणाली हो।
+    </p>
+        </div>
+        <a href="blog/epf_repayment" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+			<!---------------नागरिक लगानी कोष (CIT) को सापटी रकम Connect IPS बाट कसरी तिर्ने ?  --------->
+	<div class="article">
+    <img src="images/cit.jpg"
+     alt="नागरिक लगानी कोष (CIT) को सापटी रकम Connect IPS बाट कसरी तिर्ने ?">
+    <div class="content1">
+       <a href="blog/cit_repayment" class="read-more" target="_blank"><h2>नागरिक लगानी कोष (CIT) को सापटी रकम Connect IPS बाट कसरी तिर्ने ?</h2></a>
+       <div class="meta">Posted on August 13, 2026</div>
+<div class="description">
+    <p style="text-align:justify;">
+        <strong>नागरिक लगानी कोष (Citizen Investment Trust - CIT)</strong>
+        बाट विभिन्न प्रयोजनका लागि लिइएको सापटी (Loan) रकम हाल
+        <strong>Connect IPS</strong> मार्फत अनलाइन भुक्तानी गर्न सकिन्छ।
+        यस सुविधाले सेवाग्राहीलाई बैंक वा कोषको कार्यालयमा उपस्थित नभई
+        घर, कार्यालय वा जहाँबाट पनि सजिलै किस्ता तथा बाँकी सापटी रकम
+        बुझाउने सुविधा प्रदान गरेको छ।
+    </p>
+        </div>
+        <a href="blog/cit_repayment" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+			<!--------------- Microsoft Word मा Page Break र Section Break के हो ?   --------->
+	<div class="article">
+    <img src="images/reference-word.jpg"
+     alt="Microsoft Word मा Page Break र Section Break के हो ?">
+    <div class="content1">
+       <a href="blog/ms_office_page_break_section_break" class="read-more" target="_blank"><h2>Microsoft Word मा Page Break र Section Break के हो ?</h2></a>
+       <div class="meta">Posted on August 13, 2026</div>
+<div class="description">
+    <p style="text-align:justify;">
+        Microsoft Word मा लामो Document तयार गर्दा एउटै Document लाई
+        विभिन्न पृष्ठ तथा भागमा व्यवस्थित गर्न <strong>Page Break</strong>
+        र <strong>Section Break</strong> को प्रयोग गरिन्छ। यी दुवैको
+        काम Document लाई व्यवस्थित बनाउनु हो, तर दुवैको उद्देश्य
+        फरक हुन्छ।
+    </p>
+        </div>
+        <a href="blog/ms_office_page_break_section_break" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+			<!---------------MS Excel File खोल्नु अघि Password Protect कसरी गर्ने ?  --------->
+	<div class="article">
+    <img src="images/mail-merge.jpg"
+     alt="MS Excel File खोल्नु अघि Password Protect कसरी गर्ने ?">
+    <div class="content1">
+       <a href="blog/excel_file_protect" class="read-more" target="_blank"><h2>MS Excel File खोल्नु अघि Password Protect कसरी गर्ने ?</h2></a>
+       <div class="meta">Posted on August 13, 2026</div>
+<div class="description">
+    <p style="text-align:justify;">
+        Microsoft Excel मा तयार गरिएको महत्वपूर्ण, व्यक्तिगत वा गोप्य
+        Excel File लाई अनधिकृत व्यक्तिले खोल्न नपाओस् भन्नका लागि
+        <strong>Password Protection</strong> प्रयोग गर्न सकिन्छ।
+        Password राखेपछि Excel File खोल्दा पहिले Password मागिन्छ र
+        सही Password राखेपछि मात्र File खुल्छ।
+    </p>
+        </div>
+        <a href="blog/excel_file_protect" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+			<!--------------- छिन्नमस्ता भगवती मन्दिर, राजविराज, सप्तरी   --------->
+	<div class="article">
+    <img src="images/Chinnamasta_bhagawati.jpg"
+     alt="छिन्नमस्ता भगवती मन्दिर, राजविराज, सप्तरी">
+    <div class="content1">
+       <a href="blog/chhinnamasta_mandir" class="read-more" target="_blank"><h2>छिन्नमस्ता भगवती मन्दिर, राजविराज, सप्तरी</h2></a>
+       <div class="meta">Posted on August 13, 2026</div>
+<div class="description">
+    <p style="text-align:justify;">
+        <strong>छिन्नमस्ता भगवती मन्दिर</strong> सप्तरी जिल्लाको प्रसिद्ध
+        धार्मिक तथा शक्तिपीठमध्ये एक महत्वपूर्ण स्थल हो। यो मन्दिर
+        <strong>छिन्नमस्ता गाउँपालिका</strong> क्षेत्रमा अवस्थित छ र
+        सप्तरीको सदरमुकाम <strong>राजविराज</strong>बाट पनि यहाँ पुग्न
+        सकिन्छ। धार्मिक आस्था, ऐतिहासिक परम्परा तथा सांस्कृतिक महत्वका
+        कारण यस मन्दिरमा नेपालका विभिन्न जिल्ला तथा छिमेकी भारतबाट समेत
+        श्रद्धालुहरू आउने गर्दछन्।
+    </p>
+        </div>
+        <a href="blog/chhinnamasta_mandir" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+			<!---------------MS PowerPoint मा Transition Effect कसरी प्रयोग गर्ने ?  --------->
+	<div class="article">
+    <img src="images/power_point.jpg"
+     alt="MS PowerPoint मा Transition Effect कसरी प्रयोग गर्ने ?">
+    <div class="content1">
+       <a href="blog/power_point_transaction_effect" class="read-more" target="_blank"><h2>MS PowerPoint मा Transition Effect कसरी प्रयोग गर्ने ?</h2></a>
+       <div class="meta">Posted on August 13, 2026</div>
+<div class="description">
+    <p style="text-align:justify;">
+        Microsoft PowerPoint मा तयार गरिएको Presentation लाई अझ आकर्षक,
+        व्यवस्थित र प्रभावकारी बनाउन विभिन्न प्रकारका
+        <strong>Transition Effect</strong> प्रयोग गर्न सकिन्छ।
+        Transition भनेको एउटा Slide बाट अर्को Slide मा जाँदा देखिने
+        दृश्य प्रभाव हो।
+    </p>
+        </div>
+        <a href="blog/power_point_transaction_effect" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+			<!--------------- कंकालिनी मन्दिर, भारदह, सप्तरी   --------->
+	<div class="article">
+    <img src="images/9.jpg"
+     alt="कंकालिनी मन्दिर, भारदह, सप्तरी">
+    <div class="content1">
+       <a href="blog/kankalani_mandir" class="read-more" target="_blank"><h2>कंकालिनी मन्दिर, भारदह, सप्तरी</h2></a>
+       <div class="meta">Posted on August 13, 2026</div>
+<div class="description">
+    <p style="text-align:justify;">
+        <strong>कंकालिनी मन्दिर</strong> नेपालको मधेश प्रदेशअन्तर्गत
+        सप्तरी जिल्लाको <strong>हनुमाननगर कंकालिनी नगरपालिका–१, भारदह</strong>
+        क्षेत्रमा अवस्थित प्रसिद्ध धार्मिक तथा ऐतिहासिक शक्तिपीठ हो।
+        यो मन्दिर पूर्व–पश्चिम राजमार्ग नजिकै रहेको कारण नेपालका विभिन्न
+        स्थानबाट सजिलै पुग्न सकिन्छ।
+    </p>
+        </div>
+        <a href="blog/kankalani_mandir" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+			<!---------------कर्मचारी सञ्चय कोष (EPF) को सापटी रकम Mobile Banking बाट कसरी तिर्ने ?  --------->
+	<div class="article">
+    <img src="images/epg.png"
+     alt="कर्मचारी सञ्चय कोष (EPF) को सापटी रकम Mobile Banking बाट कसरी तिर्ने ?">
+    <div class="content1">
+       <a href="blog/epf_repayment_mobile_banking" class="read-more" target="_blank"><h2>कर्मचारी सञ्चय कोष (EPF) को सापटी रकम Mobile Banking बाट कसरी तिर्ने ?</h2></a>
+       <div class="meta">Posted on August 12, 2026</div>
+<div class="description">
+    <p style="text-align:justify;">
+        <strong>कर्मचारी सञ्चय कोष (Employees Provident Fund - EPF)</strong>
+        बाट लिएको सापटी (Loan) रकम अहिले अधिकांश बैंकहरूको
+        <strong>Mobile Banking Application</strong> मार्फत अनलाइन भुक्तानी
+        गर्न सकिन्छ। यस सुविधाले सेवाग्राहीलाई बैंक वा कर्मचारी सञ्चय
+        कोषको कार्यालयमा गएर लाइन बस्नुपर्ने झन्झटबाट मुक्त गरेको छ।
+    </p>
+        </div>
+        <a href="blog/epf_repayment_mobile_banking" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+			<!---------------धारापानी पर्यटकीय स्थल, सप्तरी   --------->
+	<div class="article">
+    <img src="images/dharapani.jpg"
+     alt="धारापानी पर्यटकीय स्थल, सप्तरी">
+    <div class="content1">
+       <a href="blog/dharapani_saptari" class="read-more" target="_blank"><h2>धारापानी पर्यटकीय स्थल, सप्तरी</h2></a>
+       <div class="meta">Posted on August 12, 2026</div>
+<div class="description">
+    <p style="text-align:justify;">
+        <strong>धारापानी</strong> सप्तरी जिल्लामा रहेको प्राकृतिक तथा
+        स्थानीय पर्यटनको सम्भावना बोकेको रमणीय स्थल हो। हरियाली,
+        प्राकृतिक वातावरण, पानीका स्रोत तथा शान्त वातावरणका कारण
+        धारापानीलाई आन्तरिक पर्यटकका लागि आकर्षक गन्तव्यका रूपमा
+        लिन सकिन्छ।
+    </p>
+        </div>
+        <a href="blog/dharapani_saptari" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+			<!---------------MobiOffice Android Application for Office  --------->
+	<div class="article">
+    <img src="images/mobi_office.webp"
+     alt="MobiOffice Android Application for Office">
+    <div class="content1">
+       <a href="blog/mobi_office" class="read-more" target="_blank"><h2>MobiOffice Android Application for Office</h2></a>
+       <div class="meta">Posted on August 11, 2026</div>
+<div class="description">
+    <p style="text-align:justify;">
+        <strong>MobiOffice</strong> (पहिले OfficeSuite को नामले परिचित)
+        Android मोबाइल तथा ट्याबलेटमा प्रयोग गर्न मिल्ने लोकप्रिय
+        Office Application हो। यस Application को प्रयोग गरी Microsoft Word,
+        Excel, PowerPoint तथा PDF फाइलहरू सजिलै खोल्न, सम्पादन गर्न,
+        सुरक्षित गर्न र शेयर गर्न सकिन्छ।
+    </p>
+        </div>
+        <a href="blog/mobi_office" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+			<!---------------देवीथान, लहान, सिरहा   --------->
+	<div class="article">
+    <img src="images/devithan.jpg"
+     alt="देवीथान, लहान, सिरहा">
+    <div class="content1">
+       <a href="blog/devi_than" class="read-more" target="_blank"><h2>देवीथान, लहान, सिरहा</h2></a>
+       <div class="meta">Posted on August 11, 2026</div>
+<div class="description">
+    <p style="text-align:justify;">
+        <strong>देवीथान</strong> सिरहा जिल्लाको लहान क्षेत्रमा रहेको
+        महत्वपूर्ण धार्मिक तथा स्थानीय आस्थाको स्थल हो। स्थानीय
+        बासिन्दाहरूले देवीको पूजा–आराधना गर्ने भएकाले यस स्थानलाई
+        देवीथान भनेर चिनिन्छ। धार्मिक आस्था, स्थानीय परम्परा र
+        सांस्कृतिक महत्वका कारण देवीथान लहान क्षेत्रका मानिसहरूका लागि
+        विशेष महत्व राख्ने स्थलका रूपमा परिचित छ।
+    </p>
+        </div>
+        <a href="blog/devi_than" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+
+			<!---------------MS Word File खोल्नु अघि Password Protect कसरी गर्ने ?   --------->
+	<div class="article">
+    <img src="images/reference-word.jpg"
+     alt="MS Word File खोल्नु अघि Password Protect कसरी गर्ने ?">
+    <div class="content1">
+       <a href="blog/word_file_protect" class="read-more" target="_blank"><h2>MS Word File खोल्नु अघि Password Protect कसरी गर्ने ?</h2></a>
+       <div class="meta">Posted on August 10, 2026</div>
+<div class="description">
+    <p style="text-align:justify;">
+        Microsoft Word मा तयार गरिएको महत्वपूर्ण वा गोप्य Document लाई
+        अरू व्यक्तिले अनुमति बिना खोल्न नपाओस् भन्नका लागि
+        <strong>Password Protection</strong> प्रयोग गर्न सकिन्छ।
+        Password राखेपछि उक्त Word File खोल्दा पहिले Password मागिन्छ।
+        सही Password राखेपछि मात्र Document खोल्न सकिन्छ।
+    </p>
+        </div>
+        <a href="blog/word_file_protect" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+
+			<!---------------दन्तकाली मन्दिर, धरान, सुनसरी   --------->
+	<div class="article">
+    <img src="images/dantakali_mandir.jpg"
+     alt="दन्तकाली मन्दिर, धरान, सुनसरीा">
+    <div class="content1">
+       <a href="blog/dantakali_mandir" class="read-more" target="_blank"><h2>दन्तकाली मन्दिर, धरान, सुनसरी </h2></a>
+       <div class="meta">Posted on August 10, 2026</div>
+<div class="description">
+    <p style="text-align:justify;">
+        <strong>दन्तकाली मन्दिर</strong> सुनसरी जिल्लाको धरान उपमहानगरपालिकामा
+        अवस्थित नेपालको प्रसिद्ध शक्तिपीठहरूमध्ये एक महत्वपूर्ण धार्मिक स्थल हो।
+        यो मन्दिर धरान बजारबाट केही दूरीमा रहेको छ र पूर्वी नेपालको प्रमुख
+        धार्मिक तथा पर्यटकीय गन्तव्यका रूपमा परिचित छ।
+    </p>
+        </div>
+        <a href="blog/dantakali_mandir" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+
+			<!---------------MS PowerPoint मा Background Image कसरी राख्ने ?   --------->
+	<div class="article">
+    <img src="images/power_point.jpg"
+     alt="MS PowerPoint मा Background Image कसरी राख्ने ?">
+    <div class="content1">
+       <a href="blog/power_point_backgraound_image" class="read-more" target="_blank"><h2>MS PowerPoint मा Background Image कसरी राख्ने ? </h2></a>
+       <div class="meta">Posted on August 09, 2026</div>
+<div class="description">
+    <p style="text-align:justify;">
+        Microsoft PowerPoint मा Slide लाई अझ आकर्षक, व्यवस्थित र
+        Professional बनाउन <strong>Background Image</strong> राख्न
+        सकिन्छ। Background Image भनेको Slide को पछाडिको भागमा
+        राखिने तस्वीर हो, जसको माथि Text, Heading, Shape, Chart,
+        Table वा अन्य सामग्री राख्न सकिन्छ।
+    </p>
+        </div>
+        <a href="blog/power_point_backgraound_image" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+
+			<!---------------जानकी मन्दिर, जनकपुरधाम, धनुषा   --------->
+	<div class="article">
+    <img src="images/janaki-temple.jpg"
+     alt="जानकी मन्दिर, जनकपुरधाम, धनुषा">
+    <div class="content1">
+       <a href="blog/janaki_mandir" class="read-more" target="_blank"><h2>जानकी मन्दिर, जनकपुरधाम, धनुषा </h2></a>
+       <div class="meta">Posted on August 09, 2026</div>
+<div class="description">
+    <p style="text-align:justify;">
+        <strong>जानकी मन्दिर</strong> नेपालको मधेश प्रदेशअन्तर्गत
+        धनुषा जिल्लाको <strong>जनकपुरधाम</strong>मा अवस्थित प्रसिद्ध
+        धार्मिक, ऐतिहासिक तथा सांस्कृतिक सम्पदा हो। यो मन्दिर
+        माता जानकी अर्थात् <strong>सीता देवी</strong>लाई समर्पित छ।
+        हिन्दू धर्मावलम्बीहरूका लागि यो नेपालका सबैभन्दा महत्वपूर्ण
+        तीर्थस्थलमध्ये एक मानिन्छ।
+    </p>
+        </div>
+        <a href="blog/janaki_mandir" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+
+			<!---------------व्यक्तिगत आयकरमा प्राप्त हुने कर छुट सुविधा (अवकाश कोष र शिक्षा कर छुट) --------->
+	<div class="article">
+    <img src="images/gov.png"
+     alt="व्यक्तिगत आयकरमा प्राप्त हुने कर छुट सुविधा (अवकाश कोष र शिक्षा कर छुट)">
+    <div class="content1">
+       <a href="blog/tax-rebate" class="read-more" target="_blank"><h2>व्यक्तिगत आयकरमा प्राप्त हुने कर छुट सुविधा (अवकाश कोष र शिक्षा कर छुट) </h2></a>
+       <div class="meta">Posted on August 08, 2026</div>
+<div class="description">
+<p style="text-align:justify;">
+नेपालको आयकर कानून अनुसार करदाताले आफ्नो करयोग्य आय (Taxable Income) गणना गर्दा
+केही विशेष खर्च तथा योगदान रकम करयोग्य आयबाट घटाउन (Deduction) पाउने व्यवस्था छ।
+यसको उद्देश्य बचत, सामाजिक सुरक्षा तथा शिक्षालाई प्रोत्साहन गर्नु हो।
+</p>
+        </div>
+        <a href="blog/tax-rebate" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+
+			<!---------------बराह क्षेत्र (Barahachhetra) – नेपालको प्रसिद्ध धार्मिक तथा ऐतिहासिक तीर्थस्थल --------->
+	<div class="article">
+    <img src="images/barah-kshetra.jpg"
+     alt="बराह क्षेत्र (Barahachhetra) – नेपालको प्रसिद्ध धार्मिक तथा ऐतिहासिक तीर्थस्थल">
+    <div class="content1">
+       <a href="blog/barah-kshetra" class="read-more" target="_blank"><h2>बराह क्षेत्र (Barahachhetra) – नेपालको प्रसिद्ध धार्मिक तथा ऐतिहासिक तीर्थस्थल </h2></a>
+       <div class="meta">Posted on August 08, 2026</div>
+<div class="description">
+<p style="text-align:justify;">
+बराह क्षेत्र नेपालका सबैभन्दा पवित्र धार्मिक तीर्थस्थलहरूमध्ये एक हो।
+यो कोशी प्रदेशको सुनसरी जिल्लामा अवस्थित रहेको छ। सप्तकोशी नदी र
+कोका नदीको संगमस्थलमा रहेको यस क्षेत्रलाई हिन्दू धर्मावलम्बीहरूले
+विशेष श्रद्धा र आस्थाका साथ पूजा गर्ने गर्दछन्। बराह क्षेत्रलाई
+नेपालको "चार धाम" मध्ये एक पवित्र धामको रूपमा समेत मानिन्छ।
+</p>
+        </div>
+        <a href="blog/barah-kshetra" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+			
+			<!---------------करदाता प्रोत्साहन उपहार कार्यक्रम (Taxpayer Reward Program)   --------->
+	<div class="article">
+    <img src="images/gov.png"
+     alt="D-04 Return Form">
+    <div class="content1">
+       <a href="blog/Taxpayer-Reward-Program" class="read-more" target="_blank"><h2>करदाता प्रोत्साहन उपहार कार्यक्रम (Taxpayer Reward Program) </h2></a>
+       <div class="meta">Posted on August 07, 2026</div>
+<div class="description">
+<p style="text-align:justify;">
+        नेपाल सरकार, अर्थ मन्त्रालय अन्तर्गतको आन्तरिक राजस्व विभाग (IRD) ले
+        उपभोक्ताहरूमा वस्तु तथा सेवा खरिद गर्दा अनिवार्य रूपमा बीजक (Bill/Invoice)
+        लिने बानीको विकास गर्न तथा कर प्रणालीलाई थप पारदर्शी बनाउन
+        <strong>"करदाता प्रोत्साहन उपहार कार्यक्रम"</strong> सञ्चालन गरेको छ।
+    </p>
+        </div>
+        <a href="blog/Taxpayer-Reward-Program" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+
+			<!---------------आर्थिक वर्ष २०८३/८४ को लागि नयाँ कर दर तथा कर छुट सम्बन्धी व्यवस्था   --------->
+	<div class="article">
+    <img src="images/gov.png"
+     alt="D-04 Return Form">
+    <div class="content1">
+       <a href="blog/fiscal-year-2083-084-tax" class="read-more" target="_blank"><h2>आर्थिक वर्ष २०८३/८४ को लागि नयाँ कर दर तथा कर छुट सम्बन्धी व्यवस्था </h2></a>
+       <div class="meta">Posted on August 07, 2026</div>
+<div class="description">
+<p style="text-align:justify;">
+        नेपाल सरकारद्वारा आर्थिक वर्ष २०८३/८४ को बजेटमार्फत व्यक्तिगत आयकर प्रणालीमा
+        महत्वपूर्ण सुधार गरिएको छ। करदातालाई राहत प्रदान गर्ने उद्देश्यले करयोग्य
+        आयको न्यूनतम सीमा वृद्धि गरिएको, करका तह (Tax Slab) सरल बनाइएको तथा
+        अधिकतम करदर घटाइएको छ। यस व्यवस्थाले विशेष गरी तलबभोगी कर्मचारी,
+        व्यवसायी तथा सामाजिक सुरक्षा कोषमा आबद्ध करदाताहरूलाई प्रत्यक्ष लाभ
+        पुर्‍याउने अपेक्षा गरिएको छ।
+    </p>
+        </div>
+        <a href="blog/fiscal-year-2083-084-tax" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+
+			<!---------------चिण्डे डाँडा (Chinde Dada) – धराना   --------->
+	<div class="article">
+    <img src="images/chinde-dada.jpg"
+     alt="चिण्डे डाँडा (Chinde Dada) – धरान">
+    <div class="content1">
+       <a href="blog/chinde-dada" class="read-more" target="_blank"><h2>चिण्डे डाँडा (Chinde Dada) – धरान </h2></a>
+       <div class="meta">Posted on August 07, 2026</div>
+<div class="description">
+<p style="text-align:justify;">
+चिण्डे डाँडा धरान उपमहानगरपालिका–२० मा अवस्थित पूर्वी नेपालको एक प्रसिद्ध
+प्राकृतिक तथा पर्यटकीय गन्तव्य हो। पछिल्ला वर्षहरूमा यो स्थान आन्तरिक
+पर्यटक, हाइकिङ प्रेमी, फोटोग्राफर तथा साहसिक पर्यटनमा रुचि राख्ने
+व्यक्तिहरूको आकर्षणको केन्द्र बनेको छ। यहाँबाट धरान शहर, इटहरी,
+चारकोसे झाडी, तराईका फाँटहरू तथा वरिपरिका हरिया पहाडहरूको मनोरम
+दृश्य अवलोकन गर्न सकिन्छ।
+</p>
+        </div>
+        <a href="blog/chinde-dada" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+
+			<!---------------BUSY Accounting Software प्रयोग गर्ने सम्पूर्ण मार्गदर्शन   --------->
+	<div class="article">
+    <img src="images/busy.png"
+     alt="BUSY Accounting Software प्रयोग गर्ने सम्पूर्ण मार्गदर्शन">
+    <div class="content1">
+       <a href="blog/accounting-software-busy" class="read-more" target="_blank"><h2>BUSY Accounting Software प्रयोग गर्ने सम्पूर्ण मार्गदर्शन </h2></a>
+       <div class="meta">Posted on August 07, 2026</div>
+<div class="description">
+<p style="text-align:justify;">
+<strong>BUSY Accounting Software</strong> व्यवसाय, पसल, उद्योग, होलसेल, रिटेल,
+वितरण कम्पनी तथा सेवा प्रदायक संस्थाहरूमा लेखा (Accounting), स्टक व्यवस्थापन
+(Inventory Management), बिक्री (Sales), खरिद (Purchase), कर व्यवस्थापन (VAT/GST)
+र वित्तीय प्रतिवेदन (Financial Reports) तयार गर्न प्रयोग हुने लोकप्रिय
+Accounting Software हो।
+</p>
+        </div>
+        <a href="blog/accounting-software-busy" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+	
+			<!---------------अन्तःशुल्क इजाजतपत्र नवीकरण (E-Permit Renew)   --------->
+	<div class="article">
+    <img src="images/gov.png"
+     alt="D-04 Return Form">
+    <div class="content1">
+       <a href="blog/e-permit" class="read-more" target="_blank"><h2>अन्तःशुल्क इजाजतपत्र नवीकरण (E-Permit Renew) </h2></a>
+       <div class="meta">Posted on August 07, 2026</div>
+<div class="description">
+<p style="text-align:justify;">
+अन्तःशुल्क इजाजतपत्र नवीकरण (Excise Permit Renewal) भनेको अन्तःशुल्क लाग्ने वस्तु वा सेवासँग सम्बन्धित व्यवसाय सञ्चालन गर्न लिइएको इजाजतपत्रको म्याद समाप्त भएपछि त्यसलाई पुनः वैधानिक र सक्रिय बनाउने प्रक्रिया हो। नेपालमा मदिरा, बियर, वाइन, चुरोट, सूर्तीजन्य पदार्थ तथा अन्तःशुल्क लाग्ने अन्य वस्तु वा सेवाको उत्पादन, पैठारी, निकासी, भण्डारण, बिक्री वितरण तथा सम्बन्धित कारोबार गर्न अन्तःशुल्क इजाजतपत्र अनिवार्य हुन्छ। यस्तो इजाजतपत्र सामान्यतया एक आर्थिक वर्षका लागि जारी हुने भएकाले प्रत्येक वर्ष समयमै नवीकरण गर्नुपर्छ ।
+</p>
+        </div>
+        <a href="blog/e-permit" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+			
+			<!--------------- D-01 form   --------->
+	<div class="article">
+    <img src="images/gov.png"
+     alt="D-01 Return Form">
+    <div class="content1">
+       <a href="blog/d-01" target="_blank" class="read-more"><h2>D-01 Return Form (स्वयं कर निर्धारण आय विवरण) </h2></a>
+       <div class="meta">Posted on July 31, 2026</div>
+<div class="description">
+<p style="text-align:justify;">
+D-01 Return Form भनेको आन्तरिक राजस्व विभाग (IRD) द्वारा साना करदाताहरूका लागि
+निर्धारण गरिएको <strong>स्वयं कर निर्धारण आय विवरण (Self Assessment Return)</strong>
+फाराम हो। वार्षिक कारोबार तोकिएको सीमाभित्र रहेका तथा अनुमानित कर प्रणाली
+अन्तर्गत पर्ने व्यवसायी वा साना करदाताले आफ्नो आम्दानी, कारोबार तथा कर दायित्व
+स्वयं घोषणा गर्न यो फाराम प्रयोग गर्छन्। D-01 फाराम अनलाइन Taxpayer Portal मार्फत
+भर्न र पेश गर्न सकिन्छ। 
+</p>
+        </div>
+        <a href="blog/d-01" target="_blank" class="read-more" >Read More</a>
+    </div>
+	</div>
+<hr>
+
+			<!--------------- सामाजिक सुरक्षा कोष (Social Security Fund - SSF)   --------->
+	<div class="article">
+    <img src="images/ssf.jpg"
+     alt="D-04 Return Form">
+    <div class="content1">
+       <a href="blog/ssf" class="read-more" target="_blank"><h2>सामाजिक सुरक्षा कोष (Social Security Fund - SSF) </h2></a>
+       <div class="meta">Posted on July 31, 2026</div>
+<div class="description">
+<p style="text-align:justify;">
+        सामाजिक सुरक्षा कोष (SSF) नेपाल सरकारद्वारा श्रमिक तथा रोजगारमा रहेका
+        व्यक्तिहरूको आर्थिक तथा सामाजिक सुरक्षा सुनिश्चित गर्न स्थापना गरिएको
+        एक महत्वपूर्ण संस्था हो। सामाजिक सुरक्षा कोष (व्यवस्थापन तथा सञ्चालन)
+        नियमावली, २०६७ जारी भएपछि २०६७ साल चैत्र ७ गते यस कोषको स्थापना भएको थियो।
+        प्रारम्भिक चरणमा कोषले सामाजिक सुरक्षा करको व्यवस्थापन गर्ने कार्य गर्दै
+        आएको थियो। पछि <strong>योगदानमा आधारित सामाजिक सुरक्षा ऐन, २०७४</strong>
+        लागू भएपछि कोषले सोही ऐन अनुसार सामाजिक सुरक्षा योजनाहरू सञ्चालन गर्दै आएको छ।
+    </p>
+        </div>
+        <a href="blog/ssf" target="_blank" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+			
+			<!---------------  Online माध्यमबाट स्वास्थ्य बीमा नवीकरण प्रक्रिय   --------->
+	<div class="article">
+    <img src="images/healthinsurance.jpeg"
+     alt="Online माध्यमबाट स्वास्थ्य बीमा नवीकरण प्रक्रिय">
+    <div class="content1">
+       <a href="blog/HealthInsuranceRenueProcess" class="read-more" ><h2>Online माध्यमबाट स्वास्थ्य बीमा नवीकरण प्रक्रिया </h2></a>
+       <div class="meta">Posted on July 14, 2026</div>
+<div class="description">
+<p style="text-align:justify;">
+नेपाल सरकार, स्वास्थ्य तथा जनसंख्या मन्त्रालय अन्तर्गतको स्वास्थ्य बीमा बोर्डले
+सेवाग्राहीलाई सहज, छिटो तथा पारदर्शी सेवा उपलब्ध गराउने उद्देश्यले विद्युतीय
+माध्यमबाट स्वास्थ्य बीमा नवीकरण गर्ने व्यवस्था लागू गरेको छ। यस प्रणालीमार्फत
+बीमित परिवारले स्वास्थ्य बीमा कार्यालयमा प्रत्यक्ष उपस्थित नभई घर, कार्यालय वा
+जुनसुकै स्थानबाट मोबाइल बैंकिङ, डिजिटल वालेट तथा अनलाइन भुक्तानी प्रणाली प्रयोग
+गरी स्वास्थ्य बीमा नवीकरण गर्न सक्दछन्।
+</p>
+
+        </div>
+        <a href="blog/HealthInsuranceRenueProcess" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+
+			<!--------------- Google Nepali Input Tools   --------->
+	<div class="article">
+    <img src="images/google-input-tool.jpg"
+     alt="Google Nepali Input Tools">
+    <div class="content1">
+       <a href="blog/google-input-tool" class="read-more" ><h2>Google Nepali Input Tools </h2></a>
+       <div class="meta">Posted on July 14, 2026</div>
+<div class="description">
+<p style="text-align:justify;">
+Google Nepali Input Tools भनेको Google द्वारा विकसित गरिएको एक लोकप्रिय
+टाइपिङ उपकरण (Typing Tool) हो, जसले अंग्रेजी (English) Keyboard प्रयोग गरेर
+सजिलै नेपाली Unicode मा टाइप गर्न मद्दत गर्छ। यसलाई विशेष गरी नेपाली भाषा
+टाइप गर्न सजिलो बनाउने उद्देश्यले विकास गरिएको हो। Google Input Tools मा
+Transliteration प्रविधि प्रयोग गरिएको हुन्छ, जसमा प्रयोगकर्ताले अंग्रेजी
+अक्षर टाइप गर्दा त्यसलाई स्वतः नेपाली Unicode मा रूपान्तरण गरिन्छ। :contentReference[oaicite:0]{index=0}
+</p>
+
+        </div>
+        <a href="blog/google-input-tool" class="read-more">Read More</a>
+    </div>
+	</div>
+<hr>
+
+<!---------------  Koshi Tappu   --------->
+	<div class="article">
+    <img src="images/koshi_tappu.jpg"
+     alt="Koshi Tappu Wild Life Reserved">
+    <div class="content1">
+       <a href="blog/koshi_tappu.html" class="read-more"><h2>कोशी टप्पु वन्यजन्तु आरक्ष </h2></a>
+       <div class="meta">Posted on April 20, 2026</div>
+        <div class="description">
+		<p>
+कोशी टप्पु वन्यजन्तु आरक्ष कोशी नदी किनारमा रहेको संरक्षित क्षेत्र हो। यो वि.स. २०३२ (सन् १९७६) मा स्थापना भएको हो। 
+यस आरक्षको क्षेत्रफल १७५ वर्ग किलोमिटर छ। यो सुनसरी, सप्तरी र उदयपुर गरी तिन जिल्लामा फैलिएको छ। 
+सन् १९८७ मा रामसार सूचीमा सूचीकृत भएको नेपालकै पहिलो ठूलो रामसार क्षेत्रको रूपमा चिनिन्छ।
+</p>
+
+        </div>
+        <a href="blog/koshi_tappu.html" class="read-more">Read More</a>
+    </div>
+</div><hr>
+<!---------------  EPF KYC   --------->
+	<div class="article">
+    <img src="images/epg.png"
+     alt="EPF Online KYC Submission (Know Your Customer)">
+    <div class="content1">
+       <a href="blog/epfkyc" class="read-more"><h2>EPF Online KYC Submission - कर्मचारी संचयकोष </h2></a>
+       <div class="meta">Posted on March 24, 2026</div>
+        <div class="description">
+<p style="text-align:justify;">
+कर्मचारी सञ्चय कोष (EPF) ले आफ्ना योगदानकर्ताहरूको पहिचान, व्यक्तिगत विवरण,
+बैंकिङ जानकारी तथा लाभग्राही (Nominee) सम्बन्धी विवरण अद्यावधिक र प्रमाणीकरण
+गर्नका लागि Online KYC (Know Your Customer) प्रणाली सञ्चालन गरेको छ।
+यो प्रक्रिया Anti-Money Laundering (AML) तथा Combating the Financing of Terrorism
+(CFT) सम्बन्धी प्रचलित कानुनी व्यवस्था पालना गर्न आवश्यक छ।
+</p>
+        </div>
+        <a href="blog/epfkyc" class="read-more">Read More</a>
+    </div>
+</div><hr>	
+
+<!---------------  MS Excel मा What-If Analysis   --------->
+	<div class="article">
+    <img src="images/what-if-analysis.jpg"
+     alt="MS Excel मा What-If Analysis">
+    <div class="content1">
+       <a href="blog/ms-excel-what-if-analysis" class="read-more"><h2>MS Excel मा What-If Analysis </h2></a>
+       <div class="meta">Posted on March 24, 2026</div>
+        <div class="description">
+		<p style="text-align: justify;">
+<strong>What-If Analysis</strong> Microsoft Excel को एक शक्तिशाली सुविधा (Feature) हो
+जसले कुनै तथ्यांक (Data) वा सूत्र (Formula) मा परिवर्तन गर्दा परिणाम (Result)
+कसरी परिवर्तन हुन्छ भन्ने विश्लेषण गर्न मद्दत गर्दछ ।
+</p>
+
+<p>
+सरल भाषामा भन्नुपर्दा,
+<strong>"यदि यस्तो भयो भने के हुन्छ?"</strong>
+भन्ने प्रश्नको उत्तर खोज्न What-If Analysis प्रयोग गरिन्छ।
+</p>
+        </div>
+        <a href="blog/ms-excel-what-if-analysis" class="read-more">Read More</a>
+    </div>
+</div><hr>
+			
+<!---------------  CIT   --------->
+	<div class="article">
+    <img src="images/cit.jpg"
+     alt="कर्मचारी बचतबृद्दि स्विकृत अवकाश काेष - नागरिक लगानी कोष">
+    <div class="content1">
+       <a href="blog/cit.html" class="read-more"><h2>कर्मचारी बचतबृद्दि स्विकृत अवकाश काेष - नागरिक लगानी कोष </h2></a>
+       <div class="meta">Posted on March 24, 2026</div>
+        <div class="description">
+		<p style="text-align: justify;">
+कर्मचारी बचत वृद्धि निवृत्ति योजना कर्मचारीहरूको दीर्घकालीन आर्थिक सुरक्षा सुनिश्चित गर्ने उद्देश्यले सुरु गरिएको महत्वपूर्ण व्यवस्था हो । यस अन्तर्गत कर्मचारीको मासिक तलबबाट निश्चित रकम कटौती गरी व्यक्तिगत खातामा जम्मा गरिन्छ। त्यसरी संकलित रकम सम्बन्धित कार्यालय वा संस्थाले तोकिएका सङ्कलन केन्द्रहरू—जस्तै वाणिज्य बैंकका शाखा तथा नेपाल राष्ट्र बैंक—मार्फत नियमित रूपमा जमा गर्ने व्यवस्था हुन्छ।
+यो योजना स्वेच्छिक सहभागितामा आधारित छ र “Defined Contribution” प्रणाली अनुसार सञ्चालन हुन्छ ।
+
+        </p>
+        </div>
+        <a href="blog/cit.html" class="read-more">Read More</a>
+    </div>
+</div><hr>
+			
+	<!------------------------>
+
+<div class="article">
+    <img src="images/bpkihs_dharan.jpg" alt="BPKIHS, Dharan, Nepal">
+    <div class="content1">
+       <a href="https://bpkihs.edu/2025/about/introduction" class="read-more"><h2>B.P. Koirala Institute of Health Sciences (BPKIHS), Dharan</h2></a>
+       <div class="meta">Posted on November 13, 2025</div>
+        <div class="description">
+    <p>
+        <strong>B.P. Koirala Institute of Health Sciences (BPKIHS)</strong> is an autonomous health sciences university located in <strong>Dharan, Sunsari District, Nepal</strong>. 
+        Established on <strong>January 18, 1993</strong>........
+    </p>
+        </div>
+        <a href="https://bpkihs.edu/2025/about/introduction" class="read-more">Read More</a>
+    </div>
+</div><hr>
+<div class="article">
+    <img src="images/dc-613.jpg" alt="BPKIHS, Dharan, Nepal">
+    <div class="content1">
+        <a href="blog/darta_chalani" class="read-more"><h2>Digital Darta Chalani System - Nepal</h2></a>
+       <div class="meta">Posted on November 13, 2025</div>
+        <div class="description">
+        <p>
+            <strong>Digital Darta Chalani</strong> is an initiative of the Government of Nepal designed to 
+            digitize the traditional process of registering and dispatching official documents. 
+            The system replaces manual record-keeping with a secure digital platform..........
+        </p>
+        </div>
+        <a href="blog/darta_chalani" class="read-more">Read More</a>
+    </div>
+</div>	<hr>
+
+
+<div class="article">
+    <img src="images/mail-merge.jpg" alt="">
+    <div class="content1">
+        <a href="blog/mail-merge-ms-word"><h2>Microsoft Word मा Mail Merge प्रयोग गर्ने तरिका</h2></a>
+        <div class="meta">
+            Posted on September 7, 2025
+        </div>
+        <div class="description">
+<p style="text-align:justify;">
+Mail Merge भनेको Microsoft Word को एउटा विशेष सुविधा हो जसको प्रयोग गरेर एउटै
+ढाँचाको पत्र, प्रमाणपत्र, नियुक्ति पत्र, तलब पर्चा, निमन्त्रणा पत्र, परिचयपत्र
+आदि धेरै व्यक्तिका लागि स्वचालित रूपमा तयार गर्न सकिन्छ।
+यसमा Word फाइल (Main Document) र Excel फाइल (Data Source) लाई आपसमा जोडेर
+प्रत्येक व्यक्तिको नाम, ठेगाना, पद, तलब, फोन नम्बर आदि विवरण स्वतः राख्न सकिन्छ।
+</p>
+        </div>
+        <a href="blog/mail-merge-ms-word" class="read-more">Read More</a>
+    </div>
+</div><hr>
+			
+<div class="article">
+    <img src="images/Lohajara_thakur_baba.jpg" alt="">
+    <div class="content1">
+        <a href="blog/takurbabadaha.html"><h2>ठाकुर बाबा दह Thakur Baba Daha (Lohajara Lake), Saptari</h2></a>
+        <div class="meta">
+            Posted on September 7, 2025
+        </div>
+        <div class="description">
+<p><strong>ठाकुर बाबा दह</strong> सप्तरी जिल्लाको लोहजारामा अवस्थित एक प्रसिद्ध प्राकृतिक ताल हो । यसलाई स्थानीय स्तरमा 'लोहजारा दह' को नामले पनि चिनिन्छ ।</p>
+
+<b><u>मुख्य विशेषताहरू:</u></b>
+<ul>
+	<li><strong>प्राकृतिक अवस्थिति:</strong> यो दह लोहजारा गाउँको ठीक बीच भागमा अवस्थित एक मनोरम प्राकृतिक ताल हो ।</li>
+	<li><strong>क्षेत्रफल:</strong> यसलाई पूर्वी नेपालकै ठूला तालहरूमध्ये एक मानिन्छ । ...... </li>
+</ul>
+        </div>
+        <a href="blog/takurbabadaha.html" class="read-more">Read More</a>
+    </div>
+</div><hr>
+
+<div class="article">
+    <img src="images/office-auto.jpg" alt="नेपालमा सरकारी कार्यालयको कामलाई रूपान्तरण गर्दै Office Automation">
+    <div class="content1">
+        <a href="blog/office-automation"><h2>नेपालमा सरकारी कार्यालयको कामलाई रूपान्तरण गर्दै Office Automation</h2></a>
+        <div class="meta">Posted on December 10, 2025</div>
+        <div class="description">
+<p style="text-align:justify;">
+डिजिटल प्रविधिको तीव्र विकाससँगै नेपालका सरकारी कार्यालयहरू पनि परम्परागत
+कागजी प्रणालीबाट क्रमशः डिजिटल प्रणालीतर्फ अघि बढिरहेका छन्।
+यस परिवर्तनको प्रमुख आधार <strong>Office Automation (कार्यालय स्वचालन)</strong>
+हो। Office Automation ले कार्यालयका दैनिक कार्यहरूलाई कम्प्युटर, सफ्टवेयर,
+नेटवर्क तथा डिजिटल प्रणालीको माध्यमबाट स्वचालित, व्यवस्थित र प्रभावकारी बनाउने
+कार्य गर्दछ।
+</p>
+        </div>
+        <a href="blog/office-automation" class="read-more">Read More</a>
+    </div>
+</div>
+<hr>
+<div class="article">
+    <img src="images/budda-subba-mandir.jpg" alt="Buddha Subba Temple, Dharan">
+    <div class="content1">
+       <a href="blog/buddha_subba_temple.html" class="read-more"><h2>बुढा सुब्बा मन्दिर (Buddha Subba Temple) – धरान</h2></a>
+       <div class="meta">Posted on November 15, 2025 | by TravelNepal</div>
+        <div class="description">
+         <p style="text-align:justify;">
+बुढा सुब्बा मन्दिर पूर्वी नेपालको सुनसरी जिल्लाको धरान उपमहानगरपालिका–१४,
+विजयपुर क्षेत्रमा अवस्थित एक प्रसिद्ध धार्मिक तथा पर्यटकीय स्थल हो।
+यो मन्दिर पूर्वाञ्चलका सबैभन्दा लोकप्रिय तीर्थस्थलमध्ये एक मानिन्छ।
+प्रत्येक वर्ष नेपालका विभिन्न जिल्लाका साथै भारतलगायत अन्य देशबाट समेत
+हजारौं भक्तजन तथा पर्यटक यहाँ दर्शन गर्न आउने गर्छन्।
+मन्दिर धार्मिक आस्था, ऐतिहासिक महत्व, सांस्कृतिक परम्परा तथा प्राकृतिक
+सौन्दर्यका कारण विशेष रूपमा परिचित छ। 
+</p>
+        </div>
+        <a href="blog/buddha_subba_temple.html" class="read-more">Read More</a>
+    </div>
+</div>	<hr>	
+
+<div class="article">
+    <img src="images/8.jpg" alt="">
+    <div class="content1">
+        <a href="blog/koshi_barej"><h2>कोशी ब्यारेज (सप्तकोशी) – नेपालको महत्वपूर्ण जलस्रोत तथा पर्यटन स्थल</h2></a>
+        <div class="meta">
+            Posted on November 15, 2025
+        </div>
+        <div class="description">
+<p style="text-align:justify;">
+<strong>कोशी ब्यारेज</strong> नेपालको पूर्वी भागमा अवस्थित एक महत्वपूर्ण
+जलस्रोत, सिँचाइ तथा बाढी नियन्त्रण संरचना हो। यो ब्यारेज
+<strong>सप्तकोशी नदी</strong> माथि सुनसरी र सप्तरी जिल्लाको सीमामा
+निर्माण गरिएको छ। कोशी नदी नेपालको सबैभन्दा ठूलो नदी प्रणालीमध्ये एक
+हो, जसलाई सातवटा प्रमुख नदीहरू मिलेर बनेको हुनाले
+<strong>“सप्तकोशी”</strong> भनिन्छ।
+</p>
+        </div>
+        <a href="blog/koshi_barej" class="read-more">Read More</a>
+    </div>
+</div><hr>
+			
+<div class="article">
+    <img src="images/reference-word.jpg" alt="">
+    <div class="content1">
+        <a href="blog/reference-ms-word"><h2>Microsoft Word को Reference Menu (References Tab)</h2></a>
+        <div class="meta">
+            Posted on November 15, 2025
+        </div>
+        <div class="description">
+<p style="text-align:justify;">
+Microsoft Word मा रहेको <strong>References Menu (References Tab)</strong> अनुसन्धानमूलक
+लेखन (Research Writing), प्रतिवेदन (Report), थेसिस (Thesis), परियोजना प्रतिवेदन,
+पुस्तक, लेख तथा कार्यालयका औपचारिक दस्तावेज तयार गर्दा प्रयोग हुने महत्वपूर्ण
+मेनु हो। यस मेनुले दस्तावेजमा विषय सूची (Table of Contents), फुटनोट (Footnote),
+सन्दर्भ सूची (Bibliography), उद्धरण (Citation), चित्र सूची (Table of Figures),
+अनुक्रमणिका (Index) तथा क्रस-रेफरेन्स (Cross-reference) जस्ता सुविधाहरू प्रदान गर्छ।
+</p>
+        </div>
+        <a href="blog/reference-ms-word" class="read-more">Read More</a>
+    </div>
+</div><hr>
+		
+<div class="article">
+    <img src="images/Two date Calculation in Excel copy.png" alt="">
+    <div class="content1">
+        <a href="blog/calculate2dates"><h2>Calculate the Difference Two Dates likes Years, Months, and Days in Excel</h2></a>
+        <div class="meta">
+            Posted on November 14, 2025
+        </div>
+        <div class="description">
+            Calculate age in accumulated years, months, and days. You can also calculate age or someone’s time of service. The result can be like as 25 years, 10 months, 29 days.
+			<div style="padding-left:25px;">
+<p>=DATEDIF(B2,C2,"y")&"Y " &nbsp; &nbsp;&nbsp;&nbsp; =DATEDIF(B2,C2,"ym")&"M " &nbsp; &nbsp;&nbsp;&nbsp; =DATEDIF(B2,C2,"md")&"D" </p>
+
+</div>
+        </div>
+        <a href="blog/calculate2dates" class="read-more">Read More</a>
+    </div>
+</div>	<hr>
+
+<div class="article">
+    <img src="images/consolidate.png" alt="">
+    <div class="content1">
+        <a href="blog/consolidate"><h2>Sum Two or More Similar Product Name Price Values in Excel</h2></a>
+        <div class="meta">
+            Posted on November 14, 2025
+        </div>
+        <div class="description">
+<p>
+Excel is one of the most widely used tools in offices, schools, and government organizations in Nepal. 
+Learning advanced Excel formulas can significantly improve efficiency and accuracy in daily tasks.
+</p>
+
+        </div>
+        <a href="blog/consolidate" class="read-more">Read More</a>
+    </div>
+</div><hr>	
+
+
+		</div>
+		</div>		
+		</div>
+	</div>
+  </div>
+  <div class="column3">
+
+  <div class="w3-row-padding">
+	<div class="m-margin-top" >
+		<div class="w3-card-3 w3-white">
+		<div>
+		<p style="background-color:rgb(0,120,201);font-size:14px;text-align:center;color:white;">Useful</p>
+		</div>
+<div class="w3-padding w3-small">
+<ul>
+<li><a href="https://onlinekyc.epf.org.np/contributorkyc" target="_blanck" style="text-decoration:none;">संचयकोष - KYC Online Form (नयाँको लागि)</a></li>
+<li><a href="form/Anusuchee 10 for Web of Suchikaran biniyam 2081-2b68.pdf" target="_blanck" style="text-decoration:none;">संचयकोष - अनुसूची १० फारम </a></li>
+<li><a href="form/Anusuchee KYC Update form suchikaran biniyam-da5e.pdf" target="_blanck" style="text-decoration:none;">संचयकोष - KYC Update फारम</a></li>
+<li><a href="form/Medical Reimbersement.pdf" target="_blanck" style="text-decoration:none;">संचयकोष - औषधि उपचार खर्च फारम </a></li>
+<li><a href="form/sutkeri_tatha_sisu_herchahar.pdf" target="_blanck" style="text-decoration:none;">संचयकोष  - सुत्केरी स्याहार फारम </a></li>
+<li><a href="downloads/GoogleInputToolsNepali.zip">Download Nepali InputTool</a><br>
+<li><a href="downloads/Kokila_Plus.ttf">Download Kokila Plus Font</a><br>
+<li><a href="downloads/ChequeWriter_NP.zip">Download Cheque Writer</a>
+</ul>
+</div>
+
+		</div>
+	</div>
+
+
+<!-- add row here -->
+	  
+  </div>
+ 
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Footer -->
+
+<div class="w3-container w3-theme-d3 w3-padding-16 t-bar co">
+
+<p class='footer-col w3-small'>Our Products: BPKIHS Payroll | Darta Chalani | Children's Fee Claim</a></p>
+
+
+   </div>
+
+<div class="w3-container w3-theme-d3 w3-padding-16 foot-bar co w3-small">
+
+  <h5 class='' style="text-align:center;"></h5>
+
+<p style="text-align:center;">
+© 2026 dhaneshwarchaudhary.com.np. All Rights Reserved.
+</p>
+<p style="text-align:center;">
+<a href="policy">Privacy Policy</a> |
+<a href="about-us">About Us</a> |
+<a href="terms">Terms & Conditions</a> |
+<a href="disclaimer">Disclaimer</a> | 
+<a href="contact">Contact</a>
+</p>
+
+
+</div>
+
+</body>
+
+</html>
+
